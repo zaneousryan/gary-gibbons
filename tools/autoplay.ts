@@ -501,7 +501,7 @@ async function runOnce(seed: number): Promise<string[]> {
   if (!game.advancePhase()) fail('night 4 gate blocked');
   const d5state = useGameStore.getState().state;
   if (d5state.day !== 5) fail(`expected day 5, got ${d5state.day}`);
-  log.push('day 4 complete: stakeout, pivot, tracks, rail composite, photo-witness aha, D6, gate -> day 5');
+  log.push('day 4 complete: stakeout, pivot, tracks, rail seats (completes night 6), photo-witness aha, D6, gate -> day 5');
 
   unsubLog();
   unsubTriggers();

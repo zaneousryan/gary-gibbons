@@ -156,3 +156,35 @@ From this point, any content ID rename requires a migration entry in `app/src/en
 
 ### Open DESIGN-QUESTIONs
 - DQ-1 (carried) · **DQ-2 (new)**: Morning Pitch board-item picker vs dialogue-choice interim (II.16.6).
+
+---
+
+## 2026-07-03 — PHASE 5: Systems Completion — DONE
+
+### What shipped
+- **All 9 puzzle modules exist** (§6.7): then_now (plaque moved), trace_follow (holed sole), photo_triangulation, fire_escape_sightline, torn_letter, handwriting_match, map_overlay (ghost landing) join dust_library + sketch_memory — each with UI, headless solver, registry entry (validator-visible grants).
+- **Photo mode** (II.12.3): camera from Warren D3, viewfinder, lantern collectibles, overnight prints. GameState v2 + tested migration.
+- **Weather** (II.14.2): seeded deterministic roll + D5-midday schedule, rain variants + particles, ifRain rerouting.
+- **LivingTown** (II.14.4/II.27): vignette selector, townTheory from rumor seeds, rumor pool.
+- **Rail**: completion cinematic (RailCinematic), composite-pair support (III.22.5 — content arrives Phase 6 with milos_sighting), clearSuspect deduction product (D4/D8 pattern).
+- **Off-the-record system LIVE** (III.23.1, via review): Margie's sherry quote is the tutorial — off-record card, string refusal ("promised" + verbatim inner line), on-record corroboration through Warren's own admission; sweep upgrades off-record via routes (the know-it→prove-it loop Phase 6 builds on).
+- **OBSERVE tells wired project-wide**: chekhov detail flag field; Julian's ring, Warren's glasses, Poppy's fog all earnable.
+- **Reentrant dialogues** (II.12.1 cozy failure): pressing Warren closes the scene; returning with better manners reopens it (with an in-voice callout).
+- **Days 3–4 content**: ferris + prudence; drowsy_lantern, ledger_morgue, riverbank, lockup; verbatim Margie/Warren/Ferris/stakeout/lockup scenes; grape beat 4 (the longest silence); 20 cards incl. 3 rail events; recipes D4 (CLEARED stamp)/D5/D6/photo-witness aha; contradictions cx_warren + cx_two_keys; ed_d3/ed_d4 (WEASEL CAUGHT RED-PAWED! as the tempting-wrong); morgue + Founder's Addition beat; hints; 3 new bark pools.
+
+### gg-content-reviewer verdict
+**LGTM** (after 1 major fix round — 3 real gaps): (1) the REQUIRED off-record tutorial was missing entirely → implemented in full, engine + content + autoplay assertions; (2) composite rail pair was wired to the wrong cards (Warren's photo is evidence of the WATCHER) → ev_photo_night deleted, pair deferred to Phase 6 with a new validator rule; (3) OBSERVE tells were unearnable project-wide → wired. Rulings: press-reroute acceptable; d6 deduction-card input faithful to "Ferris's Testimony + D1"; timeline 4-slot trim correct (§3 names exactly four event nights); Prudence market placement acceptable interim (decorative until Phase 6); Dot's authored Archie memories in voice. Ryan note: Warren's glasses tell fires with the scene's mandatory narration (softer than the doc's "noticed" gating — engine has no portrait-click affordance yet).
+
+### gg-verifier verdict (evidence summary)
+**PASS** — validator 0 errors/5 by-design warnings (15 chars, 9 locations, 26 dialogues, 39 cards, 10 deductions, 4 editions, 6 bark pools); 63/63 tests; autoplay ×2 byte-identical, 344 lines, Days 1–4 assertions verified line-by-line; **curious run LIVE** (optional sweep, zero crashes); build clean; e2e 4/4. Hand inspections: ONE remaining STUB repo-wide (TauriFs, phase-7); Math.random clean (weather has its own seeded mulberry — consolidation nit for Phase 7); GameState v2 migration proven; timeline trim needs no migration; stakeout is watch-and-dialogue, NOT stealth-follow (Cut List clean); vignette watcher not in autoplay path (determinism safe). Verifier notes fixed: autoplay double-fire removed, stale composite log line fixed.
+
+### Stubs (open)
+- STUB(phase-7) TauriFsStorage — the only one left.
+
+### Open DESIGN-QUESTIONs
+- DQ-1, DQ-2 (carried). No new questions.
+
+### Notes for Phase 6
+- compositePair = [ev_crossing, ev_milo_sighting] once milos_sighting exists; rail completes Night 6 via ev_garden (night_minus_5).
+- careful_hands already produced — Night 6 authoring must not assume it un-produced (reviewer continuity note from Phase 4).
+- Day 5 opens with the Ferris lockup read-aloud consequence if printed_sensational_d4.
