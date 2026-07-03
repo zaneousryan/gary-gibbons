@@ -246,3 +246,6 @@ From this point, any content ID rename requires a migration entry in `app/src/en
 
 ### Project status: ALL PHASES 0–7 COMPLETE
 Full game playable boot->credits in the browser (npm run dev), deterministic, gated, canon-reviewed. 46 dialogues, 61 cards, 18 deductions, 7 editions, 9 side stories, 10 achievements, 9 puzzle modules, 4 save-tested days x 7 playable days.
+
+### Addendum 2026-07-03 (morning) — Native build VERIFIED
+Rust + MSVC Build Tools installed by Ryan. Two packaging fixes landed: productName colon (Windows filename rule) and the startup panic (v1-style plugins.fs.scope -> Tauri 2 capabilities/default.json scoped to $APPDATA/saves). Placeholder icon generated (tools/gen-icon.ts — lantern in ivy, wax drips). **Evidence: release gary-gibbons.exe (4.6 MB) alive 10s+ and closed cleanly; bundles produced: msi (2.8 MB) + nsis setup (2.3 MB) under src-tauri/target/release/bundle/. The game is now a shippable Windows app.**
