@@ -188,3 +188,32 @@ From this point, any content ID rename requires a migration entry in `app/src/en
 - compositePair = [ev_crossing, ev_milo_sighting] once milos_sighting exists; rail completes Night 6 via ev_garden (night_minus_5).
 - careful_hands already produced — Night 6 authoring must not assume it un-produced (reviewer continuity note from Phase 4).
 - Day 5 opens with the Ferris lockup read-aloud consequence if printed_sensational_d4.
+
+---
+
+## 2026-07-03 — PHASE 6: Content Production — DONE (the game is completable)
+
+### What shipped
+- **Days 5–7 complete**: Prudence's day (romance/alibi/SEAL=VALE SIGNET verbatim, Evelyn confirmation, Ferris read-aloud consequence branch, grape beat 5), the heaviest day (Clara ×3 verbatim with off-record clue 3 → Ida's ledger corroboration + PRIMED trust variant, Ida's ledger, the fragment set-piece, Milo's secret trade + protectable sighting + fire-escape verification + voxpop second route, Beatrice's tea FULL VERBATIM off-record with a PRIMED "Who was at the window?" variant, garden acoustics per §13.7, torn letter), and the finale (Dot's blessing + Thin Sourcing exchange, the river walk, boathouse four-reads + shining nails, confrontation FULL VERBATIM with any-order evidence presentation + "Front page after all." variant + III.25.4 floorboards variant, the reading with the complete will, grape 7 with the grounded-Milo consequence branch, credits with the complete Archie letter).
+- **The Discovery Web at scale**: off-record know-it→prove-it proven for Clara (ledger route) and Beatrice (acoustics route per §13.7); beatrice_read_will stays a promise forever.
+- **Night 6**: rail COMPLETES + Two-Witnesses-One-Minute composite, D9–D12 fill Julian's ledger row, D13 FINAL (4 inputs, all on-record), direction aha (railFlip + mapMark), th_secret retires, Hold The Page + Milo attribution (refuse-then-choose, "the game just remembers").
+- **Side stories**: runner system + all 9 arcs with trust floors, payoff barks, doodles — incl. the handyman publish-or-keep CHOICE (both endings written, the Hold-The-Page rehearsal).
+- **Texture**: 4 canon skipping-rhyme verses, 40 wrong-pair barks (spec ≥40 met), festival-photo + locked-drawer + missing-week + &Wick seeds placed unremarked, Beatrice + 4 locations, 26 cards, 8 recipes, editions d5–d7, hints.
+- Totals: 16 characters, 13 locations, 46 dialogues, 61 cards, 18 deductions, 7 editions, 9 sidestories, 9 bark pools.
+
+### gg-content-reviewer verdict
+**LGTM** (after 1 major round — 9 gaps, the strictest review of the project): verbatim clause drop restored (Theodora's letter, at last); Milo attribution consequences and the handyman choice — both REQUIRED features — implemented in full; "Front page after all." wired; a 4th "truth with compassion" recitation removed (exactly 3 game-wide, grep-verified); voxpop umbrella route added per spec §5.4; festival seed placed. Two findings the reviewer RETRACTED with evidence after my citations: the garden-acoustics verification route (§13.7 verbatim authority; delivery-vs-printability distinction holds) and the hold-flag mismatch (engine's generic printed_{tone}_d{day} flag — false positive from content-only scope).
+
+### gg-verifier verdict (evidence summary)
+**PASS** — validator 0 errors/5 by-design warnings; 63/63 tests; **autoplay FULL GAME boot→credits, 595 lines, deterministic ×2** (all 18 recipes, six gated nights, primed tea, hold ack, thin-sourcing, end-of-game blocker traced to engine code); curious sweep 38 interactions zero crashes; build clean; e2e 4/4. Independent hand-verification of the side-story runner via a throwaway harness (all 9 stories, trust floors correct). ID freeze respected (addition-only diff). Cut List: single ending confirmed (the floorboards/read-it variants change one exchange each, never the outcome).
+
+### Phase 7 backlog (from both gates)
+- Side-story runner has no automated coverage (verified by hand only) — add sidestories.test.ts or wire into autoplay.
+- julian_read_it branch rides on inspection alone — add an assertion.
+- Wrong-pair barks: 40 exactly (commit message said 42 — arithmetic slip, target met).
+- weather.ts mulberry duplication → consolidate on Rng.
+- Beatrice festival-photo payoff line (seen_festival_photo) — post-game/NG+ scope.
+- Vite chunk 925 kB — code-split.
+
+### Open DESIGN-QUESTIONs
+- DQ-1, DQ-2 (carried) · **DQ-3 (new)**: side stories ship as observational arcs; four interactive centerpieces flagged for Ryan (handyman choice since implemented — the other three stand).
