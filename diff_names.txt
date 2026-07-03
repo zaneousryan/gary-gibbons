@@ -1,0 +1,5322 @@
+diff --git a/content/barks/day567.json b/content/barks/day567.json
+new file mode 100644
+index 0000000..7f0215a
+--- /dev/null
++++ b/content/barks/day567.json
+@@ -0,0 +1,31 @@
++{
++  "pool": "day567",
++  "barks": [
++    { "id": "gary_inner_loose_ring", "text": "The loose ring. The one Julian spins when he's nervous.", "speaker": "gary", "authored": "verbatim", "ref": "I.5.day5", "tags": [] },
++    { "id": "gary_inner_decided_about", "text": "Two people the town decided about before they'd decided about themselves. That sentence is going to rhyme with something before this week is out. I can feel it.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day5", "tags": [] },
++    { "id": "gary_inner_words_hold", "text": "He held the shovel; the words hold longer. I wrote those words. Grandpa never published angry — I'm learning why the rule exists after breaking it.", "speaker": "gary", "authored": "aletheia", "ref": "II.15.1", "tags": [] },
++    { "id": "gary_inner_two_keys", "text": "Two keys. Fifty years. One accounted for every hour of the week — and one missing from a study drawer. The question mark on the board just stopped glowing and started pointing.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day6", "tags": [] },
++    { "id": "gary_inner_gentle_hands", "text": "Careful now, Gibbons. Grandpa's rule: the closer a story gets to a family, the gentler your hands.", "speaker": "gary", "authored": "verbatim", "ref": "I.5.day5", "tags": [] },
++    { "id": "gary_inner_the_umbrella", "text": "THE umbrella. The one that's leaned against every wall Julian Vale has stood near all week. Couldn't see ears or antlers or anything — because from above, that canopy hides the whole him.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day6", "tags": [] },
++    { "id": "gary_inner_clicking", "text": "A comfort to one child. A verdict overheard by the other.", "speaker": "gary", "authored": "verbatim", "ref": "I.8.1", "tags": [] },
++    { "id": "gary_inner_that_coat", "text": "The seal was intact when Poppy saw it. Broken wax means it was handled after. And it was handled by that coat.", "speaker": "gary", "authored": "verbatim", "ref": "I.5.day6", "tags": [] },
++    { "id": "gary_inner_river_walk", "text": "No dialogue options on the walk down. Some walks are just walks, and you owe them your whole attention.", "speaker": "gary", "authored": "aletheia", "ref": "II.18", "tags": [] },
++    { "id": "gary_inner_after_boathouse", "text": "Grandpa... I went and talked to him first. Truth with compassion — in that order and no other. The story writes itself now, and for once I mean that kindly.", "speaker": "gary", "authored": "aletheia", "ref": "I.8.2", "tags": [] },
++    { "id": "gary_inner_lantern_ivy", "text": "The lantern and the ivy. The seal said it from the start — sharp-eyed folks could have solved the THEME on day two. Some answers wait in plain sight for a town to be ready.", "speaker": "gary", "authored": "aletheia", "ref": "I.10", "tags": [] },
++    { "id": "gary_inner_at_peace_ish", "text": "One grape, given away, and no earthquake. He is at peace. Ish. The stress ball stays on the desk — a man needs institutions.", "speaker": "gary", "authored": "aletheia", "ref": "I.7.1", "tags": [] },
++    { "id": "bark_ded_signet", "text": "The lantern in ivy is the Vale family's own mark. The trail leads to the manor — and the gold string now touches the family portrait. Gentle hands, Gibbons.", "speaker": "gary", "authored": "aletheia", "ref": "I.6.D7", "tags": [] },
++    { "id": "bark_ded_prudence_cleared", "text": "Cataloguing love letters until three in the morning is the best alibi I've ever verified. CLEARED — and the exhibit in the corner just got a happier ending.", "speaker": "gary", "authored": "aletheia", "ref": "I.6.D8", "tags": [] },
++    { "id": "bark_ded_means", "text": "MEANS. One key unaccounted for, family-held. The front door of this mystery had exactly two keys, and I know where one of them isn't.", "speaker": "gary", "authored": "aletheia", "ref": "I.6.D9", "tags": [] },
++    { "id": "bark_ded_motive", "text": "MOTIVE. Not greed — fear. He did the arithmetic of half a conversation and got 'everything' as the amount he was losing.", "speaker": "gary", "authored": "aletheia", "ref": "I.6.D10", "tags": [] },
++    { "id": "bark_ded_opportunity", "text": "OPPORTUNITY. The umbrella crossing, two in the morning, seen twice from two angles. The square belonged to him for exactly one minute.", "speaker": "gary", "authored": "aletheia", "ref": "I.6.D11", "tags": [] },
++    { "id": "bark_ded_proof", "text": "PHYSICAL PROOF. The wax broke after the theft, in a pocket, from being held and held and never opened. Proof of a crime. Proof of a conscience, too.", "speaker": "gary", "authored": "aletheia", "ref": "I.6.D12", "tags": [] },
++    { "id": "bark_ded_final", "text": "It was Julian. And he wasn't stealing a future — he was hiding from one. ...Grandpa, how do I write a story that doesn't break the person it's about? ...Right. You don't write it yet. First you go talk to him.", "speaker": "gary", "authored": "verbatim", "ref": "I.5.day6", "tags": [] },
++    { "id": "bark_ded_toward_river", "text": "We've all been reading the sentence backwards. The question was never where he came from. It's where he was carrying everything to.", "speaker": "gary", "authored": "verbatim", "ref": "III.22.1", "tags": [] },
++    { "id": "bench_archive_d5", "text": "The Archive smells like patience. Somewhere in these reeds of shelves is a fifty-year love story with one page missing, and the page is in a hole in the ground somewhere. Journalism is a strange profession.", "speaker": "gary", "authored": "aletheia", "ref": "II.18", "tags": ["archive"] },
++    { "id": "bench_alley_d6", "text": "Milo's alley. From down here the fire escape looks like a kid-sized press box over the whole square. Of course he saw it. Kids in high places always see it.", "speaker": "gary", "authored": "aletheia", "ref": "II.18", "tags": ["alley"] },
++    { "id": "bench_manor_d6", "text": "The manor holds its breath so well it's practically a family skill. Tea gets poured in there for conversations that never quite happen. Today one has to.", "speaker": "gary", "authored": "aletheia", "ref": "II.18", "tags": ["manor"] },
++    { "id": "bench_boathouse_after", "text": "The river keeps moving. That's the whole of its advice, and it's good advice. Behind him, and getting smaller.", "speaker": "gary", "authored": "aletheia", "ref": "I.8.2", "tags": ["boathouse"] },
++    { "id": "beatrice_repeat_busy", "text": "The parlor door is closed the way only Beatrice Vale can close a door — politely, completely, and with tea still warm on the other side.", "speaker": "gary", "authored": "aletheia", "ref": "I.4", "tags": [] },
++    { "id": "beatrice_observe_cup", "text": "She turned her cup a quarter turn when I said 'will.' In this house, that's a shout.", "speaker": "gary", "authored": "aletheia", "ref": "II.12.1", "tags": [] }
++  ]
++}
+diff --git a/content/barks/rhymes.json b/content/barks/rhymes.json
+new file mode 100644
+index 0000000..d03fce9
+--- /dev/null
++++ b/content/barks/rhymes.json
+@@ -0,0 +1,9 @@
++{
++  "pool": "rhymes",
++  "barks": [
++    { "id": "rhyme_d1", "text": "Fifty years inside the stone / fifty treasures coming home—", "authored": "verbatim", "ref": "II.14.3", "tags": ["market"], "cond": { "day": { "lte": 2 } } },
++    { "id": "rhyme_d3", "text": "Guardian, Guardian, whatcha gonna keep? / Empty box and a district to sweep—", "authored": "verbatim", "ref": "II.14.3", "tags": ["market"], "cond": { "all": [{ "day": { "gte": 3 } }, { "day": { "lte": 4 } }] } },
++    { "id": "rhyme_d5", "text": "Weasel dug a hole, hole had jam / weasel said sorry to the garden ma'am—", "authored": "verbatim", "ref": "II.14.3", "tags": ["market"], "cond": { "all": [{ "day": { "gte": 5 } }, { "day": { "lte": 6 } }] } },
++    { "id": "rhyme_d7", "text": "Lantern and the ivy grow / side by side in a see-saw row—", "authored": "verbatim", "ref": "II.14.3", "tags": ["market"], "cond": { "day": 7 } }
++  ]
++}
+diff --git a/content/barks/sidestory_barks.json b/content/barks/sidestory_barks.json
+new file mode 100644
+index 0000000..fed48b6
+--- /dev/null
++++ b/content/barks/sidestory_barks.json
+@@ -0,0 +1,19 @@
++{
++  "pool": "sidestory_barks",
++  "barks": [
++    { "id": "ss_redpen_payoff", "text": "Bought the kid his own pens — the good kind. He signed a receipt for them in red, 'for the file.' The Ledger has a junior stringer now, whether the Ledger knows it or not.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.1", "tags": [] },
++    { "id": "ss_otto_hook", "text": "Otto's entering the regional roasting fair. Otto has a head cold. Otto cannot smell his own blends, and it is quietly breaking his enormous heart.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.2", "tags": [] },
++    { "id": "ss_otto_payoff", "text": "The fair took THE GIBBONS — 'notes of tweed and stubbornness.' It's on the menu permanently now. I have become a beverage. Grandpa would be proud, probably.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.2", "tags": [] },
++    { "id": "ss_handyman_reveal", "text": "The brass screws. Eight years of gates that stopped squeaking and steps that stopped wobbling — it's Warren. Maintaining a district he wasn't sure he had the right to lead.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.3", "tags": [] },
++    { "id": "ss_handyman_payoff", "text": "A brass screw, pressed into my hand at the dock: 'For your board. File under stories that didn't need telling.' Some scoops you keep by not keeping them.", "speaker": "gary", "authored": "verbatim", "ref": "II.17.3", "tags": [] },
++    { "id": "ss_marrow_payoff", "text": "The rival had watered it to death WEEKS ago. Gino forgave him in an aria. They're co-planting a memorial vine. Grapes. Of course it's grapes. My face did a thing and everyone saw.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.4", "tags": [] },
++    { "id": "ss_key_reveal", "text": "The looped G, the crossed double-t, the pressure of the pen. Drawer 400's ticket belongs to Margie's late husband. Forty years, one music box, still waiting for its repair to be collected.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.5", "tags": [] },
++    { "id": "ss_key_payoff", "text": "She let it play once, alone, after close. I quietly didn't file this one either. Ida: 'Locks are patient, Mr. Gibbons. So am I.'", "speaker": "gary", "authored": "verbatim", "ref": "II.17.5", "tags": [] },
++    { "id": "ss_byline_reveal", "text": "The doorstep gardener is Beatrice Vale. Milo's evidence chart is impeccable, and he keeps whispering 'follow the vegetables' like it's a noir picture.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.6", "tags": [] },
++    { "id": "ss_byline_payoff", "text": "Two sentences in the real Evening Edition, name attached: MILO TANAKA. He framed it. The frame is bigger than the clipping by a factor of nine.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.6", "tags": [] },
++    { "id": "ss_whistler_reveal", "text": "'Theodora's Air.' Written for her fifty years ago, learned grandfather-to-grandson from Jonah Croft himself. The town forgot the song's name and kept the song.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.7", "tags": [] },
++    { "id": "ss_whistler_payoff", "text": "He played it while she read the letter. Nobody introduced the piece. Nobody needed to.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.7", "tags": [] },
++    { "id": "ss_planz_payoff", "text": "PLAN A: JOY — framed at her stall, slightly crooked, perfect. She planned the recovery ceremony before there was anything to recover. That's not lamination. That's faith.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.8", "tags": [] },
++    { "id": "ss_pigeons_payoff", "text": "One nest. Warren photographed it. The notebook's final doodle is the two of them in tiny lantern and ivy costumes, and I regret nothing.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.9", "tags": [] }
++  ]
++}
+diff --git a/content/barks/wrong_pairs.json b/content/barks/wrong_pairs.json
+index bddddcd..55ba427 100644
+--- a/content/barks/wrong_pairs.json
++++ b/content/barks/wrong_pairs.json
+@@ -15,6 +15,31 @@
+     { "id": "wp_not_yet", "text": "Not yet. Some pairs are true and still not ready. This one's neither.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] },
+     { "id": "wp_generous", "text": "That's generous thinking. Generous like putting a hat on a lamppost.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] },
+     { "id": "wp_editor_voice", "text": "I can hear Dot already: 'Sell me that in one sentence.' I could not sell that in a paragraph.", "speaker": "gary", "authored": "aletheia", "ref": "II.16.6", "tags": [] },
+-    { "id": "wp_string_budget", "text": "No. And I'm starting to think the string budget should count against me personally.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] }
++    { "id": "wp_string_budget", "text": "No. And I'm starting to think the string budget should count against me personally.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] },
++    { "id": "wp_two_lefts", "text": "That's two left shoes, Gibbons. Technically a pair. Practically a limp.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] },
++    { "id": "wp_pigeons_agree", "text": "No. Even the divorced pigeons agree on more than these two.", "speaker": "gary", "authored": "aletheia", "ref": "II.14.4", "tags": [] },
++    { "id": "wp_hold_grapes", "text": "Holding this theory feels like holding Gino's fruit through a whole interview. Heavy. Sticky. Not mine to keep.", "speaker": "gary", "authored": "aletheia", "ref": "III.23.4", "tags": [] },
++    { "id": "wp_kind_wrong", "text": "It's a kind thought. Kind and wrong can share a sentence; they can't share a string.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] },
++    { "id": "wp_second_draft", "text": "Nope. That's a first-draft connection. Warren rewrites joy three times; I can rewrite one string.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day3", "tags": [] },
++    { "id": "wp_laminate", "text": "If this were true, Poppy would have laminated it by now.", "speaker": "gary", "authored": "aletheia", "ref": "I.4", "tags": [] },
++    { "id": "wp_locks_gossip", "text": "Locks are terrible gossips and even they haven't heard this one.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day6", "tags": [] },
++    { "id": "wp_wind_drops", "text": "That's half a sentence pretending to be a whole one. I've learned to wait for the wind to drop.", "speaker": "gary", "authored": "aletheia", "ref": "II.13.7", "tags": [] },
++    { "id": "wp_espresso_thin", "text": "Otto would call that a thin pull. All water, no crema.", "speaker": "gary", "authored": "aletheia", "ref": "I.4", "tags": [] },
++    { "id": "wp_bellissimo_no", "text": "As Gino would say: a tragedy. A small one. But a tragedy.", "speaker": "gary", "authored": "aletheia", "ref": "I.4", "tags": [] },
++    { "id": "wp_map_jam", "text": "This connection has jam on it. Somebody enthusiastic got here before the facts did.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day4", "tags": [] },
++    { "id": "wp_pastry_test", "text": "Tuck tests pastry with more rigor than I just tested that idea.", "speaker": "gary", "authored": "aletheia", "ref": "I.4", "tags": [] },
++    { "id": "wp_ethics", "text": "No. Journalism has ETHICS. I read about it. An eleven-year-old told me where.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day6", "tags": [] },
++    { "id": "wp_ivy_holds", "text": "Ivy holds what it grows over. This string holds nothing. Botany wins.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day1", "tags": [] },
++    { "id": "wp_deadline", "text": "If I filed that connection, Dot would return it with the red pen and a personal note. Possibly a bite.", "speaker": "gary", "authored": "aletheia", "ref": "I.4", "tags": [] },
++    { "id": "wp_chalkboard", "text": "No. Though it would make a decent chalkboard special: THE LONG SHOT — mostly foam.", "speaker": "gary", "authored": "aletheia", "ref": "II.14", "tags": [] },
++    { "id": "wp_rowboat", "text": "Grandpa filed from a rowboat once. Even mid-river, he'd have rowed away from this one.", "speaker": "gary", "authored": "aletheia", "ref": "I.7.2", "tags": [] },
++    { "id": "wp_contingency", "text": "There's no contingency card for this connection. Not even PLAN F: SWANS covers it.", "speaker": "gary", "authored": "aletheia", "ref": "I.4", "tags": [] },
++    { "id": "wp_night_photo", "text": "Long exposure, Gibbons: hold the shutter open long enough and the truth smears into view. This one's just smear.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day3", "tags": [] },
++    { "id": "wp_umbrella_logic", "text": "That theory covers everything and shows nothing. I know an umbrella like that.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day6", "tags": [] },
++    { "id": "wp_marrow", "text": "The marrow died for less certainty than this, and the marrow still deserved better.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.4", "tags": [] },
++    { "id": "wp_shears", "text": "Evelyn would prune that connection at the stem. Cleanly. While maintaining eye contact.", "speaker": "gary", "authored": "aletheia", "ref": "I.4", "tags": [] },
++    { "id": "wp_sherry", "text": "One (1) sherry of an idea. Margie would quote it back to me verbatim and it would not survive the quoting.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day3", "tags": [] },
++    { "id": "wp_stakeout_hum", "text": "This theory hums while it sneaks. I've seen how that ends: hole number six.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day4", "tags": [] },
++    { "id": "wp_own_eyes", "text": "A document, a witness, or my own eyes. This has none of the three. It barely has the string.", "speaker": "gary", "authored": "aletheia", "ref": "II.12.6", "tags": [] }
+   ]
+ }
+diff --git a/content/cards/beatrice_read_will.json b/content/cards/beatrice_read_will.json
+new file mode 100644
+index 0000000..3d86f7e
+--- /dev/null
++++ b/content/cards/beatrice_read_will.json
+@@ -0,0 +1,12 @@
++{
++  "id": "beatrice_read_will",
++  "ref": "I.8.1",
++  "type": "testimony",
++  "title": "Beatrice read the will - ten years ago",
++  "sprite": "card_beatrice_read_will",
++  "source": "beatrice",
++  "initialStatus": "offrecord",
++  "text": "The night before Edmund sealed it away. That is all the further she will go. It is not hers to tell, and it never will be. Some cards stay promises.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/clara_fear.json b/content/cards/clara_fear.json
+new file mode 100644
+index 0000000..887c1cc
+--- /dev/null
++++ b/content/cards/clara_fear.json
+@@ -0,0 +1,12 @@
++{
++  "id": "clara_fear",
++  "ref": "I.5.day6",
++  "type": "testimony",
++  "title": "CLARA CLUE 1 - Julian's fear",
++  "sprite": "card_clara_fear",
++  "source": "clara",
++  "initialStatus": "verified",
++  "text": "'What if I'm only the shape of Father?' He's terrified of the chair - and everyone, including Clara, keeps telling him he'll hold it alone.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/clara_key_missing.json b/content/cards/clara_key_missing.json
+new file mode 100644
+index 0000000..a89ccbe
+--- /dev/null
++++ b/content/cards/clara_key_missing.json
+@@ -0,0 +1,21 @@
++{
++  "id": "clara_key_missing",
++  "ref": "I.5.day6",
++  "type": "testimony",
++  "title": "CLARA CLUE 3 - the family backup key is MISSING",
++  "sprite": "card_clara_key_missing",
++  "source": "clara",
++  "initialStatus": "offrecord",
++  "text": "Two keys have always existed: the council's, and a family backup in Edmund's study. Clara looked last night. It's gone. Given in trust - the family in Gary's hands.",
++  "verifyRoutes": [
++    {
++      "id": "idas_ledger_route",
++      "ref": "III.23.1",
++      "hint": "Clara's trust is not printable. Fifty-year-old locksmith records are.",
++      "cond": {
++        "card": "idas_ledger"
++      }
++    }
++  ],
++  "reReadLines": []
++}
+diff --git a/content/cards/ded_final.json b/content/cards/ded_final.json
+new file mode 100644
+index 0000000..4d2ef58
+--- /dev/null
++++ b/content/cards/ded_final.json
+@@ -0,0 +1,12 @@
++{
++  "id": "ded_final",
++  "ref": "I.6.D13",
++  "type": "deduction",
++  "title": "IT WAS JULIAN - hiding, not stealing",
++  "sprite": "card_ded_final",
++  "source": "gary",
++  "initialStatus": "verified",
++  "text": "Motive, means, opportunity, proof. And underneath all four: a man who emptied fifty years of a town into a hole in the floor because he couldn't finish overhearing a conversation. He wasn't stealing a future. He was hiding from one.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/ded_means.json b/content/cards/ded_means.json
+new file mode 100644
+index 0000000..3e0a7e7
+--- /dev/null
++++ b/content/cards/ded_means.json
+@@ -0,0 +1,12 @@
++{
++  "id": "ded_means",
++  "ref": "I.6.D9",
++  "type": "deduction",
++  "title": "MEANS - one key unaccounted for, family-held",
++  "sprite": "card_ded_means",
++  "source": "gary",
++  "initialStatus": "verified",
++  "text": "Exactly two keys in fifty years. The council's is accounted for every hour. The family's backup is missing from Edmund's study. Whoever crossed the square owned the front door of this mystery.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/ded_motive.json b/content/cards/ded_motive.json
+new file mode 100644
+index 0000000..ed83d94
+--- /dev/null
++++ b/content/cards/ded_motive.json
+@@ -0,0 +1,12 @@
++{
++  "id": "ded_motive",
++  "ref": "I.6.D10",
++  "type": "deduction",
++  "title": "MOTIVE - fear of disinheritance, not greed",
++  "sprite": "card_ded_motive",
++  "source": "gary",
++  "initialStatus": "verified",
++  "text": "Julian heard half a conversation and did the arithmetic of the missing half: 'I'm about to lose everything.' Fear is a quieter motive than greed, and it packs more carefully.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/ded_opportunity.json b/content/cards/ded_opportunity.json
+new file mode 100644
+index 0000000..a08fc30
+--- /dev/null
++++ b/content/cards/ded_opportunity.json
+@@ -0,0 +1,12 @@
++{
++  "id": "ded_opportunity",
++  "ref": "I.6.D11",
++  "type": "deduction",
++  "title": "OPPORTUNITY - the umbrella crossing, 2 a.m.",
++  "sprite": "card_ded_opportunity",
++  "source": "gary",
++  "initialStatus": "verified",
++  "text": "Two witnesses, one minute: Ferris saw the key turn smooth as butter; Milo saw THE umbrella hide the whole him. Night -2, two in the morning, the square briefly belonged to someone.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/ded_proof.json b/content/cards/ded_proof.json
+new file mode 100644
+index 0000000..26d2905
+--- /dev/null
++++ b/content/cards/ded_proof.json
+@@ -0,0 +1,12 @@
++{
++  "id": "ded_proof",
++  "ref": "I.6.D12",
++  "type": "deduction",
++  "title": "PHYSICAL PROOF - he handled the will, after",
++  "sprite": "card_ded_proof",
++  "source": "gary",
++  "initialStatus": "verified",
++  "text": "The seal was whole when Poppy counted. The wax broke later - in a coat pocket, from being taken out and turned over and not opened, five days running. The fragment is proof of a crime and of a conscience.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/ded_prudence_cleared.json b/content/cards/ded_prudence_cleared.json
+new file mode 100644
+index 0000000..e90efdf
+--- /dev/null
++++ b/content/cards/ded_prudence_cleared.json
+@@ -0,0 +1,12 @@
++{
++  "id": "ded_prudence_cleared",
++  "ref": "I.6.D8",
++  "type": "deduction",
++  "title": "The curator is CLEARED - and the romance is real",
++  "sprite": "card_ded_prudence_cleared",
++  "source": "gary",
++  "initialStatus": "verified",
++  "text": "Night -2, cataloguing with Evelyn Croft until three in the morning, both sides of a fifty-year correspondence between them. Twenty years of 'little theory' turns out to be the town's oldest love story, mid-restoration.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/ded_signet.json b/content/cards/ded_signet.json
+new file mode 100644
+index 0000000..8624704
+--- /dev/null
++++ b/content/cards/ded_signet.json
+@@ -0,0 +1,12 @@
++{
++  "id": "ded_signet",
++  "ref": "I.6.D7",
++  "type": "deduction",
++  "title": "The sealed envelope bears the VALE FAMILY SIGNET",
++  "sprite": "card_ded_signet",
++  "source": "gary",
++  "initialStatus": "verified",
++  "text": "Not the council's seal - the family's own lantern-in-ivy, from a ring that never left the family. The trail leads to Vale Manor. Careful now, Gibbons. The closer a story gets to a family, the gentler your hands.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/ded_toward_river.json b/content/cards/ded_toward_river.json
+new file mode 100644
+index 0000000..a8b1a97
+--- /dev/null
++++ b/content/cards/ded_toward_river.json
+@@ -0,0 +1,12 @@
++{
++  "id": "ded_toward_river",
++  "ref": "III.22.1",
++  "type": "deduction",
++  "title": "AHA - he was walking TOWARD THE RIVER",
++  "sprite": "card_ded_toward_river",
++  "source": "gary",
++  "initialStatus": "verified",
++  "text": "Everyone read the sentence backwards. The question was never where he came from - it's where he was carrying everything TO. The rail card flips with a soft snap, and the riverbank quietly gains a question mark.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/ev_garden.json b/content/cards/ev_garden.json
+new file mode 100644
+index 0000000..04ee350
+--- /dev/null
++++ b/content/cards/ev_garden.json
+@@ -0,0 +1,16 @@
++{
++  "id": "ev_garden",
++  "ref": "II.16.1",
++  "type": "event",
++  "title": "NIGHT -5: half a conversation in the garden",
++  "sprite": "card_ev_garden",
++  "source": "gary",
++  "initialStatus": "verified",
++  "text": "'It isn't fair.' / 'You may be surprised.' One comfort, one verdict, one open study window.",
++  "verifyRoutes": [],
++  "reReadLines": [],
++  "anchor": {
++    "card": "overheard_conversation"
++  },
++  "railSlot": "night_minus_5"
++}
+diff --git a/content/cards/ev_milo_sighting.json b/content/cards/ev_milo_sighting.json
+new file mode 100644
+index 0000000..8425b93
+--- /dev/null
++++ b/content/cards/ev_milo_sighting.json
+@@ -0,0 +1,17 @@
++{
++  "id": "ev_milo_sighting",
++  "ref": "II.16.1",
++  "type": "event",
++  "title": "NIGHT -2: Milo sees THE umbrella",
++  "sprite": "card_ev_milo_sighting",
++  "source": "gary",
++  "initialStatus": "verified",
++  "text": "From the fire escape: the whole him hidden under one particular canopy, silver duck handle and all.",
++  "verifyRoutes": [],
++  "reReadLines": [],
++  "anchor": {
++    "card": "milos_sighting",
++    "status": "verified"
++  },
++  "railSlot": "night_minus_2"
++}
+diff --git a/content/cards/evelyn_confirmation.json b/content/cards/evelyn_confirmation.json
+new file mode 100644
+index 0000000..6ce1a8e
+--- /dev/null
++++ b/content/cards/evelyn_confirmation.json
+@@ -0,0 +1,12 @@
++{
++  "id": "evelyn_confirmation",
++  "ref": "I.5.day5",
++  "type": "testimony",
++  "title": "Evelyn confirms - until three, with tea",
++  "sprite": "card_evelyn_confirmation",
++  "source": "evelyn",
++  "initialStatus": "verified",
++  "text": "Confirmed, blushing: cataloguing until 3 a.m., Jonah's letters read aloud in a borrowed voice. Some alibis are also the best nights of a person's year.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/garden_acoustics.json b/content/cards/garden_acoustics.json
+new file mode 100644
+index 0000000..eeac35f
+--- /dev/null
++++ b/content/cards/garden_acoustics.json
+@@ -0,0 +1,12 @@
++{
++  "id": "garden_acoustics",
++  "ref": "II.13.7",
++  "type": "physical",
++  "title": "The garden acoustics - audible only when the wind drops",
++  "sprite": "card_garden_acoustics",
++  "source": "vale_manor",
++  "initialStatus": "verified",
++  "text": "From the study window, the garden arrives in halves - whole sentences only when the wind rests. The physics of overhearing enough to be exactly wrong.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/idas_ledger.json b/content/cards/idas_ledger.json
+new file mode 100644
+index 0000000..6f3ea2e
+--- /dev/null
++++ b/content/cards/idas_ledger.json
+@@ -0,0 +1,12 @@
++{
++  "id": "idas_ledger",
++  "ref": "I.5.day6",
++  "type": "document",
++  "title": "IDA'S LEDGER - exactly two keys exist",
++  "sprite": "card_idas_ledger",
++  "source": "ida",
++  "initialStatus": "verified",
++  "text": "Fifty years ago: two keys, apprentice work, one to the council, one to Edmund. No copies since - the lock would gossip. It's only ever known its two.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/milos_sighting.json b/content/cards/milos_sighting.json
+new file mode 100644
+index 0000000..f1d2c5f
+--- /dev/null
++++ b/content/cards/milos_sighting.json
+@@ -0,0 +1,25 @@
++{
++  "id": "milos_sighting",
++  "ref": "I.5.day6",
++  "type": "testimony",
++  "title": "Milo saw the umbrella - 2 a.m.",
++  "sprite": "card_milos_sighting",
++  "source": "milo",
++  "initialStatus": "unverified",
++  "text": "A tall figure, no face, no ears, no anything - the umbrella was in the way of the whole him. But THE umbrella. The fancy Vale one with the silver duck handle. Nobody else has that umbrella.",
++  "verifyRoutes": [
++    {
++      "id": "sightline",
++      "ref": "III.20",
++      "hint": "A good reporter checks whether the kid COULD have seen it. Stand where he stood.",
++      "cond": {
++        "flag": "fire_escape_puzzle_done"
++      }
++    }
++  ],
++  "reReadLines": [],
++  "attribution": {
++    "protectable": true,
++    "namedFlag": "named_milo"
++  }
++}
+diff --git a/content/cards/overheard_conversation.json b/content/cards/overheard_conversation.json
+new file mode 100644
+index 0000000..470ad0c
+--- /dev/null
++++ b/content/cards/overheard_conversation.json
+@@ -0,0 +1,21 @@
++{
++  "id": "overheard_conversation",
++  "ref": "I.8.1",
++  "type": "testimony",
++  "title": "THE OVERHEARD CONVERSATION - 'You may be surprised'",
++  "sprite": "card_overheard_conversation",
++  "source": "beatrice",
++  "initialStatus": "offrecord",
++  "text": "Five nights before the ceremony, in the garden: 'It isn't fair. Everyone already knows he'll lead.' And the only true thing that wasn't a secret: 'You may be surprised.' A comfort to one child. A verdict overheard by the other.",
++  "verifyRoutes": [
++    {
++      "id": "garden_echo",
++      "ref": "II.13.7",
++      "hint": "The garden itself can testify - stand at the study window and listen to how the wind edits sentences.",
++      "cond": {
++        "flag": "garden_acoustics_done"
++      }
++    }
++  ],
++  "reReadLines": []
++}
+diff --git a/content/cards/prudence_alibi.json b/content/cards/prudence_alibi.json
+new file mode 100644
+index 0000000..561fbc8
+--- /dev/null
++++ b/content/cards/prudence_alibi.json
+@@ -0,0 +1,21 @@
++{
++  "id": "prudence_alibi",
++  "ref": "I.5.day5",
++  "type": "testimony",
++  "title": "Prudence's alibi - cataloguing with Evelyn until 3 a.m.",
++  "sprite": "card_prudence_alibi",
++  "source": "prudence",
++  "initialStatus": "unverified",
++  "text": "Night -2: reconstructing both sides of the Theodora-Jonah correspondence with Evelyn Croft, until three in the morning. Verify with the florist. Bring context; she is armed with shears.",
++  "verifyRoutes": [
++    {
++      "id": "evelyn_confirms",
++      "ref": "I.5.day5",
++      "hint": "The florist can confirm it - two rival family lines, one long night of letters.",
++      "cond": {
++        "card": "evelyn_confirmation"
++      }
++    }
++  ],
++  "reReadLines": []
++}
+diff --git a/content/cards/prudences_id.json b/content/cards/prudences_id.json
+new file mode 100644
+index 0000000..265db2a
+--- /dev/null
++++ b/content/cards/prudences_id.json
+@@ -0,0 +1,12 @@
++{
++  "id": "prudences_id",
++  "ref": "I.5.day5",
++  "type": "testimony",
++  "title": "SEAL IDENTIFIED - Edmund Vale's personal signet",
++  "sprite": "card_prudences_id",
++  "source": "prudence",
++  "initialStatus": "verified",
++  "text": "Not the council seal. The lantern in ivy is the Vale family signet - and the ring never left the family. It sits, as far as anyone knows, on his son's finger to this day.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/recovered_contents.json b/content/cards/recovered_contents.json
+new file mode 100644
+index 0000000..3d089fe
+--- /dev/null
++++ b/content/cards/recovered_contents.json
+@@ -0,0 +1,12 @@
++{
++  "id": "recovered_contents",
++  "ref": "I.8.2",
++  "type": "physical",
++  "title": "THE CONTENTS - located, returned intact",
++  "sprite": "card_recovered_contents",
++  "source": "old_boathouse",
++  "initialStatus": "verified",
++  "text": "Under the boathouse floor: the crates, the children's bundles, and on top, the green-sealed envelope - cracked, but unopened. Contents located. Returned intact.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/two_person_puzzles.json b/content/cards/two_person_puzzles.json
+new file mode 100644
+index 0000000..0c8a0b6
+--- /dev/null
++++ b/content/cards/two_person_puzzles.json
+@@ -0,0 +1,12 @@
++{
++  "id": "two_person_puzzles",
++  "ref": "I.5.day6",
++  "type": "testimony",
++  "title": "CLARA CLUE 2 - the two-person puzzles (SAVE FOR CONFRONTATION)",
++  "sprite": "card_two_person_puzzles",
++  "source": "clara",
++  "initialStatus": "verified",
++  "text": "Every birthday: one puzzle, one box, two children - designed so neither could solve it alone. She used to think it was a game. Lately she thinks it was a syllabus.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/cards/wax_fragment.json b/content/cards/wax_fragment.json
+new file mode 100644
+index 0000000..c533706
+--- /dev/null
++++ b/content/cards/wax_fragment.json
+@@ -0,0 +1,12 @@
++{
++  "id": "wax_fragment",
++  "ref": "I.5.day6",
++  "type": "physical",
++  "title": "THE WAX FRAGMENT - matches the sketch",
++  "sprite": "card_wax_fragment",
++  "source": "the_percolator",
++  "initialStatus": "verified",
++  "text": "Green wax from Julian's coat pocket, ivy leaves aligning with the seal sketch. The seal was intact when Poppy saw it. Broken wax means handled after - by that coat.",
++  "verifyRoutes": [],
++  "reReadLines": []
++}
+diff --git a/content/characters/beatrice.json b/content/characters/beatrice.json
+new file mode 100644
+index 0000000..11ddb01
+--- /dev/null
++++ b/content/characters/beatrice.json
+@@ -0,0 +1,22 @@
++{
++  "id": "beatrice",
++  "name": "Beatrice Vale",
++  "ref": "I.4",
++  "species": "red deer (doe, silvered)",
++  "portraitSet": "beatrice",
++  "voice": { "textSpeed": 0.85, "blipSound": "blip_beatrice" },
++  "greetings": {
++    "cold": "Mr. Gibbons. The garden is not receiving today.",
++    "neutral": "Mr. Gibbons. The tea is already poured — I find that saves us both a pretense.",
++    "warm": "Mr. Gibbons. Sit. You take it without sugar; I remembered."
++  },
++  "tells": [
++    {
++      "id": "quarter_turned_cup",
++      "cond": { "flag": "beatrice_topic_will" },
++      "observeLine": "beatrice_observe_cup",
++      "noticedFlag": "noticed_beatrice_cup"
++    }
++  ],
++  "etiquette": { "note": "She never lies. She declines. Every sentence is true; the silences carry the secrets. The PRESS button wilts in her scenes — deflected perfectly, every time." }
++}
+diff --git a/content/deductions.json b/content/deductions.json
+index 98a7aba..971370d 100644
+--- a/content/deductions.json
++++ b/content/deductions.json
+@@ -4,60 +4,90 @@
+       "id": "red_pen_bandit",
+       "ref": "II.17.1",
+       "kind": "standard",
+-      "inputs": ["dots_missing_pens", "milos_crimes_notebook"],
++      "inputs": [
++        "dots_missing_pens",
++        "milos_crimes_notebook"
++      ],
+       "requireVerified": false,
+       "requireOnRecordForFinale": false,
+-      "produces": { "card": "ded_red_pen_bandit" },
++      "produces": {
++        "card": "ded_red_pen_bandit"
++      },
+       "garyLine": "bark_ded_red_pen_bandit"
+     },
+     {
+       "id": "d1_emptied_before",
+       "ref": "I.6.D1",
+       "kind": "standard",
+-      "inputs": ["empty_vault", "unforced_lock"],
++      "inputs": [
++        "empty_vault",
++        "unforced_lock"
++      ],
+       "requireVerified": true,
+       "requireOnRecordForFinale": false,
+-      "produces": { "card": "ded_emptied_before" },
++      "produces": {
++        "card": "ded_emptied_before"
++      },
+       "garyLine": "bark_ded_emptied_before"
+     },
+     {
+       "id": "d2_borrowed_recently",
+       "ref": "I.6.D2",
+       "kind": "standard",
+-      "inputs": ["key_backwards", "dust_outline"],
++      "inputs": [
++        "key_backwards",
++        "dust_outline"
++      ],
+       "requireVerified": true,
+       "requireOnRecordForFinale": false,
+-      "produces": { "card": "ded_borrowed_recently" },
++      "produces": {
++        "card": "ded_borrowed_recently"
++      },
+       "garyLine": "bark_ded_borrowed_recently"
+     },
+     {
+       "id": "d3_theft_window",
+       "ref": "I.6.D3",
+       "kind": "standard",
+-      "inputs": ["poppys_checklist", "empty_vault"],
++      "inputs": [
++        "poppys_checklist",
++        "empty_vault"
++      ],
+       "requireVerified": true,
+       "requireOnRecordForFinale": false,
+-      "produces": { "card": "ded_theft_window" },
++      "produces": {
++        "card": "ded_theft_window"
++      },
+       "garyLine": "bark_ded_theft_window"
+     },
+     {
+       "id": "poppy_opened_not_emptied",
+       "ref": "I.5.day2",
+       "kind": "standard",
+-      "inputs": ["key_backwards", "poppys_checklist"],
++      "inputs": [
++        "key_backwards",
++        "poppys_checklist"
++      ],
+       "requireVerified": true,
+       "requireOnRecordForFinale": false,
+-      "produces": { "card": "ded_poppy_opened_not_emptied" },
++      "produces": {
++        "card": "ded_poppy_opened_not_emptied"
++      },
+       "garyLine": "bark_ded_poppy_cleared"
+     },
+     {
+       "id": "careful_hands",
+       "ref": "III.22.3",
+       "kind": "aha",
+-      "inputs": ["sharp_edged_void", "poppys_checklist"],
++      "inputs": [
++        "sharp_edged_void",
++        "poppys_checklist"
++      ],
+       "requireVerified": true,
+       "requireOnRecordForFinale": false,
+-      "produces": { "card": "ded_careful_hands" },
++      "produces": {
++        "card": "ded_careful_hands"
++      },
+       "garyLine": "bark_ded_careful_hands",
+       "cinematic": "theory_curl_outsider"
+     },
+@@ -65,42 +95,202 @@
+       "id": "d4_warren_cleared",
+       "ref": "I.6.D4",
+       "kind": "standard",
+-      "inputs": ["margies_testimony", "warrens_speech", "lighthouse_folio"],
++      "inputs": [
++        "margies_testimony",
++        "warrens_speech",
++        "lighthouse_folio"
++      ],
+       "requireVerified": true,
+       "requireOnRecordForFinale": false,
+-      "produces": { "card": "ded_warren_cleared", "clearSuspect": "warren" },
++      "produces": {
++        "card": "ded_warren_cleared",
++        "clearSuspect": "warren"
++      },
+       "garyLine": "bark_ded_warren_cleared"
+     },
+     {
+       "id": "d5_lodger",
+       "ref": "I.6.D5",
+       "kind": "standard",
+-      "inputs": ["night_photograph", "lodger_gossip"],
++      "inputs": [
++        "night_photograph",
++        "lodger_gossip"
++      ],
+       "requireVerified": true,
+       "requireOnRecordForFinale": false,
+-      "produces": { "card": "ded_lodger" },
++      "produces": {
++        "card": "ded_lodger"
++      },
+       "garyLine": "bark_ded_lodger"
+     },
+     {
+       "id": "d6_insider",
+       "ref": "I.6.D6",
+       "kind": "standard",
+-      "inputs": ["ferris_testimony", "ded_emptied_before"],
++      "inputs": [
++        "ferris_testimony",
++        "ded_emptied_before"
++      ],
+       "requireVerified": true,
+       "requireOnRecordForFinale": false,
+-      "produces": { "card": "ded_insider" },
++      "produces": {
++        "card": "ded_insider"
++      },
+       "garyLine": "bark_ded_insider"
+     },
+     {
+       "id": "photo_witness",
+       "ref": "III.22.2",
+       "kind": "aha",
+-      "inputs": ["night_photograph", "ferris_testimony"],
++      "inputs": [
++        "night_photograph",
++        "ferris_testimony"
++      ],
+       "requireVerified": true,
+       "requireOnRecordForFinale": false,
+-      "produces": { "card": "ded_photo_witness" },
++      "produces": {
++        "card": "ded_photo_witness"
++      },
+       "garyLine": "bark_ded_photo_witness",
+       "cinematic": "photo_to_witness_column"
++    },
++    {
++      "id": "d7_signet",
++      "ref": "I.6.D7",
++      "kind": "standard",
++      "inputs": [
++        "seal_sketch",
++        "prudences_id"
++      ],
++      "requireVerified": true,
++      "requireOnRecordForFinale": false,
++      "produces": {
++        "card": "ded_signet"
++      },
++      "garyLine": "bark_ded_signet"
++    },
++    {
++      "id": "d8_prudence_cleared",
++      "ref": "I.6.D8",
++      "kind": "standard",
++      "inputs": [
++        "prudence_alibi",
++        "evelyn_confirmation"
++      ],
++      "requireVerified": true,
++      "requireOnRecordForFinale": false,
++      "produces": {
++        "card": "ded_prudence_cleared",
++        "clearSuspect": "prudence"
++      },
++      "garyLine": "bark_ded_prudence_cleared"
++    },
++    {
++      "id": "d9_means",
++      "ref": "I.6.D9",
++      "kind": "standard",
++      "inputs": [
++        "clara_key_missing",
++        "idas_ledger"
++      ],
++      "requireVerified": true,
++      "requireOnRecordForFinale": true,
++      "produces": {
++        "card": "ded_means",
++        "ledgerCell": {
++          "suspect": "julian",
++          "col": "means"
++        }
++      },
++      "garyLine": "bark_ded_means"
++    },
++    {
++      "id": "d10_motive",
++      "ref": "I.6.D10",
++      "kind": "standard",
++      "inputs": [
++        "clara_fear",
++        "overheard_conversation"
++      ],
++      "requireVerified": true,
++      "requireOnRecordForFinale": true,
++      "produces": {
++        "card": "ded_motive",
++        "ledgerCell": {
++          "suspect": "julian",
++          "col": "motive"
++        }
++      },
++      "garyLine": "bark_ded_motive"
++    },
++    {
++      "id": "d11_opportunity",
++      "ref": "I.6.D11",
++      "kind": "standard",
++      "inputs": [
++        "milos_sighting",
++        "ferris_testimony"
++      ],
++      "requireVerified": true,
++      "requireOnRecordForFinale": true,
++      "produces": {
++        "card": "ded_opportunity",
++        "ledgerCell": {
++          "suspect": "julian",
++          "col": "opportunity"
++        }
++      },
++      "garyLine": "bark_ded_opportunity"
++    },
++    {
++      "id": "d12_proof",
++      "ref": "I.6.D12",
++      "kind": "standard",
++      "inputs": [
++        "wax_fragment",
++        "seal_sketch"
++      ],
++      "requireVerified": true,
++      "requireOnRecordForFinale": true,
++      "produces": {
++        "card": "ded_proof"
++      },
++      "garyLine": "bark_ded_proof"
++    },
++    {
++      "id": "d13_final",
++      "ref": "I.6.D13",
++      "kind": "standard",
++      "inputs": [
++        "ded_means",
++        "ded_motive",
++        "ded_opportunity",
++        "ded_proof"
++      ],
++      "requireVerified": true,
++      "requireOnRecordForFinale": true,
++      "produces": {
++        "card": "ded_final"
++      },
++      "garyLine": "bark_ded_final"
++    },
++    {
++      "id": "aha_direction",
++      "ref": "III.22.1",
++      "kind": "aha",
++      "inputs": [
++        "triangulation_result",
++        "milos_sighting"
++      ],
++      "requireVerified": true,
++      "requireOnRecordForFinale": false,
++      "produces": {
++        "card": "ded_toward_river",
++        "mapMark": "boathouse_q",
++        "railFlip": "ev_crossing"
++      },
++      "garyLine": "bark_ded_toward_river",
++      "cinematic": "aha_direction_flip"
+     }
+   ],
+   "wrongPairBarks": "wrong_pairs",
+@@ -109,29 +299,58 @@
+       "id": "th_outsider",
+       "ref": "II.16.3",
+       "title": "AN OUTSIDER STOLE IT FOR PROFIT",
+-      "retireWhen": { "card": "ded_careful_hands" }
++      "retireWhen": {
++        "card": "ded_careful_hands"
++      }
+     },
+     {
+       "id": "th_never_there",
+       "ref": "II.16.3",
+       "title": "IT WAS NEVER THERE AT ALL",
+-      "retireWhen": { "card": "poppys_checklist", "status": "verified" }
++      "retireWhen": {
++        "card": "poppys_checklist",
++        "status": "verified"
++      }
++    },
++    {
++      "id": "th_secret",
++      "ref": "II.16.3",
++      "title": "SOMEONE PROTECTING A SECRET",
++      "retireWhen": {
++        "card": "ded_final"
++      }
+     }
+   ],
+   "contradictions": [
+     {
+       "id": "cx_warren",
+-      "pair": ["margies_testimony", "warrens_speech"],
++      "pair": [
++        "margies_testimony",
++        "warrens_speech"
++      ],
+       "producesQuestion": "q_warren_motive",
+       "ref": "II.16.4",
+       "line": "These two can't both be the whole truth."
+     },
+     {
+       "id": "cx_two_keys",
+-      "pair": ["ferris_testimony", "poppys_checklist"],
++      "pair": [
++        "ferris_testimony",
++        "poppys_checklist"
++      ],
+       "producesQuestion": "q_second_key",
+       "ref": "II.16.4",
+       "line": "These two can't both be the whole truth."
++    },
++    {
++      "id": "cx_milo_time",
++      "pair": [
++        "milos_sighting",
++        "lodger_gossip"
++      ],
++      "producesQuestion": "q_same_night",
++      "ref": "II.16.4",
++      "line": "These two can't both be the whole truth."
+     }
+   ]
+ }
+diff --git a/content/dialogue/beatrice_d6.dlg.json b/content/dialogue/beatrice_d6.dlg.json
+new file mode 100644
+index 0000000..964e770
+--- /dev/null
++++ b/content/dialogue/beatrice_d6.dlg.json
+@@ -0,0 +1,127 @@
++{
++  "id": "beatrice_d6",
++  "character": "beatrice",
++  "ref": "I.8.1",
++  "entries": [
++    { "id": "main", "cond": { "all": [{ "day": { "gte": 6 } }, { "not": { "card": "overheard_conversation" } }] }, "node": "b1" }
++  ],
++  "reentrant": true,
++  "nodes": {
++    "b1": {
++      "speaker": "narrator",
++      "line": "The manor parlor. Tea already poured. Two cups. She was expecting him. In this room, there is no off-the-record toggle to decline — the whole conversation simply is, and always will be, hers and his.",
++      "authored": "aletheia",
++      "next": "b2"
++    },
++    "b2": {
++      "speaker": "beatrice",
++      "line": "Sit, Mr. Gibbons. You've been walking a spiral all week, and spirals end at their center. Ask.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "next": "b3"
++    },
++    "b3": {
++      "speaker": "gary",
++      "line": "Did you take the contents of the capsule?",
++      "authored": "verbatim",
++      "next": "b4"
++    },
++    "b4": {
++      "speaker": "beatrice",
++      "line": "No.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "next": "b5"
++    },
++    "b5": {
++      "speaker": "gary",
++      "line": "Do you know who did?",
++      "authored": "verbatim",
++      "next": "b6"
++    },
++    "b6": {
++      "speaker": "narrator",
++      "line": "A pause exactly one breath long.",
++      "authored": "verbatim",
++      "next": "b7"
++    },
++    "b7": {
++      "speaker": "beatrice",
++      "line": "I have a fear. A fear is not knowledge. I won't dress it up as one for your notebook.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "next": "b8"
++    },
++    "b8": {
++      "speaker": "gary",
++      "line": "Then tell me about the will.",
++      "authored": "verbatim",
++      "next": "b9"
++    },
++    "b9": {
++      "speaker": "narrator",
++      "line": "She turns her cup a quarter turn.",
++      "authored": "verbatim",
++      "effects": [{ "setFlag": "noticed_beatrice_cup" }, { "setFlag": "beatrice_topic_will" }],
++      "next": "b10"
++    },
++    "b10": {
++      "speaker": "beatrice",
++      "line": "I read it. Ten years ago, the night before Edmund sealed it away. That is all the further I will go. It is not mine to tell. It was his last act, and I will not spend it for him.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "offRecord": true,
++      "effects": [{ "giveCard": "beatrice_read_will" }],
++      "next": "b11"
++    },
++    "b11": {
++      "speaker": "gary",
++      "line": "Mrs. Vale. Something started this. Something small. In my experience it's always something small.",
++      "authored": "verbatim",
++      "next": "b12"
++    },
++    "b12": {
++      "speaker": "narrator",
++      "line": "A long look. She decides he's earned a true thing.",
++      "authored": "verbatim",
++      "next": "b13"
++    },
++    "b13": {
++      "speaker": "beatrice",
++      "line": "...Five nights before the ceremony, in the garden, my daughter said something to me that broke my heart a little. She said, \"It isn't fair. Everyone already knows he'll lead.\" And because I could not tell her what I knew, I gave her the only true thing I had that wasn't a secret. I said: \"You may be surprised.\"",
++      "authored": "verbatim",
++      "emote": "sad",
++      "offRecord": true,
++      "effects": [
++        { "giveCard": "overheard_conversation" },
++        { "giveCard": "ev_garden" },
++        { "notebook": { "entry": "nb_overheard" } },
++        { "playBark": "gary_inner_clicking" }
++      ],
++      "next": "b14"
++    },
++    "b14": {
++      "speaker": "beatrice",
++      "line": "You've just understood something. I can see it land. Be careful with it, Mr. Gibbons. Whatever it is — it's carrying one of my children.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "next": "b15"
++    },
++    "b15": {
++      "speaker": "gary",
++      "line": "Mrs. Vale. My grandfather had a rule about stories like this one. \"Truth with compassion. In that order — and no other.\"",
++      "authored": "verbatim",
++      "next": "b16"
++    },
++    "b16": {
++      "speaker": "beatrice",
++      "line": "Then Archie Gibbons raised you correctly. Good evening.",
++      "authored": "verbatim",
++      "emote": "happy",
++      "effects": [{ "setFlag": "beatrice_tea_done" }],
++      "next": null
++    }
++  },
++  "oncePerDay": false,
++  "repeatBark": "beatrice_repeat_busy"
++}
+diff --git a/content/dialogue/clara_d6_1.dlg.json b/content/dialogue/clara_d6_1.dlg.json
+new file mode 100644
+index 0000000..06b5749
+--- /dev/null
++++ b/content/dialogue/clara_d6_1.dlg.json
+@@ -0,0 +1,50 @@
++{
++  "id": "clara_d6_1",
++  "character": "clara",
++  "ref": "I.5.day6",
++  "entries": [
++    { "id": "main", "cond": { "all": [{ "day": { "gte": 6 } }, { "not": { "card": "clara_fear" } }] }, "node": "c1" }
++  ],
++  "reentrant": true,
++  "nodes": {
++    "c1": {
++      "speaker": "clara",
++      "line": "You've come to ask if I stole my father's will. Efficient. Ask.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "next": "c2"
++    },
++    "c2": {
++      "speaker": "gary",
++      "line": "Actually — I came to ask what your brother's afraid of.",
++      "authored": "verbatim",
++      "next": "c3"
++    },
++    "c3": {
++      "speaker": "narrator",
++      "line": "The first crack in her composure.",
++      "authored": "verbatim",
++      "next": "c4"
++    },
++    "c4": {
++      "speaker": "clara",
++      "line": "...That's a better question than the constable managed.",
++      "authored": "verbatim",
++      "emote": "surprised",
++      "next": "c5"
++    },
++    "c5": {
++      "speaker": "clara",
++      "line": "Everyone thinks Julian is dying to take the chair. He's terrified of it. He told me once — years ago, before he learned to give speeches — \"What if I'm only the shape of Father?\" He doesn't think he can do it alone. And everyone, including me, keeps telling him he'll be doing it alone.",
++      "authored": "verbatim",
++      "emote": "sad",
++      "effects": [
++        { "giveCard": "clara_fear", "status": "verified" },
++        { "notebook": { "entry": "nb_clara_fear" } }
++      ],
++      "next": null
++    }
++  },
++  "oncePerDay": false,
++  "repeatBark": "clara_repeat_busy"
++}
+diff --git a/content/dialogue/clara_d6_2.dlg.json b/content/dialogue/clara_d6_2.dlg.json
+new file mode 100644
+index 0000000..14fe62b
+--- /dev/null
++++ b/content/dialogue/clara_d6_2.dlg.json
+@@ -0,0 +1,38 @@
++{
++  "id": "clara_d6_2",
++  "character": "clara",
++  "ref": "I.5.day6",
++  "entries": [
++    { "id": "main", "cond": { "all": [{ "card": "clara_fear" }, { "not": { "card": "two_person_puzzles" } }] }, "node": "c1" }
++  ],
++  "reentrant": true,
++  "nodes": {
++    "c1": {
++      "speaker": "narrator",
++      "line": "By the old stone table in the garden, she talks without being asked.",
++      "authored": "aletheia",
++      "next": "c2"
++    },
++    "c2": {
++      "speaker": "clara",
++      "line": "Father used to give us puzzles. Every birthday, one puzzle, one box, two children. And they were designed, Mr. Gibbons — designed so neither of us could solve them alone. Julian would find the mad sideways idea; I'd find the flaw in it; between us, the box opened. Every single time.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "next": "c3"
++    },
++    "c3": {
++      "speaker": "clara",
++      "line": "I used to think it was a game. Lately I think it was a syllabus.",
++      "authored": "verbatim",
++      "emote": "sad",
++      "effects": [
++        { "giveCard": "two_person_puzzles", "status": "verified" },
++        { "setFlag": "save_for_confrontation" },
++        { "notebook": { "entry": "nb_two_person_puzzles" } }
++      ],
++      "next": null
++    }
++  },
++  "oncePerDay": false,
++  "repeatBark": "clara_repeat_busy"
++}
+diff --git a/content/dialogue/clara_d6_3.dlg.json b/content/dialogue/clara_d6_3.dlg.json
+new file mode 100644
+index 0000000..2c9ff6b
+--- /dev/null
++++ b/content/dialogue/clara_d6_3.dlg.json
+@@ -0,0 +1,82 @@
++{
++  "id": "clara_d6_3",
++  "character": "clara",
++  "ref": "I.5.day6",
++  "entries": [
++    { "id": "primed", "cond": { "all": [{ "card": "two_person_puzzles" }, { "flag": "q_second_key_answered" }, { "not": { "card": "clara_key_missing" } }] }, "node": "p1" },
++    { "id": "main", "cond": { "all": [{ "card": "two_person_puzzles" }, { "not": { "card": "clara_key_missing" } }] }, "node": "c1" }
++  ],
++  "reentrant": true,
++  "nodes": {
++    "c1": {
++      "speaker": "narrator",
++      "line": "She looks at Gary for a long moment — the look of someone counting the exits and choosing, instead, the door marked trust.",
++      "authored": "aletheia",
++      "next": "c2"
++    },
++    "c2": {
++      "speaker": "clara",
++      "line": "One more thing, and I am trusting you with the family in my hands. There have always been two keys to the capsule. The council's — and ours. A backup, from the founding, kept in Father's study. I looked last night.",
++      "authored": "verbatim",
++      "emote": "worried",
++      "next": "c3"
++    },
++    "c3": {
++      "speaker": "narrator",
++      "line": "She meets his eyes.",
++      "authored": "verbatim",
++      "next": "c4"
++    },
++    "c4": {
++      "speaker": "clara",
++      "line": "It's gone.",
++      "authored": "verbatim",
++      "emote": "sad",
++      "offRecord": true,
++      "effects": [
++        { "giveCard": "clara_key_missing" },
++        { "setFlag": "clara_clue3_given" },
++        { "notebook": { "entry": "nb_clara_key" } },
++        { "playBark": "gary_inner_gentle_hands" }
++      ],
++      "next": null
++    },
++    "p1": {
++      "speaker": "gary",
++      "line": "Clara. Before you decide what to tell me — I already know about the backup key. The founding records show two. What I think you know is that it's missing.",
++      "authored": "aletheia",
++      "next": "p2"
++    },
++    "p2": {
++      "speaker": "narrator",
++      "line": "She notices. Of course she notices — he knew, and he let her choose to say it.",
++      "authored": "aletheia",
++      "next": "p3"
++    },
++    "p3": {
++      "speaker": "clara",
++      "line": "You knew, and you let me choose to say it. Father would have hired you.",
++      "authored": "verbatim",
++      "emote": "happy",
++      "next": "p4"
++    },
++    "p4": {
++      "speaker": "clara",
++      "line": "Yes. The family backup, from Father's study. I looked last night. It's gone.",
++      "authored": "aletheia",
++      "emote": "sad",
++      "offRecord": true,
++      "effects": [
++        { "giveCard": "clara_key_missing" },
++        { "setFlag": "clara_clue3_given" },
++        { "setFlag": "clara_primed_trust" },
++        { "trust": { "char": "clara", "delta": 1 } },
++        { "notebook": { "entry": "nb_clara_key" } },
++        { "playBark": "gary_inner_gentle_hands" }
++      ],
++      "next": null
++    }
++  },
++  "oncePerDay": false,
++  "repeatBark": "clara_repeat_busy"
++}
+diff --git a/content/dialogue/clara_d7_river.dlg.json b/content/dialogue/clara_d7_river.dlg.json
+new file mode 100644
+index 0000000..2fbd123
+--- /dev/null
++++ b/content/dialogue/clara_d7_river.dlg.json
+@@ -0,0 +1,32 @@
++{
++  "id": "clara_d7_river",
++  "character": "clara",
++  "ref": "I.8.2",
++  "entries": [
++    { "id": "main", "cond": { "all": [{ "day": 7 }, { "flag": "pitch_d7_done" }, { "not": { "flag": "river_walk_done" } }] }, "node": "c1" }
++  ],
++  "reentrant": true,
++  "nodes": {
++    "c1": {
++      "speaker": "narrator",
++      "line": "River morning. Mist on the water. Clara is waiting at the bank — she insisted on coming this far, and no farther. The walk down was quiet; some walks are supposed to be.",
++      "authored": "aletheia",
++      "next": "c2"
++    },
++    "c2": {
++      "speaker": "clara",
++      "line": "I'll be here. For after.",
++      "authored": "verbatim",
++      "emote": "sad",
++      "effects": [
++        { "setFlag": "river_walk_done" },
++        { "setFlag": "boathouse_ready" },
++        { "notebook": { "entry": "nb_river_walk" } },
++        { "playBark": "gary_inner_river_walk" }
++      ],
++      "next": null
++    }
++  },
++  "oncePerDay": false,
++  "repeatBark": "clara_repeat_busy"
++}
+diff --git a/content/dialogue/confrontation_d7.dlg.json b/content/dialogue/confrontation_d7.dlg.json
+new file mode 100644
+index 0000000..52a16a1
+--- /dev/null
++++ b/content/dialogue/confrontation_d7.dlg.json
+@@ -0,0 +1,233 @@
++{
++  "id": "confrontation_d7",
++  "character": "narrator",
++  "ref": "I.8.2",
++  "entries": [{ "id": "main", "cond": {}, "node": "n1" }],
++  "nodes": {
++    "n1": {
++      "speaker": "narrator",
++      "line": "Julian is already there, sitting on the floor, umbrella against the wall, spinning the ring. He doesn't look up.",
++      "authored": "verbatim",
++      "next": "n2"
++    },
++    "n2": {
++      "speaker": "julian",
++      "line": "You knock on every door in the district for a week, and then you find the one place without a door. Front page?",
++      "authored": "verbatim",
++      "emote": "sad",
++      "next": "n3"
++    },
++    "n3": {
++      "speaker": "gary",
++      "line": "Not yet. Not maybe.",
++      "authored": "verbatim",
++      "next": "n4"
++    },
++    "n4": {
++      "speaker": "julian",
++      "line": "Then present your case, reporter. I've watched you build it all week. You may as well perform it.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "next": "present"
++    },
++    "present": {
++      "speaker": "gary",
++      "choices": [
++        {
++          "line": "THE WAX FRAGMENT — \"Green wax, from your coat pocket. It matches a seal a witness saw intact three nights before the ceremony. Whoever broke it, handled the will after the capsule was checked.\"",
++          "cond": { "all": [{ "card": "wax_fragment", "status": "verified" }, { "not": { "flag": "presented_wax" } }] },
++          "authored": "verbatim",
++          "effects": [{ "setFlag": "presented_wax" }],
++          "next": "present_check"
++        },
++        {
++          "line": "THE BACKUP KEY — \"Two keys in fifty years. Ida Wren's ledger. The council's key is accounted for every hour. The family's key is missing from your father's study.\"",
++          "cond": { "all": [{ "card": "clara_key_missing", "status": "verified" }, { "not": { "flag": "presented_key" } }] },
++          "authored": "verbatim",
++          "effects": [{ "setFlag": "presented_key" }],
++          "next": "present_check"
++        },
++        {
++          "line": "THE SIGHTING — \"Two in the morning, night before the ceremony. A tall figure crossed the square, dry under one particular umbrella.\"",
++          "cond": { "all": [{ "card": "milos_sighting", "status": "verified" }, { "not": { "flag": "presented_sighting" } }] },
++          "authored": "verbatim",
++          "effects": [{ "setFlag": "presented_sighting" }],
++          "next": "sighting_beat"
++        }
++      ]
++    },
++    "sighting_beat": {
++      "speaker": "narrator",
++      "line": "Julian glances at the umbrella against the wall. The silver duck handle. He closes his eyes.",
++      "authored": "verbatim",
++      "next": "present_check"
++    },
++    "present_check": {
++      "speaker": "narrator",
++      "line": "Each piece lands with quiet weight. No bombast. Just a floor, two people, and the shape of a week.",
++      "authored": "aletheia",
++      "next": "route"
++    },
++    "route": {
++      "speaker": "narrator",
++      "line": "…",
++      "authored": "aletheia",
++      "choices": [
++        {
++          "line": "(Lay out the next piece.)",
++          "cond": { "any": [{ "not": { "flag": "presented_wax" } }, { "not": { "flag": "presented_key" } }, { "not": { "flag": "presented_sighting" } }] },
++          "authored": "aletheia",
++          "next": "present"
++        },
++        {
++          "line": "(That's the case. All of it.)",
++          "cond": { "all": [{ "flag": "presented_wax" }, { "flag": "presented_key" }, { "flag": "presented_sighting" }] },
++          "authored": "aletheia",
++          "next": "why1"
++        }
++      ]
++    },
++    "why1": {
++      "speaker": "julian",
++      "line": "You're missing why.",
++      "authored": "verbatim",
++      "emote": "sad",
++      "next": "why2"
++    },
++    "why2": {
++      "speaker": "gary",
++      "line": "No. I'm not.",
++      "authored": "verbatim",
++      "next": "why3"
++    },
++    "why3": {
++      "speaker": "narrator",
++      "line": "Gary sits down on the floor across from him. This staging matters.",
++      "authored": "verbatim",
++      "next": "why4"
++    },
++    "why4": {
++      "speaker": "gary",
++      "line": "You heard your sister in the garden. \"It isn't fair.\" And your mother said, \"You may be surprised.\" And you stood at the study window and did the arithmetic of half a conversation, and the answer you got was: I'm about to lose everything.",
++      "authored": "verbatim",
++      "next": "break1"
++    },
++    "break1": {
++      "speaker": "julian",
++      "line": "I wasn't going to KEEP it. Any of it. I was going to read the will — just read it, just KNOW, before the whole district watched my face while a stranger's future was read out over my head. And then I had it in my hands and I couldn't— I couldn't even open it. I've had it for five days and I can't open an envelope, Gary. Some leader.",
++      "authored": "verbatim",
++      "emote": "sad",
++      "next": "break2"
++    },
++    "break2": {
++      "speaker": "julian",
++      "line": "You know the joke? Half of me was terrified of losing it. The other half was terrified I'd have to do it. Alone. I am not enough for that chair alone, and everyone keeps saying \"alone\" like it's a coronation—",
++      "authored": "verbatim",
++      "emote": "sad",
++      "next": "story1"
++    },
++    "story1": {
++      "speaker": "gary",
++      "line": "Julian. Can I tell you a story your sister told me?",
++      "authored": "verbatim",
++      "next": "story2"
++    },
++    "story2": {
++      "speaker": "julian",
++      "line": "...What?",
++      "authored": "verbatim",
++      "emote": "surprised",
++      "next": "story3"
++    },
++    "story3": {
++      "speaker": "gary",
++      "line": "The birthday puzzles. One box, two children. Your father built every single one so that neither of you could open it alone. Your mad sideways ideas. Her logic finding the flaw. Every year. Every box. Clara said she used to think it was a game. She thinks now it was a syllabus.",
++      "authored": "verbatim",
++      "next": "story4"
++    },
++    "story4": {
++      "speaker": "narrator",
++      "line": "Stillness. The ring stops spinning.",
++      "authored": "verbatim",
++      "next": "story5"
++    },
++    "story5": {
++      "speaker": "julian",
++      "line": "...He was teaching us to—",
++      "authored": "verbatim",
++      "emote": "surprised",
++      "next": "story6"
++    },
++    "story6": {
++      "speaker": "gary",
++      "line": "I haven't read the will. Nobody has. But I've spent a week learning who your father was from everyone who loved him, and I'd stake Grandpa's badge on this: that envelope doesn't take the future away from either of you. I think it refuses to give it to only one of you.",
++      "authored": "verbatim",
++      "next": "break3"
++    },
++    "break3": {
++      "speaker": "julian",
++      "line": "I emptied fifty years of this town's heart into a hole in the floor because I couldn't finish overhearing a conversation.",
++      "authored": "verbatim",
++      "emote": "sad",
++      "next": "break4"
++    },
++    "break4": {
++      "speaker": "gary",
++      "line": "Yeah. And tomorrow that can be the worst thing you ever did — behind you, and getting smaller.",
++      "authored": "verbatim",
++      "next": "boards"
++    },
++    "boards": {
++      "speaker": "narrator",
++      "line": "Julian pries up the floorboards. Everything is there — the crates, the children's bundles, and on top, the green-sealed envelope, cracked but unopened.",
++      "authored": "verbatim",
++      "choices": [
++        {
++          "line": "(He found the boards himself.)",
++          "cond": { "not": { "flag": "found_floorboards" } },
++          "authored": "aletheia",
++          "next": "hand1"
++        },
++        {
++          "line": "\"You'd have found it without me.\" — \"I'd rather you'd shown me.\"",
++          "cond": { "flag": "found_floorboards" },
++          "authored": "verbatim",
++          "next": "hand1"
++        }
++      ]
++    },
++    "hand1": {
++      "speaker": "julian",
++      "line": "You could have led with the constable.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "next": "hand2"
++    },
++    "hand2": {
++      "speaker": "gary",
++      "line": "Grandpa's rule. Truth with compassion. In that order — and no other.",
++      "authored": "verbatim",
++      "next": "outside"
++    },
++    "outside": {
++      "speaker": "narrator",
++      "line": "Outside: Clara on the bank. Brother and sister look at each other for a long time, and then she walks to him. Nobody scripts this part.",
++      "authored": "verbatim",
++      "next": "tuck"
++    },
++    "tuck": {
++      "speaker": "tuck",
++      "line": "Contents located. Returned intact. The rest is district business, not police business.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "effects": [
++        { "setFlag": "confession_done" },
++        { "setFlag": "contents_recovered" },
++        { "giveCard": "recovered_contents", "status": "verified" },
++        { "notebook": { "entry": "nb_confession" } },
++        { "playBark": "gary_inner_after_boathouse" }
++      ],
++      "next": null
++    }
++  }
++}
+diff --git a/content/dialogue/credits_d7.dlg.json b/content/dialogue/credits_d7.dlg.json
+new file mode 100644
+index 0000000..ca07ce7
+--- /dev/null
++++ b/content/dialogue/credits_d7.dlg.json
+@@ -0,0 +1,60 @@
++{
++  "id": "credits_d7",
++  "character": "narrator",
++  "ref": "I.8.4",
++  "entries": [{ "id": "main", "cond": {}, "node": "n1" }],
++  "nodes": {
++    "n1": {
++      "speaker": "narrator",
++      "line": "Days later. A small gathering, and the capsule properly opened at last. The items come out one by one: a drawing of LANTERNSIDE IN THE FUTURE (flying trams, a mayor who is a dog). A prediction card: 'In 50 years everyone will have a personal robot. If not, we apologize.' A kid's lost tooth, 'for science.'",
++      "authored": "verbatim",
++      "next": "n2"
++    },
++    "n2": {
++      "speaker": "narrator",
++      "line": "Theodora's letter, which Prudence reads privately. The game shows only her face — and Evelyn's hand.",
++      "authored": "verbatim",
++      "next": "n3"
++    },
++    "n3": {
++      "speaker": "narrator",
++      "line": "Last: a small parcel in oilcloth, addressed in strong pencil: FOR THE GIBBONS WHO COMES NEXT.",
++      "authored": "verbatim",
++      "next": "n4"
++    },
++    "n4": {
++      "speaker": "narrator",
++      "line": "\"If you're reading this, then one of mine grew up curious, and the badge found its way to you. Good. Now listen: the truth is not a trophy. It's a lantern. You don't win it — you carry it, and you mind whose eyes you shine it in.\"",
++      "authored": "verbatim",
++      "next": "n5"
++    },
++    "n5": {
++      "speaker": "narrator",
++      "line": "\"Ask the question under the question. Believe people are more than their worst night. And when the story is about someone's heart — and son, it is always, eventually, about someone's heart — tell the truth with compassion. In that order. And no other. — A.G.\"",
++      "authored": "verbatim",
++      "next": "n6"
++    },
++    "n6": {
++      "speaker": "narrator",
++      "line": "In the parcel: Archie's field notebook. A brass magnifying glass engraved \"Look closer, then look kinder.\" And a jar of homemade grape jam, labeled in Archie's hand: \"For emergencies.\" It's hereditary. Gary laughs until he cries, for several reasons at once.",
++      "authored": "verbatim",
++      "next": "n7"
++    },
++    "n7": {
++      "speaker": "narrator",
++      "line": "The board, cleared of string. In the center, one fresh index card in Gary's hand: NEXT STORY?",
++      "authored": "verbatim",
++      "next": "n8"
++    },
++    "n8": {
++      "speaker": "narrator",
++      "line": "…And in the repaired community garden, a trowel strikes something with a metallic clink. A weasel looks left. Looks right. \"...Ferris Mott smells destiny.\" GARY GIBBONS WILL RETURN.",
++      "authored": "verbatim",
++      "effects": [
++        { "setFlag": "game_complete" },
++        { "notebook": { "entry": "nb_credits" } }
++      ],
++      "next": null
++    }
++  }
++}
+diff --git a/content/dialogue/dot_d6_pitch.dlg.json b/content/dialogue/dot_d6_pitch.dlg.json
+new file mode 100644
+index 0000000..8811e39
+--- /dev/null
++++ b/content/dialogue/dot_d6_pitch.dlg.json
+@@ -0,0 +1,49 @@
++{
++  "id": "dot_d6_pitch",
++  "character": "dot",
++  "ref": "II.16.6",
++  "entries": [{ "id": "main", "cond": { "day": 6 }, "node": "c1" }],
++  "nodes": {
++    "c1": {
++      "speaker": "dot",
++      "line": "Gibbons. The seal was the family's, the key was the family's, and you've got the manor look about you — the one your grandfather got when a story stopped being fun. Sell me today. Gently.",
++      "authored": "aletheia",
++      "emote": "neutral",
++      "next": "c2"
++    },
++    "c2": {
++      "speaker": "gary",
++      "choices": [
++        {
++          "line": "The trail ends at the manor. Today I find out which Vale — and I do it with my hat in my hands.",
++          "authored": "aletheia",
++          "effects": [{ "setFlag": "pitch_d6_done" }],
++          "next": "c3"
++        },
++        {
++          "line": "I think I already know. Today I make sure I'm wrong before I let myself be right.",
++          "authored": "aletheia",
++          "effects": [{ "setFlag": "pitch_d6_done" }],
++          "next": "c3"
++        }
++      ]
++    },
++    "c3": {
++      "speaker": "dot",
++      "line": "Good. Both of those were the right answer, which almost never happens at this desk.",
++      "authored": "aletheia",
++      "emote": "neutral",
++      "next": "c4"
++    },
++    "c4": {
++      "speaker": "dot",
++      "line": "You know what your grandfather never did? Publish angry.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "ref": "I.7.2",
++      "next": null
++    }
++  },
++  "oncePerDay": true,
++  "repeatBark": "dot_repeat_busy"
++}
+diff --git a/content/dialogue/dot_d7_final.dlg.json b/content/dialogue/dot_d7_final.dlg.json
+new file mode 100644
+index 0000000..2ab559c
+--- /dev/null
++++ b/content/dialogue/dot_d7_final.dlg.json
+@@ -0,0 +1,50 @@
++{
++  "id": "dot_d7_final",
++  "character": "dot",
++  "ref": "I.5.day7",
++  "entries": [
++    { "id": "held", "cond": { "all": [{ "day": 7 }, { "flag": "printed_hold_d6" }] }, "node": "h1" },
++    { "id": "main", "cond": { "day": 7 }, "node": "c1" }
++  ],
++  "nodes": {
++    "h1": {
++      "speaker": "dot",
++      "line": "You held the page. Archie held the page once too. I'll tell you about it when you're back.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "next": "c2"
++    },
++    "c1": {
++      "speaker": "dot",
++      "line": "Gibbons. Last pressure test of the week. You know where the story ends. Sell me the way you're going to end it.",
++      "authored": "aletheia",
++      "emote": "neutral",
++      "next": "c2"
++    },
++    "c2": {
++      "speaker": "gary",
++      "line": "Not with the constable. With a conversation. Truth first — compassion in the same breath.",
++      "authored": "aletheia",
++      "next": "c3"
++    },
++    "c3": {
++      "speaker": "narrator",
++      "line": "Dot looks at him for a long moment over the reading glasses. The red pen stays down.",
++      "authored": "aletheia",
++      "next": "c4"
++    },
++    "c4": {
++      "speaker": "dot",
++      "line": "Archie would run it exactly the way you're about to.",
++      "authored": "verbatim",
++      "emote": "happy",
++      "effects": [
++        { "setFlag": "pitch_d7_done" },
++        { "notebook": { "entry": "nb_dot_blessing" } }
++      ],
++      "next": null
++    }
++  },
++  "oncePerDay": true,
++  "repeatBark": "dot_repeat_busy"
++}
+diff --git a/content/dialogue/evelyn_d5.dlg.json b/content/dialogue/evelyn_d5.dlg.json
+new file mode 100644
+index 0000000..0ffab12
+--- /dev/null
++++ b/content/dialogue/evelyn_d5.dlg.json
+@@ -0,0 +1,54 @@
++{
++  "id": "evelyn_d5",
++  "character": "evelyn",
++  "ref": "I.5.day5",
++  "entries": [
++    { "id": "main", "cond": { "all": [{ "day": { "gte": 5 } }, { "card": "prudence_alibi" }, { "not": { "card": "evelyn_confirmation" } }] }, "node": "c1" }
++  ],
++  "reentrant": true,
++  "nodes": {
++    "c1": {
++      "speaker": "gary",
++      "line": "Prudence says she was here, night before the theft window closed. Cataloguing until three.",
++      "authored": "aletheia",
++      "next": "c2"
++    },
++    "c2": {
++      "speaker": "narrator",
++      "line": "Evelyn sets down the shears — which counts, in this shop, as a formal oath.",
++      "authored": "aletheia",
++      "next": "c3"
++    },
++    "c3": {
++      "speaker": "evelyn",
++      "line": "Until three in the morning, and I made the tea, and she read Jonah's half out loud in the voice she thinks is his. Write it down, Mr. Gibbons. Some alibis are also the best nights of a person's year.",
++      "authored": "aletheia",
++      "emote": "happy",
++      "effects": [
++        { "giveCard": "evelyn_confirmation", "status": "verified" },
++        { "notebook": { "entry": "nb_evelyn_alibi" } }
++      ],
++      "next": "c4"
++    },
++    "c4": {
++      "speaker": "evelyn",
++      "line": "They weren't scandal, Mr. Gibbons. They were two people the town decided about before they'd decided about themselves.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "next": "c5"
++    },
++    "c5": {
++      "speaker": "evelyn",
++      "line": "If the letter is ever found — let Prudence read it first. She's earned first.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "effects": [
++        { "setFlag": "promised_prudence_first" },
++        { "playBark": "gary_inner_decided_about" }
++      ],
++      "next": null
++    }
++  },
++  "oncePerDay": false,
++  "repeatBark": "evelyn_repeat_busy"
++}
+diff --git a/content/dialogue/ferris_d5_lockup.dlg.json b/content/dialogue/ferris_d5_lockup.dlg.json
+new file mode 100644
+index 0000000..b3ce7a0
+--- /dev/null
++++ b/content/dialogue/ferris_d5_lockup.dlg.json
+@@ -0,0 +1,52 @@
++{
++  "id": "ferris_d5_lockup",
++  "character": "ferris",
++  "ref": "II.15.1",
++  "entries": [
++    { "id": "sensational", "cond": { "all": [{ "day": 5 }, { "flag": "printed_sensational_d4" }] }, "node": "s1" },
++    { "id": "gentle", "cond": { "day": 5 }, "node": "g1" }
++  ],
++  "nodes": {
++    "s1": {
++      "speaker": "ferris",
++      "line": "Ah. The press. Ferris Mott has a request, reporter. Read it to me. Your page. Out loud, if you would.",
++      "authored": "aletheia",
++      "emote": "neutral",
++      "next": "s2"
++    },
++    "s2": {
++      "speaker": "gary",
++      "line": "...\"Weasel caught red-pawed.\"",
++      "authored": "aletheia",
++      "next": "s3"
++    },
++    "s3": {
++      "speaker": "narrator",
++      "line": "Ferris nods, slowly, the way a man nods at weather he predicted. He isn't angry. That's worse.",
++      "authored": "aletheia",
++      "next": "s4"
++    },
++    "s4": {
++      "speaker": "ferris",
++      "line": "Red-pawed. Yes. Ferris Mott held the shovel; the words hold longer. Well. You know where the witness is, when the paper wants him again.",
++      "authored": "aletheia",
++      "emote": "sad",
++      "effects": [
++        { "trust": { "char": "ferris", "delta": -1 } },
++        { "notebook": { "entry": "nb_ferris_readaloud" } },
++        { "playBark": "gary_inner_words_hold" }
++      ],
++      "next": null
++    },
++    "g1": {
++      "speaker": "ferris",
++      "line": "The reporter returns! Ferris Mott is composing a formal apology to a marrow. It is proving difficult. The marrow gave so much, and Ferris Mott took... well. The marrow.",
++      "authored": "aletheia",
++      "emote": "neutral",
++      "effects": [{ "notebook": { "entry": "nb_ferris_apology" } }],
++      "next": null
++    }
++  },
++  "oncePerDay": true,
++  "repeatBark": "ferris_repeat_busy"
++}
+diff --git a/content/dialogue/fragment_d6.dlg.json b/content/dialogue/fragment_d6.dlg.json
+new file mode 100644
+index 0000000..fcf1137
+--- /dev/null
++++ b/content/dialogue/fragment_d6.dlg.json
+@@ -0,0 +1,39 @@
++{
++  "id": "fragment_d6",
++  "character": "narrator",
++  "ref": "I.5.day6",
++  "entries": [{ "id": "main", "cond": {}, "node": "n1" }],
++  "nodes": {
++    "n1": {
++      "speaker": "narrator",
++      "line": "Julian at the counter, paying, rehearsing his public smile. He pulls coins from his coat pocket — and something small skitters across the floor to Gary's shoe. A fragment of GREEN WAX.",
++      "authored": "verbatim",
++      "next": "n2"
++    },
++    "n2": {
++      "speaker": "narrator",
++      "line": "Gary crouches. Overlaying the seal sketch in his mind: the ivy leaves align. A soft, terrible chime somewhere behind the sternum.",
++      "authored": "aletheia",
++      "next": "n3"
++    },
++    "n3": {
++      "speaker": "otto",
++      "line": "You look like a man who found something he was hoping not to find.",
++      "authored": "verbatim",
++      "emote": "sad",
++      "next": "n4"
++    },
++    "n4": {
++      "speaker": "narrator",
++      "line": "An espresso slides across the counter, quietly, on the house.",
++      "authored": "aletheia",
++      "effects": [
++        { "giveCard": "wax_fragment", "status": "verified" },
++        { "setFlag": "fragment_found" },
++        { "notebook": { "entry": "nb_wax_fragment" } },
++        { "playBark": "gary_inner_that_coat" }
++      ],
++      "next": null
++    }
++  }
++}
+diff --git a/content/dialogue/grape_d7.dlg.json b/content/dialogue/grape_d7.dlg.json
+new file mode 100644
+index 0000000..8fcdf52
+--- /dev/null
++++ b/content/dialogue/grape_d7.dlg.json
+@@ -0,0 +1,43 @@
++{
++  "id": "grape_d7",
++  "character": "gino",
++  "ref": "I.7.1",
++  "entries": [
++    { "id": "main", "cond": { "all": [{ "day": 7 }, { "flag": "reading_done" }, { "not": { "flag": "grape_beat_d7" } }] }, "node": "c1" }
++  ],
++  "reentrant": true,
++  "nodes": {
++    "c1": {
++      "speaker": "narrator",
++      "line": "Gino emerges from the celebration holding aloft the bunch — THE bunch, the celebratory one, grapes like small green lanterns.",
++      "authored": "aletheia",
++      "next": "c2"
++    },
++    "c2": {
++      "speaker": "gino",
++      "line": "Gibbons! Today of ALL days! The good ones! For the hero of Lanternside — bellissimo, no tragedy, only grapes!",
++      "authored": "aletheia",
++      "emote": "happy",
++      "next": "c3"
++    },
++    "c3": {
++      "speaker": "narrator",
++      "line": "Gary takes ONE grape. Looks at it a long moment — a week, a year, a whole inheritance in one small green sphere. Then he turns and hands it to Milo.",
++      "authored": "aletheia",
++      "next": "c4"
++    },
++    "c4": {
++      "speaker": "gary",
++      "line": "You earned it, kid.",
++      "authored": "verbatim",
++      "effects": [
++        { "setFlag": "grape_beat_d7" },
++        { "notebook": { "entry": "nb_grape_victory" } },
++        { "playBark": "gary_inner_at_peace_ish" }
++      ],
++      "next": null
++    }
++  },
++  "oncePerDay": false,
++  "repeatBark": "gino_repeat_busy"
++}
+diff --git a/content/dialogue/ida_d6.dlg.json b/content/dialogue/ida_d6.dlg.json
+new file mode 100644
+index 0000000..cfa4a21
+--- /dev/null
++++ b/content/dialogue/ida_d6.dlg.json
+@@ -0,0 +1,39 @@
++{
++  "id": "ida_d6",
++  "character": "ida",
++  "ref": "I.5.day6",
++  "entries": [
++    { "id": "main", "cond": { "all": [{ "day": { "gte": 5 } }, { "deduction": "d6_insider" }, { "not": { "card": "idas_ledger" } }] }, "node": "c1" }
++  ],
++  "reentrant": true,
++  "nodes": {
++    "c1": {
++      "speaker": "narrator",
++      "line": "Ledger open, visor down. Ida taps a fifty-year-old entry with one tiny finger.",
++      "authored": "aletheia",
++      "next": "c2"
++    },
++    "c2": {
++      "speaker": "ida",
++      "line": "Fifty years ago, two keys, my own apprentice hands. One to the council, one to Edmund. No copies since — this lock would tell me if a copy had ever been tried.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "next": "c3"
++    },
++    "c3": {
++      "speaker": "ida",
++      "line": "Locks are terrible gossips, Mr. Gibbons. This one's only ever known its two.",
++      "authored": "verbatim",
++      "emote": "happy",
++      "effects": [
++        { "giveCard": "idas_ledger", "status": "verified" },
++        { "setFlag": "q_second_key_answered" },
++        { "notebook": { "entry": "nb_idas_ledger" } },
++        { "playBark": "gary_inner_two_keys" }
++      ],
++      "next": null
++    }
++  },
++  "oncePerDay": false,
++  "repeatBark": "ida_repeat_busy"
++}
+diff --git a/content/dialogue/milo_d6_trade.dlg.json b/content/dialogue/milo_d6_trade.dlg.json
+new file mode 100644
+index 0000000..6591b1c
+--- /dev/null
++++ b/content/dialogue/milo_d6_trade.dlg.json
+@@ -0,0 +1,59 @@
++{
++  "id": "milo_d6_trade",
++  "character": "milo",
++  "ref": "I.5.day6",
++  "entries": [
++    { "id": "main", "cond": { "all": [{ "day": { "gte": 6 } }, { "deduction": "d6_insider" }, { "not": { "card": "milos_sighting" } }] }, "node": "c1" }
++  ],
++  "reentrant": true,
++  "nodes": {
++    "c1": {
++      "speaker": "milo",
++      "line": "I can't tell you. Because then YOU'D know I was out at two in the morning, and then MOM would know, and journalism has ETHICS, I read about it.",
++      "authored": "verbatim",
++      "emote": "worried",
++      "next": "c2"
++    },
++    "c2": {
++      "speaker": "gary",
++      "line": "Trade you. A secret for a secret.",
++      "authored": "verbatim",
++      "next": "c3"
++    },
++    "c3": {
++      "speaker": "gary",
++      "line": "I'm scared of grapes, Milo. Not scared — it's... we have a complicated history. Nobody knows that.",
++      "authored": "verbatim",
++      "next": "c4"
++    },
++    "c4": {
++      "speaker": "narrator",
++      "line": "Awed silence, raccoon-sized.",
++      "authored": "aletheia",
++      "next": "c5"
++    },
++    "c5": {
++      "speaker": "milo",
++      "line": "...That's so weird. Deal.",
++      "authored": "verbatim",
++      "emote": "surprised",
++      "next": "c6"
++    },
++    "c6": {
++      "speaker": "milo",
++      "line": "Two nights before the ceremony. A tall figure crossed the square. I couldn't see his face — couldn't see ears or antlers or ANYTHING, the umbrella was in the way of the whole him. But I saw the umbrella. THE umbrella. The fancy Vale one with the silver duck handle. Nobody else has that umbrella.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "effects": [
++        { "giveCard": "milos_sighting" },
++        { "giveCard": "ev_milo_sighting" },
++        { "setFlag": "milo_traded_secret" },
++        { "notebook": { "entry": "nb_milos_sighting" } },
++        { "playBark": "gary_inner_the_umbrella" }
++      ],
++      "next": null
++    }
++  },
++  "oncePerDay": false,
++  "repeatBark": "milo_repeat_busy"
++}
+diff --git a/content/dialogue/prudence_d5_romance.dlg.json b/content/dialogue/prudence_d5_romance.dlg.json
+new file mode 100644
+index 0000000..53dcf84
+--- /dev/null
++++ b/content/dialogue/prudence_d5_romance.dlg.json
+@@ -0,0 +1,51 @@
++{
++  "id": "prudence_d5_romance",
++  "character": "prudence",
++  "ref": "I.5.day5",
++  "entries": [
++    { "id": "main", "cond": { "all": [{ "day": { "gte": 5 } }, { "not": { "card": "prudence_alibi" } }] }, "node": "c1" }
++  ],
++  "reentrant": true,
++  "nodes": {
++    "c1": {
++      "speaker": "prudence",
++      "line": "Twenty years, Mr. Gibbons, they have called it my \"little theory.\" Theodora Vale and Jonah Croft. Rival families, one river between their houses, and letters — I have thirty-one of them — that would make a stone weep.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "next": "c2"
++    },
++    "c2": {
++      "speaker": "prudence",
++      "line": "The last letter, the one where she ends it or doesn't, Theodora sealed into the capsule herself. Fifty years I couldn't touch it; three days I've been unable to sleep for wanting to. So yes. Suspect me. I would suspect me.",
++      "authored": "verbatim",
++      "emote": "sad",
++      "effects": [{ "notebook": { "entry": "nb_prudence_motive" } }],
++      "next": "c3"
++    },
++    "c3": {
++      "speaker": "gary",
++      "line": "Where were you, night before last-but-one?",
++      "authored": "verbatim",
++      "next": "c4"
++    },
++    "c4": {
++      "speaker": "narrator",
++      "line": "A beat; the faintest color rises along the heron's grey.",
++      "authored": "aletheia",
++      "next": "c5"
++    },
++    "c5": {
++      "speaker": "prudence",
++      "line": "Cataloguing. With Evelyn Croft. Until three in the morning. We have been... reconstructing both sides of the correspondence. You may verify with the florist. Bring context; she is armed with shears.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "effects": [
++        { "giveCard": "prudence_alibi" },
++        { "notebook": { "entry": "nb_prudence_alibi" } }
++      ],
++      "next": null
++    }
++  },
++  "oncePerDay": false,
++  "repeatBark": "prudence_repeat_busy"
++}
+diff --git a/content/dialogue/prudence_d5_seal.dlg.json b/content/dialogue/prudence_d5_seal.dlg.json
+new file mode 100644
+index 0000000..6403c54
+--- /dev/null
++++ b/content/dialogue/prudence_d5_seal.dlg.json
+@@ -0,0 +1,50 @@
++{
++  "id": "prudence_d5_seal",
++  "character": "prudence",
++  "ref": "I.5.day5",
++  "entries": [
++    { "id": "main", "cond": { "all": [{ "day": { "gte": 5 } }, { "card": "prudence_alibi" }, { "card": "seal_sketch" }, { "not": { "card": "prudences_id" } }] }, "node": "s1" }
++  ],
++  "reentrant": true,
++  "nodes": {
++    "s1": {
++      "speaker": "gary",
++      "line": "One more thing. Ever seen this seal?",
++      "authored": "verbatim",
++      "next": "s2"
++    },
++    "s2": {
++      "speaker": "narrator",
++      "line": "The loupe comes up. Total stillness — a heron's stillness, the kind that precedes a strike. Then, softly:",
++      "authored": "aletheia",
++      "next": "s3"
++    },
++    "s3": {
++      "speaker": "prudence",
++      "line": "Where did you get this.",
++      "authored": "verbatim",
++      "emote": "surprised",
++      "next": "s4"
++    },
++    "s4": {
++      "speaker": "gary",
++      "line": "A witness saw it on an envelope in the capsule. I drew it.",
++      "authored": "verbatim",
++      "next": "s5"
++    },
++    "s5": {
++      "speaker": "prudence",
++      "line": "Then your witness saw Edmund Vale's personal signet. The lantern in ivy. Not the council seal — the family's. That ring never left the family, Mr. Gibbons. It sits, as far as I know, on his son's finger to this day.",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "effects": [
++        { "giveCard": "prudences_id", "status": "verified" },
++        { "notebook": { "entry": "nb_seal_identified" } },
++        { "playBark": "gary_inner_loose_ring" }
++      ],
++      "next": null
++    }
++  },
++  "oncePerDay": false,
++  "repeatBark": "prudence_repeat_busy"
++}
+diff --git a/content/dialogue/reading_d7.dlg.json b/content/dialogue/reading_d7.dlg.json
+new file mode 100644
+index 0000000..9c07a2e
+--- /dev/null
++++ b/content/dialogue/reading_d7.dlg.json
+@@ -0,0 +1,60 @@
++{
++  "id": "reading_d7",
++  "character": "narrator",
++  "ref": "I.8.3",
++  "entries": [{ "id": "main", "cond": {}, "node": "n1" }],
++  "nodes": {
++    "n1": {
++      "speaker": "narrator",
++      "line": "Founders' Square, evening. The whole cast assembled — the district re-decorated itself during the afternoon, so the walk here was a victory lap the town built for its own good news. Warren opens the envelope, scans it, and — beautifully — starts to laugh. Then he hands it across.",
++      "authored": "aletheia",
++      "next": "n2"
++    },
++    "n2": {
++      "speaker": "warren",
++      "line": "It should be your voice.",
++      "authored": "verbatim",
++      "emote": "happy",
++      "next": "n3"
++    },
++    "n3": {
++      "speaker": "beatrice",
++      "line": "\"To my district, and to my children, who will hear this together, which is the entire point. Julian: you are the lantern — you make people believe the dark is temporary. Clara: you are the ivy — you hold what would otherwise fall.\"",
++      "authored": "verbatim",
++      "emote": "neutral",
++      "next": "n4"
++    },
++    "n4": {
++      "speaker": "beatrice",
++      "line": "\"I never once built a puzzle either of you could solve alone. I was never going to start with the hardest one. Lead together. Argue often. Decide once. — Edmund Vale.\"",
++      "authored": "verbatim",
++      "emote": "happy",
++      "next": "n5"
++    },
++    "n5": {
++      "speaker": "narrator",
++      "line": "The cascade: Clara's composure finally cracking. Julian looking at his sister like the answer to a puzzle. Warren already mentally at lighthouse number one. Poppy sobbing into contingency card PLAN A: JOY. Ferris nodding sagely — 'Ferris Mott suspected co-treasure.' Prudence clutching a second envelope Tuck has quietly passed her, Evelyn's hand on her shoulder.",
++      "authored": "verbatim",
++      "next": "n6"
++    },
++    "n6": {
++      "speaker": "warren",
++      "line": "Then it is my genuine honor to say the happiest sentence I will ever say: the waiting is over.",
++      "authored": "verbatim",
++      "emote": "happy",
++      "next": "n7"
++    },
++    "n7": {
++      "speaker": "warren",
++      "line": "I hear the coast is lovely this time of year.",
++      "authored": "verbatim",
++      "emote": "happy",
++      "effects": [
++        { "setFlag": "reading_done" },
++        { "notebook": { "entry": "nb_reading" } },
++        { "playBark": "gary_inner_lantern_ivy" }
++      ],
++      "next": null
++    }
++  }
++}
+diff --git a/content/editions/ed_d5.json b/content/editions/ed_d5.json
+new file mode 100644
+index 0000000..eef6cbf
+--- /dev/null
++++ b/content/editions/ed_d5.json
+@@ -0,0 +1,79 @@
++{
++  "id": "ed_d5",
++  "day": 5,
++  "ref": "II.15.1",
++  "draftCards": [
++    "prudences_id",
++    "ded_signet",
++    "evelyn_confirmation"
++  ],
++  "headlines": [
++    {
++      "id": "h_d5_sensational",
++      "tone": "sensational",
++      "text": "VALE FAMILY SEAL ON THE MISSING WILL!",
++      "effects": [
++        {
++          "trust": {
++            "delta": -1,
++            "char": "clara"
++          }
++        },
++        {
++          "trust": {
++            "delta": 1,
++            "char": "margie"
++          }
++        }
++      ],
++      "reactions": {
++        "rumorSeed": "vale_suspected",
++        "chalkboard": "THE FAMILY BLEND - handle with tongs"
++      }
++    },
++    {
++      "id": "h_d5_measured",
++      "tone": "measured",
++      "text": "Seal on Sealed Envelope Identified as Private Signet",
++      "reactions": {
++        "chalkboard": "THE SIGNET SHOT - small, precise, leaves a mark"
++      }
++    },
++    {
++      "id": "h_d5_compassionate",
++      "tone": "compassionate",
++      "text": "Archive Curator Cleared; a Fifty-Year Love Story Surfaces",
++      "effects": [
++        {
++          "trust": {
++            "delta": 1,
++            "char": "prudence"
++          }
++        },
++        {
++          "trust": {
++            "delta": 1,
++            "char": "evelyn"
++          }
++        }
++      ],
++      "reactions": {
++        "chalkboard": "THE LONG CORRESPONDENCE - two cups, one river"
++      }
++    }
++  ],
++  "kickers": [
++    {
++      "id": "k_d5_gentle",
++      "text": "The trail narrows. The Ledger walks it slowly, on purpose."
++    },
++    {
++      "id": "k_d5_romance",
++      "text": "Some stories wait fifty years to be told kindly. This paper can wait one more day for the other one."
++    },
++    {
++      "id": "k_d5_facts",
++      "text": "The Ledger prints what it knows, as it knows it."
++    }
++  ]
++}
+diff --git a/content/editions/ed_d6.json b/content/editions/ed_d6.json
+new file mode 100644
+index 0000000..eeb3213
+--- /dev/null
++++ b/content/editions/ed_d6.json
+@@ -0,0 +1,80 @@
++{
++  "id": "ed_d6",
++  "day": 6,
++  "ref": "II.15.1",
++  "draftCards": [
++    "idas_ledger",
++    "wax_fragment",
++    "milos_sighting",
++    "ded_final"
++  ],
++  "headlines": [
++    {
++      "id": "h_d6_sensational",
++      "tone": "sensational",
++      "text": "HEIR SUSPECTED IN CAPSULE THEFT",
++      "effects": [
++        {
++          "setFlag": "julian_read_it"
++        },
++        {
++          "trust": {
++            "delta": -1,
++            "char": "clara"
++          }
++        },
++        {
++          "trust": {
++            "delta": -1,
++            "char": "beatrice"
++          }
++        }
++      ],
++      "reactions": {
++        "rumorSeed": "julian_suspected",
++        "chalkboard": "THE FRONT PAGE - bitter, and someone drinks it alone"
++      }
++    },
++    {
++      "id": "h_d6_measured",
++      "tone": "measured",
++      "text": "Investigation Nears Its End",
++      "reactions": {
++        "chalkboard": "THE LAST POUR - almost done, steady hands"
++      }
++    },
++    {
++      "id": "h_d6_hold",
++      "tone": "hold",
++      "text": "Hold Tomorrow's Front Page",
++      "effects": [
++        {
++          "setFlag": "held_the_page_d6"
++        },
++        {
++          "trust": {
++            "delta": 1,
++            "char": "clara"
++          }
++        }
++      ],
++      "reactions": {
++        "chalkboard": "THE HELD BREATH - no charge, on the house"
++      }
++    }
++  ],
++  "kickers": [
++    {
++      "id": "k_d6_tomorrow",
++      "text": "Tomorrow, this paper prints the truth. Tonight, it lets a family sleep."
++    },
++    {
++      "id": "k_d6_near",
++      "text": "The Ledger expects to publish a full account shortly."
++    },
++    {
++      "id": "k_d6_facts",
++      "text": "What we know, as we know it. What we suspect stays at the desk."
++    }
++  ]
++}
+diff --git a/content/editions/ed_d7.json b/content/editions/ed_d7.json
+new file mode 100644
+index 0000000..75705ef
+--- /dev/null
++++ b/content/editions/ed_d7.json
+@@ -0,0 +1,83 @@
++{
++  "id": "ed_d7",
++  "day": 7,
++  "ref": "II.15.1",
++  "draftCards": [
++    "recovered_contents",
++    "ded_final"
++  ],
++  "headlines": [
++    {
++      "id": "h_d7_sensational",
++      "tone": "sensational",
++      "text": "HEIR CONFESSES! CAPSULE FOUND UNDER BOATHOUSE",
++      "effects": [
++        {
++          "trust": {
++            "delta": -1,
++            "char": "clara"
++          }
++        },
++        {
++          "trust": {
++            "delta": -1,
++            "char": "julian"
++          }
++        }
++      ],
++      "reactions": {
++        "chalkboard": "THE MORNING AFTER - strong, unkind"
++      }
++    },
++    {
++      "id": "h_d7_measured",
++      "tone": "measured",
++      "text": "Capsule Contents Recovered Intact; Leadership to Be Shared",
++      "reactions": {
++        "chalkboard": "THE FULL ACCOUNT - everything in the cup"
++      }
++    },
++    {
++      "id": "h_d7_compassionate",
++      "tone": "compassionate",
++      "text": "The Lantern and the Ivy: Lanternside Gets Its Memory Back",
++      "effects": [
++        {
++          "trust": {
++            "delta": 1,
++            "char": "julian"
++          }
++        },
++        {
++          "trust": {
++            "delta": 1,
++            "char": "clara"
++          }
++        },
++        {
++          "trust": {
++            "delta": 1,
++            "char": "beatrice"
++          }
++        }
++      ],
++      "reactions": {
++        "chalkboard": "THE LANTERN & IVY - two shots, one saucer, sweet"
++      }
++    }
++  ],
++  "kickers": [
++    {
++      "id": "k_d7_together",
++      "text": "Lead together. Argue often. Decide once. This paper intends to hold them to it."
++    },
++    {
++      "id": "k_d7_home",
++      "text": "Fifty years came home this week. So did a few other things."
++    },
++    {
++      "id": "k_d7_next",
++      "text": "NEXT STORY? - the board is already asking."
++    }
++  ]
++}
+diff --git a/content/game.json b/content/game.json
+index 9dbe843..ca2e93c 100644
+--- a/content/game.json
++++ b/content/game.json
+@@ -4,16 +4,83 @@
+   "startPhase": "morning",
+   "apartmentLocation": "gary_apartment",
+   "days": [
+-    { "day": 1, "title": "An Ordinary Thursday", "ref": "I.5.day1", "gateDeductions": ["d1_emptied_before"], "coreCompleteFlag": "ceremony_done", "edition": "ed_d1" },
+-    { "day": 2, "title": "The Backwards Key", "ref": "I.5.day2", "gateDeductions": ["d3_theft_window", "poppy_opened_not_emptied"], "coreCompleteFlag": "seal_after_done", "edition": "ed_d2" },
+-    { "day": 3, "title": "The Man Who Counts Lighthouses", "ref": "I.5.day3", "gateDeductions": ["d5_lodger"], "coreCompleteFlag": "has_camera", "edition": "ed_d3" },
+-    { "day": 4, "title": "The Weasel Digs at Midnight", "ref": "I.5.day4", "gateDeductions": ["d6_insider"], "coreCompleteFlag": "ferris_testimony_heard", "edition": "ed_d4" },
+-    { "day": 5, "title": "The Lantern in Ivy", "ref": "I.5.day5", "gateDeductions": [] },
+-    { "day": 6, "title": "The Two-Person Puzzle", "ref": "I.5.day6", "gateDeductions": [] },
+-    { "day": 7, "title": "The Boathouse", "ref": "I.5.day7", "gateDeductions": [] }
++    {
++      "day": 1,
++      "title": "An Ordinary Thursday",
++      "ref": "I.5.day1",
++      "gateDeductions": [
++        "d1_emptied_before"
++      ],
++      "coreCompleteFlag": "ceremony_done",
++      "edition": "ed_d1"
++    },
++    {
++      "day": 2,
++      "title": "The Backwards Key",
++      "ref": "I.5.day2",
++      "gateDeductions": [
++        "d3_theft_window",
++        "poppy_opened_not_emptied"
++      ],
++      "coreCompleteFlag": "seal_after_done",
++      "edition": "ed_d2"
++    },
++    {
++      "day": 3,
++      "title": "The Man Who Counts Lighthouses",
++      "ref": "I.5.day3",
++      "gateDeductions": [
++        "d5_lodger"
++      ],
++      "coreCompleteFlag": "has_camera",
++      "edition": "ed_d3"
++    },
++    {
++      "day": 4,
++      "title": "The Weasel Digs at Midnight",
++      "ref": "I.5.day4",
++      "gateDeductions": [
++        "d6_insider"
++      ],
++      "coreCompleteFlag": "ferris_testimony_heard",
++      "edition": "ed_d4"
++    },
++    {
++      "day": 5,
++      "title": "The Lantern in Ivy",
++      "ref": "I.5.day5",
++      "gateDeductions": [
++        "d7_signet"
++      ],
++      "coreCompleteFlag": "promised_prudence_first",
++      "edition": "ed_d5"
++    },
++    {
++      "day": 6,
++      "title": "The Two-Person Puzzle",
++      "ref": "I.5.day6",
++      "gateDeductions": [
++        "d13_final"
++      ],
++      "coreCompleteFlag": "beatrice_tea_done",
++      "edition": "ed_d6"
++    },
++    {
++      "day": 7,
++      "title": "The Boathouse",
++      "ref": "I.5.day7",
++      "gateDeductions": [],
++      "coreCompleteFlag": "reading_done",
++      "edition": "ed_d7"
++    }
+   ],
+   "weather": {
+-    "scheduledRain": [{ "day": 5, "phase": "midday" }],
++    "scheduledRain": [
++      {
++        "day": 5,
++        "phase": "midday"
++      }
++    ],
+     "dailyRainChance": 0.1
+   }
+ }
+diff --git a/content/hints.json b/content/hints.json
+index 51bbce3..b926490 100644
+--- a/content/hints.json
++++ b/content/hints.json
+@@ -17,6 +17,15 @@
+       { "text": "Grandpa always said: when a witness gives you one strange detail, that detail is the story. Ferris gave you a key.", "ref": "I.6.D6" },
+       { "text": "Your very first deduction, Gibbons — the one from the ceremony night. It's been waiting on the board for a partner all week.", "ref": "I.6.D6" }
+     ],
++    "d7_signet": [
++      { "text": "Grandpa always said: every mark belongs to a hand. You drew the mark days ago — now find the person who reads marks for a living.", "ref": "I.6.D7" },
++      { "text": "The sketch, Gibbons. It's been pinned there since Day 2, waiting for an expert's eyes to finish it.", "ref": "I.6.D7" }
++    ],
++    "d13_final": [
++      { "text": "Grandpa always said: the last step of a story is never a new fact. It's four old ones agreeing.", "ref": "I.6.D13" },
++      { "text": "Motive. Means. Opportunity. Proof. The ledger row is waiting for all four deduction cards on one string.", "ref": "I.6.D13" },
++      { "text": "The four gold cards, Gibbons. Every one of them earned on the record. Tie them, and then go be kind about it.", "ref": "I.6.D13" }
++    ],
+     "poppy_opened_not_emptied": [
+       { "text": "Grandpa always said: re-read the witness who was most embarrassed. Embarrassment and guilt wear different coats.", "ref": "I.5.day2" },
+       { "text": "The backwards key. A thief wipes her tracks; a worrier makes a list of them. Which kind hung that key back wrong?", "ref": "I.5.day2" }
+diff --git a/content/locations/founders_square.json b/content/locations/founders_square.json
+index 800e187..0504445 100644
+--- a/content/locations/founders_square.json
++++ b/content/locations/founders_square.json
+@@ -2,70 +2,158 @@
+   "id": "founders_square",
+   "name": "Founders' Square",
+   "ref": "I.2",
+-  "layers": ["bg", "mid", "fg"],
+-  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
++  "layers": [
++    "bg",
++    "mid",
++    "fg"
++  ],
++  "walkLine": {
++    "y": 880,
++    "minX": 160,
++    "maxX": 1760,
++    "depthScale": [
++      0.92,
++      1.0
++    ]
++  },
+   "exits": [
+-    { "to": "market_row", "at": [160, 880] },
+-    { "to": "council_hall", "at": [1760, 880] }
++    {
++      "to": "market_row",
++      "at": [
++        160,
++        880
++      ]
++    },
++    {
++      "to": "council_hall",
++      "at": [
++        1760,
++        880
++      ]
++    },
++    {
++      "to": "vale_manor",
++      "at": [
++        960,
++        880
++      ]
++    }
+   ],
+   "sitSpot": {
+-    "at": [400, 880],
++    "at": [
++      400,
++      880
++    ],
+     "monologues": [
+-      { "cond": { "flag": "ceremony_done" }, "bark": "bench_square_post_ceremony" },
+-      { "cond": {}, "bark": "bench_square_d1" }
++      {
++        "cond": {
++          "flag": "ceremony_done"
++        },
++        "bark": "bench_square_post_ceremony"
++      },
++      {
++        "cond": {},
++        "bark": "bench_square_d1"
++      }
+     ]
+   },
+   "hotspots": [
+     {
+       "id": "talk_poppy",
+-      "at": [600, 800],
++      "at": [
++        600,
++        800
++      ],
+       "kind": "talk",
+       "character": "poppy",
+       "label": "Poppy"
+     },
+     {
+       "id": "talk_warren",
+-      "at": [1000, 800],
++      "at": [
++        1000,
++        800
++      ],
+       "kind": "talk",
+       "character": "warren",
+       "label": "Warren"
+     },
+     {
+       "id": "talk_julian",
+-      "at": [1350, 800],
++      "at": [
++        1350,
++        800
++      ],
+       "kind": "talk",
+       "character": "julian",
+       "label": "Julian"
+     },
+     {
+       "id": "talk_clara",
+-      "at": [1550, 800],
++      "at": [
++        1550,
++        800
++      ],
+       "kind": "talk",
+       "character": "clara",
+       "label": "Clara"
+     },
+     {
+       "id": "monument",
+-      "at": [820, 560],
++      "at": [
++        820,
++        560
++      ],
+       "kind": "examine",
+       "label": "The Founders' Monument",
+       "interactions": [
+         {
+           "id": "dust_library",
+-          "cond": { "all": [{ "day": { "gte": 2 } }, { "not": { "flag": "dust_library_done" } }] },
++          "cond": {
++            "all": [
++              {
++                "day": {
++                  "gte": 2
++                }
++              },
++              {
++                "not": {
++                  "flag": "dust_library_done"
++                }
++              }
++            ]
++          },
+           "opens": "puzzle:dust_library",
+           "ref": "II.13.1"
+         },
+         {
+           "id": "wax_scrapings",
+-          "cond": { "all": [{ "flag": "dust_library_done" }, { "not": { "card": "wax_scrapings" } }] },
++          "cond": {
++            "all": [
++              {
++                "flag": "dust_library_done"
++              },
++              {
++                "not": {
++                  "card": "wax_scrapings"
++                }
++              }
++            ]
++          },
+           "text": "On the vault's lip, where a careful hand would rest an envelope on the way out: flecks of green wax, scraped thin. The sealed envelope came out LAST — lifted deliberately, over everything else.",
+-          "effects": [{ "giveCard": "wax_scrapings", "status": "verified" }],
++          "effects": [
++            {
++              "giveCard": "wax_scrapings",
++              "status": "verified"
++            }
++          ],
+           "ref": "II.12.4"
+         },
+         {
+           "id": "monument_post_ceremony",
+-          "cond": { "flag": "ceremony_done" },
++          "cond": {
++            "flag": "ceremony_done"
++          },
+           "text": "The vault door stands open at the monument's base. Fifty years of waiting, and inside: clean stone, old dust, and nothing at all. The bunting overhead has already begun to sag.",
+           "ref": "I.5.day1"
+         },
+@@ -79,10 +167,17 @@
+     },
+     {
+       "id": "julians_ring",
+-      "at": [1350, 640],
++      "at": [
++        1350,
++        640
++      ],
+       "kind": "chekhov",
+       "label": "The Heir at Work",
+-      "cond": { "not": { "flag": "ceremony_done" } },
++      "cond": {
++        "not": {
++          "flag": "ceremony_done"
++        }
++      },
+       "detail": {
+         "tier": "character",
+         "text": "Julian Vale, shaking hands, smiling the practiced smile. Between handshakes his thumb finds his father's signet ring and spins it — around, around. Probably nothing. Gary writes it down anyway.",
+@@ -93,20 +188,40 @@
+     },
+     {
+       "id": "dedication_plaque",
+-      "at": [620, 620],
++      "at": [
++        620,
++        620
++      ],
+       "kind": "examine",
+       "label": "The Dedication Plaque",
+-      "cond": { "day": { "gte": 3 } },
++      "cond": {
++        "day": {
++          "gte": 3
++        }
++      },
+       "interactions": [
+         {
+           "id": "then_now",
+-          "cond": { "all": [{ "card": "founding_photograph" }, { "not": { "flag": "then_now_founding_done" } }] },
++          "cond": {
++            "all": [
++              {
++                "card": "founding_photograph"
++              },
++              {
++                "not": {
++                  "flag": "then_now_founding_done"
++                }
++              }
++            ]
++          },
+           "opens": "puzzle:then_now_founding",
+           "ref": "II.13.2"
+         },
+         {
+           "id": "plaque_after",
+-          "cond": { "flag": "then_now_founding_done" },
++          "cond": {
++            "flag": "then_now_founding_done"
++          },
+           "text": "The dedication plaque, a full stride from where the founding photograph shows it. Moved ten years ago — to make room for something added behind it.",
+           "ref": "II.13.2"
+         },
+@@ -120,40 +235,141 @@
+     },
+     {
+       "id": "square_lantern_photo",
+-      "at": [1180, 500],
++      "at": [
++        1180,
++        500
++      ],
+       "kind": "photo",
+       "label": "The Square's Oldest Lantern",
+       "interactions": [
+-        { "id": "lantern_sq_01", "text": "Lantern #1 of 47, if anyone were counting.", "ref": "II.19.2" }
++        {
++          "id": "lantern_sq_01",
++          "text": "Lantern #1 of 47, if anyone were counting.",
++          "ref": "II.19.2"
++        }
+       ],
+       "ref": "II.19.2"
+     },
+     {
+       "id": "exit_market",
+-      "at": [160, 820],
++      "at": [
++        160,
++        820
++      ],
+       "kind": "exit",
+       "to": "market_row",
+       "label": "To Market Row"
+     },
+     {
+       "id": "exit_hall",
+-      "at": [1760, 820],
++      "at": [
++        1760,
++        820
++      ],
+       "kind": "exit",
+       "to": "council_hall",
+       "label": "To the Council Hall"
++    },
++    {
++      "id": "exit_manor",
++      "at": [
++        960,
++        500
++      ],
++      "kind": "exit",
++      "to": "vale_manor",
++      "label": "Vale Manor",
++      "cond": {
++        "day": {
++          "gte": 6
++        }
++      }
++    },
++    {
++      "id": "balcony_line",
++      "at": [
++        1500,
++        540
++      ],
++      "kind": "examine",
++      "label": "Warren's Balcony Line",
++      "cond": {
++        "all": [
++          {
++            "day": {
++              "gte": 5
++            }
++          },
++          {
++            "card": "night_photograph"
++          },
++          {
++            "flag": "has_camera"
++          }
++        ]
++      },
++      "interactions": [
++        {
++          "id": "triangulate",
++          "cond": {
++            "not": {
++              "flag": "photo_triangulation_done"
++            }
++          },
++          "opens": "puzzle:photo_triangulation",
++          "ref": "III.25.2"
++        },
++        {
++          "id": "triangulated",
++          "text": "The spot where the figure stood, worked out from light and habit. Off the manor shortcut. On the river-side line.",
++          "ref": "III.25.2"
++        }
++      ],
++      "ref": "III.25.2"
+     }
+   ],
+   "triggers": [
+     {
+       "id": "ceremony_d1",
+-      "cond": { "all": [{ "day": 1 }, { "phase": "evening" }] },
++      "cond": {
++        "all": [
++          {
++            "day": 1
++          },
++          {
++            "phase": "evening"
++          }
++        ]
++      },
+       "dialogue": "ceremony_d1",
+       "once": true,
+       "ref": "I.5.day1"
++    },
++    {
++      "id": "reading_d7",
++      "cond": {
++        "all": [
++          {
++            "day": 7
++          },
++          {
++            "phase": "evening"
++          },
++          {
++            "flag": "contents_recovered"
++          }
++        ]
++      },
++      "dialogue": "reading_d7",
++      "once": true,
++      "ref": "I.8.3"
+     }
+   ],
+   "ambient": {
+-    "vignetteTags": ["square", "outdoors"],
++    "vignetteTags": [
++      "square",
++      "outdoors"
++    ],
+     "weatherVariants": true,
+     "music": "music_square",
+     "ambience": "amb_square"
+diff --git a/content/locations/gary_apartment.json b/content/locations/gary_apartment.json
+index 5fa3b0b..eacb891 100644
+--- a/content/locations/gary_apartment.json
++++ b/content/locations/gary_apartment.json
+@@ -2,22 +2,55 @@
+   "id": "gary_apartment",
+   "name": "Gary's Apartment",
+   "ref": "I.2",
+-  "layers": ["bg", "mid", "fg"],
+-  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
++  "layers": [
++    "bg",
++    "mid",
++    "fg"
++  ],
++  "walkLine": {
++    "y": 880,
++    "minX": 160,
++    "maxX": 1760,
++    "depthScale": [
++      0.92,
++      1.0
++    ]
++  },
+   "exits": [
+-    { "to": "the_percolator", "at": [1760, 880] },
+-    { "to": "ledger_morgue", "at": [320, 880] }
++    {
++      "to": "the_percolator",
++      "at": [
++        1760,
++        880
++      ]
++    },
++    {
++      "to": "ledger_morgue",
++      "at": [
++        320,
++        880
++      ]
++    }
+   ],
+   "sitSpot": {
+-    "at": [420, 880],
++    "at": [
++      420,
++      880
++    ],
+     "monologues": [
+-      { "cond": {}, "bark": "bench_apartment_d1" }
++      {
++        "cond": {},
++        "bark": "bench_apartment_d1"
++      }
+     ]
+   },
+   "hotspots": [
+     {
+       "id": "the_board",
+-      "at": [960, 520],
++      "at": [
++        960,
++        520
++      ],
+       "kind": "examine",
+       "label": "The Board",
+       "interactions": [
+@@ -31,7 +64,10 @@
+     },
+     {
+       "id": "grandpas_badge",
+-      "at": [640, 700],
++      "at": [
++        640,
++        700
++      ],
+       "kind": "chekhov",
+       "label": "Grandpa's Badge",
+       "detail": {
+@@ -42,14 +78,21 @@
+     },
+     {
+       "id": "stair_rail",
+-      "at": [1600, 760],
++      "at": [
++        1600,
++        760
++      ],
+       "kind": "examine",
+       "label": "The Stair Rail",
+       "interactions": [
+         {
+           "id": "red_ink_smudge",
+           "text": "The rail down to the Ledger office, polished by fifty years of deadline hands. Near the bottom: a smudge of red ink, low on the rail. Low, like a small hand made it.",
+-          "effects": [{ "setFlag": "noticed_red_ink" }],
++          "effects": [
++            {
++              "setFlag": "noticed_red_ink"
++            }
++          ],
+           "ref": "II.17.1"
+         }
+       ],
+@@ -57,10 +100,17 @@
+     },
+     {
+       "id": "grape_stress_ball",
+-      "at": [1180, 700],
++      "at": [
++        1180,
++        700
++      ],
+       "kind": "examine",
+       "label": "A Grape-Shaped Stress Ball",
+-      "cond": { "day": { "gte": 2 } },
++      "cond": {
++        "day": {
++          "gte": 2
++        }
++      },
+       "interactions": [
+         {
+           "id": "stress_ball_look",
+@@ -72,7 +122,10 @@
+     },
+     {
+       "id": "kettle",
+-      "at": [1400, 700],
++      "at": [
++        1400,
++        700
++      ],
+       "kind": "examine",
+       "label": "The Kettle",
+       "interactions": [
+@@ -86,24 +139,55 @@
+     },
+     {
+       "id": "exit_to_percolator",
+-      "at": [1760, 820],
++      "at": [
++        1760,
++        820
++      ],
+       "kind": "exit",
+       "to": "the_percolator",
+       "label": "Down to the street"
+     },
+     {
+       "id": "exit_to_morgue",
+-      "at": [320, 820],
++      "at": [
++        320,
++        820
++      ],
+       "kind": "exit",
+       "to": "ledger_morgue",
+       "label": "Down to the Morgue",
+-      "cond": { "flag": "morgue_unlocked" }
++      "cond": {
++        "flag": "morgue_unlocked"
++      }
+     }
+   ],
+   "ambient": {
+-    "vignetteTags": ["apartment"],
++    "vignetteTags": [
++      "apartment"
++    ],
+     "weatherVariants": true,
+     "music": "music_apartment",
+     "ambience": "amb_apartment"
+-  }
++  },
++  "triggers": [
++    {
++      "id": "credits_d7",
++      "cond": {
++        "all": [
++          {
++            "day": 7
++          },
++          {
++            "phase": "night"
++          },
++          {
++            "flag": "reading_done"
++          }
++        ]
++      },
++      "dialogue": "credits_d7",
++      "once": true,
++      "ref": "I.8.4"
++    }
++  ]
+ }
+diff --git a/content/locations/lanternside_archive.json b/content/locations/lanternside_archive.json
+new file mode 100644
+index 0000000..e427b54
+--- /dev/null
++++ b/content/locations/lanternside_archive.json
+@@ -0,0 +1,87 @@
++{
++  "id": "lanternside_archive",
++  "name": "The Lanternside Archive",
++  "ref": "I.2",
++  "layers": ["bg", "mid", "fg"],
++  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
++  "exits": [{ "to": "market_row", "at": [160, 880] }],
++  "sitSpot": {
++    "at": [1500, 880],
++    "monologues": [{ "cond": {}, "bark": "bench_archive_d5" }]
++  },
++  "hotspots": [
++    {
++      "id": "talk_prudence",
++      "at": [800, 800],
++      "kind": "talk",
++      "character": "prudence",
++      "label": "Prudence"
++    },
++    {
++      "id": "visitor_ledger",
++      "at": [420, 640],
++      "kind": "examine",
++      "label": "The Visitor Ledger",
++      "interactions": [
++        {
++          "id": "sign_ledger",
++          "cond": { "not": { "flag": "signed_archive_ledger" } },
++          "text": "Gary signs the visitor ledger in his best press-badge handwriting. Somewhere in the reeds of shelves, a curator's posture approves by two degrees.",
++          "effects": [{ "setFlag": "signed_archive_ledger" }],
++          "ref": "III.23.4"
++        },
++        {
++          "id": "ledger_signed",
++          "text": "Signed, dated, legible. The Archive keeps better records of its visitors than the visitors do.",
++          "ref": "III.23.4"
++        }
++      ],
++      "ref": "III.23.4"
++    },
++    {
++      "id": "grapes_in_lamplight",
++      "at": [1250, 540],
++      "kind": "examine",
++      "label": "A Still Life",
++      "cond": { "day": { "gte": 5 } },
++      "interactions": [
++        {
++          "id": "grape_painting",
++          "cond": { "not": { "flag": "grape_beat_d5" } },
++          "text": "A 200-year-old still life: GRAPES IN LAMPLIGHT. Gary stands before it slightly too long. From the shelves, Prudence: 'It's not for sale.' Gary, quietly: 'I know what it is.'",
++          "effects": [{ "setFlag": "grape_beat_d5" }, { "grapeDeclined": true }],
++          "ref": "I.7.1"
++        },
++        {
++          "id": "grape_painting_again",
++          "text": "GRAPES IN LAMPLIGHT. Still not for sale. Still magnificent. Gary keeps walking, which is growth.",
++          "ref": "I.7.1"
++        }
++      ],
++      "ref": "I.7.1"
++    },
++    {
++      "id": "exhibit_corner",
++      "at": [980, 560],
++      "kind": "chekhov",
++      "label": "A Half-Assembled Exhibit",
++      "detail": {
++        "tier": "character",
++        "text": "In the corner, slowly taking shape: two portraits facing each other across a gap, ribbon-tied letter bundles beneath. A doe and a fox, fifty years apart and two feet apart. Twenty years of somebody's patient believing."
++      },
++      "ref": "I.2"
++    },
++    {
++      "id": "exit_market",
++      "at": [160, 820],
++      "kind": "exit",
++      "to": "market_row",
++      "label": "To Market Row"
++    }
++  ],
++  "ambient": {
++    "vignetteTags": ["archive", "indoors"],
++    "weatherVariants": false,
++    "ambience": "amb_paper_dust"
++  }
++}
+diff --git a/content/locations/market_row.json b/content/locations/market_row.json
+index c7a869b..e29dda7 100644
+--- a/content/locations/market_row.json
++++ b/content/locations/market_row.json
+@@ -2,50 +2,123 @@
+   "id": "market_row",
+   "name": "Market Row",
+   "ref": "I.2",
+-  "layers": ["bg", "mid", "fg"],
+-  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
++  "layers": [
++    "bg",
++    "mid",
++    "fg"
++  ],
++  "walkLine": {
++    "y": 880,
++    "minX": 160,
++    "maxX": 1760,
++    "depthScale": [
++      0.92,
++      1.0
++    ]
++  },
+   "exits": [
+-    { "to": "the_percolator", "at": [160, 880] },
+-    { "to": "founders_square", "at": [1760, 880] },
+-    { "to": "drowsy_lantern", "at": [960, 880] },
+-    { "to": "riverbank", "at": [520, 880] }
++    {
++      "to": "the_percolator",
++      "at": [
++        160,
++        880
++      ]
++    },
++    {
++      "to": "founders_square",
++      "at": [
++        1760,
++        880
++      ]
++    },
++    {
++      "to": "drowsy_lantern",
++      "at": [
++        960,
++        880
++      ]
++    },
++    {
++      "to": "riverbank",
++      "at": [
++        520,
++        880
++      ]
++    },
++    {
++      "to": "lanternside_archive",
++      "at": [
++        1200,
++        880
++      ]
++    },
++    {
++      "to": "milos_alley",
++      "at": [
++        700,
++        880
++      ]
++    }
+   ],
+   "sitSpot": {
+-    "at": [980, 880],
+-    "monologues": [{ "cond": {}, "bark": "bench_market_d1" }]
++    "at": [
++      980,
++      880
++    ],
++    "monologues": [
++      {
++        "cond": {},
++        "bark": "bench_market_d1"
++      }
++    ]
+   },
+   "hotspots": [
+     {
+       "id": "talk_gino",
+-      "at": [480, 800],
++      "at": [
++        480,
++        800
++      ],
+       "kind": "talk",
+       "character": "gino",
+       "label": "Gino"
+     },
+     {
+       "id": "talk_ida",
+-      "at": [900, 800],
++      "at": [
++        900,
++        800
++      ],
+       "kind": "talk",
+       "character": "ida",
+       "label": "Ida"
+     },
+     {
+       "id": "talk_evelyn",
+-      "at": [1320, 800],
++      "at": [
++        1320,
++        800
++      ],
+       "kind": "talk",
+       "character": "evelyn",
+       "label": "Evelyn"
+     },
+     {
+       "id": "talk_milo",
+-      "at": [1550, 800],
++      "at": [
++        1550,
++        800
++      ],
+       "kind": "talk",
+       "character": "milo",
+       "label": "Milo"
+     },
+     {
+       "id": "wren_wick_window",
+-      "at": [1000, 560],
++      "at": [
++        1000,
++        560
++      ],
+       "kind": "chekhov",
+       "label": "Wren & Wick",
+       "detail": {
+@@ -56,7 +129,10 @@
+     },
+     {
+       "id": "flower_stall",
+-      "at": [1380, 560],
++      "at": [
++        1380,
++        560
++      ],
+       "kind": "chekhov",
+       "label": "Fifty Years of Flowers",
+       "detail": {
+@@ -67,35 +143,70 @@
+     },
+     {
+       "id": "exit_percolator",
+-      "at": [160, 820],
++      "at": [
++        160,
++        820
++      ],
+       "kind": "exit",
+       "to": "the_percolator",
+       "label": "To the Percolator"
+     },
+     {
+       "id": "exit_square",
+-      "at": [1760, 820],
++      "at": [
++        1760,
++        820
++      ],
+       "kind": "exit",
+       "to": "founders_square",
+       "label": "To Founders' Square"
+     },
+     {
+       "id": "exit_inn",
+-      "at": [960, 560],
++      "at": [
++        960,
++        560
++      ],
+       "kind": "exit",
+       "to": "drowsy_lantern",
+       "label": "The Drowsy Lantern"
+     },
+     {
+       "id": "exit_river",
+-      "at": [520, 820],
++      "at": [
++        520,
++        820
++      ],
+       "kind": "exit",
+       "to": "riverbank",
+       "label": "Down to the river"
++    },
++    {
++      "id": "exit_archive",
++      "at": [
++        1200,
++        560
++      ],
++      "kind": "exit",
++      "to": "lanternside_archive",
++      "label": "The Archive"
++    },
++    {
++      "id": "exit_alley",
++      "at": [
++        700,
++        560
++      ],
++      "kind": "exit",
++      "to": "milos_alley",
++      "label": "Milo's Alley"
+     }
+   ],
+   "ambient": {
+-    "vignetteTags": ["market", "outdoors"],
++    "vignetteTags": [
++      "market",
++      "outdoors"
++    ],
+     "weatherVariants": true,
+     "music": "music_market",
+     "ambience": "amb_market"
+diff --git a/content/locations/milos_alley.json b/content/locations/milos_alley.json
+new file mode 100644
+index 0000000..f86a90f
+--- /dev/null
++++ b/content/locations/milos_alley.json
+@@ -0,0 +1,54 @@
++{
++  "id": "milos_alley",
++  "name": "Milo's Fire Escape",
++  "ref": "I.5.day6",
++  "layers": ["bg", "mid", "fg"],
++  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
++  "exits": [{ "to": "market_row", "at": [160, 880] }],
++  "sitSpot": {
++    "at": [1500, 880],
++    "monologues": [{ "cond": {}, "bark": "bench_alley_d6" }]
++  },
++  "hotspots": [
++    {
++      "id": "talk_milo_alley",
++      "at": [900, 800],
++      "kind": "talk",
++      "character": "milo",
++      "label": "Milo"
++    },
++    {
++      "id": "fire_escape",
++      "at": [1300, 600],
++      "kind": "examine",
++      "label": "The Fire Escape",
++      "cond": { "all": [{ "day": { "gte": 6 } }, { "card": "milos_sighting" }] },
++      "interactions": [
++        {
++          "id": "sightline_check",
++          "cond": { "not": { "flag": "fire_escape_puzzle_done" } },
++          "opens": "puzzle:fire_escape_sightline",
++          "ref": "II.12.6"
++        },
++        {
++          "id": "sightline_done",
++          "text": "Milo's vantage, verified with Gary's own eyes and Warren's loaner lens. The kid could see exactly what he said he saw — and exactly nothing more. The umbrella did the rest.",
++          "ref": "II.12.6"
++        }
++      ],
++      "ref": "II.12.6"
++    },
++    {
++      "id": "exit_market",
++      "at": [160, 820],
++      "kind": "exit",
++      "to": "market_row",
++      "label": "To Market Row"
++    }
++  ],
++  "ambient": {
++    "vignetteTags": ["alley"],
++    "weatherVariants": true,
++    "ambience": "amb_evening_street"
++  }
++}
+diff --git a/content/locations/old_boathouse.json b/content/locations/old_boathouse.json
+new file mode 100644
+index 0000000..0aa5f59
+--- /dev/null
++++ b/content/locations/old_boathouse.json
+@@ -0,0 +1,91 @@
++{
++  "id": "old_boathouse",
++  "name": "The Old Boathouse",
++  "ref": "I.2",
++  "layers": ["bg", "mid", "fg"],
++  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
++  "exits": [{ "to": "riverbank", "at": [160, 880] }],
++  "sitSpot": {
++    "at": [400, 880],
++    "monologues": [{ "cond": { "flag": "confession_done" }, "bark": "bench_boathouse_after" }]
++  },
++  "hotspots": [
++    {
++      "id": "carved_initials",
++      "at": [600, 560],
++      "kind": "chekhov",
++      "label": "A Beam, Child-Height",
++      "cond": { "day": 7 },
++      "detail": {
++        "tier": "clue",
++        "text": "Two initials carved at child-height in the beam: J + C. Not a heart around them — a plus sign. Arithmetic, not romance. Two children who added up to something.",
++        "flag": "boathouse_read_1"
++      },
++      "ref": "II.13.5"
++    },
++    {
++      "id": "puzzle_boxes",
++      "at": [950, 560],
++      "kind": "chekhov",
++      "label": "A Shelf of Small Boxes",
++      "cond": { "day": 7 },
++      "detail": {
++        "tier": "clue",
++        "text": "Small wooden puzzle boxes, one per birthday, each built so that no single pair of hands could open it. A shelf of syllabus, dressed as toys.",
++        "flag": "boathouse_read_2"
++      },
++      "ref": "II.13.5"
++    },
++    {
++      "id": "scuff_line",
++      "at": [1250, 700],
++      "kind": "chekhov",
++      "label": "A Scuff on the Floor",
++      "cond": { "day": 7 },
++      "detail": {
++        "tier": "clue",
++        "text": "One recent scuff-line where floorboards were dragged, and a dry umbrella against the wall. The room has already told the whole story; it's just waiting for someone to say it kindly.",
++        "flag": "boathouse_read_3"
++      },
++      "ref": "II.13.5"
++    },
++    {
++      "id": "shining_nails",
++      "at": [1450, 760],
++      "kind": "examine",
++      "label": "The Floorboards",
++      "cond": { "all": [{ "day": 7 }, { "not": { "flag": "confession_done" } }] },
++      "interactions": [
++        {
++          "id": "find_floorboards",
++          "cond": { "not": { "flag": "found_floorboards" } },
++          "text": "Every nail in the floor is dull with age — except six, shining, recently re-driven. Gary kneels. He doesn't pry. Finding it is enough; the rest belongs to Julian.",
++          "effects": [{ "setFlag": "found_floorboards" }],
++          "ref": "III.25.4"
++        }
++      ],
++      "ref": "III.25.4"
++    },
++    {
++      "id": "exit_river",
++      "at": [160, 820],
++      "kind": "exit",
++      "to": "riverbank",
++      "label": "Back along the bank"
++    }
++  ],
++  "triggers": [
++    {
++      "id": "confrontation_d7",
++      "cond": { "all": [{ "day": 7 }, { "flag": "river_walk_done" }, { "not": { "flag": "confession_done" } }, { "flag": "boathouse_ready" }] },
++      "dialogue": "confrontation_d7",
++      "once": true,
++      "ref": "I.8.2"
++    }
++  ],
++  "ambient": {
++    "vignetteTags": ["boathouse"],
++    "weatherVariants": false,
++    "ambience": "amb_mist_water"
++  }
++}
+diff --git a/content/locations/riverbank.json b/content/locations/riverbank.json
+index 026a0f1..52f5c03 100644
+--- a/content/locations/riverbank.json
++++ b/content/locations/riverbank.json
+@@ -2,27 +2,83 @@
+   "id": "riverbank",
+   "name": "The Riverbank",
+   "ref": "I.2",
+-  "layers": ["bg", "mid", "fg"],
+-  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+-  "exits": [{ "to": "market_row", "at": [160, 880] }],
++  "layers": [
++    "bg",
++    "mid",
++    "fg"
++  ],
++  "walkLine": {
++    "y": 880,
++    "minX": 160,
++    "maxX": 1760,
++    "depthScale": [
++      0.92,
++      1.0
++    ]
++  },
++  "exits": [
++    {
++      "to": "market_row",
++      "at": [
++        160,
++        880
++      ]
++    },
++    {
++      "to": "old_boathouse",
++      "at": [
++        1760,
++        880
++      ]
++    }
++  ],
+   "sitSpot": {
+-    "at": [400, 880],
++    "at": [
++      400,
++      880
++    ],
+     "monologues": [
+-      { "cond": { "flag": "stakeout_done" }, "bark": "bench_river_post_stakeout" },
+-      { "cond": {}, "bark": "bench_river_d4" }
++      {
++        "cond": {
++          "flag": "stakeout_done"
++        },
++        "bark": "bench_river_post_stakeout"
++      },
++      {
++        "cond": {},
++        "bark": "bench_river_d4"
++      }
+     ]
+   },
+   "hotspots": [
+     {
+       "id": "boot_prints",
+-      "at": [800, 780],
++      "at": [
++        800,
++        780
++      ],
+       "kind": "examine",
+       "label": "Boot Prints",
+-      "cond": { "all": [{ "day": { "gte": 4 } }, { "deduction": "d5_lodger" }] },
++      "cond": {
++        "all": [
++          {
++            "day": {
++              "gte": 4
++            }
++          },
++          {
++            "deduction": "d5_lodger"
++          }
++        ]
++      },
+       "interactions": [
+         {
+           "id": "trace_tracks",
+-          "cond": { "not": { "flag": "ferris_tracks_followed" } },
++          "cond": {
++            "not": {
++              "flag": "ferris_tracks_followed"
++            }
++          },
+           "opens": "puzzle:trace_ferris",
+           "ref": "II.12.4"
+         },
+@@ -36,35 +92,73 @@
+     },
+     {
+       "id": "boathouse_fence",
+-      "at": [1400, 620],
++      "at": [
++        1400,
++        620
++      ],
+       "kind": "chekhov",
+       "label": "The Old Boathouse",
+       "detail": {
+         "tier": "clue",
+         "text": "The Vale family boathouse, locked and low on its pilings, mist coming off the water behind it. Six fresh holes along the fence line, courtesy of somebody's midnight optimism. A family place. The kind of place you'd go to feel safe.",
+-        "cond": { "day": { "gte": 4 } }
++        "cond": {
++          "day": {
++            "gte": 4
++          }
++        }
+       },
+       "ref": "II.13.4"
+     },
+     {
+       "id": "exit_market",
+-      "at": [160, 820],
++      "at": [
++        160,
++        820
++      ],
+       "kind": "exit",
+       "to": "market_row",
+       "label": "Back to Market Row"
++    },
++    {
++      "id": "exit_boathouse",
++      "at": [
++        1760,
++        820
++      ],
++      "kind": "exit",
++      "to": "old_boathouse",
++      "label": "The Old Boathouse",
++      "cond": {
++        "day": 7
++      }
+     }
+   ],
+   "triggers": [
+     {
+       "id": "stakeout_d4",
+-      "cond": { "all": [{ "day": 4 }, { "phase": "evening" }, { "flag": "ferris_tracks_followed" }] },
++      "cond": {
++        "all": [
++          {
++            "day": 4
++          },
++          {
++            "phase": "evening"
++          },
++          {
++            "flag": "ferris_tracks_followed"
++          }
++        ]
++      },
+       "dialogue": "stakeout_d4",
+       "once": true,
+       "ref": "I.5.day4"
+     }
+   ],
+   "ambient": {
+-    "vignetteTags": ["river", "outdoors"],
++    "vignetteTags": [
++      "river",
++      "outdoors"
++    ],
+     "weatherVariants": true,
+     "ambience": "amb_river"
+   }
+diff --git a/content/locations/the_percolator.json b/content/locations/the_percolator.json
+index f54651c..d7af96e 100644
+--- a/content/locations/the_percolator.json
++++ b/content/locations/the_percolator.json
+@@ -2,50 +2,95 @@
+   "id": "the_percolator",
+   "name": "The Percolator",
+   "ref": "I.2",
+-  "layers": ["bg", "mid", "fg"],
+-  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
++  "layers": [
++    "bg",
++    "mid",
++    "fg"
++  ],
++  "walkLine": {
++    "y": 880,
++    "minX": 160,
++    "maxX": 1760,
++    "depthScale": [
++      0.92,
++      1.0
++    ]
++  },
+   "exits": [
+-    { "to": "gary_apartment", "at": [160, 880] },
+-    { "to": "market_row", "at": [1760, 880] }
++    {
++      "to": "gary_apartment",
++      "at": [
++        160,
++        880
++      ]
++    },
++    {
++      "to": "market_row",
++      "at": [
++        1760,
++        880
++      ]
++    }
+   ],
+   "sitSpot": {
+-    "at": [1500, 880],
++    "at": [
++      1500,
++      880
++    ],
+     "monologues": [
+-      { "cond": {}, "bark": "bench_percolator_d1" }
++      {
++        "cond": {},
++        "bark": "bench_percolator_d1"
++      }
+     ]
+   },
+   "hotspots": [
+     {
+       "id": "talk_dot",
+-      "at": [820, 800],
++      "at": [
++        820,
++        800
++      ],
+       "kind": "talk",
+       "character": "dot",
+       "label": "Dot"
+     },
+     {
+       "id": "talk_otto",
+-      "at": [500, 800],
++      "at": [
++        500,
++        800
++      ],
+       "kind": "talk",
+       "character": "otto",
+       "label": "Otto"
+     },
+     {
+       "id": "talk_margie",
+-      "at": [1240, 800],
++      "at": [
++        1240,
++        800
++      ],
+       "kind": "talk",
+       "character": "margie",
+       "label": "Margie"
+     },
+     {
+       "id": "talk_tuck",
+-      "at": [1450, 800],
++      "at": [
++        1450,
++        800
++      ],
+       "kind": "talk",
+       "character": "tuck",
+       "label": "Tuck"
+     },
+     {
+       "id": "chalkboard",
+-      "at": [500, 560],
++      "at": [
++        500,
++        560
++      ],
+       "kind": "examine",
+       "label": "The Chalkboard",
+       "interactions": [
+@@ -59,7 +104,10 @@
+     },
+     {
+       "id": "grape_bowl",
+-      "at": [1120, 640],
++      "at": [
++        1120,
++        640
++      ],
+       "kind": "chekhov",
+       "label": "A Bowl on the Counter",
+       "detail": {
+@@ -70,23 +118,50 @@
+     },
+     {
+       "id": "exit_home",
+-      "at": [160, 820],
++      "at": [
++        160,
++        820
++      ],
+       "kind": "exit",
+       "to": "gary_apartment",
+       "label": "Back home"
+     },
+     {
+       "id": "exit_market",
+-      "at": [1760, 820],
++      "at": [
++        1760,
++        820
++      ],
+       "kind": "exit",
+       "to": "market_row",
+       "label": "To Market Row"
+     }
+   ],
+   "ambient": {
+-    "vignetteTags": ["percolator", "indoors"],
++    "vignetteTags": [
++      "percolator",
++      "indoors"
++    ],
+     "weatherVariants": false,
+     "music": "music_percolator",
+     "ambience": "amb_cafe"
+-  }
++  },
++  "triggers": [
++    {
++      "id": "fragment_d6",
++      "cond": {
++        "all": [
++          {
++            "day": 6
++          },
++          {
++            "card": "seal_sketch"
++          }
++        ]
++      },
++      "dialogue": "fragment_d6",
++      "once": true,
++      "ref": "I.5.day6"
++    }
++  ]
+ }
+diff --git a/content/locations/vale_manor.json b/content/locations/vale_manor.json
+new file mode 100644
+index 0000000..a8ec4ef
+--- /dev/null
++++ b/content/locations/vale_manor.json
+@@ -0,0 +1,136 @@
++{
++  "id": "vale_manor",
++  "name": "Vale Manor",
++  "ref": "I.2",
++  "layers": ["bg", "mid", "fg"],
++  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
++  "exits": [{ "to": "founders_square", "at": [160, 880] }],
++  "sitSpot": {
++    "at": [400, 880],
++    "monologues": [{ "cond": {}, "bark": "bench_manor_d6" }]
++  },
++  "hotspots": [
++    {
++      "id": "talk_clara",
++      "at": [700, 800],
++      "kind": "talk",
++      "character": "clara",
++      "label": "Clara"
++    },
++    {
++      "id": "talk_beatrice",
++      "at": [1300, 800],
++      "kind": "talk",
++      "character": "beatrice",
++      "label": "Beatrice",
++      "cond": { "day": { "gte": 6 } }
++    },
++    {
++      "id": "lintel_signet",
++      "at": [500, 520],
++      "kind": "chekhov",
++      "label": "The Front Door Lintel",
++      "detail": {
++        "tier": "clue",
++        "text": "Carved into the stone above the manor door, worn smooth by fifty years of weather: a lantern, wreathed in ivy. The whole district has walked under the answer all week.",
++        "flag": "seen_lintel_signet"
++      },
++      "ref": "III.21"
++    },
++    {
++      "id": "portrait_hall",
++      "at": [1000, 540],
++      "kind": "chekhov",
++      "label": "The Portrait Hall",
++      "detail": {
++        "tier": "clue",
++        "text": "Edmund's portrait hangs midway down the hall — with two empty spaces beside it, framed and waiting. Not one. Two. The will, painted on a wall, hiding in plain sight since before anyone thought to look.",
++        "flag": "seen_two_portrait_spaces"
++      },
++      "ref": "III.24"
++    },
++    {
++      "id": "height_marks",
++      "at": [1500, 620],
++      "kind": "chekhov",
++      "label": "A Doorframe",
++      "detail": {
++        "tier": "character",
++        "text": "Two columns of childhood height-marks up the doorframe, 'J' and 'C', climbing year by year — and ending the same year. The house measures its children together or not at all."
++      },
++      "ref": "III.24"
++    },
++    {
++      "id": "garden_table",
++      "at": [1650, 760],
++      "kind": "examine",
++      "label": "The Garden Table",
++      "cond": { "day": { "gte": 6 } },
++      "interactions": [
++        {
++          "id": "garden_acoustics",
++          "cond": { "not": { "flag": "garden_acoustics_done" } },
++          "text": "The stone table under the study window. Standing at the window above, Gary can hear the garden — but only when the wind drops. A whole conversation, delivered in halves. That's how you overhear enough to be wrong.",
++          "effects": [
++            { "setFlag": "garden_acoustics_done" },
++            { "giveCard": "garden_acoustics", "status": "verified" },
++            { "notebook": { "entry": "nb_garden_acoustics" } }
++          ],
++          "ref": "II.13.7"
++        },
++        {
++          "id": "garden_again",
++          "text": "The wind moves through the garden in sentences with the middles missing.",
++          "ref": "II.13.7"
++        }
++      ],
++      "ref": "II.13.7"
++    },
++    {
++      "id": "study_wastebasket",
++      "at": [1180, 640],
++      "kind": "examine",
++      "label": "The Study Wastebasket",
++      "cond": { "all": [{ "day": { "gte": 6 } }, { "flag": "clara_clue3_given" }] },
++      "interactions": [
++        {
++          "id": "torn_letter_find",
++          "cond": { "not": { "flag": "torn_letter_done" } },
++          "opens": "puzzle:torn_letter",
++          "ref": "III.25.1"
++        },
++        {
++          "id": "letter_found",
++          "text": "The wastebasket, lighter by eight fragments. Some evidence is for understanding, not for presenting.",
++          "ref": "III.25.1"
++        }
++      ],
++      "ref": "III.25.1"
++    },
++    {
++      "id": "fruit_basket",
++      "at": [880, 640],
++      "kind": "chekhov",
++      "label": "A Fruit Basket",
++      "cond": { "day": { "gte": 6 } },
++      "detail": {
++        "tier": "character",
++        "text": "A fruit basket on the sideboard, prominent, generous — grapes front and center — during the hardest interviews of Gary's life. He keeps it in peripheral vision. He does not break."
++      },
++      "ref": "I.7.1"
++    },
++    {
++      "id": "exit_square",
++      "at": [160, 820],
++      "kind": "exit",
++      "to": "founders_square",
++      "label": "To Founders' Square"
++    }
++  ],
++  "ambient": {
++    "vignetteTags": ["manor", "indoors"],
++    "weatherVariants": false,
++    "music": "music_manor",
++    "ambience": "amb_held_breath"
++  }
++}
+diff --git a/content/notebook.json b/content/notebook.json
+index 27af4c4..615c00e 100644
+--- a/content/notebook.json
++++ b/content/notebook.json
+@@ -34,13 +34,34 @@
+     { "id": "nb_fire_escape", "tab": "places", "title": "The fire-escape sightline", "text": "Stood where the witness stood. The chimney hides the manor side; the lantern strip shows the crossing; and from above, an umbrella hides the whole him. The story holds — and now I know WHY it's incomplete.", "authored": "aletheia", "ref": "II.12.6" },
+     { "id": "nb_torn_letter", "tab": "people", "title": "The torn letter (not for the board's strings)", "text": "Eight fragments, one unsent apology. It answers nothing and confirms everything. Some evidence is for understanding, not for presenting.", "authored": "aletheia", "ref": "III.25.1" },
+     { "id": "nb_handwriting", "tab": "places", "title": "Handwriting comparison", "text": "The looped G, the crossed double-t, the pen pressure. Three features, the way Archie taught. Same hand.", "authored": "aletheia", "ref": "II.12.5" },
+-    { "id": "nb_ghost_landing", "tab": "places", "title": "Three ghosts on an old map", "text": "The 1890s survey over the modern district: a filled mill race, a lost market cross — and the original VALE BOAT LANDING, unmarked, straight below the old boathouse. Family water.", "authored": "aletheia", "ref": "II.13.4" }
++    { "id": "nb_ghost_landing", "tab": "places", "title": "Three ghosts on an old map", "text": "The 1890s survey over the modern district: a filled mill race, a lost market cross — and the original VALE BOAT LANDING, unmarked, straight below the old boathouse. Family water.", "authored": "aletheia", "ref": "II.13.4" },
++    { "id": "nb_prudence_motive", "tab": "people", "title": "Prudence — motive on a plate", "text": "Twenty years reconstructing the Theodora–Jonah romance, final proof sealed in the capsule, three sleepless days from touching it. 'Suspect me. I would suspect me.' Noted — and noted that innocent people rarely say that.", "authored": "aletheia", "ref": "I.5.day5" },
++    { "id": "nb_prudence_alibi", "tab": "people", "title": "Prudence's alibi", "text": "Night −2: cataloguing with Evelyn Croft until 3 a.m. Verify with the florist. Bring context. She is armed with shears.", "authored": "aletheia", "ref": "I.5.day5" },
++    { "id": "nb_evelyn_alibi", "tab": "people", "title": "Evelyn confirms — blushing", "text": "Until three, with tea, Jonah's letters read aloud. The rival families' last two descendants have quietly become... the game never says. Neither will I.", "authored": "aletheia", "ref": "I.5.day5" },
++    { "id": "nb_seal_identified", "tab": "places", "title": "THE SEAL IS THE VALE SIGNET", "text": "Not the council's. Edmund Vale's personal mark — the lantern in ivy — from a ring that never left the family. It sits on his son's finger to this day. The loose one. The one he spins.", "authored": "aletheia", "ref": "I.5.day5" },
++    { "id": "nb_ferris_readaloud", "tab": "people", "title": "The lockup, after the headline", "text": "He asked me to read my own front page to him, out loud. He wasn't angry. That's worse. Filed under: rules of Grandpa's I now understand from the inside.", "authored": "aletheia", "ref": "II.15.1" },
++    { "id": "nb_ferris_apology", "tab": "people", "title": "Ferris, reforming", "text": "Composing a formal apology to a marrow. The town may keep him yet.", "authored": "aletheia", "ref": "I.5.day5" },
++    { "id": "nb_clara_fear", "tab": "people", "title": "CLARA CLUE 1 — Julian's fear", "text": "'What if I'm only the shape of Father?' Everyone keeps telling him he'll lead alone — including the sister who loves him most. Fear wears a rehearsed smile in public.", "authored": "aletheia", "ref": "I.5.day6" },
++    { "id": "nb_two_person_puzzles", "tab": "people", "title": "CLARA CLUE 2 — the two-person puzzles", "text": "Every birthday box designed so neither child could open it alone. A game, she thought. A syllabus, she thinks now. SAVE FOR THE CONFRONTATION — this one's a door, not a nail.", "authored": "aletheia", "ref": "I.5.day6" },
++    { "id": "nb_clara_key", "tab": "people", "title": "CLARA CLUE 3 — the backup key (a trust)", "text": "Two keys have always existed. The family's is gone from the study. Given to me with the family in my hands — which means it goes on the record only through Ida's ledger, never through Clara.", "authored": "aletheia", "ref": "I.5.day6" },
++    { "id": "nb_idas_ledger", "tab": "places", "title": "IDA'S LEDGER — exactly two keys", "text": "Fifty years, two keys, apprentice hands, no copies since — the lock would gossip. The most reliable witness in Lanternside is a ledger in a drawer scaled to wren fingers.", "authored": "aletheia", "ref": "I.5.day6" },
++    { "id": "nb_wax_fragment", "tab": "places", "title": "THE WAX FRAGMENT", "text": "Green wax from Julian's coat pocket, skittering across the Percolator floor to my shoe. The ivy aligns with the sketch. A soft, terrible chime.", "authored": "aletheia", "ref": "I.5.day6" },
++    { "id": "nb_milos_sighting", "tab": "people", "title": "MILO'S SIGHTING — the Vale umbrella, 2 a.m.", "text": "Traded a secret for a secret. He saw THE umbrella — silver duck handle — hiding the whole him. Now I owe an 11-year-old the professional courtesy of checking his story instead of just believing it.", "authored": "aletheia", "ref": "I.5.day6" },
++    { "id": "nb_overheard", "tab": "people", "title": "THE OVERHEARD CONVERSATION", "text": "'It isn't fair.' / 'You may be surprised.' A comfort to one child; a verdict overheard by the other. Off the record — the tea in that parlor doesn't even offer the toggle. The garden's own acoustics can carry the fact instead.", "authored": "aletheia", "ref": "I.8.1" },
++    { "id": "nb_garden_acoustics", "tab": "places", "title": "The garden acoustics", "text": "From the study window, the garden arrives only when the wind rests. Physics explains the half-heard conversation better than any confession could.", "authored": "aletheia", "ref": "II.13.7" },
++    { "id": "nb_dot_blessing", "tab": "people", "title": "Dot, on the last morning", "text": "'Archie would run it exactly the way you're about to.' The red pen stayed down. That's the highest compliment this office issues.", "authored": "aletheia", "ref": "I.5.day7" },
++    { "id": "nb_river_walk", "tab": "places", "title": "The river walk", "text": "Clara came as far as the bank. 'I'll be here. For after.' Some sentences hold a whole family up by themselves.", "authored": "aletheia", "ref": "I.8.2" },
++    { "id": "nb_confession", "tab": "people", "title": "The boathouse", "text": "Everything was there — crates, bundles, and the green-sealed envelope, cracked but unopened. Five days in a coat pocket and he couldn't open it. Contents located. Returned intact. The rest is district business.", "authored": "aletheia", "ref": "I.8.2" },
++    { "id": "nb_reading", "tab": "places", "title": "The reading", "text": "The lantern and the ivy. Lead together, argue often, decide once. Poppy sobbed into PLAN A: JOY, and the happiest sentence Warren will ever say got said.", "authored": "aletheia", "ref": "I.8.3" },
++    { "id": "nb_grape_victory", "tab": "grapes", "title": "One grape", "text": "Took one. Looked at it. Gave it to the kid. At peace — ish. The stress ball remains employed.", "authored": "aletheia", "ref": "I.7.1" },
++    { "id": "nb_credits", "tab": "people", "title": "FOR THE GIBBONS WHO COMES NEXT", "text": "A field notebook. A brass magnifying glass — 'Look closer, then look kinder.' And a jar of grape jam labeled 'For emergencies.' It's hereditary. NEXT STORY?", "authored": "aletheia", "ref": "I.8.4" }
+   ],
+   "questions": [
+     { "id": "q_who_takes_red_pens", "text": "Who keeps taking Dot's red pens? (One a shift. She counts.)", "ref": "II.17.1" },
+     { "id": "q_who_emptied_the_capsule", "text": "Who emptied the capsule — and how did they open it without forcing Ida's lock?", "ref": "I.5.day1" },
+     { "id": "q_why_two_keys", "text": "WHY TWO KEYS? The founding portrait shows Edmund with a second key at his belt.", "ref": "III.21" },
+     { "id": "q_warren_motive", "text": "Which is true — the doubt Margie heard, or the joy in Warren's speech? (They can't both be the whole truth.)", "ref": "II.16.4" },
+-    { "id": "q_second_key", "text": "Ferris watched a key turn at 2 a.m. — but the council key was accounted for. ...Is it the only key?", "ref": "II.16.4" }
++    { "id": "q_second_key", "text": "Ferris watched a key turn at 2 a.m. — but the council key was accounted for. ...Is it the only key?", "ref": "II.16.4" },
++    { "id": "q_same_night", "text": "Milo's umbrella and Margie's restless lodger — same night, same square. How many people were out at 2 a.m., and who saw whom?", "ref": "II.16.4" }
+   ]
+ }
+diff --git a/content/schedules.json b/content/schedules.json
+index 7c8b134..9bb8c48 100644
+--- a/content/schedules.json
++++ b/content/schedules.json
+@@ -43,6 +43,36 @@
+         "loc": "the_percolator",
+         "spot": "corner_table"
+       }
++    },
++    "d5": {
++      "morning": {
++        "loc": "the_percolator",
++        "spot": "corner_table"
++      },
++      "midday": {
++        "loc": "the_percolator",
++        "spot": "corner_table"
++      }
++    },
++    "d6": {
++      "morning": {
++        "loc": "the_percolator",
++        "spot": "corner_table"
++      },
++      "midday": {
++        "loc": "the_percolator",
++        "spot": "corner_table"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "the_percolator",
++        "spot": "corner_table"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "press_row"
++      }
+     }
+   },
+   "otto": {
+@@ -101,6 +131,48 @@
+         "loc": "the_percolator",
+         "spot": "counter"
+       }
++    },
++    "d5": {
++      "morning": {
++        "loc": "the_percolator",
++        "spot": "counter"
++      },
++      "midday": {
++        "loc": "the_percolator",
++        "spot": "counter"
++      },
++      "evening": {
++        "loc": "the_percolator",
++        "spot": "counter"
++      }
++    },
++    "d6": {
++      "morning": {
++        "loc": "the_percolator",
++        "spot": "counter"
++      },
++      "midday": {
++        "loc": "the_percolator",
++        "spot": "counter"
++      },
++      "evening": {
++        "loc": "the_percolator",
++        "spot": "counter"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "the_percolator",
++        "spot": "counter"
++      },
++      "midday": {
++        "loc": "the_percolator",
++        "spot": "counter"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "crowd"
++      }
+     }
+   },
+   "margie": {
+@@ -151,6 +223,36 @@
+         "loc": "drowsy_lantern",
+         "spot": "bar"
+       }
++    },
++    "d5": {
++      "morning": {
++        "loc": "drowsy_lantern",
++        "spot": "bar"
++      },
++      "midday": {
++        "loc": "drowsy_lantern",
++        "spot": "bar"
++      }
++    },
++    "d6": {
++      "morning": {
++        "loc": "drowsy_lantern",
++        "spot": "bar"
++      },
++      "midday": {
++        "loc": "drowsy_lantern",
++        "spot": "bar"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "drowsy_lantern",
++        "spot": "bar"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "crowd"
++      }
+     }
+   },
+   "tuck": {
+@@ -197,6 +299,36 @@
+         "loc": "market_row",
+         "spot": "lamppost"
+       }
++    },
++    "d5": {
++      "morning": {
++        "loc": "lockup",
++        "spot": "desk"
++      },
++      "midday": {
++        "loc": "lockup",
++        "spot": "desk"
++      }
++    },
++    "d6": {
++      "morning": {
++        "loc": "the_percolator",
++        "spot": "pastry_case"
++      },
++      "midday": {
++        "loc": "market_row",
++        "spot": "lamppost"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "riverbank",
++        "spot": "bank"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "crowd"
++      }
+     }
+   },
+   "gino": {
+@@ -243,6 +375,36 @@
+         "loc": "market_row",
+         "spot": "fruit_stall"
+       }
++    },
++    "d5": {
++      "morning": {
++        "loc": "market_row",
++        "spot": "fruit_stall"
++      },
++      "midday": {
++        "loc": "market_row",
++        "spot": "fruit_stall"
++      }
++    },
++    "d6": {
++      "morning": {
++        "loc": "market_row",
++        "spot": "fruit_stall"
++      },
++      "midday": {
++        "loc": "market_row",
++        "spot": "fruit_stall"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "market_row",
++        "spot": "fruit_stall"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "crowd"
++      }
+     }
+   },
+   "ida": {
+@@ -289,6 +451,36 @@
+         "loc": "market_row",
+         "spot": "wren_wick"
+       }
++    },
++    "d5": {
++      "morning": {
++        "loc": "market_row",
++        "spot": "wren_wick"
++      },
++      "midday": {
++        "loc": "market_row",
++        "spot": "wren_wick"
++      }
++    },
++    "d6": {
++      "morning": {
++        "loc": "market_row",
++        "spot": "wren_wick"
++      },
++      "midday": {
++        "loc": "market_row",
++        "spot": "wren_wick"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "market_row",
++        "spot": "wren_wick"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "crowd"
++      }
+     }
+   },
+   "evelyn": {
+@@ -335,6 +527,36 @@
+         "loc": "market_row",
+         "spot": "flower_shop"
+       }
++    },
++    "d5": {
++      "morning": {
++        "loc": "market_row",
++        "spot": "flower_shop"
++      },
++      "midday": {
++        "loc": "market_row",
++        "spot": "flower_shop"
++      }
++    },
++    "d6": {
++      "morning": {
++        "loc": "market_row",
++        "spot": "flower_shop"
++      },
++      "midday": {
++        "loc": "market_row",
++        "spot": "flower_shop"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "market_row",
++        "spot": "flower_shop"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "crowd"
++      }
+     }
+   },
+   "milo": {
+@@ -381,6 +603,40 @@
+         "loc": "market_row",
+         "spot": "stakeout_box"
+       }
++    },
++    "d5": {
++      "morning": {
++        "loc": "market_row",
++        "spot": "stakeout_box"
++      },
++      "midday": {
++        "loc": "market_row",
++        "spot": "stakeout_box"
++      }
++    },
++    "d6": {
++      "morning": {
++        "loc": "milos_alley",
++        "spot": "fire_escape"
++      },
++      "midday": {
++        "loc": "milos_alley",
++        "spot": "fire_escape"
++      },
++      "evening": {
++        "loc": "milos_alley",
++        "spot": "fire_escape"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "market_row",
++        "spot": "stakeout_box"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "crowd"
++      }
+     }
+   },
+   "poppy": {
+@@ -431,6 +687,40 @@
+         "loc": "founders_square",
+         "spot": "monument"
+       }
++    },
++    "d5": {
++      "morning": {
++        "loc": "founders_square",
++        "spot": "monument"
++      },
++      "midday": {
++        "loc": "founders_square",
++        "spot": "monument"
++      }
++    },
++    "d6": {
++      "morning": {
++        "loc": "founders_square",
++        "spot": "monument"
++      },
++      "midday": {
++        "loc": "founders_square",
++        "spot": "monument"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "founders_square",
++        "spot": "stage"
++      },
++      "midday": {
++        "loc": "founders_square",
++        "spot": "stage"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "stage"
++      }
+     }
+   },
+   "warren": {
+@@ -481,6 +771,36 @@
+         "loc": "council_hall",
+         "spot": "office"
+       }
++    },
++    "d5": {
++      "morning": {
++        "loc": "council_hall",
++        "spot": "office"
++      },
++      "midday": {
++        "loc": "council_hall",
++        "spot": "office"
++      }
++    },
++    "d6": {
++      "morning": {
++        "loc": "council_hall",
++        "spot": "office"
++      },
++      "midday": {
++        "loc": "council_hall",
++        "spot": "office"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "council_hall",
++        "spot": "office"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "stage"
++      }
+     }
+   },
+   "julian": {
+@@ -497,6 +817,26 @@
+         "loc": "founders_square",
+         "spot": "stage"
+       }
++    },
++    "d6": {
++      "morning": {
++        "loc": "the_percolator",
++        "spot": "counter"
++      },
++      "midday": {
++        "loc": "founders_square",
++        "spot": "receiving_line"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "old_boathouse",
++        "spot": "floor"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "stage"
++      }
+     }
+   },
+   "clara": {
+@@ -513,6 +853,30 @@
+         "loc": "founders_square",
+         "spot": "stage"
+       }
++    },
++    "d6": {
++      "morning": {
++        "loc": "vale_manor",
++        "spot": "garden"
++      },
++      "midday": {
++        "loc": "vale_manor",
++        "spot": "garden"
++      },
++      "evening": {
++        "loc": "vale_manor",
++        "spot": "garden"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "riverbank",
++        "spot": "bank"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "stage"
++      }
+     }
+   },
+   "ferris": {
+@@ -549,6 +913,26 @@
+         "loc": "lockup",
+         "spot": "cell"
+       }
++    },
++    "d6": {
++      "morning": {
++        "loc": "lockup",
++        "spot": "cell"
++      },
++      "midday": {
++        "loc": "lockup",
++        "spot": "cell"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "market_row",
++        "spot": "garden_repair"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "crowd"
++      }
+     }
+   },
+   "prudence": {
+@@ -571,6 +955,66 @@
+         "loc": "market_row",
+         "spot": "flower_shop"
+       }
++    },
++    "d5": {
++      "morning": {
++        "loc": "lanternside_archive",
++        "spot": "shelves"
++      },
++      "midday": {
++        "loc": "lanternside_archive",
++        "spot": "shelves"
++      },
++      "evening": {
++        "loc": "lanternside_archive",
++        "spot": "shelves"
++      }
++    },
++    "d6": {
++      "morning": {
++        "loc": "lanternside_archive",
++        "spot": "shelves"
++      },
++      "midday": {
++        "loc": "lanternside_archive",
++        "spot": "shelves"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "lanternside_archive",
++        "spot": "shelves"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "crowd"
++      }
++    }
++  },
++  "beatrice": {
++    "d6": {
++      "morning": {
++        "loc": "vale_manor",
++        "spot": "parlor"
++      },
++      "midday": {
++        "loc": "vale_manor",
++        "spot": "parlor"
++      },
++      "evening": {
++        "loc": "vale_manor",
++        "spot": "parlor"
++      }
++    },
++    "d7": {
++      "morning": {
++        "loc": "vale_manor",
++        "spot": "parlor"
++      },
++      "evening": {
++        "loc": "founders_square",
++        "spot": "stage"
++      }
+     }
+   }
+ }
+diff --git a/content/sidestories/anonymous_handyman.json b/content/sidestories/anonymous_handyman.json
+new file mode 100644
+index 0000000..8b3496e
+--- /dev/null
++++ b/content/sidestories/anonymous_handyman.json
+@@ -0,0 +1,63 @@
++{
++  "id": "anonymous_handyman",
++  "ref": "II.17.3",
++  "title": "The Anonymous Handyman",
++  "days": [
++    3,
++    4,
++    5
++  ],
++  "steps": [
++    {
++      "id": "brass_screws",
++      "cond": {
++        "all": [
++          {
++            "day": {
++              "gte": 3
++            }
++          },
++          {
++            "card": "lighthouse_folio"
++          }
++        ]
++      },
++      "text": "For eight years, small things get quietly fixed overnight - always the same distinctive brass screws."
++    },
++    {
++      "id": "its_warren",
++      "cond": {
++        "deduction": "d4_warren_cleared"
++      },
++      "text": "It's Warren. Anonymously maintaining the district he wasn't sure he had the right to lead.",
++      "effects": [
++        {
++          "playBark": "ss_handyman_reveal"
++        }
++      ]
++    },
++    {
++      "id": "kept_secret",
++      "cond": {
++        "day": {
++          "gte": 5
++        }
++      },
++      "text": "Gary keeps the secret. No reward - except a brass screw pressed into his hand at the dock: 'File under stories that didn't need telling.' A rehearsal for the week's hardest choice.",
++      "effects": [
++        {
++          "playBark": "ss_handyman_payoff"
++        },
++        {
++          "notebook": {
++            "doodle": "doodle_brass_screw"
++          }
++        }
++      ]
++    }
++  ],
++  "trustFloor": {
++    "char": "warren",
++    "min": 1
++  }
++}
+diff --git a/content/sidestories/divorced_pigeons.json b/content/sidestories/divorced_pigeons.json
+new file mode 100644
+index 0000000..8d7dab4
+--- /dev/null
++++ b/content/sidestories/divorced_pigeons.json
+@@ -0,0 +1,65 @@
++{
++  "id": "divorced_pigeons",
++  "ref": "II.17.9",
++  "title": "The Divorced Pigeons",
++  "days": [
++    1,
++    2,
++    3,
++    4,
++    5,
++    6,
++    7
++  ],
++  "steps": [
++    {
++      "id": "the_situation",
++      "cond": {
++        "day": {
++          "gte": 2
++        }
++      },
++      "text": "Two pigeons, one lamppost, escalating silent drama. Gary's notebook gains an ongoing case file he refuses to call a case file.",
++      "effects": [
++        {
++          "notebook": {
++            "doodle": "doodle_pigeons_1"
++          }
++        }
++      ]
++    },
++    {
++      "id": "escalation",
++      "cond": {
++        "day": {
++          "gte": 4
++        }
++      },
++      "text": "The pigeons now occupy opposite ends of the lamppost with performative indifference.",
++      "effects": [
++        {
++          "notebook": {
++            "doodle": "doodle_pigeons_2"
++          }
++        }
++      ]
++    },
++    {
++      "id": "reconciliation",
++      "cond": {
++        "flag": "reading_done"
++      },
++      "text": "Day 7: reconciliation. One nest. Warren photographs it. The final doodle: two pigeons in tiny lantern and ivy costumes.",
++      "effects": [
++        {
++          "notebook": {
++            "doodle": "doodle_pigeons_final"
++          }
++        },
++        {
++          "playBark": "ss_pigeons_payoff"
++        }
++      ]
++    }
++  ]
++}
+diff --git a/content/sidestories/marrow_affair.json b/content/sidestories/marrow_affair.json
+new file mode 100644
+index 0000000..56f84a2
+--- /dev/null
++++ b/content/sidestories/marrow_affair.json
+@@ -0,0 +1,36 @@
++{
++  "id": "marrow_affair",
++  "ref": "II.17.4",
++  "title": "The Marrow Affair",
++  "days": [
++    4
++  ],
++  "steps": [
++    {
++      "id": "the_victim",
++      "cond": {
++        "flag": "ferris_tracks_followed"
++      },
++      "text": "Ferris's digging exposed Gino's prize marrow - dead. But the rival gardener is suspiciously unbereaved."
++    },
++    {
++      "id": "the_truth",
++      "cond": {
++        "flag": "stakeout_done"
++      },
++      "text": "The rival had watered the marrow to death weeks ago; Ferris's hole merely exposed the crime. Gino's operatic forgiveness aria follows. The rivals co-plant a memorial vine. Grapes. Of course it's grapes.",
++      "effects": [
++        {
++          "playBark": "ss_marrow_payoff"
++        },
++        {
++          "grapeDeclined": true
++        }
++      ]
++    }
++  ],
++  "trustFloor": {
++    "char": "gino",
++    "min": 1
++  }
++}
+diff --git a/content/sidestories/milos_byline.json b/content/sidestories/milos_byline.json
+new file mode 100644
+index 0000000..f4072d6
+--- /dev/null
++++ b/content/sidestories/milos_byline.json
+@@ -0,0 +1,57 @@
++{
++  "id": "milos_byline",
++  "ref": "II.17.6",
++  "title": "Milo's First Byline",
++  "days": [
++    5,
++    6
++  ],
++  "steps": [
++    {
++      "id": "doorstep_gardener",
++      "cond": {
++        "day": {
++          "gte": 5
++        }
++      },
++      "text": "Someone's leaving fresh vegetables on struggling neighbors' doorsteps. Milo investigates; Gary mentors - approving and challenging the kid's claims like a real editor."
++    },
++    {
++      "id": "its_beatrice",
++      "cond": {
++        "all": [
++          {
++            "day": {
++              "gte": 5
++            }
++          },
++          {
++            "flag": "morning_pages_done_d5"
++          }
++        ]
++      },
++      "text": "The doorstep gardener is Beatrice Vale - warming the reader to her one day before her big scene.",
++      "effects": [
++        {
++          "playBark": "ss_byline_reveal"
++        }
++      ]
++    },
++    {
++      "id": "framed",
++      "cond": {
++        "flag": "printed_measured_d6"
++      },
++      "text": "Milo's two-sentence piece runs in the real Evening Edition, name attached. He frames it.",
++      "effects": [
++        {
++          "playBark": "ss_byline_payoff"
++        }
++      ]
++    }
++  ],
++  "trustFloor": {
++    "char": "milo",
++    "min": 1
++  }
++}
+diff --git a/content/sidestories/ottos_nose.json b/content/sidestories/ottos_nose.json
+new file mode 100644
+index 0000000..46d116a
+--- /dev/null
++++ b/content/sidestories/ottos_nose.json
+@@ -0,0 +1,50 @@
++{
++  "id": "ottos_nose",
++  "ref": "II.17.2",
++  "title": "The Nose of Otto Kessler",
++  "days": [
++    2,
++    3
++  ],
++  "steps": [
++    {
++      "id": "cold_confessed",
++      "cond": {
++        "all": [
++          {
++            "day": {
++              "gte": 2
++            }
++          },
++          {
++            "flag": "dlg_done_otto_d1"
++          }
++        ]
++      },
++      "text": "Otto's entering the regional roasting fair - with a head cold. He can't smell his own blends.",
++      "effects": [
++        {
++          "playBark": "ss_otto_hook"
++        }
++      ]
++    },
++    {
++      "id": "became_the_nose",
++      "cond": {
++        "day": {
++          "gte": 3
++        }
++      },
++      "text": "Gary becomes Otto's nose: 'more rain-on-warm-brick, or library-in-autumn?' Vocabulary that will matter later.",
++      "effects": [
++        {
++          "playBark": "ss_otto_payoff"
++        }
++      ]
++    }
++  ],
++  "trustFloor": {
++    "char": "otto",
++    "min": 1
++  }
++}
+diff --git a/content/sidestories/plan_z.json b/content/sidestories/plan_z.json
+new file mode 100644
+index 0000000..bfa4929
+--- /dev/null
++++ b/content/sidestories/plan_z.json
+@@ -0,0 +1,44 @@
++{
++  "id": "plan_z",
++  "ref": "II.17.8",
++  "title": "Plan Z",
++  "days": [
++    5,
++    6,
++    7
++  ],
++  "steps": [
++    {
++      "id": "recovery_plans",
++      "cond": {
++        "all": [
++          {
++            "day": {
++              "gte": 5
++            }
++          },
++          {
++            "card": "ded_signet"
++          }
++        ]
++      },
++      "text": "Poppy starts sketching a Recovery Ceremony, just in case the town gets its heart back. Gary helps with the logistics - route, music, who speaks first."
++    },
++    {
++      "id": "plan_a_joy",
++      "cond": {
++        "flag": "reading_done"
++      },
++      "text": "The player decorated their own ending. Poppy's final contingency card, framed at her stall: PLAN A: JOY.",
++      "effects": [
++        {
++          "playBark": "ss_planz_payoff"
++        }
++      ]
++    }
++  ],
++  "trustFloor": {
++    "char": "poppy",
++    "min": 1
++  }
++}
+diff --git a/content/sidestories/red_pen_bandit.json b/content/sidestories/red_pen_bandit.json
+new file mode 100644
+index 0000000..7401085
+--- /dev/null
++++ b/content/sidestories/red_pen_bandit.json
+@@ -0,0 +1,46 @@
++{
++  "id": "red_pen_bandit",
++  "ref": "II.17.1",
++  "title": "The Red Pen Bandit",
++  "days": [
++    1,
++    2
++  ],
++  "steps": [
++    {
++      "id": "case_open",
++      "cond": {
++        "flag": "redpens_case_open"
++      },
++      "text": "Dot's pens are vanishing, one a shift. Find her pattern."
++    },
++    {
++      "id": "suspect_found",
++      "cond": {
++        "card": "milos_crimes_notebook"
++      },
++      "text": "The CRIMES? notebook is written entirely in urgent red. Hm."
++    },
++    {
++      "id": "solved",
++      "cond": {
++        "deduction": "red_pen_bandit"
++      },
++      "text": "Case closed the only correct way: Gary buys the kid his own pens. Milo becomes the Ledger's junior stringer.",
++      "effects": [
++        {
++          "playBark": "ss_redpen_payoff"
++        },
++        {
++          "notebook": {
++            "doodle": "doodle_red_pens"
++          }
++        }
++      ]
++    }
++  ],
++  "trustFloor": {
++    "char": "milo",
++    "min": 1
++  }
++}
+diff --git a/content/sidestories/unclaimed_key.json b/content/sidestories/unclaimed_key.json
+new file mode 100644
+index 0000000..4c43ced
+--- /dev/null
++++ b/content/sidestories/unclaimed_key.json
+@@ -0,0 +1,59 @@
++{
++  "id": "unclaimed_key",
++  "ref": "II.17.5",
++  "title": "The Unclaimed Key",
++  "days": [
++    3,
++    4,
++    5,
++    6
++  ],
++  "steps": [
++    {
++      "id": "drawer_400",
++      "cond": {
++        "all": [
++          {
++            "day": {
++              "gte": 3
++            }
++          },
++          {
++            "flag": "morgue_unlocked"
++          }
++        ]
++      },
++      "text": "Drawer 400 of Wren & Wick: a key, forty years unclaimed, ticket signed illegibly."
++    },
++    {
++      "id": "handwriting",
++      "cond": {
++        "flag": "handwriting_match_done"
++      },
++      "text": "The morgue ledgers match the signature: Margie's late husband. The key opens a music box he'd left for repair the month he died.",
++      "effects": [
++        {
++          "playBark": "ss_key_reveal"
++        }
++      ]
++    },
++    {
++      "id": "the_music_box",
++      "cond": {
++        "day": {
++          "gte": 6
++        }
++      },
++      "text": "Margie, alone in the inn after close, lets it play. Gary quietly doesn't file this one either. Ida: 'Locks are patient, Mr. Gibbons. So am I.'",
++      "effects": [
++        {
++          "playBark": "ss_key_payoff"
++        }
++      ]
++    }
++  ],
++  "trustFloor": {
++    "char": "margie",
++    "min": 1
++  }
++}
+diff --git a/content/sidestories/whistlers_tune.json b/content/sidestories/whistlers_tune.json
+new file mode 100644
+index 0000000..4fd3b70
+--- /dev/null
++++ b/content/sidestories/whistlers_tune.json
+@@ -0,0 +1,49 @@
++{
++  "id": "whistlers_tune",
++  "ref": "II.17.7",
++  "title": "The Whistler's Tune",
++  "days": [
++    3,
++    4,
++    5,
++    6,
++    7
++  ],
++  "steps": [
++    {
++      "id": "the_melody",
++      "cond": {
++        "flag": "morgue_unlocked"
++      },
++      "text": "A street musician plays one melody nobody can name."
++    },
++    {
++      "id": "theodoras_air",
++      "cond": {
++        "card": "prudences_id"
++      },
++      "text": "Morgue research names it: 'Theodora's Air,' written for her fifty years ago - learned grandfather-to-grandson from Jonah Croft himself.",
++      "effects": [
++        {
++          "playBark": "ss_whistler_reveal"
++        }
++      ]
++    },
++    {
++      "id": "played_at_last",
++      "cond": {
++        "flag": "reading_done"
++      },
++      "text": "On Day 7, the Whistler plays it while Prudence reads the letter. No dialogue needed.",
++      "effects": [
++        {
++          "playBark": "ss_whistler_payoff"
++        }
++      ]
++    }
++  ],
++  "trustFloor": {
++    "char": "prudence",
++    "min": 1
++  }
++}
+diff --git a/content/timeline.json b/content/timeline.json
+index 6d91019..2226a2f 100644
+--- a/content/timeline.json
++++ b/content/timeline.json
+@@ -6,5 +6,6 @@
+     { "id": "night_minus_2", "label": "NIGHT −2", "order": 3 },
+     { "id": "ceremony", "label": "CEREMONY", "order": 4 }
+   ],
++  "compositePair": ["ev_crossing", "ev_milo_sighting"],
+   "completionCinematic": "rail_chronology"
+ }
