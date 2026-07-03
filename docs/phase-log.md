@@ -110,3 +110,27 @@ From this point, any content ID rename requires a migration entry in `app/src/en
 
 ### Open DESIGN-QUESTIONs
 - DQ-1 only (carried).
+
+---
+
+## 2026-07-03 — PHASE 3: The Reporter — DONE
+
+### What shipped
+- **VerificationSystem** (§6.4): route sweep on flag/card/phase/deduction events; CONFIRMED — G.G. toast; verified_via_* provenance flags; whyUnverified() copy.
+- **EditionSystem** (§6.5, II.15.1): Dot's-law draft (verified on-record only — off-record mathematically cannot print), tone-axis headlines with conds/effects, kickers, attribution sub-step with zero ceremony (III.23.2 — two plain buttons, no reward), once-per-night, printed_{tone}_d{N} flags, chalkboard/rumor reactions, gallery. Night gate now requires the published page.
+- **Trust surface** (III.23.3): cold/neutral/warm tiers via greetings only (greeting bubble on talk); verifier grepped the UI — no numeric trust anywhere.
+- **Morning Pages** (III.26): Day 2+ mornings, pick ≤3 open questions, morning_focus_* flags, prior focus cleared daily.
+- **Vox pop** (II.15.5): ambient scheduled NPCs answer the focused Question of the Day from the voxpop pool when they have no fresh dialogue.
+- **Content**: editions/ed_d1 (canon example headlines on the tone axis, II.15.1 trust doctrine deltas, THE EMPTY ESPRESSO chalkboard verbatim, outsider_thief rumor seed), voxpop pool (5 NPCs), day-1 edition wiring.
+
+### gg-content-reviewer verdict
+**LGTM — first pass, zero gaps.** Rulings: doc example headlines apt for Day 1; chalkboard lands Day 2 morning correctly; Otto "smooth hands" / Evelyn "couldn't wait for the future" are §27 town-speculation, NOT Discovery Web leaks. For Ryan's skim: (a) sensational + measured share one chalkboard riff — consider distinct riffs per tone in later editions; (b) the 5 vox-pop lines are a taste call on foreshadowing, canon-safe per reviewer.
+
+### gg-verifier verdict (evidence summary)
+**PASS** — validator 0 errors/1 known warning; 48/48 tests; autoplay ×2 process-level byte-identical (123 lines) with real assertions verified in source (verification route provenance, edition-blocked night, zero-trust measured play, publish-twice refusal, day-2 pages + vox pop + greeting tier); --curious explicit NOT RUN; build clean; e2e 3/3 with full compose flow. Hand inspections: 4 honest STUBs, Math.random clean, no visible trust meter (Cut List), Dot's law structurally airtight, attribution zero-ceremony confirmed, save shape correct, ID freeze respected (diff touches no frozen ids — no migration needed), no silent narrative decisions.
+
+### Stubs (open)
+- STUB(phase-4) puzzle modules + thock sfx · STUB(phase-5) curious run + rail cinematic · STUB(phase-7) TauriFsStorage.
+
+### Open DESIGN-QUESTIONs
+- DQ-1 only (carried).
