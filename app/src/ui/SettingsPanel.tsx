@@ -1,5 +1,7 @@
-// Settings overlay (tech spec §8).
+// Settings overlay (tech spec §8). Renders ABOVE the title screen (z-70 vs
+// z-60) so it is usable from both entry points; Escape closes it.
 
+import { useEffect } from 'react';
 import { useSettings } from './settingsStore';
 import { useUiStore } from './uiStore';
 
@@ -7,6 +9,15 @@ export default function SettingsPanel() {
   const open = useUiStore((s) => s.settingsOpen);
   const toggle = useUiStore((s) => s.toggleSettings);
   const settings = useSettings();
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') toggle();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open, toggle]);
 
   if (!open) return null;
 
@@ -18,7 +29,7 @@ export default function SettingsPanel() {
   );
 
   return (
-    <div className="absolute inset-0 bg-ink/60 flex items-center justify-center pointer-events-auto z-50" data-testid="settings" onClick={toggle}>
+    <div className="absolute inset-0 bg-ink/60 flex items-center justify-center pointer-events-auto z-[70]" data-testid="settings" onClick={toggle}>
       <div className="w-[min(520px,92vw)] bg-cream border-4 border-ink rounded-lg shadow-2xl p-6" onClick={(e) => e.stopPropagation()}>
         <h2 className="text-ink font-bold text-2xl mb-3">Settings</h2>
         <Row label="Text size">

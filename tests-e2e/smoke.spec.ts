@@ -45,6 +45,31 @@ async function playConversation(page: Page) {
   throw new Error('conversation did not finish in 80 interactions');
 }
 
+test('settings usable from title AND in-game (RC gate)', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.getByTestId('title-screen')).toBeVisible({ timeout: 20_000 });
+
+  // from the title screen: open, change a setting, close — clicks must land
+  await page.getByTestId('title-settings').click();
+  await expect(page.getByTestId('settings')).toBeVisible();
+  await page.getByTestId('set-textscale-1.2').click();
+  await expect(page.getByTestId('set-textscale-1.2')).toHaveClass(/border-amber/);
+  await page.getByTestId('settings-close').click();
+  await expect(page.getByTestId('settings')).not.toBeVisible();
+
+  // persisted outside saves
+  const stored = await page.evaluate(() => localStorage.getItem('gg_settings'));
+  expect(JSON.parse(stored ?? '{}').textScale).toBe(1.2);
+
+  // in-game: the HUD gear opens it; Escape closes it
+  await page.getByTestId('title-new').click();
+  await expect(page.getByTestId('hud-settings')).toBeVisible({ timeout: 20_000 });
+  await page.getByTestId('hud-settings').click();
+  await expect(page.getByTestId('settings')).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(page.getByTestId('settings')).not.toBeVisible();
+});
+
 test('boot → walk → talk → save → reload', async ({ page }) => {
   await startNewGame(page);
 

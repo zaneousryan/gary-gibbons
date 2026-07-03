@@ -135,6 +135,14 @@ export default function Hud({ db }: { db: ContentDB }) {
         >
           Load
         </button>
+        <button
+          onClick={() => useUiStore.getState().toggleSettings()}
+          data-testid="hud-settings"
+          className="bg-ink/85 text-cream border-2 border-amber/60 rounded px-3 py-2 font-bold cursor-pointer hover:brightness-110"
+          title="Settings"
+        >
+          ⚙
+        </button>
       </div>
     </div>
   );
