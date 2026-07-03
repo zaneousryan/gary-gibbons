@@ -134,3 +134,25 @@ From this point, any content ID rename requires a migration entry in `app/src/en
 
 ### Open DESIGN-QUESTIONs
 - DQ-1 only (carried).
+
+---
+
+## 2026-07-03 — PHASE 4: Vertical Slice Day 2 — DONE (playtest build #1)
+
+### What shipped
+- **Puzzle framework** (§6.7): open(id)→resolve(effects) contract, PuzzleHost, openPuzzle effect, headless solvers, PUZZLE_RESOLVE_EFFECTS registry consumed by the validator (puzzle-granted cards are graph-visible). PixiStage puzzle STUB retired.
+- **dust_library** (II.13.1): void↔checklist matching, canon items incl. Archie's oilcloth parcel (the player unknowingly matches Grandpa's void), sharp-edge payoff, wax scrapings follow-up.
+- **sketch_memory: the seal** (II.12.2): parts assembly with replaying description, silent 0–3 grading, imperfect sketches still pin.
+- **AudioService pass 1** (§6.8): Howler channels + synthesized thock/blip/chime fallbacks — zero OGGs required (placeholder rule holds for audio).
+- **DEMO groundwork** (§13): demo.endAfterDay schema + clock blocker, inert in shipping game.json.
+- **Day 2 content**: council_hall (key-cabinet verbatim beat, founding-portrait Discovery Web path C, guardian's chair), Poppy arc COLD verbatim + III.20 PRIMED variant + seal pre/puzzle/after chain, dot_d2 pitch + Archie memory, brush-off scene preserving in-day free order (§27), 10 cards, recipes D2/D3/poppy_opened_not_emptied/careful_hands (aha), theories th_outsider + th_never_there, ed_d2, d2 schedules, hint ladders (node-not-pair), grape beat 2 verbatim.
+- **Routing fix**: day:1 conds retrofitted on all Day-1 dialogue entries (dot_d1_redpens was selectable on Day 2).
+
+### gg-content-reviewer verdict
+**LGTM** (after 1 fix round). Rulings: card-cond entry gating for the confession is the faithful smallest-reasonable reading of I.6.D2 (no DQ needed); early 2-input careful_hands IS the doc's "quiet chill placed early" — **Phase 6 note: the doc's full sentence adds the fragment; confirm Night 6 authoring doesn't assume ded_careful_hands is un-produced**; 2 of 2–3 theories in range; identifiable-sensational ed_d2 headline matches the doc's own pattern. Gaps fixed: invented "keepsake tin" → canon oilcloth parcel; trembling stage direction restored (c7n + worried emote); Morning Pitch board-picker gap logged as DQ-2. Nit for later: rename void_tin → void_parcel on next touch. Ryan skim: ~18 authored lines (Poppy deflection, Dot's pitch reactions).
+
+### gg-verifier verdict (evidence summary)
+**PASS** — validator PASS (5 locations/18 dialogues/18 cards/6 deductions/2 editions); 54/54 tests (brief said 57 — brief arithmetic error, flagged by verifier); autoplay ×2 byte-identical, 195 lines, all Day-2 assertions verified line-by-line in source; --curious explicit NOT RUN; build clean; e2e 4/4 incl. dust-library browser drive. Hand inspections: STUB set correct after PixiStage retirement (one stale thock STUB comment found in verify.ts — deleted); Math.random clean; zero OGGs + synthesized fallback proven; puzzles organic per §13; ID freeze respected (addition-only diff, no migration needed); GameState untouched.
+
+### Open DESIGN-QUESTIONs
+- DQ-1 (carried) · **DQ-2 (new)**: Morning Pitch board-item picker vs dialogue-choice interim (II.16.6).
