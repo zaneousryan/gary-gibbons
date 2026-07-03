@@ -396,10 +396,9 @@ async function runOnce(seed: number): Promise<string[]> {
   assertFlag('has_camera');
   assertCard('founding_photograph', 'verified');
 
-  // then & now (II.13.2): the plaque moved
+  // then & now (II.13.2): the plaque moved — runHotspot solves the opened puzzle
   game.moveTo('founders_square');
   runHotspot(db, 'founders_square', 'dedication_plaque');
-  game.runEffects(solveThenNow());
   assertFlag('then_now_founding_done');
   assertCard('plaque_moved', 'verified');
 
