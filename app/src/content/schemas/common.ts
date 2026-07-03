@@ -40,7 +40,7 @@ export type ConditionShape = {
   trust?: { char: string; gte?: number; lte?: number; gt?: number; lt?: number; eq?: number };
   weather?: 'clear' | 'rain';
   deduction?: string;
-  collectible?: { lanterns?: number; doodles?: number; clippings?: number };
+  collectible?: { lanterns?: number; doodles?: number; clippings?: number; grapesDeclined?: number };
 };
 
 export const ConditionSchema: z.ZodType<ConditionShape> = z.lazy(() =>
