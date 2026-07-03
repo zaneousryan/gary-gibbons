@@ -1,0 +1,12 @@
+{
+  "id": "recovered_contents",
+  "ref": "I.8.2",
+  "type": "physical",
+  "title": "THE CONTENTS - located, returned intact",
+  "sprite": "card_recovered_contents",
+  "source": "old_boathouse",
+  "initialStatus": "verified",
+  "text": "Under the boathouse floor: the crates, the children's bundles, and on top, the green-sealed envelope - cracked, but unopened. Contents located. Returned intact.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

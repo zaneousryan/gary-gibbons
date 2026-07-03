@@ -1,0 +1,12 @@
+{
+  "id": "garden_acoustics",
+  "ref": "II.13.7",
+  "type": "physical",
+  "title": "The garden acoustics - audible only when the wind drops",
+  "sprite": "card_garden_acoustics",
+  "source": "vale_manor",
+  "initialStatus": "verified",
+  "text": "From the study window, the garden arrives in halves - whole sentences only when the wind rests. The physics of overhearing enough to be exactly wrong.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

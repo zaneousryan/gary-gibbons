@@ -1,0 +1,12 @@
+{
+  "id": "ded_proof",
+  "ref": "I.6.D12",
+  "type": "deduction",
+  "title": "PHYSICAL PROOF - he handled the will, after",
+  "sprite": "card_ded_proof",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "The seal was whole when Poppy counted. The wax broke later - in a coat pocket, from being taken out and turned over and not opened, five days running. The fragment is proof of a crime and of a conscience.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

@@ -1,0 +1,83 @@
+{
+  "id": "ed_d7",
+  "day": 7,
+  "ref": "II.15.1",
+  "draftCards": [
+    "recovered_contents",
+    "ded_final"
+  ],
+  "headlines": [
+    {
+      "id": "h_d7_sensational",
+      "tone": "sensational",
+      "text": "HEIR CONFESSES! CAPSULE FOUND UNDER BOATHOUSE",
+      "effects": [
+        {
+          "trust": {
+            "delta": -1,
+            "char": "clara"
+          }
+        },
+        {
+          "trust": {
+            "delta": -1,
+            "char": "julian"
+          }
+        }
+      ],
+      "reactions": {
+        "chalkboard": "THE MORNING AFTER - strong, unkind"
+      }
+    },
+    {
+      "id": "h_d7_measured",
+      "tone": "measured",
+      "text": "Capsule Contents Recovered Intact; Leadership to Be Shared",
+      "reactions": {
+        "chalkboard": "THE FULL ACCOUNT - everything in the cup"
+      }
+    },
+    {
+      "id": "h_d7_compassionate",
+      "tone": "compassionate",
+      "text": "The Lantern and the Ivy: Lanternside Gets Its Memory Back",
+      "effects": [
+        {
+          "trust": {
+            "delta": 1,
+            "char": "julian"
+          }
+        },
+        {
+          "trust": {
+            "delta": 1,
+            "char": "clara"
+          }
+        },
+        {
+          "trust": {
+            "delta": 1,
+            "char": "beatrice"
+          }
+        }
+      ],
+      "reactions": {
+        "chalkboard": "THE LANTERN & IVY - two shots, one saucer, sweet"
+      }
+    }
+  ],
+  "kickers": [
+    {
+      "id": "k_d7_together",
+      "text": "Lead together. Argue often. Decide once. This paper intends to hold them to it."
+    },
+    {
+      "id": "k_d7_home",
+      "text": "Fifty years came home this week. So did a few other things."
+    },
+    {
+      "id": "k_d7_next",
+      "text": "NEXT STORY? - the board is already asking."
+    }
+  ]
+}

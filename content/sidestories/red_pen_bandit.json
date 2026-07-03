@@ -1,0 +1,46 @@
+{
+  "id": "red_pen_bandit",
+  "ref": "II.17.1",
+  "title": "The Red Pen Bandit",
+  "days": [
+    1,
+    2
+  ],
+  "steps": [
+    {
+      "id": "case_open",
+      "cond": {
+        "flag": "redpens_case_open"
+      },
+      "text": "Dot's pens are vanishing, one a shift. Find her pattern."
+    },
+    {
+      "id": "suspect_found",
+      "cond": {
+        "card": "milos_crimes_notebook"
+      },
+      "text": "The CRIMES? notebook is written entirely in urgent red. Hm."
+    },
+    {
+      "id": "solved",
+      "cond": {
+        "deduction": "red_pen_bandit"
+      },
+      "text": "Case closed the only correct way: Gary buys the kid his own pens. Milo becomes the Ledger's junior stringer.",
+      "effects": [
+        {
+          "playBark": "ss_redpen_payoff"
+        },
+        {
+          "notebook": {
+            "doodle": "doodle_red_pens"
+          }
+        }
+      ]
+    }
+  ],
+  "trustFloor": {
+    "char": "milo",
+    "min": 1
+  }
+}

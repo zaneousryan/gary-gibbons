@@ -1,0 +1,50 @@
+{
+  "id": "prudence_d5_seal",
+  "character": "prudence",
+  "ref": "I.5.day5",
+  "entries": [
+    { "id": "main", "cond": { "all": [{ "day": { "gte": 5 } }, { "card": "prudence_alibi" }, { "card": "seal_sketch" }, { "not": { "card": "prudences_id" } }] }, "node": "s1" }
+  ],
+  "reentrant": true,
+  "nodes": {
+    "s1": {
+      "speaker": "gary",
+      "line": "One more thing. Ever seen this seal?",
+      "authored": "verbatim",
+      "next": "s2"
+    },
+    "s2": {
+      "speaker": "narrator",
+      "line": "The loupe comes up. Total stillness — a heron's stillness, the kind that precedes a strike. Then, softly:",
+      "authored": "aletheia",
+      "next": "s3"
+    },
+    "s3": {
+      "speaker": "prudence",
+      "line": "Where did you get this.",
+      "authored": "verbatim",
+      "emote": "surprised",
+      "next": "s4"
+    },
+    "s4": {
+      "speaker": "gary",
+      "line": "A witness saw it on an envelope in the capsule. I drew it.",
+      "authored": "verbatim",
+      "next": "s5"
+    },
+    "s5": {
+      "speaker": "prudence",
+      "line": "Then your witness saw Edmund Vale's personal signet. The lantern in ivy. Not the council seal — the family's. That ring never left the family, Mr. Gibbons. It sits, as far as I know, on his son's finger to this day.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "effects": [
+        { "giveCard": "prudences_id", "status": "verified" },
+        { "notebook": { "entry": "nb_seal_identified" } },
+        { "playBark": "gary_inner_loose_ring" }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "prudence_repeat_busy"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "ded_opportunity",
+  "ref": "I.6.D11",
+  "type": "deduction",
+  "title": "OPPORTUNITY - the umbrella crossing, 2 a.m.",
+  "sprite": "card_ded_opportunity",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "Two witnesses, one minute: Ferris saw the key turn smooth as butter; Milo saw THE umbrella hide the whole him. Night -2, two in the morning, the square briefly belonged to someone.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

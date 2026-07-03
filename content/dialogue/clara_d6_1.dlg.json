@@ -1,0 +1,50 @@
+{
+  "id": "clara_d6_1",
+  "character": "clara",
+  "ref": "I.5.day6",
+  "entries": [
+    { "id": "main", "cond": { "all": [{ "day": { "gte": 6 } }, { "not": { "card": "clara_fear" } }] }, "node": "c1" }
+  ],
+  "reentrant": true,
+  "nodes": {
+    "c1": {
+      "speaker": "clara",
+      "line": "You've come to ask if I stole my father's will. Efficient. Ask.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "line": "Actually — I came to ask what your brother's afraid of.",
+      "authored": "verbatim",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "narrator",
+      "line": "The first crack in her composure.",
+      "authored": "verbatim",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "clara",
+      "line": "...That's a better question than the constable managed.",
+      "authored": "verbatim",
+      "emote": "surprised",
+      "next": "c5"
+    },
+    "c5": {
+      "speaker": "clara",
+      "line": "Everyone thinks Julian is dying to take the chair. He's terrified of it. He told me once — years ago, before he learned to give speeches — \"What if I'm only the shape of Father?\" He doesn't think he can do it alone. And everyone, including me, keeps telling him he'll be doing it alone.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "effects": [
+        { "giveCard": "clara_fear", "status": "verified" },
+        { "notebook": { "entry": "nb_clara_fear" } }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "clara_repeat_busy"
+}

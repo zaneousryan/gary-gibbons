@@ -1,0 +1,12 @@
+{
+  "id": "clara_fear",
+  "ref": "I.5.day6",
+  "type": "testimony",
+  "title": "CLARA CLUE 1 - Julian's fear",
+  "sprite": "card_clara_fear",
+  "source": "clara",
+  "initialStatus": "verified",
+  "text": "'What if I'm only the shape of Father?' He's terrified of the chair - and everyone, including Clara, keeps telling him he'll hold it alone.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

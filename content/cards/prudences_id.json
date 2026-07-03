@@ -1,0 +1,12 @@
+{
+  "id": "prudences_id",
+  "ref": "I.5.day5",
+  "type": "testimony",
+  "title": "SEAL IDENTIFIED - Edmund Vale's personal signet",
+  "sprite": "card_prudences_id",
+  "source": "prudence",
+  "initialStatus": "verified",
+  "text": "Not the council seal. The lantern in ivy is the Vale family signet - and the ring never left the family. It sits, as far as anyone knows, on his son's finger to this day.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

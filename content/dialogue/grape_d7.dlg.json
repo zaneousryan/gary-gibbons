@@ -1,0 +1,43 @@
+{
+  "id": "grape_d7",
+  "character": "gino",
+  "ref": "I.7.1",
+  "entries": [
+    { "id": "main", "cond": { "all": [{ "day": 7 }, { "flag": "reading_done" }, { "not": { "flag": "grape_beat_d7" } }] }, "node": "c1" }
+  ],
+  "reentrant": true,
+  "nodes": {
+    "c1": {
+      "speaker": "narrator",
+      "line": "Gino emerges from the celebration holding aloft the bunch — THE bunch, the celebratory one, grapes like small green lanterns.",
+      "authored": "aletheia",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gino",
+      "line": "Gibbons! Today of ALL days! The good ones! For the hero of Lanternside — bellissimo, no tragedy, only grapes!",
+      "authored": "aletheia",
+      "emote": "happy",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "narrator",
+      "line": "Gary takes ONE grape. Looks at it a long moment — a week, a year, a whole inheritance in one small green sphere. Then he turns and hands it to Milo.",
+      "authored": "aletheia",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "gary",
+      "line": "You earned it, kid.",
+      "authored": "verbatim",
+      "effects": [
+        { "setFlag": "grape_beat_d7" },
+        { "notebook": { "entry": "nb_grape_victory" } },
+        { "playBark": "gary_inner_at_peace_ish" }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "gino_repeat_busy"
+}

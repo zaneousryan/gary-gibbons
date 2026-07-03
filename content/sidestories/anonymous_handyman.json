@@ -1,0 +1,63 @@
+{
+  "id": "anonymous_handyman",
+  "ref": "II.17.3",
+  "title": "The Anonymous Handyman",
+  "days": [
+    3,
+    4,
+    5
+  ],
+  "steps": [
+    {
+      "id": "brass_screws",
+      "cond": {
+        "all": [
+          {
+            "day": {
+              "gte": 3
+            }
+          },
+          {
+            "card": "lighthouse_folio"
+          }
+        ]
+      },
+      "text": "For eight years, small things get quietly fixed overnight - always the same distinctive brass screws."
+    },
+    {
+      "id": "its_warren",
+      "cond": {
+        "deduction": "d4_warren_cleared"
+      },
+      "text": "It's Warren. Anonymously maintaining the district he wasn't sure he had the right to lead.",
+      "effects": [
+        {
+          "playBark": "ss_handyman_reveal"
+        }
+      ]
+    },
+    {
+      "id": "kept_secret",
+      "cond": {
+        "day": {
+          "gte": 5
+        }
+      },
+      "text": "Gary keeps the secret. No reward - except a brass screw pressed into his hand at the dock: 'File under stories that didn't need telling.' A rehearsal for the week's hardest choice.",
+      "effects": [
+        {
+          "playBark": "ss_handyman_payoff"
+        },
+        {
+          "notebook": {
+            "doodle": "doodle_brass_screw"
+          }
+        }
+      ]
+    }
+  ],
+  "trustFloor": {
+    "char": "warren",
+    "min": 1
+  }
+}

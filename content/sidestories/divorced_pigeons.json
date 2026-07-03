@@ -1,0 +1,65 @@
+{
+  "id": "divorced_pigeons",
+  "ref": "II.17.9",
+  "title": "The Divorced Pigeons",
+  "days": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "steps": [
+    {
+      "id": "the_situation",
+      "cond": {
+        "day": {
+          "gte": 2
+        }
+      },
+      "text": "Two pigeons, one lamppost, escalating silent drama. Gary's notebook gains an ongoing case file he refuses to call a case file.",
+      "effects": [
+        {
+          "notebook": {
+            "doodle": "doodle_pigeons_1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "escalation",
+      "cond": {
+        "day": {
+          "gte": 4
+        }
+      },
+      "text": "The pigeons now occupy opposite ends of the lamppost with performative indifference.",
+      "effects": [
+        {
+          "notebook": {
+            "doodle": "doodle_pigeons_2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "reconciliation",
+      "cond": {
+        "flag": "reading_done"
+      },
+      "text": "Day 7: reconciliation. One nest. Warren photographs it. The final doodle: two pigeons in tiny lantern and ivy costumes.",
+      "effects": [
+        {
+          "notebook": {
+            "doodle": "doodle_pigeons_final"
+          }
+        },
+        {
+          "playBark": "ss_pigeons_payoff"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "ed_d6",
+  "day": 6,
+  "ref": "II.15.1",
+  "draftCards": [
+    "idas_ledger",
+    "wax_fragment",
+    "milos_sighting",
+    "ded_final"
+  ],
+  "headlines": [
+    {
+      "id": "h_d6_sensational",
+      "tone": "sensational",
+      "text": "HEIR SUSPECTED IN CAPSULE THEFT",
+      "effects": [
+        {
+          "setFlag": "julian_read_it"
+        },
+        {
+          "trust": {
+            "delta": -1,
+            "char": "clara"
+          }
+        },
+        {
+          "trust": {
+            "delta": -1,
+            "char": "beatrice"
+          }
+        }
+      ],
+      "reactions": {
+        "rumorSeed": "julian_suspected",
+        "chalkboard": "THE FRONT PAGE - bitter, and someone drinks it alone"
+      }
+    },
+    {
+      "id": "h_d6_measured",
+      "tone": "measured",
+      "text": "Investigation Nears Its End",
+      "reactions": {
+        "chalkboard": "THE LAST POUR - almost done, steady hands"
+      }
+    },
+    {
+      "id": "h_d6_hold",
+      "tone": "hold",
+      "text": "Hold Tomorrow's Front Page",
+      "effects": [
+        {
+          "setFlag": "held_the_page_d6"
+        },
+        {
+          "trust": {
+            "delta": 1,
+            "char": "clara"
+          }
+        }
+      ],
+      "reactions": {
+        "chalkboard": "THE HELD BREATH - no charge, on the house"
+      }
+    }
+  ],
+  "kickers": [
+    {
+      "id": "k_d6_tomorrow",
+      "text": "Tomorrow, this paper prints the truth. Tonight, it lets a family sleep."
+    },
+    {
+      "id": "k_d6_near",
+      "text": "The Ledger expects to publish a full account shortly."
+    },
+    {
+      "id": "k_d6_facts",
+      "text": "What we know, as we know it. What we suspect stays at the desk."
+    }
+  ]
+}

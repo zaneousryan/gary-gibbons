@@ -1,0 +1,49 @@
+{
+  "id": "dot_d6_pitch",
+  "character": "dot",
+  "ref": "II.16.6",
+  "entries": [{ "id": "main", "cond": { "day": 6 }, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "dot",
+      "line": "Gibbons. The seal was the family's, the key was the family's, and you've got the manor look about you — the one your grandfather got when a story stopped being fun. Sell me today. Gently.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "choices": [
+        {
+          "line": "The trail ends at the manor. Today I find out which Vale — and I do it with my hat in my hands.",
+          "authored": "aletheia",
+          "effects": [{ "setFlag": "pitch_d6_done" }],
+          "next": "c3"
+        },
+        {
+          "line": "I think I already know. Today I make sure I'm wrong before I let myself be right.",
+          "authored": "aletheia",
+          "effects": [{ "setFlag": "pitch_d6_done" }],
+          "next": "c3"
+        }
+      ]
+    },
+    "c3": {
+      "speaker": "dot",
+      "line": "Good. Both of those were the right answer, which almost never happens at this desk.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "dot",
+      "line": "You know what your grandfather never did? Publish angry.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "ref": "I.7.2",
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "dot_repeat_busy"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "milos_byline",
+  "ref": "II.17.6",
+  "title": "Milo's First Byline",
+  "days": [
+    5,
+    6
+  ],
+  "steps": [
+    {
+      "id": "doorstep_gardener",
+      "cond": {
+        "day": {
+          "gte": 5
+        }
+      },
+      "text": "Someone's leaving fresh vegetables on struggling neighbors' doorsteps. Milo investigates; Gary mentors - approving and challenging the kid's claims like a real editor."
+    },
+    {
+      "id": "its_beatrice",
+      "cond": {
+        "all": [
+          {
+            "day": {
+              "gte": 5
+            }
+          },
+          {
+            "flag": "morning_pages_done_d5"
+          }
+        ]
+      },
+      "text": "The doorstep gardener is Beatrice Vale - warming the reader to her one day before her big scene.",
+      "effects": [
+        {
+          "playBark": "ss_byline_reveal"
+        }
+      ]
+    },
+    {
+      "id": "framed",
+      "cond": {
+        "flag": "printed_measured_d6"
+      },
+      "text": "Milo's two-sentence piece runs in the real Evening Edition, name attached. He frames it.",
+      "effects": [
+        {
+          "playBark": "ss_byline_payoff"
+        }
+      ]
+    }
+  ],
+  "trustFloor": {
+    "char": "milo",
+    "min": 1
+  }
+}

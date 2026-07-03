@@ -1,0 +1,12 @@
+{
+  "id": "evelyn_confirmation",
+  "ref": "I.5.day5",
+  "type": "testimony",
+  "title": "Evelyn confirms - until three, with tea",
+  "sprite": "card_evelyn_confirmation",
+  "source": "evelyn",
+  "initialStatus": "verified",
+  "text": "Confirmed, blushing: cataloguing until 3 a.m., Jonah's letters read aloud in a borrowed voice. Some alibis are also the best nights of a person's year.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

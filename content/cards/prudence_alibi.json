@@ -1,0 +1,21 @@
+{
+  "id": "prudence_alibi",
+  "ref": "I.5.day5",
+  "type": "testimony",
+  "title": "Prudence's alibi - cataloguing with Evelyn until 3 a.m.",
+  "sprite": "card_prudence_alibi",
+  "source": "prudence",
+  "initialStatus": "unverified",
+  "text": "Night -2: reconstructing both sides of the Theodora-Jonah correspondence with Evelyn Croft, until three in the morning. Verify with the florist. Bring context; she is armed with shears.",
+  "verifyRoutes": [
+    {
+      "id": "evelyn_confirms",
+      "ref": "I.5.day5",
+      "hint": "The florist can confirm it - two rival family lines, one long night of letters.",
+      "cond": {
+        "card": "evelyn_confirmation"
+      }
+    }
+  ],
+  "reReadLines": []
+}

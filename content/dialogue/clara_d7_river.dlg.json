@@ -1,0 +1,32 @@
+{
+  "id": "clara_d7_river",
+  "character": "clara",
+  "ref": "I.8.2",
+  "entries": [
+    { "id": "main", "cond": { "all": [{ "day": 7 }, { "flag": "pitch_d7_done" }, { "not": { "flag": "river_walk_done" } }] }, "node": "c1" }
+  ],
+  "reentrant": true,
+  "nodes": {
+    "c1": {
+      "speaker": "narrator",
+      "line": "River morning. Mist on the water. Clara is waiting at the bank — she insisted on coming this far, and no farther. The walk down was quiet; some walks are supposed to be.",
+      "authored": "aletheia",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "clara",
+      "line": "I'll be here. For after.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "effects": [
+        { "setFlag": "river_walk_done" },
+        { "setFlag": "boathouse_ready" },
+        { "notebook": { "entry": "nb_river_walk" } },
+        { "playBark": "gary_inner_river_walk" }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "clara_repeat_busy"
+}

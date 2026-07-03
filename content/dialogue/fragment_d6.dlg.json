@@ -1,0 +1,39 @@
+{
+  "id": "fragment_d6",
+  "character": "narrator",
+  "ref": "I.5.day6",
+  "entries": [{ "id": "main", "cond": {}, "node": "n1" }],
+  "nodes": {
+    "n1": {
+      "speaker": "narrator",
+      "line": "Julian at the counter, paying, rehearsing his public smile. He pulls coins from his coat pocket — and something small skitters across the floor to Gary's shoe. A fragment of GREEN WAX.",
+      "authored": "verbatim",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "narrator",
+      "line": "Gary crouches. Overlaying the seal sketch in his mind: the ivy leaves align. A soft, terrible chime somewhere behind the sternum.",
+      "authored": "aletheia",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "otto",
+      "line": "You look like a man who found something he was hoping not to find.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "narrator",
+      "line": "An espresso slides across the counter, quietly, on the house.",
+      "authored": "aletheia",
+      "effects": [
+        { "giveCard": "wax_fragment", "status": "verified" },
+        { "setFlag": "fragment_found" },
+        { "notebook": { "entry": "nb_wax_fragment" } },
+        { "playBark": "gary_inner_that_coat" }
+      ],
+      "next": null
+    }
+  }
+}

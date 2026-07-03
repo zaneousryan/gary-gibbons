@@ -1,0 +1,54 @@
+{
+  "id": "milos_alley",
+  "name": "Milo's Fire Escape",
+  "ref": "I.5.day6",
+  "layers": ["bg", "mid", "fg"],
+  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "exits": [{ "to": "market_row", "at": [160, 880] }],
+  "sitSpot": {
+    "at": [1500, 880],
+    "monologues": [{ "cond": {}, "bark": "bench_alley_d6" }]
+  },
+  "hotspots": [
+    {
+      "id": "talk_milo_alley",
+      "at": [900, 800],
+      "kind": "talk",
+      "character": "milo",
+      "label": "Milo"
+    },
+    {
+      "id": "fire_escape",
+      "at": [1300, 600],
+      "kind": "examine",
+      "label": "The Fire Escape",
+      "cond": { "all": [{ "day": { "gte": 6 } }, { "card": "milos_sighting" }] },
+      "interactions": [
+        {
+          "id": "sightline_check",
+          "cond": { "not": { "flag": "fire_escape_puzzle_done" } },
+          "opens": "puzzle:fire_escape_sightline",
+          "ref": "II.12.6"
+        },
+        {
+          "id": "sightline_done",
+          "text": "Milo's vantage, verified with Gary's own eyes and Warren's loaner lens. The kid could see exactly what he said he saw — and exactly nothing more. The umbrella did the rest.",
+          "ref": "II.12.6"
+        }
+      ],
+      "ref": "II.12.6"
+    },
+    {
+      "id": "exit_market",
+      "at": [160, 820],
+      "kind": "exit",
+      "to": "market_row",
+      "label": "To Market Row"
+    }
+  ],
+  "ambient": {
+    "vignetteTags": ["alley"],
+    "weatherVariants": true,
+    "ambience": "amb_evening_street"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "credits_d7",
+  "character": "narrator",
+  "ref": "I.8.4",
+  "entries": [{ "id": "main", "cond": {}, "node": "n1" }],
+  "nodes": {
+    "n1": {
+      "speaker": "narrator",
+      "line": "Days later. A small gathering, and the capsule properly opened at last. The items come out one by one: a drawing of LANTERNSIDE IN THE FUTURE (flying trams, a mayor who is a dog). A prediction card: 'In 50 years everyone will have a personal robot. If not, we apologize.' A kid's lost tooth, 'for science.'",
+      "authored": "verbatim",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "narrator",
+      "line": "Theodora's letter, which Prudence reads privately. The game shows only her face — and Evelyn's hand.",
+      "authored": "verbatim",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "narrator",
+      "line": "Last: a small parcel in oilcloth, addressed in strong pencil: FOR THE GIBBONS WHO COMES NEXT.",
+      "authored": "verbatim",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "narrator",
+      "line": "\"If you're reading this, then one of mine grew up curious, and the badge found its way to you. Good. Now listen: the truth is not a trophy. It's a lantern. You don't win it — you carry it, and you mind whose eyes you shine it in.\"",
+      "authored": "verbatim",
+      "next": "n5"
+    },
+    "n5": {
+      "speaker": "narrator",
+      "line": "\"Ask the question under the question. Believe people are more than their worst night. And when the story is about someone's heart — and son, it is always, eventually, about someone's heart — tell the truth with compassion. In that order. And no other. — A.G.\"",
+      "authored": "verbatim",
+      "next": "n6"
+    },
+    "n6": {
+      "speaker": "narrator",
+      "line": "In the parcel: Archie's field notebook. A brass magnifying glass engraved \"Look closer, then look kinder.\" And a jar of homemade grape jam, labeled in Archie's hand: \"For emergencies.\" It's hereditary. Gary laughs until he cries, for several reasons at once.",
+      "authored": "verbatim",
+      "next": "n7"
+    },
+    "n7": {
+      "speaker": "narrator",
+      "line": "The board, cleared of string. In the center, one fresh index card in Gary's hand: NEXT STORY?",
+      "authored": "verbatim",
+      "next": "n8"
+    },
+    "n8": {
+      "speaker": "narrator",
+      "line": "…And in the repaired community garden, a trowel strikes something with a metallic clink. A weasel looks left. Looks right. \"...Ferris Mott smells destiny.\" GARY GIBBONS WILL RETURN.",
+      "authored": "verbatim",
+      "effects": [
+        { "setFlag": "game_complete" },
+        { "notebook": { "entry": "nb_credits" } }
+      ],
+      "next": null
+    }
+  }
+}

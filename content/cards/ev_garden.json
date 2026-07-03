@@ -1,0 +1,16 @@
+{
+  "id": "ev_garden",
+  "ref": "II.16.1",
+  "type": "event",
+  "title": "NIGHT -5: half a conversation in the garden",
+  "sprite": "card_ev_garden",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "'It isn't fair.' / 'You may be surprised.' One comfort, one verdict, one open study window.",
+  "verifyRoutes": [],
+  "reReadLines": [],
+  "anchor": {
+    "card": "overheard_conversation"
+  },
+  "railSlot": "night_minus_5"
+}

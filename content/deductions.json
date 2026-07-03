@@ -4,60 +4,90 @@
       "id": "red_pen_bandit",
       "ref": "II.17.1",
       "kind": "standard",
-      "inputs": ["dots_missing_pens", "milos_crimes_notebook"],
+      "inputs": [
+        "dots_missing_pens",
+        "milos_crimes_notebook"
+      ],
       "requireVerified": false,
       "requireOnRecordForFinale": false,
-      "produces": { "card": "ded_red_pen_bandit" },
+      "produces": {
+        "card": "ded_red_pen_bandit"
+      },
       "garyLine": "bark_ded_red_pen_bandit"
     },
     {
       "id": "d1_emptied_before",
       "ref": "I.6.D1",
       "kind": "standard",
-      "inputs": ["empty_vault", "unforced_lock"],
+      "inputs": [
+        "empty_vault",
+        "unforced_lock"
+      ],
       "requireVerified": true,
       "requireOnRecordForFinale": false,
-      "produces": { "card": "ded_emptied_before" },
+      "produces": {
+        "card": "ded_emptied_before"
+      },
       "garyLine": "bark_ded_emptied_before"
     },
     {
       "id": "d2_borrowed_recently",
       "ref": "I.6.D2",
       "kind": "standard",
-      "inputs": ["key_backwards", "dust_outline"],
+      "inputs": [
+        "key_backwards",
+        "dust_outline"
+      ],
       "requireVerified": true,
       "requireOnRecordForFinale": false,
-      "produces": { "card": "ded_borrowed_recently" },
+      "produces": {
+        "card": "ded_borrowed_recently"
+      },
       "garyLine": "bark_ded_borrowed_recently"
     },
     {
       "id": "d3_theft_window",
       "ref": "I.6.D3",
       "kind": "standard",
-      "inputs": ["poppys_checklist", "empty_vault"],
+      "inputs": [
+        "poppys_checklist",
+        "empty_vault"
+      ],
       "requireVerified": true,
       "requireOnRecordForFinale": false,
-      "produces": { "card": "ded_theft_window" },
+      "produces": {
+        "card": "ded_theft_window"
+      },
       "garyLine": "bark_ded_theft_window"
     },
     {
       "id": "poppy_opened_not_emptied",
       "ref": "I.5.day2",
       "kind": "standard",
-      "inputs": ["key_backwards", "poppys_checklist"],
+      "inputs": [
+        "key_backwards",
+        "poppys_checklist"
+      ],
       "requireVerified": true,
       "requireOnRecordForFinale": false,
-      "produces": { "card": "ded_poppy_opened_not_emptied" },
+      "produces": {
+        "card": "ded_poppy_opened_not_emptied"
+      },
       "garyLine": "bark_ded_poppy_cleared"
     },
     {
       "id": "careful_hands",
       "ref": "III.22.3",
       "kind": "aha",
-      "inputs": ["sharp_edged_void", "poppys_checklist"],
+      "inputs": [
+        "sharp_edged_void",
+        "poppys_checklist"
+      ],
       "requireVerified": true,
       "requireOnRecordForFinale": false,
-      "produces": { "card": "ded_careful_hands" },
+      "produces": {
+        "card": "ded_careful_hands"
+      },
       "garyLine": "bark_ded_careful_hands",
       "cinematic": "theory_curl_outsider"
     },
@@ -65,42 +95,202 @@
       "id": "d4_warren_cleared",
       "ref": "I.6.D4",
       "kind": "standard",
-      "inputs": ["margies_testimony", "warrens_speech", "lighthouse_folio"],
+      "inputs": [
+        "margies_testimony",
+        "warrens_speech",
+        "lighthouse_folio"
+      ],
       "requireVerified": true,
       "requireOnRecordForFinale": false,
-      "produces": { "card": "ded_warren_cleared", "clearSuspect": "warren" },
+      "produces": {
+        "card": "ded_warren_cleared",
+        "clearSuspect": "warren"
+      },
       "garyLine": "bark_ded_warren_cleared"
     },
     {
       "id": "d5_lodger",
       "ref": "I.6.D5",
       "kind": "standard",
-      "inputs": ["night_photograph", "lodger_gossip"],
+      "inputs": [
+        "night_photograph",
+        "lodger_gossip"
+      ],
       "requireVerified": true,
       "requireOnRecordForFinale": false,
-      "produces": { "card": "ded_lodger" },
+      "produces": {
+        "card": "ded_lodger"
+      },
       "garyLine": "bark_ded_lodger"
     },
     {
       "id": "d6_insider",
       "ref": "I.6.D6",
       "kind": "standard",
-      "inputs": ["ferris_testimony", "ded_emptied_before"],
+      "inputs": [
+        "ferris_testimony",
+        "ded_emptied_before"
+      ],
       "requireVerified": true,
       "requireOnRecordForFinale": false,
-      "produces": { "card": "ded_insider" },
+      "produces": {
+        "card": "ded_insider"
+      },
       "garyLine": "bark_ded_insider"
     },
     {
       "id": "photo_witness",
       "ref": "III.22.2",
       "kind": "aha",
-      "inputs": ["night_photograph", "ferris_testimony"],
+      "inputs": [
+        "night_photograph",
+        "ferris_testimony"
+      ],
       "requireVerified": true,
       "requireOnRecordForFinale": false,
-      "produces": { "card": "ded_photo_witness" },
+      "produces": {
+        "card": "ded_photo_witness"
+      },
       "garyLine": "bark_ded_photo_witness",
       "cinematic": "photo_to_witness_column"
+    },
+    {
+      "id": "d7_signet",
+      "ref": "I.6.D7",
+      "kind": "standard",
+      "inputs": [
+        "seal_sketch",
+        "prudences_id"
+      ],
+      "requireVerified": true,
+      "requireOnRecordForFinale": false,
+      "produces": {
+        "card": "ded_signet"
+      },
+      "garyLine": "bark_ded_signet"
+    },
+    {
+      "id": "d8_prudence_cleared",
+      "ref": "I.6.D8",
+      "kind": "standard",
+      "inputs": [
+        "prudence_alibi",
+        "evelyn_confirmation"
+      ],
+      "requireVerified": true,
+      "requireOnRecordForFinale": false,
+      "produces": {
+        "card": "ded_prudence_cleared",
+        "clearSuspect": "prudence"
+      },
+      "garyLine": "bark_ded_prudence_cleared"
+    },
+    {
+      "id": "d9_means",
+      "ref": "I.6.D9",
+      "kind": "standard",
+      "inputs": [
+        "clara_key_missing",
+        "idas_ledger"
+      ],
+      "requireVerified": true,
+      "requireOnRecordForFinale": true,
+      "produces": {
+        "card": "ded_means",
+        "ledgerCell": {
+          "suspect": "julian",
+          "col": "means"
+        }
+      },
+      "garyLine": "bark_ded_means"
+    },
+    {
+      "id": "d10_motive",
+      "ref": "I.6.D10",
+      "kind": "standard",
+      "inputs": [
+        "clara_fear",
+        "overheard_conversation"
+      ],
+      "requireVerified": true,
+      "requireOnRecordForFinale": true,
+      "produces": {
+        "card": "ded_motive",
+        "ledgerCell": {
+          "suspect": "julian",
+          "col": "motive"
+        }
+      },
+      "garyLine": "bark_ded_motive"
+    },
+    {
+      "id": "d11_opportunity",
+      "ref": "I.6.D11",
+      "kind": "standard",
+      "inputs": [
+        "milos_sighting",
+        "ferris_testimony"
+      ],
+      "requireVerified": true,
+      "requireOnRecordForFinale": true,
+      "produces": {
+        "card": "ded_opportunity",
+        "ledgerCell": {
+          "suspect": "julian",
+          "col": "opportunity"
+        }
+      },
+      "garyLine": "bark_ded_opportunity"
+    },
+    {
+      "id": "d12_proof",
+      "ref": "I.6.D12",
+      "kind": "standard",
+      "inputs": [
+        "wax_fragment",
+        "seal_sketch"
+      ],
+      "requireVerified": true,
+      "requireOnRecordForFinale": true,
+      "produces": {
+        "card": "ded_proof"
+      },
+      "garyLine": "bark_ded_proof"
+    },
+    {
+      "id": "d13_final",
+      "ref": "I.6.D13",
+      "kind": "standard",
+      "inputs": [
+        "ded_means",
+        "ded_motive",
+        "ded_opportunity",
+        "ded_proof"
+      ],
+      "requireVerified": true,
+      "requireOnRecordForFinale": true,
+      "produces": {
+        "card": "ded_final"
+      },
+      "garyLine": "bark_ded_final"
+    },
+    {
+      "id": "aha_direction",
+      "ref": "III.22.1",
+      "kind": "aha",
+      "inputs": [
+        "triangulation_result",
+        "milos_sighting"
+      ],
+      "requireVerified": true,
+      "requireOnRecordForFinale": false,
+      "produces": {
+        "card": "ded_toward_river",
+        "mapMark": "boathouse_q",
+        "railFlip": "ev_crossing"
+      },
+      "garyLine": "bark_ded_toward_river",
+      "cinematic": "aha_direction_flip"
     }
   ],
   "wrongPairBarks": "wrong_pairs",
@@ -109,27 +299,56 @@
       "id": "th_outsider",
       "ref": "II.16.3",
       "title": "AN OUTSIDER STOLE IT FOR PROFIT",
-      "retireWhen": { "card": "ded_careful_hands" }
+      "retireWhen": {
+        "card": "ded_careful_hands"
+      }
     },
     {
       "id": "th_never_there",
       "ref": "II.16.3",
       "title": "IT WAS NEVER THERE AT ALL",
-      "retireWhen": { "card": "poppys_checklist", "status": "verified" }
+      "retireWhen": {
+        "card": "poppys_checklist",
+        "status": "verified"
+      }
+    },
+    {
+      "id": "th_secret",
+      "ref": "II.16.3",
+      "title": "SOMEONE PROTECTING A SECRET",
+      "retireWhen": {
+        "card": "ded_final"
+      }
     }
   ],
   "contradictions": [
     {
       "id": "cx_warren",
-      "pair": ["margies_testimony", "warrens_speech"],
+      "pair": [
+        "margies_testimony",
+        "warrens_speech"
+      ],
       "producesQuestion": "q_warren_motive",
       "ref": "II.16.4",
       "line": "These two can't both be the whole truth."
     },
     {
       "id": "cx_two_keys",
-      "pair": ["ferris_testimony", "poppys_checklist"],
+      "pair": [
+        "ferris_testimony",
+        "poppys_checklist"
+      ],
       "producesQuestion": "q_second_key",
+      "ref": "II.16.4",
+      "line": "These two can't both be the whole truth."
+    },
+    {
+      "id": "cx_milo_time",
+      "pair": [
+        "milos_sighting",
+        "lodger_gossip"
+      ],
+      "producesQuestion": "q_same_night",
       "ref": "II.16.4",
       "line": "These two can't both be the whole truth."
     }

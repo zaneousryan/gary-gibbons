@@ -1,0 +1,82 @@
+{
+  "id": "clara_d6_3",
+  "character": "clara",
+  "ref": "I.5.day6",
+  "entries": [
+    { "id": "primed", "cond": { "all": [{ "card": "two_person_puzzles" }, { "flag": "q_second_key_answered" }, { "not": { "card": "clara_key_missing" } }] }, "node": "p1" },
+    { "id": "main", "cond": { "all": [{ "card": "two_person_puzzles" }, { "not": { "card": "clara_key_missing" } }] }, "node": "c1" }
+  ],
+  "reentrant": true,
+  "nodes": {
+    "c1": {
+      "speaker": "narrator",
+      "line": "She looks at Gary for a long moment — the look of someone counting the exits and choosing, instead, the door marked trust.",
+      "authored": "aletheia",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "clara",
+      "line": "One more thing, and I am trusting you with the family in my hands. There have always been two keys to the capsule. The council's — and ours. A backup, from the founding, kept in Father's study. I looked last night.",
+      "authored": "verbatim",
+      "emote": "worried",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "narrator",
+      "line": "She meets his eyes.",
+      "authored": "verbatim",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "clara",
+      "line": "It's gone.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "offRecord": true,
+      "effects": [
+        { "giveCard": "clara_key_missing" },
+        { "setFlag": "clara_clue3_given" },
+        { "notebook": { "entry": "nb_clara_key" } },
+        { "playBark": "gary_inner_gentle_hands" }
+      ],
+      "next": null
+    },
+    "p1": {
+      "speaker": "gary",
+      "line": "Clara. Before you decide what to tell me — I already know about the backup key. The founding records show two. What I think you know is that it's missing.",
+      "authored": "aletheia",
+      "next": "p2"
+    },
+    "p2": {
+      "speaker": "narrator",
+      "line": "She notices. Of course she notices — he knew, and he let her choose to say it.",
+      "authored": "aletheia",
+      "next": "p3"
+    },
+    "p3": {
+      "speaker": "clara",
+      "line": "You knew, and you let me choose to say it. Father would have hired you.",
+      "authored": "verbatim",
+      "emote": "happy",
+      "next": "p4"
+    },
+    "p4": {
+      "speaker": "clara",
+      "line": "Yes. The family backup, from Father's study. I looked last night. It's gone.",
+      "authored": "aletheia",
+      "emote": "sad",
+      "offRecord": true,
+      "effects": [
+        { "giveCard": "clara_key_missing" },
+        { "setFlag": "clara_clue3_given" },
+        { "setFlag": "clara_primed_trust" },
+        { "trust": { "char": "clara", "delta": 1 } },
+        { "notebook": { "entry": "nb_clara_key" } },
+        { "playBark": "gary_inner_gentle_hands" }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "clara_repeat_busy"
+}

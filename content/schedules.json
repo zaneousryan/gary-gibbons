@@ -43,6 +43,36 @@
         "loc": "the_percolator",
         "spot": "corner_table"
       }
+    },
+    "d5": {
+      "morning": {
+        "loc": "the_percolator",
+        "spot": "corner_table"
+      },
+      "midday": {
+        "loc": "the_percolator",
+        "spot": "corner_table"
+      }
+    },
+    "d6": {
+      "morning": {
+        "loc": "the_percolator",
+        "spot": "corner_table"
+      },
+      "midday": {
+        "loc": "the_percolator",
+        "spot": "corner_table"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "the_percolator",
+        "spot": "corner_table"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "press_row"
+      }
     }
   },
   "otto": {
@@ -101,6 +131,48 @@
         "loc": "the_percolator",
         "spot": "counter"
       }
+    },
+    "d5": {
+      "morning": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      },
+      "midday": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      },
+      "evening": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      }
+    },
+    "d6": {
+      "morning": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      },
+      "midday": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      },
+      "evening": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      },
+      "midday": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "crowd"
+      }
     }
   },
   "margie": {
@@ -151,6 +223,36 @@
         "loc": "drowsy_lantern",
         "spot": "bar"
       }
+    },
+    "d5": {
+      "morning": {
+        "loc": "drowsy_lantern",
+        "spot": "bar"
+      },
+      "midday": {
+        "loc": "drowsy_lantern",
+        "spot": "bar"
+      }
+    },
+    "d6": {
+      "morning": {
+        "loc": "drowsy_lantern",
+        "spot": "bar"
+      },
+      "midday": {
+        "loc": "drowsy_lantern",
+        "spot": "bar"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "drowsy_lantern",
+        "spot": "bar"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "crowd"
+      }
     }
   },
   "tuck": {
@@ -196,6 +298,36 @@
       "midday": {
         "loc": "market_row",
         "spot": "lamppost"
+      }
+    },
+    "d5": {
+      "morning": {
+        "loc": "lockup",
+        "spot": "desk"
+      },
+      "midday": {
+        "loc": "lockup",
+        "spot": "desk"
+      }
+    },
+    "d6": {
+      "morning": {
+        "loc": "the_percolator",
+        "spot": "pastry_case"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "lamppost"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "riverbank",
+        "spot": "bank"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "crowd"
       }
     }
   },
@@ -243,6 +375,36 @@
         "loc": "market_row",
         "spot": "fruit_stall"
       }
+    },
+    "d5": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "fruit_stall"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "fruit_stall"
+      }
+    },
+    "d6": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "fruit_stall"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "fruit_stall"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "fruit_stall"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "crowd"
+      }
     }
   },
   "ida": {
@@ -288,6 +450,36 @@
       "midday": {
         "loc": "market_row",
         "spot": "wren_wick"
+      }
+    },
+    "d5": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "wren_wick"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "wren_wick"
+      }
+    },
+    "d6": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "wren_wick"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "wren_wick"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "wren_wick"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "crowd"
       }
     }
   },
@@ -335,6 +527,36 @@
         "loc": "market_row",
         "spot": "flower_shop"
       }
+    },
+    "d5": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "flower_shop"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "flower_shop"
+      }
+    },
+    "d6": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "flower_shop"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "flower_shop"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "flower_shop"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "crowd"
+      }
     }
   },
   "milo": {
@@ -380,6 +602,40 @@
       "midday": {
         "loc": "market_row",
         "spot": "stakeout_box"
+      }
+    },
+    "d5": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "stakeout_box"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "stakeout_box"
+      }
+    },
+    "d6": {
+      "morning": {
+        "loc": "milos_alley",
+        "spot": "fire_escape"
+      },
+      "midday": {
+        "loc": "milos_alley",
+        "spot": "fire_escape"
+      },
+      "evening": {
+        "loc": "milos_alley",
+        "spot": "fire_escape"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "stakeout_box"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "crowd"
       }
     }
   },
@@ -431,6 +687,40 @@
         "loc": "founders_square",
         "spot": "monument"
       }
+    },
+    "d5": {
+      "morning": {
+        "loc": "founders_square",
+        "spot": "monument"
+      },
+      "midday": {
+        "loc": "founders_square",
+        "spot": "monument"
+      }
+    },
+    "d6": {
+      "morning": {
+        "loc": "founders_square",
+        "spot": "monument"
+      },
+      "midday": {
+        "loc": "founders_square",
+        "spot": "monument"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "founders_square",
+        "spot": "stage"
+      },
+      "midday": {
+        "loc": "founders_square",
+        "spot": "stage"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "stage"
+      }
     }
   },
   "warren": {
@@ -481,6 +771,36 @@
         "loc": "council_hall",
         "spot": "office"
       }
+    },
+    "d5": {
+      "morning": {
+        "loc": "council_hall",
+        "spot": "office"
+      },
+      "midday": {
+        "loc": "council_hall",
+        "spot": "office"
+      }
+    },
+    "d6": {
+      "morning": {
+        "loc": "council_hall",
+        "spot": "office"
+      },
+      "midday": {
+        "loc": "council_hall",
+        "spot": "office"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "council_hall",
+        "spot": "office"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "stage"
+      }
     }
   },
   "julian": {
@@ -497,6 +817,26 @@
         "loc": "founders_square",
         "spot": "stage"
       }
+    },
+    "d6": {
+      "morning": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      },
+      "midday": {
+        "loc": "founders_square",
+        "spot": "receiving_line"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "old_boathouse",
+        "spot": "floor"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "stage"
+      }
     }
   },
   "clara": {
@@ -508,6 +848,30 @@
       "midday": {
         "loc": "founders_square",
         "spot": "bench"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "stage"
+      }
+    },
+    "d6": {
+      "morning": {
+        "loc": "vale_manor",
+        "spot": "garden"
+      },
+      "midday": {
+        "loc": "vale_manor",
+        "spot": "garden"
+      },
+      "evening": {
+        "loc": "vale_manor",
+        "spot": "garden"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "riverbank",
+        "spot": "bank"
       },
       "evening": {
         "loc": "founders_square",
@@ -549,6 +913,26 @@
         "loc": "lockup",
         "spot": "cell"
       }
+    },
+    "d6": {
+      "morning": {
+        "loc": "lockup",
+        "spot": "cell"
+      },
+      "midday": {
+        "loc": "lockup",
+        "spot": "cell"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "garden_repair"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "crowd"
+      }
     }
   },
   "prudence": {
@@ -570,6 +954,66 @@
       "midday": {
         "loc": "market_row",
         "spot": "flower_shop"
+      }
+    },
+    "d5": {
+      "morning": {
+        "loc": "lanternside_archive",
+        "spot": "shelves"
+      },
+      "midday": {
+        "loc": "lanternside_archive",
+        "spot": "shelves"
+      },
+      "evening": {
+        "loc": "lanternside_archive",
+        "spot": "shelves"
+      }
+    },
+    "d6": {
+      "morning": {
+        "loc": "lanternside_archive",
+        "spot": "shelves"
+      },
+      "midday": {
+        "loc": "lanternside_archive",
+        "spot": "shelves"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "lanternside_archive",
+        "spot": "shelves"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "crowd"
+      }
+    }
+  },
+  "beatrice": {
+    "d6": {
+      "morning": {
+        "loc": "vale_manor",
+        "spot": "parlor"
+      },
+      "midday": {
+        "loc": "vale_manor",
+        "spot": "parlor"
+      },
+      "evening": {
+        "loc": "vale_manor",
+        "spot": "parlor"
+      }
+    },
+    "d7": {
+      "morning": {
+        "loc": "vale_manor",
+        "spot": "parlor"
+      },
+      "evening": {
+        "loc": "founders_square",
+        "spot": "stage"
       }
     }
   }

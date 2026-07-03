@@ -283,13 +283,16 @@ function main() {
   }
 
   // ---- 4. off-record / finale rule ----
+  // An off-record-only grant is fine IF the card carries a verifyRoute — that
+  // route is the on-record corroboration path (III.23.1 know-it→prove-it).
   for (const ded of db.deductions.deductions.filter((d) => d.requireOnRecordForFinale)) {
     for (const input of ded.inputs) {
       const sources = reach.cardSources.get(input) ?? [];
-      if (sources.length > 0 && sources.every((s) => s.offRecord)) {
+      const hasRoute = (db.cards[input]?.verifyRoutes.length ?? 0) > 0;
+      if (sources.length > 0 && sources.every((s) => s.offRecord) && !hasRoute) {
         err(
           `deductions.json ${ded.id}`,
-          `finale deduction input "${input}" is obtainable ONLY off-record (III.23.1 violation)`,
+          `finale deduction input "${input}" is obtainable ONLY off-record and has no corroboration route (III.23.1 violation)`,
         );
       }
     }

@@ -1,0 +1,38 @@
+{
+  "id": "clara_d6_2",
+  "character": "clara",
+  "ref": "I.5.day6",
+  "entries": [
+    { "id": "main", "cond": { "all": [{ "card": "clara_fear" }, { "not": { "card": "two_person_puzzles" } }] }, "node": "c1" }
+  ],
+  "reentrant": true,
+  "nodes": {
+    "c1": {
+      "speaker": "narrator",
+      "line": "By the old stone table in the garden, she talks without being asked.",
+      "authored": "aletheia",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "clara",
+      "line": "Father used to give us puzzles. Every birthday, one puzzle, one box, two children. And they were designed, Mr. Gibbons — designed so neither of us could solve them alone. Julian would find the mad sideways idea; I'd find the flaw in it; between us, the box opened. Every single time.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "clara",
+      "line": "I used to think it was a game. Lately I think it was a syllabus.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "effects": [
+        { "giveCard": "two_person_puzzles", "status": "verified" },
+        { "setFlag": "save_for_confrontation" },
+        { "notebook": { "entry": "nb_two_person_puzzles" } }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "clara_repeat_busy"
+}

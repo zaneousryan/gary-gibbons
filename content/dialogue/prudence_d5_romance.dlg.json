@@ -1,0 +1,51 @@
+{
+  "id": "prudence_d5_romance",
+  "character": "prudence",
+  "ref": "I.5.day5",
+  "entries": [
+    { "id": "main", "cond": { "all": [{ "day": { "gte": 5 } }, { "not": { "card": "prudence_alibi" } }] }, "node": "c1" }
+  ],
+  "reentrant": true,
+  "nodes": {
+    "c1": {
+      "speaker": "prudence",
+      "line": "Twenty years, Mr. Gibbons, they have called it my \"little theory.\" Theodora Vale and Jonah Croft. Rival families, one river between their houses, and letters — I have thirty-one of them — that would make a stone weep.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "prudence",
+      "line": "The last letter, the one where she ends it or doesn't, Theodora sealed into the capsule herself. Fifty years I couldn't touch it; three days I've been unable to sleep for wanting to. So yes. Suspect me. I would suspect me.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "effects": [{ "notebook": { "entry": "nb_prudence_motive" } }],
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "gary",
+      "line": "Where were you, night before last-but-one?",
+      "authored": "verbatim",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "narrator",
+      "line": "A beat; the faintest color rises along the heron's grey.",
+      "authored": "aletheia",
+      "next": "c5"
+    },
+    "c5": {
+      "speaker": "prudence",
+      "line": "Cataloguing. With Evelyn Croft. Until three in the morning. We have been... reconstructing both sides of the correspondence. You may verify with the florist. Bring context; she is armed with shears.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "effects": [
+        { "giveCard": "prudence_alibi" },
+        { "notebook": { "entry": "nb_prudence_alibi" } }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "prudence_repeat_busy"
+}

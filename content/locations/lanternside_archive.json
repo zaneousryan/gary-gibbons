@@ -1,0 +1,87 @@
+{
+  "id": "lanternside_archive",
+  "name": "The Lanternside Archive",
+  "ref": "I.2",
+  "layers": ["bg", "mid", "fg"],
+  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "exits": [{ "to": "market_row", "at": [160, 880] }],
+  "sitSpot": {
+    "at": [1500, 880],
+    "monologues": [{ "cond": {}, "bark": "bench_archive_d5" }]
+  },
+  "hotspots": [
+    {
+      "id": "talk_prudence",
+      "at": [800, 800],
+      "kind": "talk",
+      "character": "prudence",
+      "label": "Prudence"
+    },
+    {
+      "id": "visitor_ledger",
+      "at": [420, 640],
+      "kind": "examine",
+      "label": "The Visitor Ledger",
+      "interactions": [
+        {
+          "id": "sign_ledger",
+          "cond": { "not": { "flag": "signed_archive_ledger" } },
+          "text": "Gary signs the visitor ledger in his best press-badge handwriting. Somewhere in the reeds of shelves, a curator's posture approves by two degrees.",
+          "effects": [{ "setFlag": "signed_archive_ledger" }],
+          "ref": "III.23.4"
+        },
+        {
+          "id": "ledger_signed",
+          "text": "Signed, dated, legible. The Archive keeps better records of its visitors than the visitors do.",
+          "ref": "III.23.4"
+        }
+      ],
+      "ref": "III.23.4"
+    },
+    {
+      "id": "grapes_in_lamplight",
+      "at": [1250, 540],
+      "kind": "examine",
+      "label": "A Still Life",
+      "cond": { "day": { "gte": 5 } },
+      "interactions": [
+        {
+          "id": "grape_painting",
+          "cond": { "not": { "flag": "grape_beat_d5" } },
+          "text": "A 200-year-old still life: GRAPES IN LAMPLIGHT. Gary stands before it slightly too long. From the shelves, Prudence: 'It's not for sale.' Gary, quietly: 'I know what it is.'",
+          "effects": [{ "setFlag": "grape_beat_d5" }, { "grapeDeclined": true }],
+          "ref": "I.7.1"
+        },
+        {
+          "id": "grape_painting_again",
+          "text": "GRAPES IN LAMPLIGHT. Still not for sale. Still magnificent. Gary keeps walking, which is growth.",
+          "ref": "I.7.1"
+        }
+      ],
+      "ref": "I.7.1"
+    },
+    {
+      "id": "exhibit_corner",
+      "at": [980, 560],
+      "kind": "chekhov",
+      "label": "A Half-Assembled Exhibit",
+      "detail": {
+        "tier": "character",
+        "text": "In the corner, slowly taking shape: two portraits facing each other across a gap, ribbon-tied letter bundles beneath. A doe and a fox, fifty years apart and two feet apart. Twenty years of somebody's patient believing."
+      },
+      "ref": "I.2"
+    },
+    {
+      "id": "exit_market",
+      "at": [160, 820],
+      "kind": "exit",
+      "to": "market_row",
+      "label": "To Market Row"
+    }
+  ],
+  "ambient": {
+    "vignetteTags": ["archive", "indoors"],
+    "weatherVariants": false,
+    "ambience": "amb_paper_dust"
+  }
+}

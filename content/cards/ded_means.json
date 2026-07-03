@@ -1,0 +1,12 @@
+{
+  "id": "ded_means",
+  "ref": "I.6.D9",
+  "type": "deduction",
+  "title": "MEANS - one key unaccounted for, family-held",
+  "sprite": "card_ded_means",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "Exactly two keys in fifty years. The council's is accounted for every hour. The family's backup is missing from Edmund's study. Whoever crossed the square owned the front door of this mystery.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

@@ -1,0 +1,39 @@
+{
+  "id": "ida_d6",
+  "character": "ida",
+  "ref": "I.5.day6",
+  "entries": [
+    { "id": "main", "cond": { "all": [{ "day": { "gte": 5 } }, { "deduction": "d6_insider" }, { "not": { "card": "idas_ledger" } }] }, "node": "c1" }
+  ],
+  "reentrant": true,
+  "nodes": {
+    "c1": {
+      "speaker": "narrator",
+      "line": "Ledger open, visor down. Ida taps a fifty-year-old entry with one tiny finger.",
+      "authored": "aletheia",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "ida",
+      "line": "Fifty years ago, two keys, my own apprentice hands. One to the council, one to Edmund. No copies since — this lock would tell me if a copy had ever been tried.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "ida",
+      "line": "Locks are terrible gossips, Mr. Gibbons. This one's only ever known its two.",
+      "authored": "verbatim",
+      "emote": "happy",
+      "effects": [
+        { "giveCard": "idas_ledger", "status": "verified" },
+        { "setFlag": "q_second_key_answered" },
+        { "notebook": { "entry": "nb_idas_ledger" } },
+        { "playBark": "gary_inner_two_keys" }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "ida_repeat_busy"
+}

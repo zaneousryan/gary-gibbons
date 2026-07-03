@@ -1,0 +1,9 @@
+{
+  "pool": "rhymes",
+  "barks": [
+    { "id": "rhyme_d1", "text": "Fifty years inside the stone / fifty treasures coming home—", "authored": "verbatim", "ref": "II.14.3", "tags": ["market"], "cond": { "day": { "lte": 2 } } },
+    { "id": "rhyme_d3", "text": "Guardian, Guardian, whatcha gonna keep? / Empty box and a district to sweep—", "authored": "verbatim", "ref": "II.14.3", "tags": ["market"], "cond": { "all": [{ "day": { "gte": 3 } }, { "day": { "lte": 4 } }] } },
+    { "id": "rhyme_d5", "text": "Weasel dug a hole, hole had jam / weasel said sorry to the garden ma'am—", "authored": "verbatim", "ref": "II.14.3", "tags": ["market"], "cond": { "all": [{ "day": { "gte": 5 } }, { "day": { "lte": 6 } }] } },
+    { "id": "rhyme_d7", "text": "Lantern and the ivy grow / side by side in a see-saw row—", "authored": "verbatim", "ref": "II.14.3", "tags": ["market"], "cond": { "day": 7 } }
+  ]
+}

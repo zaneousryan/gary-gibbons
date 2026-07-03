@@ -1,0 +1,54 @@
+{
+  "id": "evelyn_d5",
+  "character": "evelyn",
+  "ref": "I.5.day5",
+  "entries": [
+    { "id": "main", "cond": { "all": [{ "day": { "gte": 5 } }, { "card": "prudence_alibi" }, { "not": { "card": "evelyn_confirmation" } }] }, "node": "c1" }
+  ],
+  "reentrant": true,
+  "nodes": {
+    "c1": {
+      "speaker": "gary",
+      "line": "Prudence says she was here, night before the theft window closed. Cataloguing until three.",
+      "authored": "aletheia",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "narrator",
+      "line": "Evelyn sets down the shears — which counts, in this shop, as a formal oath.",
+      "authored": "aletheia",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "evelyn",
+      "line": "Until three in the morning, and I made the tea, and she read Jonah's half out loud in the voice she thinks is his. Write it down, Mr. Gibbons. Some alibis are also the best nights of a person's year.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "effects": [
+        { "giveCard": "evelyn_confirmation", "status": "verified" },
+        { "notebook": { "entry": "nb_evelyn_alibi" } }
+      ],
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "evelyn",
+      "line": "They weren't scandal, Mr. Gibbons. They were two people the town decided about before they'd decided about themselves.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "c5"
+    },
+    "c5": {
+      "speaker": "evelyn",
+      "line": "If the letter is ever found — let Prudence read it first. She's earned first.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "effects": [
+        { "setFlag": "promised_prudence_first" },
+        { "playBark": "gary_inner_decided_about" }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "evelyn_repeat_busy"
+}

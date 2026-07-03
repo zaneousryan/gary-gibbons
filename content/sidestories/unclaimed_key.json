@@ -1,0 +1,59 @@
+{
+  "id": "unclaimed_key",
+  "ref": "II.17.5",
+  "title": "The Unclaimed Key",
+  "days": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "steps": [
+    {
+      "id": "drawer_400",
+      "cond": {
+        "all": [
+          {
+            "day": {
+              "gte": 3
+            }
+          },
+          {
+            "flag": "morgue_unlocked"
+          }
+        ]
+      },
+      "text": "Drawer 400 of Wren & Wick: a key, forty years unclaimed, ticket signed illegibly."
+    },
+    {
+      "id": "handwriting",
+      "cond": {
+        "flag": "handwriting_match_done"
+      },
+      "text": "The morgue ledgers match the signature: Margie's late husband. The key opens a music box he'd left for repair the month he died.",
+      "effects": [
+        {
+          "playBark": "ss_key_reveal"
+        }
+      ]
+    },
+    {
+      "id": "the_music_box",
+      "cond": {
+        "day": {
+          "gte": 6
+        }
+      },
+      "text": "Margie, alone in the inn after close, lets it play. Gary quietly doesn't file this one either. Ida: 'Locks are patient, Mr. Gibbons. So am I.'",
+      "effects": [
+        {
+          "playBark": "ss_key_payoff"
+        }
+      ]
+    }
+  ],
+  "trustFloor": {
+    "char": "margie",
+    "min": 1
+  }
+}

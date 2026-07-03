@@ -1,0 +1,127 @@
+{
+  "id": "beatrice_d6",
+  "character": "beatrice",
+  "ref": "I.8.1",
+  "entries": [
+    { "id": "main", "cond": { "all": [{ "day": { "gte": 6 } }, { "not": { "card": "overheard_conversation" } }] }, "node": "b1" }
+  ],
+  "reentrant": true,
+  "nodes": {
+    "b1": {
+      "speaker": "narrator",
+      "line": "The manor parlor. Tea already poured. Two cups. She was expecting him. In this room, there is no off-the-record toggle to decline — the whole conversation simply is, and always will be, hers and his.",
+      "authored": "aletheia",
+      "next": "b2"
+    },
+    "b2": {
+      "speaker": "beatrice",
+      "line": "Sit, Mr. Gibbons. You've been walking a spiral all week, and spirals end at their center. Ask.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "b3"
+    },
+    "b3": {
+      "speaker": "gary",
+      "line": "Did you take the contents of the capsule?",
+      "authored": "verbatim",
+      "next": "b4"
+    },
+    "b4": {
+      "speaker": "beatrice",
+      "line": "No.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "b5"
+    },
+    "b5": {
+      "speaker": "gary",
+      "line": "Do you know who did?",
+      "authored": "verbatim",
+      "next": "b6"
+    },
+    "b6": {
+      "speaker": "narrator",
+      "line": "A pause exactly one breath long.",
+      "authored": "verbatim",
+      "next": "b7"
+    },
+    "b7": {
+      "speaker": "beatrice",
+      "line": "I have a fear. A fear is not knowledge. I won't dress it up as one for your notebook.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "b8"
+    },
+    "b8": {
+      "speaker": "gary",
+      "line": "Then tell me about the will.",
+      "authored": "verbatim",
+      "next": "b9"
+    },
+    "b9": {
+      "speaker": "narrator",
+      "line": "She turns her cup a quarter turn.",
+      "authored": "verbatim",
+      "effects": [{ "setFlag": "noticed_beatrice_cup" }, { "setFlag": "beatrice_topic_will" }],
+      "next": "b10"
+    },
+    "b10": {
+      "speaker": "beatrice",
+      "line": "I read it. Ten years ago, the night before Edmund sealed it away. That is all the further I will go. It is not mine to tell. It was his last act, and I will not spend it for him.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "offRecord": true,
+      "effects": [{ "giveCard": "beatrice_read_will" }],
+      "next": "b11"
+    },
+    "b11": {
+      "speaker": "gary",
+      "line": "Mrs. Vale. Something started this. Something small. In my experience it's always something small.",
+      "authored": "verbatim",
+      "next": "b12"
+    },
+    "b12": {
+      "speaker": "narrator",
+      "line": "A long look. She decides he's earned a true thing.",
+      "authored": "verbatim",
+      "next": "b13"
+    },
+    "b13": {
+      "speaker": "beatrice",
+      "line": "...Five nights before the ceremony, in the garden, my daughter said something to me that broke my heart a little. She said, \"It isn't fair. Everyone already knows he'll lead.\" And because I could not tell her what I knew, I gave her the only true thing I had that wasn't a secret. I said: \"You may be surprised.\"",
+      "authored": "verbatim",
+      "emote": "sad",
+      "offRecord": true,
+      "effects": [
+        { "giveCard": "overheard_conversation" },
+        { "giveCard": "ev_garden" },
+        { "notebook": { "entry": "nb_overheard" } },
+        { "playBark": "gary_inner_clicking" }
+      ],
+      "next": "b14"
+    },
+    "b14": {
+      "speaker": "beatrice",
+      "line": "You've just understood something. I can see it land. Be careful with it, Mr. Gibbons. Whatever it is — it's carrying one of my children.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "b15"
+    },
+    "b15": {
+      "speaker": "gary",
+      "line": "Mrs. Vale. My grandfather had a rule about stories like this one. \"Truth with compassion. In that order — and no other.\"",
+      "authored": "verbatim",
+      "next": "b16"
+    },
+    "b16": {
+      "speaker": "beatrice",
+      "line": "Then Archie Gibbons raised you correctly. Good evening.",
+      "authored": "verbatim",
+      "emote": "happy",
+      "effects": [{ "setFlag": "beatrice_tea_done" }],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "beatrice_repeat_busy"
+}

@@ -1,0 +1,91 @@
+{
+  "id": "old_boathouse",
+  "name": "The Old Boathouse",
+  "ref": "I.2",
+  "layers": ["bg", "mid", "fg"],
+  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "exits": [{ "to": "riverbank", "at": [160, 880] }],
+  "sitSpot": {
+    "at": [400, 880],
+    "monologues": [{ "cond": { "flag": "confession_done" }, "bark": "bench_boathouse_after" }]
+  },
+  "hotspots": [
+    {
+      "id": "carved_initials",
+      "at": [600, 560],
+      "kind": "chekhov",
+      "label": "A Beam, Child-Height",
+      "cond": { "day": 7 },
+      "detail": {
+        "tier": "clue",
+        "text": "Two initials carved at child-height in the beam: J + C. Not a heart around them — a plus sign. Arithmetic, not romance. Two children who added up to something.",
+        "flag": "boathouse_read_1"
+      },
+      "ref": "II.13.5"
+    },
+    {
+      "id": "puzzle_boxes",
+      "at": [950, 560],
+      "kind": "chekhov",
+      "label": "A Shelf of Small Boxes",
+      "cond": { "day": 7 },
+      "detail": {
+        "tier": "clue",
+        "text": "Small wooden puzzle boxes, one per birthday, each built so that no single pair of hands could open it. A shelf of syllabus, dressed as toys.",
+        "flag": "boathouse_read_2"
+      },
+      "ref": "II.13.5"
+    },
+    {
+      "id": "scuff_line",
+      "at": [1250, 700],
+      "kind": "chekhov",
+      "label": "A Scuff on the Floor",
+      "cond": { "day": 7 },
+      "detail": {
+        "tier": "clue",
+        "text": "One recent scuff-line where floorboards were dragged, and a dry umbrella against the wall. The room has already told the whole story; it's just waiting for someone to say it kindly.",
+        "flag": "boathouse_read_3"
+      },
+      "ref": "II.13.5"
+    },
+    {
+      "id": "shining_nails",
+      "at": [1450, 760],
+      "kind": "examine",
+      "label": "The Floorboards",
+      "cond": { "all": [{ "day": 7 }, { "not": { "flag": "confession_done" } }] },
+      "interactions": [
+        {
+          "id": "find_floorboards",
+          "cond": { "not": { "flag": "found_floorboards" } },
+          "text": "Every nail in the floor is dull with age — except six, shining, recently re-driven. Gary kneels. He doesn't pry. Finding it is enough; the rest belongs to Julian.",
+          "effects": [{ "setFlag": "found_floorboards" }],
+          "ref": "III.25.4"
+        }
+      ],
+      "ref": "III.25.4"
+    },
+    {
+      "id": "exit_river",
+      "at": [160, 820],
+      "kind": "exit",
+      "to": "riverbank",
+      "label": "Back along the bank"
+    }
+  ],
+  "triggers": [
+    {
+      "id": "confrontation_d7",
+      "cond": { "all": [{ "day": 7 }, { "flag": "river_walk_done" }, { "not": { "flag": "confession_done" } }, { "flag": "boathouse_ready" }] },
+      "dialogue": "confrontation_d7",
+      "once": true,
+      "ref": "I.8.2"
+    }
+  ],
+  "ambient": {
+    "vignetteTags": ["boathouse"],
+    "weatherVariants": false,
+    "ambience": "amb_mist_water"
+  }
+}

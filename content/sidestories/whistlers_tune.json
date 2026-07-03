@@ -1,0 +1,49 @@
+{
+  "id": "whistlers_tune",
+  "ref": "II.17.7",
+  "title": "The Whistler's Tune",
+  "days": [
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "steps": [
+    {
+      "id": "the_melody",
+      "cond": {
+        "flag": "morgue_unlocked"
+      },
+      "text": "A street musician plays one melody nobody can name."
+    },
+    {
+      "id": "theodoras_air",
+      "cond": {
+        "card": "prudences_id"
+      },
+      "text": "Morgue research names it: 'Theodora's Air,' written for her fifty years ago - learned grandfather-to-grandson from Jonah Croft himself.",
+      "effects": [
+        {
+          "playBark": "ss_whistler_reveal"
+        }
+      ]
+    },
+    {
+      "id": "played_at_last",
+      "cond": {
+        "flag": "reading_done"
+      },
+      "text": "On Day 7, the Whistler plays it while Prudence reads the letter. No dialogue needed.",
+      "effects": [
+        {
+          "playBark": "ss_whistler_payoff"
+        }
+      ]
+    }
+  ],
+  "trustFloor": {
+    "char": "prudence",
+    "min": 1
+  }
+}

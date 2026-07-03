@@ -1,0 +1,21 @@
+{
+  "id": "overheard_conversation",
+  "ref": "I.8.1",
+  "type": "testimony",
+  "title": "THE OVERHEARD CONVERSATION - 'You may be surprised'",
+  "sprite": "card_overheard_conversation",
+  "source": "beatrice",
+  "initialStatus": "offrecord",
+  "text": "Five nights before the ceremony, in the garden: 'It isn't fair. Everyone already knows he'll lead.' And the only true thing that wasn't a secret: 'You may be surprised.' A comfort to one child. A verdict overheard by the other.",
+  "verifyRoutes": [
+    {
+      "id": "garden_echo",
+      "ref": "II.13.7",
+      "hint": "The garden itself can testify - stand at the study window and listen to how the wind edits sentences.",
+      "cond": {
+        "flag": "garden_acoustics_done"
+      }
+    }
+  ],
+  "reReadLines": []
+}

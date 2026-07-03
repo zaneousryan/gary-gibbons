@@ -4,16 +4,83 @@
   "startPhase": "morning",
   "apartmentLocation": "gary_apartment",
   "days": [
-    { "day": 1, "title": "An Ordinary Thursday", "ref": "I.5.day1", "gateDeductions": ["d1_emptied_before"], "coreCompleteFlag": "ceremony_done", "edition": "ed_d1" },
-    { "day": 2, "title": "The Backwards Key", "ref": "I.5.day2", "gateDeductions": ["d3_theft_window", "poppy_opened_not_emptied"], "coreCompleteFlag": "seal_after_done", "edition": "ed_d2" },
-    { "day": 3, "title": "The Man Who Counts Lighthouses", "ref": "I.5.day3", "gateDeductions": ["d5_lodger"], "coreCompleteFlag": "has_camera", "edition": "ed_d3" },
-    { "day": 4, "title": "The Weasel Digs at Midnight", "ref": "I.5.day4", "gateDeductions": ["d6_insider"], "coreCompleteFlag": "ferris_testimony_heard", "edition": "ed_d4" },
-    { "day": 5, "title": "The Lantern in Ivy", "ref": "I.5.day5", "gateDeductions": [] },
-    { "day": 6, "title": "The Two-Person Puzzle", "ref": "I.5.day6", "gateDeductions": [] },
-    { "day": 7, "title": "The Boathouse", "ref": "I.5.day7", "gateDeductions": [] }
+    {
+      "day": 1,
+      "title": "An Ordinary Thursday",
+      "ref": "I.5.day1",
+      "gateDeductions": [
+        "d1_emptied_before"
+      ],
+      "coreCompleteFlag": "ceremony_done",
+      "edition": "ed_d1"
+    },
+    {
+      "day": 2,
+      "title": "The Backwards Key",
+      "ref": "I.5.day2",
+      "gateDeductions": [
+        "d3_theft_window",
+        "poppy_opened_not_emptied"
+      ],
+      "coreCompleteFlag": "seal_after_done",
+      "edition": "ed_d2"
+    },
+    {
+      "day": 3,
+      "title": "The Man Who Counts Lighthouses",
+      "ref": "I.5.day3",
+      "gateDeductions": [
+        "d5_lodger"
+      ],
+      "coreCompleteFlag": "has_camera",
+      "edition": "ed_d3"
+    },
+    {
+      "day": 4,
+      "title": "The Weasel Digs at Midnight",
+      "ref": "I.5.day4",
+      "gateDeductions": [
+        "d6_insider"
+      ],
+      "coreCompleteFlag": "ferris_testimony_heard",
+      "edition": "ed_d4"
+    },
+    {
+      "day": 5,
+      "title": "The Lantern in Ivy",
+      "ref": "I.5.day5",
+      "gateDeductions": [
+        "d7_signet"
+      ],
+      "coreCompleteFlag": "promised_prudence_first",
+      "edition": "ed_d5"
+    },
+    {
+      "day": 6,
+      "title": "The Two-Person Puzzle",
+      "ref": "I.5.day6",
+      "gateDeductions": [
+        "d13_final"
+      ],
+      "coreCompleteFlag": "beatrice_tea_done",
+      "edition": "ed_d6"
+    },
+    {
+      "day": 7,
+      "title": "The Boathouse",
+      "ref": "I.5.day7",
+      "gateDeductions": [],
+      "coreCompleteFlag": "reading_done",
+      "edition": "ed_d7"
+    }
   ],
   "weather": {
-    "scheduledRain": [{ "day": 5, "phase": "midday" }],
+    "scheduledRain": [
+      {
+        "day": 5,
+        "phase": "midday"
+      }
+    ],
     "dailyRainChance": 0.1
   }
 }

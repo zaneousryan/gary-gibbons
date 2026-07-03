@@ -1,0 +1,22 @@
+{
+  "id": "beatrice",
+  "name": "Beatrice Vale",
+  "ref": "I.4",
+  "species": "red deer (doe, silvered)",
+  "portraitSet": "beatrice",
+  "voice": { "textSpeed": 0.85, "blipSound": "blip_beatrice" },
+  "greetings": {
+    "cold": "Mr. Gibbons. The garden is not receiving today.",
+    "neutral": "Mr. Gibbons. The tea is already poured — I find that saves us both a pretense.",
+    "warm": "Mr. Gibbons. Sit. You take it without sugar; I remembered."
+  },
+  "tells": [
+    {
+      "id": "quarter_turned_cup",
+      "cond": { "flag": "beatrice_topic_will" },
+      "observeLine": "beatrice_observe_cup",
+      "noticedFlag": "noticed_beatrice_cup"
+    }
+  ],
+  "etiquette": { "note": "She never lies. She declines. Every sentence is true; the silences carry the secrets. The PRESS button wilts in her scenes — deflected perfectly, every time." }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "ded_motive",
+  "ref": "I.6.D10",
+  "type": "deduction",
+  "title": "MOTIVE - fear of disinheritance, not greed",
+  "sprite": "card_ded_motive",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "Julian heard half a conversation and did the arithmetic of the missing half: 'I'm about to lose everything.' Fear is a quieter motive than greed, and it packs more carefully.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

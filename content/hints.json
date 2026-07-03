@@ -17,6 +17,15 @@
       { "text": "Grandpa always said: when a witness gives you one strange detail, that detail is the story. Ferris gave you a key.", "ref": "I.6.D6" },
       { "text": "Your very first deduction, Gibbons — the one from the ceremony night. It's been waiting on the board for a partner all week.", "ref": "I.6.D6" }
     ],
+    "d7_signet": [
+      { "text": "Grandpa always said: every mark belongs to a hand. You drew the mark days ago — now find the person who reads marks for a living.", "ref": "I.6.D7" },
+      { "text": "The sketch, Gibbons. It's been pinned there since Day 2, waiting for an expert's eyes to finish it.", "ref": "I.6.D7" }
+    ],
+    "d13_final": [
+      { "text": "Grandpa always said: the last step of a story is never a new fact. It's four old ones agreeing.", "ref": "I.6.D13" },
+      { "text": "Motive. Means. Opportunity. Proof. The ledger row is waiting for all four deduction cards on one string.", "ref": "I.6.D13" },
+      { "text": "The four gold cards, Gibbons. Every one of them earned on the record. Tie them, and then go be kind about it.", "ref": "I.6.D13" }
+    ],
     "poppy_opened_not_emptied": [
       { "text": "Grandpa always said: re-read the witness who was most embarrassed. Embarrassment and guilt wear different coats.", "ref": "I.5.day2" },
       { "text": "The backwards key. A thief wipes her tracks; a worrier makes a list of them. Which kind hung that key back wrong?", "ref": "I.5.day2" }

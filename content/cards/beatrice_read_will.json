@@ -1,0 +1,12 @@
+{
+  "id": "beatrice_read_will",
+  "ref": "I.8.1",
+  "type": "testimony",
+  "title": "Beatrice read the will - ten years ago",
+  "sprite": "card_beatrice_read_will",
+  "source": "beatrice",
+  "initialStatus": "offrecord",
+  "text": "The night before Edmund sealed it away. That is all the further she will go. It is not hers to tell, and it never will be. Some cards stay promises.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

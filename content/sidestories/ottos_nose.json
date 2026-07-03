@@ -1,0 +1,50 @@
+{
+  "id": "ottos_nose",
+  "ref": "II.17.2",
+  "title": "The Nose of Otto Kessler",
+  "days": [
+    2,
+    3
+  ],
+  "steps": [
+    {
+      "id": "cold_confessed",
+      "cond": {
+        "all": [
+          {
+            "day": {
+              "gte": 2
+            }
+          },
+          {
+            "flag": "dlg_done_otto_d1"
+          }
+        ]
+      },
+      "text": "Otto's entering the regional roasting fair - with a head cold. He can't smell his own blends.",
+      "effects": [
+        {
+          "playBark": "ss_otto_hook"
+        }
+      ]
+    },
+    {
+      "id": "became_the_nose",
+      "cond": {
+        "day": {
+          "gte": 3
+        }
+      },
+      "text": "Gary becomes Otto's nose: 'more rain-on-warm-brick, or library-in-autumn?' Vocabulary that will matter later.",
+      "effects": [
+        {
+          "playBark": "ss_otto_payoff"
+        }
+      ]
+    }
+  ],
+  "trustFloor": {
+    "char": "otto",
+    "min": 1
+  }
+}

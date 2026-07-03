@@ -1,0 +1,44 @@
+{
+  "id": "plan_z",
+  "ref": "II.17.8",
+  "title": "Plan Z",
+  "days": [
+    5,
+    6,
+    7
+  ],
+  "steps": [
+    {
+      "id": "recovery_plans",
+      "cond": {
+        "all": [
+          {
+            "day": {
+              "gte": 5
+            }
+          },
+          {
+            "card": "ded_signet"
+          }
+        ]
+      },
+      "text": "Poppy starts sketching a Recovery Ceremony, just in case the town gets its heart back. Gary helps with the logistics - route, music, who speaks first."
+    },
+    {
+      "id": "plan_a_joy",
+      "cond": {
+        "flag": "reading_done"
+      },
+      "text": "The player decorated their own ending. Poppy's final contingency card, framed at her stall: PLAN A: JOY.",
+      "effects": [
+        {
+          "playBark": "ss_planz_payoff"
+        }
+      ]
+    }
+  ],
+  "trustFloor": {
+    "char": "poppy",
+    "min": 1
+  }
+}

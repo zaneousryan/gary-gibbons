@@ -1,0 +1,25 @@
+{
+  "id": "milos_sighting",
+  "ref": "I.5.day6",
+  "type": "testimony",
+  "title": "Milo saw the umbrella - 2 a.m.",
+  "sprite": "card_milos_sighting",
+  "source": "milo",
+  "initialStatus": "unverified",
+  "text": "A tall figure, no face, no ears, no anything - the umbrella was in the way of the whole him. But THE umbrella. The fancy Vale one with the silver duck handle. Nobody else has that umbrella.",
+  "verifyRoutes": [
+    {
+      "id": "sightline",
+      "ref": "III.20",
+      "hint": "A good reporter checks whether the kid COULD have seen it. Stand where he stood.",
+      "cond": {
+        "flag": "fire_escape_puzzle_done"
+      }
+    }
+  ],
+  "reReadLines": [],
+  "attribution": {
+    "protectable": true,
+    "namedFlag": "named_milo"
+  }
+}

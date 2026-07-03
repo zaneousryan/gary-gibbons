@@ -1,0 +1,12 @@
+{
+  "id": "ded_prudence_cleared",
+  "ref": "I.6.D8",
+  "type": "deduction",
+  "title": "The curator is CLEARED - and the romance is real",
+  "sprite": "card_ded_prudence_cleared",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "Night -2, cataloguing with Evelyn Croft until three in the morning, both sides of a fifty-year correspondence between them. Twenty years of 'little theory' turns out to be the town's oldest love story, mid-restoration.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

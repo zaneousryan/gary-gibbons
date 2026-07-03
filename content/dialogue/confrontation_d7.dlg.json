@@ -1,0 +1,233 @@
+{
+  "id": "confrontation_d7",
+  "character": "narrator",
+  "ref": "I.8.2",
+  "entries": [{ "id": "main", "cond": {}, "node": "n1" }],
+  "nodes": {
+    "n1": {
+      "speaker": "narrator",
+      "line": "Julian is already there, sitting on the floor, umbrella against the wall, spinning the ring. He doesn't look up.",
+      "authored": "verbatim",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "julian",
+      "line": "You knock on every door in the district for a week, and then you find the one place without a door. Front page?",
+      "authored": "verbatim",
+      "emote": "sad",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "gary",
+      "line": "Not yet. Not maybe.",
+      "authored": "verbatim",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "julian",
+      "line": "Then present your case, reporter. I've watched you build it all week. You may as well perform it.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "present"
+    },
+    "present": {
+      "speaker": "gary",
+      "choices": [
+        {
+          "line": "THE WAX FRAGMENT — \"Green wax, from your coat pocket. It matches a seal a witness saw intact three nights before the ceremony. Whoever broke it, handled the will after the capsule was checked.\"",
+          "cond": { "all": [{ "card": "wax_fragment", "status": "verified" }, { "not": { "flag": "presented_wax" } }] },
+          "authored": "verbatim",
+          "effects": [{ "setFlag": "presented_wax" }],
+          "next": "present_check"
+        },
+        {
+          "line": "THE BACKUP KEY — \"Two keys in fifty years. Ida Wren's ledger. The council's key is accounted for every hour. The family's key is missing from your father's study.\"",
+          "cond": { "all": [{ "card": "clara_key_missing", "status": "verified" }, { "not": { "flag": "presented_key" } }] },
+          "authored": "verbatim",
+          "effects": [{ "setFlag": "presented_key" }],
+          "next": "present_check"
+        },
+        {
+          "line": "THE SIGHTING — \"Two in the morning, night before the ceremony. A tall figure crossed the square, dry under one particular umbrella.\"",
+          "cond": { "all": [{ "card": "milos_sighting", "status": "verified" }, { "not": { "flag": "presented_sighting" } }] },
+          "authored": "verbatim",
+          "effects": [{ "setFlag": "presented_sighting" }],
+          "next": "sighting_beat"
+        }
+      ]
+    },
+    "sighting_beat": {
+      "speaker": "narrator",
+      "line": "Julian glances at the umbrella against the wall. The silver duck handle. He closes his eyes.",
+      "authored": "verbatim",
+      "next": "present_check"
+    },
+    "present_check": {
+      "speaker": "narrator",
+      "line": "Each piece lands with quiet weight. No bombast. Just a floor, two people, and the shape of a week.",
+      "authored": "aletheia",
+      "next": "route"
+    },
+    "route": {
+      "speaker": "narrator",
+      "line": "…",
+      "authored": "aletheia",
+      "choices": [
+        {
+          "line": "(Lay out the next piece.)",
+          "cond": { "any": [{ "not": { "flag": "presented_wax" } }, { "not": { "flag": "presented_key" } }, { "not": { "flag": "presented_sighting" } }] },
+          "authored": "aletheia",
+          "next": "present"
+        },
+        {
+          "line": "(That's the case. All of it.)",
+          "cond": { "all": [{ "flag": "presented_wax" }, { "flag": "presented_key" }, { "flag": "presented_sighting" }] },
+          "authored": "aletheia",
+          "next": "why1"
+        }
+      ]
+    },
+    "why1": {
+      "speaker": "julian",
+      "line": "You're missing why.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "next": "why2"
+    },
+    "why2": {
+      "speaker": "gary",
+      "line": "No. I'm not.",
+      "authored": "verbatim",
+      "next": "why3"
+    },
+    "why3": {
+      "speaker": "narrator",
+      "line": "Gary sits down on the floor across from him. This staging matters.",
+      "authored": "verbatim",
+      "next": "why4"
+    },
+    "why4": {
+      "speaker": "gary",
+      "line": "You heard your sister in the garden. \"It isn't fair.\" And your mother said, \"You may be surprised.\" And you stood at the study window and did the arithmetic of half a conversation, and the answer you got was: I'm about to lose everything.",
+      "authored": "verbatim",
+      "next": "break1"
+    },
+    "break1": {
+      "speaker": "julian",
+      "line": "I wasn't going to KEEP it. Any of it. I was going to read the will — just read it, just KNOW, before the whole district watched my face while a stranger's future was read out over my head. And then I had it in my hands and I couldn't— I couldn't even open it. I've had it for five days and I can't open an envelope, Gary. Some leader.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "next": "break2"
+    },
+    "break2": {
+      "speaker": "julian",
+      "line": "You know the joke? Half of me was terrified of losing it. The other half was terrified I'd have to do it. Alone. I am not enough for that chair alone, and everyone keeps saying \"alone\" like it's a coronation—",
+      "authored": "verbatim",
+      "emote": "sad",
+      "next": "story1"
+    },
+    "story1": {
+      "speaker": "gary",
+      "line": "Julian. Can I tell you a story your sister told me?",
+      "authored": "verbatim",
+      "next": "story2"
+    },
+    "story2": {
+      "speaker": "julian",
+      "line": "...What?",
+      "authored": "verbatim",
+      "emote": "surprised",
+      "next": "story3"
+    },
+    "story3": {
+      "speaker": "gary",
+      "line": "The birthday puzzles. One box, two children. Your father built every single one so that neither of you could open it alone. Your mad sideways ideas. Her logic finding the flaw. Every year. Every box. Clara said she used to think it was a game. She thinks now it was a syllabus.",
+      "authored": "verbatim",
+      "next": "story4"
+    },
+    "story4": {
+      "speaker": "narrator",
+      "line": "Stillness. The ring stops spinning.",
+      "authored": "verbatim",
+      "next": "story5"
+    },
+    "story5": {
+      "speaker": "julian",
+      "line": "...He was teaching us to—",
+      "authored": "verbatim",
+      "emote": "surprised",
+      "next": "story6"
+    },
+    "story6": {
+      "speaker": "gary",
+      "line": "I haven't read the will. Nobody has. But I've spent a week learning who your father was from everyone who loved him, and I'd stake Grandpa's badge on this: that envelope doesn't take the future away from either of you. I think it refuses to give it to only one of you.",
+      "authored": "verbatim",
+      "next": "break3"
+    },
+    "break3": {
+      "speaker": "julian",
+      "line": "I emptied fifty years of this town's heart into a hole in the floor because I couldn't finish overhearing a conversation.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "next": "break4"
+    },
+    "break4": {
+      "speaker": "gary",
+      "line": "Yeah. And tomorrow that can be the worst thing you ever did — behind you, and getting smaller.",
+      "authored": "verbatim",
+      "next": "boards"
+    },
+    "boards": {
+      "speaker": "narrator",
+      "line": "Julian pries up the floorboards. Everything is there — the crates, the children's bundles, and on top, the green-sealed envelope, cracked but unopened.",
+      "authored": "verbatim",
+      "choices": [
+        {
+          "line": "(He found the boards himself.)",
+          "cond": { "not": { "flag": "found_floorboards" } },
+          "authored": "aletheia",
+          "next": "hand1"
+        },
+        {
+          "line": "\"You'd have found it without me.\" — \"I'd rather you'd shown me.\"",
+          "cond": { "flag": "found_floorboards" },
+          "authored": "verbatim",
+          "next": "hand1"
+        }
+      ]
+    },
+    "hand1": {
+      "speaker": "julian",
+      "line": "You could have led with the constable.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "hand2"
+    },
+    "hand2": {
+      "speaker": "gary",
+      "line": "Grandpa's rule. Truth with compassion. In that order — and no other.",
+      "authored": "verbatim",
+      "next": "outside"
+    },
+    "outside": {
+      "speaker": "narrator",
+      "line": "Outside: Clara on the bank. Brother and sister look at each other for a long time, and then she walks to him. Nobody scripts this part.",
+      "authored": "verbatim",
+      "next": "tuck"
+    },
+    "tuck": {
+      "speaker": "tuck",
+      "line": "Contents located. Returned intact. The rest is district business, not police business.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "effects": [
+        { "setFlag": "confession_done" },
+        { "setFlag": "contents_recovered" },
+        { "giveCard": "recovered_contents", "status": "verified" },
+        { "notebook": { "entry": "nb_confession" } },
+        { "playBark": "gary_inner_after_boathouse" }
+      ],
+      "next": null
+    }
+  }
+}

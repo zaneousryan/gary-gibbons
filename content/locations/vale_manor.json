@@ -1,0 +1,136 @@
+{
+  "id": "vale_manor",
+  "name": "Vale Manor",
+  "ref": "I.2",
+  "layers": ["bg", "mid", "fg"],
+  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "exits": [{ "to": "founders_square", "at": [160, 880] }],
+  "sitSpot": {
+    "at": [400, 880],
+    "monologues": [{ "cond": {}, "bark": "bench_manor_d6" }]
+  },
+  "hotspots": [
+    {
+      "id": "talk_clara",
+      "at": [700, 800],
+      "kind": "talk",
+      "character": "clara",
+      "label": "Clara"
+    },
+    {
+      "id": "talk_beatrice",
+      "at": [1300, 800],
+      "kind": "talk",
+      "character": "beatrice",
+      "label": "Beatrice",
+      "cond": { "day": { "gte": 6 } }
+    },
+    {
+      "id": "lintel_signet",
+      "at": [500, 520],
+      "kind": "chekhov",
+      "label": "The Front Door Lintel",
+      "detail": {
+        "tier": "clue",
+        "text": "Carved into the stone above the manor door, worn smooth by fifty years of weather: a lantern, wreathed in ivy. The whole district has walked under the answer all week.",
+        "flag": "seen_lintel_signet"
+      },
+      "ref": "III.21"
+    },
+    {
+      "id": "portrait_hall",
+      "at": [1000, 540],
+      "kind": "chekhov",
+      "label": "The Portrait Hall",
+      "detail": {
+        "tier": "clue",
+        "text": "Edmund's portrait hangs midway down the hall — with two empty spaces beside it, framed and waiting. Not one. Two. The will, painted on a wall, hiding in plain sight since before anyone thought to look.",
+        "flag": "seen_two_portrait_spaces"
+      },
+      "ref": "III.24"
+    },
+    {
+      "id": "height_marks",
+      "at": [1500, 620],
+      "kind": "chekhov",
+      "label": "A Doorframe",
+      "detail": {
+        "tier": "character",
+        "text": "Two columns of childhood height-marks up the doorframe, 'J' and 'C', climbing year by year — and ending the same year. The house measures its children together or not at all."
+      },
+      "ref": "III.24"
+    },
+    {
+      "id": "garden_table",
+      "at": [1650, 760],
+      "kind": "examine",
+      "label": "The Garden Table",
+      "cond": { "day": { "gte": 6 } },
+      "interactions": [
+        {
+          "id": "garden_acoustics",
+          "cond": { "not": { "flag": "garden_acoustics_done" } },
+          "text": "The stone table under the study window. Standing at the window above, Gary can hear the garden — but only when the wind drops. A whole conversation, delivered in halves. That's how you overhear enough to be wrong.",
+          "effects": [
+            { "setFlag": "garden_acoustics_done" },
+            { "giveCard": "garden_acoustics", "status": "verified" },
+            { "notebook": { "entry": "nb_garden_acoustics" } }
+          ],
+          "ref": "II.13.7"
+        },
+        {
+          "id": "garden_again",
+          "text": "The wind moves through the garden in sentences with the middles missing.",
+          "ref": "II.13.7"
+        }
+      ],
+      "ref": "II.13.7"
+    },
+    {
+      "id": "study_wastebasket",
+      "at": [1180, 640],
+      "kind": "examine",
+      "label": "The Study Wastebasket",
+      "cond": { "all": [{ "day": { "gte": 6 } }, { "flag": "clara_clue3_given" }] },
+      "interactions": [
+        {
+          "id": "torn_letter_find",
+          "cond": { "not": { "flag": "torn_letter_done" } },
+          "opens": "puzzle:torn_letter",
+          "ref": "III.25.1"
+        },
+        {
+          "id": "letter_found",
+          "text": "The wastebasket, lighter by eight fragments. Some evidence is for understanding, not for presenting.",
+          "ref": "III.25.1"
+        }
+      ],
+      "ref": "III.25.1"
+    },
+    {
+      "id": "fruit_basket",
+      "at": [880, 640],
+      "kind": "chekhov",
+      "label": "A Fruit Basket",
+      "cond": { "day": { "gte": 6 } },
+      "detail": {
+        "tier": "character",
+        "text": "A fruit basket on the sideboard, prominent, generous — grapes front and center — during the hardest interviews of Gary's life. He keeps it in peripheral vision. He does not break."
+      },
+      "ref": "I.7.1"
+    },
+    {
+      "id": "exit_square",
+      "at": [160, 820],
+      "kind": "exit",
+      "to": "founders_square",
+      "label": "To Founders' Square"
+    }
+  ],
+  "ambient": {
+    "vignetteTags": ["manor", "indoors"],
+    "weatherVariants": false,
+    "music": "music_manor",
+    "ambience": "amb_held_breath"
+  }
+}

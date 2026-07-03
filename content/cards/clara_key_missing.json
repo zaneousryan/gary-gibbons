@@ -1,0 +1,21 @@
+{
+  "id": "clara_key_missing",
+  "ref": "I.5.day6",
+  "type": "testimony",
+  "title": "CLARA CLUE 3 - the family backup key is MISSING",
+  "sprite": "card_clara_key_missing",
+  "source": "clara",
+  "initialStatus": "offrecord",
+  "text": "Two keys have always existed: the council's, and a family backup in Edmund's study. Clara looked last night. It's gone. Given in trust - the family in Gary's hands.",
+  "verifyRoutes": [
+    {
+      "id": "idas_ledger_route",
+      "ref": "III.23.1",
+      "hint": "Clara's trust is not printable. Fifty-year-old locksmith records are.",
+      "cond": {
+        "card": "idas_ledger"
+      }
+    }
+  ],
+  "reReadLines": []
+}

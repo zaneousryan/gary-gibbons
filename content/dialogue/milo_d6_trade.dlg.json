@@ -1,0 +1,59 @@
+{
+  "id": "milo_d6_trade",
+  "character": "milo",
+  "ref": "I.5.day6",
+  "entries": [
+    { "id": "main", "cond": { "all": [{ "day": { "gte": 6 } }, { "deduction": "d6_insider" }, { "not": { "card": "milos_sighting" } }] }, "node": "c1" }
+  ],
+  "reentrant": true,
+  "nodes": {
+    "c1": {
+      "speaker": "milo",
+      "line": "I can't tell you. Because then YOU'D know I was out at two in the morning, and then MOM would know, and journalism has ETHICS, I read about it.",
+      "authored": "verbatim",
+      "emote": "worried",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "line": "Trade you. A secret for a secret.",
+      "authored": "verbatim",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "gary",
+      "line": "I'm scared of grapes, Milo. Not scared — it's... we have a complicated history. Nobody knows that.",
+      "authored": "verbatim",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "narrator",
+      "line": "Awed silence, raccoon-sized.",
+      "authored": "aletheia",
+      "next": "c5"
+    },
+    "c5": {
+      "speaker": "milo",
+      "line": "...That's so weird. Deal.",
+      "authored": "verbatim",
+      "emote": "surprised",
+      "next": "c6"
+    },
+    "c6": {
+      "speaker": "milo",
+      "line": "Two nights before the ceremony. A tall figure crossed the square. I couldn't see his face — couldn't see ears or antlers or ANYTHING, the umbrella was in the way of the whole him. But I saw the umbrella. THE umbrella. The fancy Vale one with the silver duck handle. Nobody else has that umbrella.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "effects": [
+        { "giveCard": "milos_sighting" },
+        { "giveCard": "ev_milo_sighting" },
+        { "setFlag": "milo_traded_secret" },
+        { "notebook": { "entry": "nb_milos_sighting" } },
+        { "playBark": "gary_inner_the_umbrella" }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "milo_repeat_busy"
+}

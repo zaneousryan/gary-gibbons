@@ -1,0 +1,12 @@
+{
+  "id": "two_person_puzzles",
+  "ref": "I.5.day6",
+  "type": "testimony",
+  "title": "CLARA CLUE 2 - the two-person puzzles (SAVE FOR CONFRONTATION)",
+  "sprite": "card_two_person_puzzles",
+  "source": "clara",
+  "initialStatus": "verified",
+  "text": "Every birthday: one puzzle, one box, two children - designed so neither could solve it alone. She used to think it was a game. Lately she thinks it was a syllabus.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

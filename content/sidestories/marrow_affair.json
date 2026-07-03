@@ -1,0 +1,36 @@
+{
+  "id": "marrow_affair",
+  "ref": "II.17.4",
+  "title": "The Marrow Affair",
+  "days": [
+    4
+  ],
+  "steps": [
+    {
+      "id": "the_victim",
+      "cond": {
+        "flag": "ferris_tracks_followed"
+      },
+      "text": "Ferris's digging exposed Gino's prize marrow - dead. But the rival gardener is suspiciously unbereaved."
+    },
+    {
+      "id": "the_truth",
+      "cond": {
+        "flag": "stakeout_done"
+      },
+      "text": "The rival had watered the marrow to death weeks ago; Ferris's hole merely exposed the crime. Gino's operatic forgiveness aria follows. The rivals co-plant a memorial vine. Grapes. Of course it's grapes.",
+      "effects": [
+        {
+          "playBark": "ss_marrow_payoff"
+        },
+        {
+          "grapeDeclined": true
+        }
+      ]
+    }
+  ],
+  "trustFloor": {
+    "char": "gino",
+    "min": 1
+  }
+}

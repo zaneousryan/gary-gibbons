@@ -2,27 +2,83 @@
   "id": "riverbank",
   "name": "The Riverbank",
   "ref": "I.2",
-  "layers": ["bg", "mid", "fg"],
-  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
-  "exits": [{ "to": "market_row", "at": [160, 880] }],
+  "layers": [
+    "bg",
+    "mid",
+    "fg"
+  ],
+  "walkLine": {
+    "y": 880,
+    "minX": 160,
+    "maxX": 1760,
+    "depthScale": [
+      0.92,
+      1.0
+    ]
+  },
+  "exits": [
+    {
+      "to": "market_row",
+      "at": [
+        160,
+        880
+      ]
+    },
+    {
+      "to": "old_boathouse",
+      "at": [
+        1760,
+        880
+      ]
+    }
+  ],
   "sitSpot": {
-    "at": [400, 880],
+    "at": [
+      400,
+      880
+    ],
     "monologues": [
-      { "cond": { "flag": "stakeout_done" }, "bark": "bench_river_post_stakeout" },
-      { "cond": {}, "bark": "bench_river_d4" }
+      {
+        "cond": {
+          "flag": "stakeout_done"
+        },
+        "bark": "bench_river_post_stakeout"
+      },
+      {
+        "cond": {},
+        "bark": "bench_river_d4"
+      }
     ]
   },
   "hotspots": [
     {
       "id": "boot_prints",
-      "at": [800, 780],
+      "at": [
+        800,
+        780
+      ],
       "kind": "examine",
       "label": "Boot Prints",
-      "cond": { "all": [{ "day": { "gte": 4 } }, { "deduction": "d5_lodger" }] },
+      "cond": {
+        "all": [
+          {
+            "day": {
+              "gte": 4
+            }
+          },
+          {
+            "deduction": "d5_lodger"
+          }
+        ]
+      },
       "interactions": [
         {
           "id": "trace_tracks",
-          "cond": { "not": { "flag": "ferris_tracks_followed" } },
+          "cond": {
+            "not": {
+              "flag": "ferris_tracks_followed"
+            }
+          },
           "opens": "puzzle:trace_ferris",
           "ref": "II.12.4"
         },
@@ -36,35 +92,73 @@
     },
     {
       "id": "boathouse_fence",
-      "at": [1400, 620],
+      "at": [
+        1400,
+        620
+      ],
       "kind": "chekhov",
       "label": "The Old Boathouse",
       "detail": {
         "tier": "clue",
         "text": "The Vale family boathouse, locked and low on its pilings, mist coming off the water behind it. Six fresh holes along the fence line, courtesy of somebody's midnight optimism. A family place. The kind of place you'd go to feel safe.",
-        "cond": { "day": { "gte": 4 } }
+        "cond": {
+          "day": {
+            "gte": 4
+          }
+        }
       },
       "ref": "II.13.4"
     },
     {
       "id": "exit_market",
-      "at": [160, 820],
+      "at": [
+        160,
+        820
+      ],
       "kind": "exit",
       "to": "market_row",
       "label": "Back to Market Row"
+    },
+    {
+      "id": "exit_boathouse",
+      "at": [
+        1760,
+        820
+      ],
+      "kind": "exit",
+      "to": "old_boathouse",
+      "label": "The Old Boathouse",
+      "cond": {
+        "day": 7
+      }
     }
   ],
   "triggers": [
     {
       "id": "stakeout_d4",
-      "cond": { "all": [{ "day": 4 }, { "phase": "evening" }, { "flag": "ferris_tracks_followed" }] },
+      "cond": {
+        "all": [
+          {
+            "day": 4
+          },
+          {
+            "phase": "evening"
+          },
+          {
+            "flag": "ferris_tracks_followed"
+          }
+        ]
+      },
       "dialogue": "stakeout_d4",
       "once": true,
       "ref": "I.5.day4"
     }
   ],
   "ambient": {
-    "vignetteTags": ["river", "outdoors"],
+    "vignetteTags": [
+      "river",
+      "outdoors"
+    ],
     "weatherVariants": true,
     "ambience": "amb_river"
   }

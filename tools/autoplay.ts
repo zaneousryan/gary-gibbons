@@ -13,7 +13,17 @@ import { useDialogueStore, selectDialogueFor } from '../app/src/systems/dialogue
 import { installTriggerWatcher } from '../app/src/systems/triggers';
 import { installNotebookWatcher } from '../app/src/systems/notebook';
 import { connectCards, pinCard, resetBoardSession, retireTheory, checkTheoryRetirements, layOnDesk, seatRailCard } from '../app/src/systems/board';
-import { solveDustLibrary, solveSealSketch, solveThenNow, solveMapOverlay, solveTraceFerris } from '../app/src/systems/puzzles';
+import {
+  solveDustLibrary,
+  solveSealSketch,
+  solveThenNow,
+  solveMapOverlay,
+  solveTraceFerris,
+  solvePhotoTriangulation,
+  solveFireEscape,
+  solveTornLetter,
+  solveHandwritingMatch,
+} from '../app/src/systems/puzzles';
 import { takePhoto } from '../app/src/systems/photo';
 import { askGrandpa } from '../app/src/systems/hints';
 import { installVerificationWatcher } from '../app/src/systems/verify';
@@ -22,6 +32,7 @@ import { commitMorningPages, morningPagesDue, voxPopLineFor } from '../app/src/s
 import { greetingFor } from '../app/src/systems/trust';
 import { SaveService, MemoryStorage } from '../app/src/engine/save/saveService';
 import { evalCondition } from '../app/src/engine/conditions';
+import { advance as clockAdvance } from '../app/src/engine/clock';
 import { bus } from '../app/src/engine/eventBus';
 import type { ContentDB } from '../app/src/content/contentDb';
 import type { GameDef } from '../app/src/engine/clock';
@@ -68,12 +79,25 @@ function assertFlag(flag: string) {
   if (!useGameStore.getState().state.flags[flag]) fail(`flag "${flag}" not set`);
 }
 
+/** Why is the clock blocked right now? (asserting end-of-game) */
+function advanceBlocked(): string {
+  const fresh = useGameStore.getState();
+  const result = clockAdvance(fresh.game!, fresh.state, {
+    editionPublished: fresh.state.editions.some((e) => e.day === fresh.state.day),
+  });
+  return result.blocked?.kind ?? 'not-blocked';
+}
+
 const HEADLESS_PUZZLES: Record<string, () => import('../app/src/engine/effects').Effect[]> = {
   dust_library: solveDustLibrary,
   sketch_memory_seal: solveSealSketch,
   then_now_founding: solveThenNow,
   trace_ferris: solveTraceFerris,
   map_overlay: solveMapOverlay,
+  photo_triangulation: solvePhotoTriangulation,
+  fire_escape_sightline: solveFireEscape,
+  torn_letter: solveTornLetter,
+  handwriting_match: solveHandwritingMatch,
 };
 
 /** Run a location hotspot's first passing interaction, exactly as the scene layer would. */
@@ -502,6 +526,161 @@ async function runOnce(seed: number): Promise<string[]> {
   const d5state = useGameStore.getState().state;
   if (d5state.day !== 5) fail(`expected day 5, got ${d5state.day}`);
   log.push('day 4 complete: stakeout, pivot, tracks, rail seats (completes night 6), photo-witness aha, D6, gate -> day 5');
+
+  // --- day 5: The Lantern in Ivy (I.5.day5) ---
+  if (!commitMorningPages(useGameStore.getState().state.notebook.questions.slice(0, 3))) fail('day 5 pages failed');
+  game.moveTo('lockup');
+  talkTo(db, 'ferris', 'ferris_d5_lockup'); // measured d4 was printed — the gentle branch
+  if (useGameStore.getState().state.flags['printed_sensational_d4']) fail('should not have printed sensational d4');
+  game.moveTo('lanternside_archive');
+  runHotspot(db, 'lanternside_archive', 'visitor_ledger'); // etiquette (III.23.4)
+  const grapesB4 = useGameStore.getState().state.collectibles.grapesDeclined;
+  runHotspot(db, 'lanternside_archive', 'grapes_in_lamplight'); // grape beat 5
+  if (useGameStore.getState().state.collectibles.grapesDeclined !== grapesB4 + 1) fail('grape beat 5 missing');
+  talkTo(db, 'prudence', 'prudence_d5_romance');
+  assertCard('prudence_alibi', 'unverified');
+  game.moveTo('market_row');
+  talkTo(db, 'evelyn', 'evelyn_d5');
+  assertCard('evelyn_confirmation', 'verified');
+  assertCard('prudence_alibi', 'verified'); // sweep: evelyn_confirms route
+  game.moveTo('lanternside_archive');
+  talkTo(db, 'prudence', 'prudence_d5_seal');
+  assertCard('prudences_id', 'verified');
+  game.moveTo('founders_square');
+  runHotspot(db, 'founders_square', 'balcony_line'); // photo triangulation (III.25.2)
+  assertCard('triangulation_result', 'verified');
+
+  if (!game.advancePhase() || !game.advancePhase() || !game.advancePhase()) fail('day 5 clock failed');
+  for (const [i, card] of ['prudence_alibi', 'evelyn_confirmation', 'prudences_id', 'triangulation_result'].entries()) {
+    pinCard(card, 180 + i * 210, 520);
+  }
+  const d7ded = connectCards(db, ['seal_sketch', 'prudences_id']);
+  if (d7ded.kind !== 'deduction' || d7ded.deduction.id !== 'd7_signet') fail('D7 recipe failed');
+  const d8ded = connectCards(db, ['prudence_alibi', 'evelyn_confirmation']);
+  if (d8ded.kind !== 'deduction' || d8ded.deduction.id !== 'd8_prudence_cleared') fail('D8 recipe failed');
+  if (!useGameStore.getState().state.board.cleared.includes('prudence')) fail('prudence not CLEARED');
+  if (!publishEdition(db, { headlineId: 'h_d5_compassionate', kickerId: 'k_d5_romance' })) fail('ed_d5 publish failed');
+  if (!game.advancePhase()) fail('night 5 gate blocked');
+  log.push('day 5 complete: archive, alibi verified via florist, SEAL = VALE SIGNET, triangulation, D7+D8, gate -> day 6');
+
+  // --- day 6: The Two-Person Puzzle (I.5.day6 — heaviest day) ---
+  if (!commitMorningPages(useGameStore.getState().state.notebook.questions.slice(0, 3))) fail('day 6 pages failed');
+  game.moveTo('the_percolator'); // the fragment trigger fires on entry (day 6 + seal sketch)
+  if (!useDialogueStore.getState().view) fail('fragment trigger did not fire');
+  driveDialogue();
+  assertCard('wax_fragment', 'verified');
+  talkTo(db, 'dot', 'dot_d6_pitch');
+
+  game.moveTo('market_row');
+  talkTo(db, 'ida', 'ida_d6');
+  assertCard('idas_ledger', 'verified');
+  assertFlag('q_second_key_answered');
+
+  game.moveTo('vale_manor');
+  runHotspot(db, 'vale_manor', 'garden_table'); // acoustics BEFORE the tea (Discovery Web path B)
+  assertCard('garden_acoustics', 'verified');
+  talkTo(db, 'clara', 'clara_d6_1');
+  assertCard('clara_fear', 'verified');
+  talkTo(db, 'clara', 'clara_d6_2');
+  assertCard('two_person_puzzles', 'verified');
+  talkTo(db, 'clara', 'clara_d6_3');
+  assertFlag('clara_primed_trust'); // PRIMED — Ida's ledger came first (III.21)
+  assertCard('clara_key_missing', 'verified'); // off-record -> corroborated by the ledger instantly
+  if (useGameStore.getState().state.flags['verified_via_clara_key_missing'] !== 'idas_ledger_route') {
+    fail('clara_key_missing must corroborate via the ledger, never via Clara');
+  }
+  talkTo(db, 'beatrice', 'beatrice_d6');
+  assertFlag('beatrice_tea_done');
+  assertCard('overheard_conversation', 'verified'); // acoustics corroboration (garden_echo)
+  assertCard('beatrice_read_will', 'offrecord'); // and this one stays a promise forever
+  runHotspot(db, 'vale_manor', 'study_wastebasket'); // torn letter (III.25.1)
+  assertCard('torn_letter', 'verified');
+
+  game.moveTo('milos_alley');
+  talkTo(db, 'milo', 'milo_d6_trade');
+  assertCard('milos_sighting', 'unverified');
+  runHotspot(db, 'milos_alley', 'fire_escape'); // the §12.6 showpiece
+  assertCard('milos_sighting', 'verified');
+
+  // night 6 — the big board night
+  if (!game.advancePhase() || !game.advancePhase() || !game.advancePhase()) fail('day 6 clock failed');
+  const comp = seatRailCard(db, 'ev_milo_sighting', 'night_minus_2');
+  if (comp !== 'composite') fail(`Two Witnesses One Minute should seat composite, got ${comp}`);
+  assertFlag('rail_composite_seen');
+  const railDone = seatRailCard(db, 'ev_garden', 'night_minus_5');
+  if (railDone !== 'complete') fail(`ev_garden should complete the rail, got ${railDone}`);
+  assertFlag('rail_complete');
+  for (const [i, card] of ['clara_fear', 'two_person_puzzles', 'clara_key_missing', 'idas_ledger', 'wax_fragment', 'milos_sighting', 'overheard_conversation'].entries()) {
+    pinCard(card, 150 + i * 170, 100);
+  }
+  const d9 = connectCards(db, ['clara_key_missing', 'idas_ledger']);
+  if (d9.kind !== 'deduction' || d9.deduction.id !== 'd9_means') fail('D9 MEANS failed');
+  const d10 = connectCards(db, ['clara_fear', 'overheard_conversation']);
+  if (d10.kind !== 'deduction' || d10.deduction.id !== 'd10_motive') fail('D10 MOTIVE failed');
+  const d11 = connectCards(db, ['milos_sighting', 'ferris_testimony']);
+  if (d11.kind !== 'deduction' || d11.deduction.id !== 'd11_opportunity') fail('D11 OPPORTUNITY failed');
+  const d12 = connectCards(db, ['wax_fragment', 'seal_sketch']);
+  if (d12.kind !== 'deduction' || d12.deduction.id !== 'd12_proof') fail('D12 PROOF failed');
+  const ahaDir = connectCards(db, ['triangulation_result', 'milos_sighting']);
+  if (ahaDir.kind !== 'deduction' || ahaDir.deduction.id !== 'aha_direction') fail('direction aha failed');
+  const ledger6 = useGameStore.getState().state.board.ledger;
+  if (!ledger6['julian.means'] || !ledger6['julian.motive'] || !ledger6['julian.opportunity']) {
+    fail('julian ledger row incomplete before the final deduction');
+  }
+  const d13 = connectCards(db, ['ded_means', 'ded_motive', 'ded_opportunity', 'ded_proof']);
+  if (d13.kind !== 'deduction' || d13.deduction.id !== 'd13_final') fail('D13 FINAL failed');
+  if (!checkTheoryRetirements(db).includes('th_secret')) fail('th_secret should retire after the final deduction');
+  if (!retireTheory(db, 'th_secret')) fail('retiring th_secret failed');
+  // the attribution sub-step (III.23.2): "a witness," never the kid's name —
+  // no prompt, no reward, the game just remembers
+  if (publishEdition(db, { headlineId: 'h_d6_hold', kickerId: 'k_d6_tomorrow' })) {
+    fail('publish must refuse until the protectable source gets an attribution choice');
+  }
+  if (!publishEdition(db, { headlineId: 'h_d6_hold', kickerId: 'k_d6_tomorrow', attributions: { milos_sighting: false } })) {
+    fail('hold-the-page publish failed');
+  }
+  if (useGameStore.getState().state.flags['named_milo'] !== false) fail('named_milo should record the protection');
+  assertFlag('held_the_page_d6');
+  if (!game.advancePhase()) fail('night 6 gate blocked after D13');
+  log.push('night 6: rail complete + composite, MOTIVE/MEANS/OPPORTUNITY/PROOF, FINAL, held the page -> day 7');
+
+  // --- day 7: The Boathouse (I.8) ---
+  game.moveTo('the_percolator');
+  talkTo(db, 'dot', 'dot_d7_final'); // the held-page entry: "Archie held the page once too."
+  assertFlag('pitch_d7_done');
+  game.moveTo('riverbank');
+  talkTo(db, 'clara', 'clara_d7_river');
+  assertFlag('boathouse_ready');
+  game.moveTo('old_boathouse');
+  // read the room first (II.13.5 + III.25.4): the four reads and the shining nails
+  runChekhov(db, 'old_boathouse', 'carved_initials');
+  runChekhov(db, 'old_boathouse', 'puzzle_boxes');
+  runChekhov(db, 'old_boathouse', 'scuff_line');
+  runHotspot(db, 'old_boathouse', 'shining_nails');
+  assertFlag('found_floorboards');
+  // the trigger fired on entry — the confrontation is already waiting
+  if (!useDialogueStore.getState().view) fail('confrontation trigger did not fire');
+  driveDialogue(120);
+  assertFlag('confession_done');
+  assertCard('recovered_contents', 'verified');
+
+  if (!game.advancePhase() || !game.advancePhase()) fail('day 7 morning->evening failed');
+  game.moveTo('founders_square'); // the reading
+  if (!useDialogueStore.getState().view) fail('reading trigger did not fire');
+  driveDialogue();
+  assertFlag('reading_done');
+  talkTo(db, 'gino', 'grape_d7'); // grape beat 7: one grape, given away
+  assertFlag('grape_beat_d7');
+
+  if (!game.advancePhase()) fail('day 7 evening->night failed'); // sends Gary home
+  // credits fire at the apartment on night 7
+  if (!useDialogueStore.getState().view) fail('credits trigger did not fire');
+  driveDialogue();
+  assertFlag('game_complete');
+  if (!publishEdition(db, { headlineId: 'h_d7_compassionate', kickerId: 'k_d7_together' })) fail('ed_d7 publish failed');
+  const end = advanceBlocked();
+  if (end !== 'end-of-game') fail(`day 7 night should end the game, got ${end}`);
+  log.push('DAY 7 COMPLETE: confrontation (floorboards pre-found), reading, one grape given away, credits, end-of-game');
 
   unsubLog();
   unsubTriggers();

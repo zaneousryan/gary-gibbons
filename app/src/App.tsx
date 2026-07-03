@@ -27,6 +27,7 @@ import { installAudioWatcher } from '@systems/audio';
 import { installWeatherWatcher } from '@systems/weather';
 import { installVignetteWatcher } from '@systems/livingTown';
 import { installPhotoPrinter } from '@systems/photo';
+import { installSidestoryWatcher } from '@systems/sidestories';
 import PuzzleHost from '@ui/PuzzleHost';
 import RailCinematic from '@ui/RailCinematic';
 import Camera from '@ui/Camera';
@@ -62,8 +63,9 @@ export default function App() {
       const un7 = installWeatherWatcher(content);
       const un8 = installVignetteWatcher(content);
       const un9 = installPhotoPrinter();
+      const un10 = installSidestoryWatcher(content);
       return () => {
-        [un1, un2, un3, un4, un5, un6, un7, un8, un9].forEach((u) => u());
+        [un1, un2, un3, un4, un5, un6, un7, un8, un9, un10].forEach((u) => u());
       };
     } catch (err) {
       setBootError(String(err));

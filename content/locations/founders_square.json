@@ -2,70 +2,158 @@
   "id": "founders_square",
   "name": "Founders' Square",
   "ref": "I.2",
-  "layers": ["bg", "mid", "fg"],
-  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "layers": [
+    "bg",
+    "mid",
+    "fg"
+  ],
+  "walkLine": {
+    "y": 880,
+    "minX": 160,
+    "maxX": 1760,
+    "depthScale": [
+      0.92,
+      1.0
+    ]
+  },
   "exits": [
-    { "to": "market_row", "at": [160, 880] },
-    { "to": "council_hall", "at": [1760, 880] }
+    {
+      "to": "market_row",
+      "at": [
+        160,
+        880
+      ]
+    },
+    {
+      "to": "council_hall",
+      "at": [
+        1760,
+        880
+      ]
+    },
+    {
+      "to": "vale_manor",
+      "at": [
+        960,
+        880
+      ]
+    }
   ],
   "sitSpot": {
-    "at": [400, 880],
+    "at": [
+      400,
+      880
+    ],
     "monologues": [
-      { "cond": { "flag": "ceremony_done" }, "bark": "bench_square_post_ceremony" },
-      { "cond": {}, "bark": "bench_square_d1" }
+      {
+        "cond": {
+          "flag": "ceremony_done"
+        },
+        "bark": "bench_square_post_ceremony"
+      },
+      {
+        "cond": {},
+        "bark": "bench_square_d1"
+      }
     ]
   },
   "hotspots": [
     {
       "id": "talk_poppy",
-      "at": [600, 800],
+      "at": [
+        600,
+        800
+      ],
       "kind": "talk",
       "character": "poppy",
       "label": "Poppy"
     },
     {
       "id": "talk_warren",
-      "at": [1000, 800],
+      "at": [
+        1000,
+        800
+      ],
       "kind": "talk",
       "character": "warren",
       "label": "Warren"
     },
     {
       "id": "talk_julian",
-      "at": [1350, 800],
+      "at": [
+        1350,
+        800
+      ],
       "kind": "talk",
       "character": "julian",
       "label": "Julian"
     },
     {
       "id": "talk_clara",
-      "at": [1550, 800],
+      "at": [
+        1550,
+        800
+      ],
       "kind": "talk",
       "character": "clara",
       "label": "Clara"
     },
     {
       "id": "monument",
-      "at": [820, 560],
+      "at": [
+        820,
+        560
+      ],
       "kind": "examine",
       "label": "The Founders' Monument",
       "interactions": [
         {
           "id": "dust_library",
-          "cond": { "all": [{ "day": { "gte": 2 } }, { "not": { "flag": "dust_library_done" } }] },
+          "cond": {
+            "all": [
+              {
+                "day": {
+                  "gte": 2
+                }
+              },
+              {
+                "not": {
+                  "flag": "dust_library_done"
+                }
+              }
+            ]
+          },
           "opens": "puzzle:dust_library",
           "ref": "II.13.1"
         },
         {
           "id": "wax_scrapings",
-          "cond": { "all": [{ "flag": "dust_library_done" }, { "not": { "card": "wax_scrapings" } }] },
+          "cond": {
+            "all": [
+              {
+                "flag": "dust_library_done"
+              },
+              {
+                "not": {
+                  "card": "wax_scrapings"
+                }
+              }
+            ]
+          },
           "text": "On the vault's lip, where a careful hand would rest an envelope on the way out: flecks of green wax, scraped thin. The sealed envelope came out LAST — lifted deliberately, over everything else.",
-          "effects": [{ "giveCard": "wax_scrapings", "status": "verified" }],
+          "effects": [
+            {
+              "giveCard": "wax_scrapings",
+              "status": "verified"
+            }
+          ],
           "ref": "II.12.4"
         },
         {
           "id": "monument_post_ceremony",
-          "cond": { "flag": "ceremony_done" },
+          "cond": {
+            "flag": "ceremony_done"
+          },
           "text": "The vault door stands open at the monument's base. Fifty years of waiting, and inside: clean stone, old dust, and nothing at all. The bunting overhead has already begun to sag.",
           "ref": "I.5.day1"
         },
@@ -79,10 +167,17 @@
     },
     {
       "id": "julians_ring",
-      "at": [1350, 640],
+      "at": [
+        1350,
+        640
+      ],
       "kind": "chekhov",
       "label": "The Heir at Work",
-      "cond": { "not": { "flag": "ceremony_done" } },
+      "cond": {
+        "not": {
+          "flag": "ceremony_done"
+        }
+      },
       "detail": {
         "tier": "character",
         "text": "Julian Vale, shaking hands, smiling the practiced smile. Between handshakes his thumb finds his father's signet ring and spins it — around, around. Probably nothing. Gary writes it down anyway.",
@@ -93,20 +188,40 @@
     },
     {
       "id": "dedication_plaque",
-      "at": [620, 620],
+      "at": [
+        620,
+        620
+      ],
       "kind": "examine",
       "label": "The Dedication Plaque",
-      "cond": { "day": { "gte": 3 } },
+      "cond": {
+        "day": {
+          "gte": 3
+        }
+      },
       "interactions": [
         {
           "id": "then_now",
-          "cond": { "all": [{ "card": "founding_photograph" }, { "not": { "flag": "then_now_founding_done" } }] },
+          "cond": {
+            "all": [
+              {
+                "card": "founding_photograph"
+              },
+              {
+                "not": {
+                  "flag": "then_now_founding_done"
+                }
+              }
+            ]
+          },
           "opens": "puzzle:then_now_founding",
           "ref": "II.13.2"
         },
         {
           "id": "plaque_after",
-          "cond": { "flag": "then_now_founding_done" },
+          "cond": {
+            "flag": "then_now_founding_done"
+          },
           "text": "The dedication plaque, a full stride from where the founding photograph shows it. Moved ten years ago — to make room for something added behind it.",
           "ref": "II.13.2"
         },
@@ -120,40 +235,141 @@
     },
     {
       "id": "square_lantern_photo",
-      "at": [1180, 500],
+      "at": [
+        1180,
+        500
+      ],
       "kind": "photo",
       "label": "The Square's Oldest Lantern",
       "interactions": [
-        { "id": "lantern_sq_01", "text": "Lantern #1 of 47, if anyone were counting.", "ref": "II.19.2" }
+        {
+          "id": "lantern_sq_01",
+          "text": "Lantern #1 of 47, if anyone were counting.",
+          "ref": "II.19.2"
+        }
       ],
       "ref": "II.19.2"
     },
     {
       "id": "exit_market",
-      "at": [160, 820],
+      "at": [
+        160,
+        820
+      ],
       "kind": "exit",
       "to": "market_row",
       "label": "To Market Row"
     },
     {
       "id": "exit_hall",
-      "at": [1760, 820],
+      "at": [
+        1760,
+        820
+      ],
       "kind": "exit",
       "to": "council_hall",
       "label": "To the Council Hall"
+    },
+    {
+      "id": "exit_manor",
+      "at": [
+        960,
+        500
+      ],
+      "kind": "exit",
+      "to": "vale_manor",
+      "label": "Vale Manor",
+      "cond": {
+        "day": {
+          "gte": 6
+        }
+      }
+    },
+    {
+      "id": "balcony_line",
+      "at": [
+        1500,
+        540
+      ],
+      "kind": "examine",
+      "label": "Warren's Balcony Line",
+      "cond": {
+        "all": [
+          {
+            "day": {
+              "gte": 5
+            }
+          },
+          {
+            "card": "night_photograph"
+          },
+          {
+            "flag": "has_camera"
+          }
+        ]
+      },
+      "interactions": [
+        {
+          "id": "triangulate",
+          "cond": {
+            "not": {
+              "flag": "photo_triangulation_done"
+            }
+          },
+          "opens": "puzzle:photo_triangulation",
+          "ref": "III.25.2"
+        },
+        {
+          "id": "triangulated",
+          "text": "The spot where the figure stood, worked out from light and habit. Off the manor shortcut. On the river-side line.",
+          "ref": "III.25.2"
+        }
+      ],
+      "ref": "III.25.2"
     }
   ],
   "triggers": [
     {
       "id": "ceremony_d1",
-      "cond": { "all": [{ "day": 1 }, { "phase": "evening" }] },
+      "cond": {
+        "all": [
+          {
+            "day": 1
+          },
+          {
+            "phase": "evening"
+          }
+        ]
+      },
       "dialogue": "ceremony_d1",
       "once": true,
       "ref": "I.5.day1"
+    },
+    {
+      "id": "reading_d7",
+      "cond": {
+        "all": [
+          {
+            "day": 7
+          },
+          {
+            "phase": "evening"
+          },
+          {
+            "flag": "contents_recovered"
+          }
+        ]
+      },
+      "dialogue": "reading_d7",
+      "once": true,
+      "ref": "I.8.3"
     }
   ],
   "ambient": {
-    "vignetteTags": ["square", "outdoors"],
+    "vignetteTags": [
+      "square",
+      "outdoors"
+    ],
     "weatherVariants": true,
     "music": "music_square",
     "ambience": "amb_square"

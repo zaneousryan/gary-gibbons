@@ -1,0 +1,12 @@
+{
+  "id": "idas_ledger",
+  "ref": "I.5.day6",
+  "type": "document",
+  "title": "IDA'S LEDGER - exactly two keys exist",
+  "sprite": "card_idas_ledger",
+  "source": "ida",
+  "initialStatus": "verified",
+  "text": "Fifty years ago: two keys, apprentice work, one to the council, one to Edmund. No copies since - the lock would gossip. It's only ever known its two.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

@@ -2,22 +2,55 @@
   "id": "gary_apartment",
   "name": "Gary's Apartment",
   "ref": "I.2",
-  "layers": ["bg", "mid", "fg"],
-  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "layers": [
+    "bg",
+    "mid",
+    "fg"
+  ],
+  "walkLine": {
+    "y": 880,
+    "minX": 160,
+    "maxX": 1760,
+    "depthScale": [
+      0.92,
+      1.0
+    ]
+  },
   "exits": [
-    { "to": "the_percolator", "at": [1760, 880] },
-    { "to": "ledger_morgue", "at": [320, 880] }
+    {
+      "to": "the_percolator",
+      "at": [
+        1760,
+        880
+      ]
+    },
+    {
+      "to": "ledger_morgue",
+      "at": [
+        320,
+        880
+      ]
+    }
   ],
   "sitSpot": {
-    "at": [420, 880],
+    "at": [
+      420,
+      880
+    ],
     "monologues": [
-      { "cond": {}, "bark": "bench_apartment_d1" }
+      {
+        "cond": {},
+        "bark": "bench_apartment_d1"
+      }
     ]
   },
   "hotspots": [
     {
       "id": "the_board",
-      "at": [960, 520],
+      "at": [
+        960,
+        520
+      ],
       "kind": "examine",
       "label": "The Board",
       "interactions": [
@@ -31,7 +64,10 @@
     },
     {
       "id": "grandpas_badge",
-      "at": [640, 700],
+      "at": [
+        640,
+        700
+      ],
       "kind": "chekhov",
       "label": "Grandpa's Badge",
       "detail": {
@@ -42,14 +78,21 @@
     },
     {
       "id": "stair_rail",
-      "at": [1600, 760],
+      "at": [
+        1600,
+        760
+      ],
       "kind": "examine",
       "label": "The Stair Rail",
       "interactions": [
         {
           "id": "red_ink_smudge",
           "text": "The rail down to the Ledger office, polished by fifty years of deadline hands. Near the bottom: a smudge of red ink, low on the rail. Low, like a small hand made it.",
-          "effects": [{ "setFlag": "noticed_red_ink" }],
+          "effects": [
+            {
+              "setFlag": "noticed_red_ink"
+            }
+          ],
           "ref": "II.17.1"
         }
       ],
@@ -57,10 +100,17 @@
     },
     {
       "id": "grape_stress_ball",
-      "at": [1180, 700],
+      "at": [
+        1180,
+        700
+      ],
       "kind": "examine",
       "label": "A Grape-Shaped Stress Ball",
-      "cond": { "day": { "gte": 2 } },
+      "cond": {
+        "day": {
+          "gte": 2
+        }
+      },
       "interactions": [
         {
           "id": "stress_ball_look",
@@ -72,7 +122,10 @@
     },
     {
       "id": "kettle",
-      "at": [1400, 700],
+      "at": [
+        1400,
+        700
+      ],
       "kind": "examine",
       "label": "The Kettle",
       "interactions": [
@@ -86,24 +139,55 @@
     },
     {
       "id": "exit_to_percolator",
-      "at": [1760, 820],
+      "at": [
+        1760,
+        820
+      ],
       "kind": "exit",
       "to": "the_percolator",
       "label": "Down to the street"
     },
     {
       "id": "exit_to_morgue",
-      "at": [320, 820],
+      "at": [
+        320,
+        820
+      ],
       "kind": "exit",
       "to": "ledger_morgue",
       "label": "Down to the Morgue",
-      "cond": { "flag": "morgue_unlocked" }
+      "cond": {
+        "flag": "morgue_unlocked"
+      }
     }
   ],
   "ambient": {
-    "vignetteTags": ["apartment"],
+    "vignetteTags": [
+      "apartment"
+    ],
     "weatherVariants": true,
     "music": "music_apartment",
     "ambience": "amb_apartment"
-  }
+  },
+  "triggers": [
+    {
+      "id": "credits_d7",
+      "cond": {
+        "all": [
+          {
+            "day": 7
+          },
+          {
+            "phase": "night"
+          },
+          {
+            "flag": "reading_done"
+          }
+        ]
+      },
+      "dialogue": "credits_d7",
+      "once": true,
+      "ref": "I.8.4"
+    }
+  ]
 }

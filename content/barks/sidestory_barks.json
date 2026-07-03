@@ -1,0 +1,19 @@
+{
+  "pool": "sidestory_barks",
+  "barks": [
+    { "id": "ss_redpen_payoff", "text": "Bought the kid his own pens — the good kind. He signed a receipt for them in red, 'for the file.' The Ledger has a junior stringer now, whether the Ledger knows it or not.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.1", "tags": [] },
+    { "id": "ss_otto_hook", "text": "Otto's entering the regional roasting fair. Otto has a head cold. Otto cannot smell his own blends, and it is quietly breaking his enormous heart.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.2", "tags": [] },
+    { "id": "ss_otto_payoff", "text": "The fair took THE GIBBONS — 'notes of tweed and stubbornness.' It's on the menu permanently now. I have become a beverage. Grandpa would be proud, probably.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.2", "tags": [] },
+    { "id": "ss_handyman_reveal", "text": "The brass screws. Eight years of gates that stopped squeaking and steps that stopped wobbling — it's Warren. Maintaining a district he wasn't sure he had the right to lead.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.3", "tags": [] },
+    { "id": "ss_handyman_payoff", "text": "A brass screw, pressed into my hand at the dock: 'For your board. File under stories that didn't need telling.' Some scoops you keep by not keeping them.", "speaker": "gary", "authored": "verbatim", "ref": "II.17.3", "tags": [] },
+    { "id": "ss_marrow_payoff", "text": "The rival had watered it to death WEEKS ago. Gino forgave him in an aria. They're co-planting a memorial vine. Grapes. Of course it's grapes. My face did a thing and everyone saw.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.4", "tags": [] },
+    { "id": "ss_key_reveal", "text": "The looped G, the crossed double-t, the pressure of the pen. Drawer 400's ticket belongs to Margie's late husband. Forty years, one music box, still waiting for its repair to be collected.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.5", "tags": [] },
+    { "id": "ss_key_payoff", "text": "She let it play once, alone, after close. I quietly didn't file this one either. Ida: 'Locks are patient, Mr. Gibbons. So am I.'", "speaker": "gary", "authored": "verbatim", "ref": "II.17.5", "tags": [] },
+    { "id": "ss_byline_reveal", "text": "The doorstep gardener is Beatrice Vale. Milo's evidence chart is impeccable, and he keeps whispering 'follow the vegetables' like it's a noir picture.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.6", "tags": [] },
+    { "id": "ss_byline_payoff", "text": "Two sentences in the real Evening Edition, name attached: MILO TANAKA. He framed it. The frame is bigger than the clipping by a factor of nine.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.6", "tags": [] },
+    { "id": "ss_whistler_reveal", "text": "'Theodora's Air.' Written for her fifty years ago, learned grandfather-to-grandson from Jonah Croft himself. The town forgot the song's name and kept the song.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.7", "tags": [] },
+    { "id": "ss_whistler_payoff", "text": "He played it while she read the letter. Nobody introduced the piece. Nobody needed to.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.7", "tags": [] },
+    { "id": "ss_planz_payoff", "text": "PLAN A: JOY — framed at her stall, slightly crooked, perfect. She planned the recovery ceremony before there was anything to recover. That's not lamination. That's faith.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.8", "tags": [] },
+    { "id": "ss_pigeons_payoff", "text": "One nest. Warren photographed it. The notebook's final doodle is the two of them in tiny lantern and ivy costumes, and I regret nothing.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.9", "tags": [] }
+  ]
+}

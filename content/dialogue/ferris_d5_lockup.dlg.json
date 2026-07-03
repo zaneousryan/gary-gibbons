@@ -1,0 +1,52 @@
+{
+  "id": "ferris_d5_lockup",
+  "character": "ferris",
+  "ref": "II.15.1",
+  "entries": [
+    { "id": "sensational", "cond": { "all": [{ "day": 5 }, { "flag": "printed_sensational_d4" }] }, "node": "s1" },
+    { "id": "gentle", "cond": { "day": 5 }, "node": "g1" }
+  ],
+  "nodes": {
+    "s1": {
+      "speaker": "ferris",
+      "line": "Ah. The press. Ferris Mott has a request, reporter. Read it to me. Your page. Out loud, if you would.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "s2"
+    },
+    "s2": {
+      "speaker": "gary",
+      "line": "...\"Weasel caught red-pawed.\"",
+      "authored": "aletheia",
+      "next": "s3"
+    },
+    "s3": {
+      "speaker": "narrator",
+      "line": "Ferris nods, slowly, the way a man nods at weather he predicted. He isn't angry. That's worse.",
+      "authored": "aletheia",
+      "next": "s4"
+    },
+    "s4": {
+      "speaker": "ferris",
+      "line": "Red-pawed. Yes. Ferris Mott held the shovel; the words hold longer. Well. You know where the witness is, when the paper wants him again.",
+      "authored": "aletheia",
+      "emote": "sad",
+      "effects": [
+        { "trust": { "char": "ferris", "delta": -1 } },
+        { "notebook": { "entry": "nb_ferris_readaloud" } },
+        { "playBark": "gary_inner_words_hold" }
+      ],
+      "next": null
+    },
+    "g1": {
+      "speaker": "ferris",
+      "line": "The reporter returns! Ferris Mott is composing a formal apology to a marrow. It is proving difficult. The marrow gave so much, and Ferris Mott took... well. The marrow.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "effects": [{ "notebook": { "entry": "nb_ferris_apology" } }],
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "ferris_repeat_busy"
+}

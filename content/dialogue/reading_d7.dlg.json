@@ -1,0 +1,60 @@
+{
+  "id": "reading_d7",
+  "character": "narrator",
+  "ref": "I.8.3",
+  "entries": [{ "id": "main", "cond": {}, "node": "n1" }],
+  "nodes": {
+    "n1": {
+      "speaker": "narrator",
+      "line": "Founders' Square, evening. The whole cast assembled — the district re-decorated itself during the afternoon, so the walk here was a victory lap the town built for its own good news. Warren opens the envelope, scans it, and — beautifully — starts to laugh. Then he hands it across.",
+      "authored": "aletheia",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "warren",
+      "line": "It should be your voice.",
+      "authored": "verbatim",
+      "emote": "happy",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "beatrice",
+      "line": "\"To my district, and to my children, who will hear this together, which is the entire point. Julian: you are the lantern — you make people believe the dark is temporary. Clara: you are the ivy — you hold what would otherwise fall.\"",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "beatrice",
+      "line": "\"I never once built a puzzle either of you could solve alone. I was never going to start with the hardest one. Lead together. Argue often. Decide once. — Edmund Vale.\"",
+      "authored": "verbatim",
+      "emote": "happy",
+      "next": "n5"
+    },
+    "n5": {
+      "speaker": "narrator",
+      "line": "The cascade: Clara's composure finally cracking. Julian looking at his sister like the answer to a puzzle. Warren already mentally at lighthouse number one. Poppy sobbing into contingency card PLAN A: JOY. Ferris nodding sagely — 'Ferris Mott suspected co-treasure.' Prudence clutching a second envelope Tuck has quietly passed her, Evelyn's hand on her shoulder.",
+      "authored": "verbatim",
+      "next": "n6"
+    },
+    "n6": {
+      "speaker": "warren",
+      "line": "Then it is my genuine honor to say the happiest sentence I will ever say: the waiting is over.",
+      "authored": "verbatim",
+      "emote": "happy",
+      "next": "n7"
+    },
+    "n7": {
+      "speaker": "warren",
+      "line": "I hear the coast is lovely this time of year.",
+      "authored": "verbatim",
+      "emote": "happy",
+      "effects": [
+        { "setFlag": "reading_done" },
+        { "notebook": { "entry": "nb_reading" } },
+        { "playBark": "gary_inner_lantern_ivy" }
+      ],
+      "next": null
+    }
+  }
+}

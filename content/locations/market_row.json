@@ -2,50 +2,123 @@
   "id": "market_row",
   "name": "Market Row",
   "ref": "I.2",
-  "layers": ["bg", "mid", "fg"],
-  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "layers": [
+    "bg",
+    "mid",
+    "fg"
+  ],
+  "walkLine": {
+    "y": 880,
+    "minX": 160,
+    "maxX": 1760,
+    "depthScale": [
+      0.92,
+      1.0
+    ]
+  },
   "exits": [
-    { "to": "the_percolator", "at": [160, 880] },
-    { "to": "founders_square", "at": [1760, 880] },
-    { "to": "drowsy_lantern", "at": [960, 880] },
-    { "to": "riverbank", "at": [520, 880] }
+    {
+      "to": "the_percolator",
+      "at": [
+        160,
+        880
+      ]
+    },
+    {
+      "to": "founders_square",
+      "at": [
+        1760,
+        880
+      ]
+    },
+    {
+      "to": "drowsy_lantern",
+      "at": [
+        960,
+        880
+      ]
+    },
+    {
+      "to": "riverbank",
+      "at": [
+        520,
+        880
+      ]
+    },
+    {
+      "to": "lanternside_archive",
+      "at": [
+        1200,
+        880
+      ]
+    },
+    {
+      "to": "milos_alley",
+      "at": [
+        700,
+        880
+      ]
+    }
   ],
   "sitSpot": {
-    "at": [980, 880],
-    "monologues": [{ "cond": {}, "bark": "bench_market_d1" }]
+    "at": [
+      980,
+      880
+    ],
+    "monologues": [
+      {
+        "cond": {},
+        "bark": "bench_market_d1"
+      }
+    ]
   },
   "hotspots": [
     {
       "id": "talk_gino",
-      "at": [480, 800],
+      "at": [
+        480,
+        800
+      ],
       "kind": "talk",
       "character": "gino",
       "label": "Gino"
     },
     {
       "id": "talk_ida",
-      "at": [900, 800],
+      "at": [
+        900,
+        800
+      ],
       "kind": "talk",
       "character": "ida",
       "label": "Ida"
     },
     {
       "id": "talk_evelyn",
-      "at": [1320, 800],
+      "at": [
+        1320,
+        800
+      ],
       "kind": "talk",
       "character": "evelyn",
       "label": "Evelyn"
     },
     {
       "id": "talk_milo",
-      "at": [1550, 800],
+      "at": [
+        1550,
+        800
+      ],
       "kind": "talk",
       "character": "milo",
       "label": "Milo"
     },
     {
       "id": "wren_wick_window",
-      "at": [1000, 560],
+      "at": [
+        1000,
+        560
+      ],
       "kind": "chekhov",
       "label": "Wren & Wick",
       "detail": {
@@ -56,7 +129,10 @@
     },
     {
       "id": "flower_stall",
-      "at": [1380, 560],
+      "at": [
+        1380,
+        560
+      ],
       "kind": "chekhov",
       "label": "Fifty Years of Flowers",
       "detail": {
@@ -67,35 +143,70 @@
     },
     {
       "id": "exit_percolator",
-      "at": [160, 820],
+      "at": [
+        160,
+        820
+      ],
       "kind": "exit",
       "to": "the_percolator",
       "label": "To the Percolator"
     },
     {
       "id": "exit_square",
-      "at": [1760, 820],
+      "at": [
+        1760,
+        820
+      ],
       "kind": "exit",
       "to": "founders_square",
       "label": "To Founders' Square"
     },
     {
       "id": "exit_inn",
-      "at": [960, 560],
+      "at": [
+        960,
+        560
+      ],
       "kind": "exit",
       "to": "drowsy_lantern",
       "label": "The Drowsy Lantern"
     },
     {
       "id": "exit_river",
-      "at": [520, 820],
+      "at": [
+        520,
+        820
+      ],
       "kind": "exit",
       "to": "riverbank",
       "label": "Down to the river"
+    },
+    {
+      "id": "exit_archive",
+      "at": [
+        1200,
+        560
+      ],
+      "kind": "exit",
+      "to": "lanternside_archive",
+      "label": "The Archive"
+    },
+    {
+      "id": "exit_alley",
+      "at": [
+        700,
+        560
+      ],
+      "kind": "exit",
+      "to": "milos_alley",
+      "label": "Milo's Alley"
     }
   ],
   "ambient": {
-    "vignetteTags": ["market", "outdoors"],
+    "vignetteTags": [
+      "market",
+      "outdoors"
+    ],
     "weatherVariants": true,
     "music": "music_market",
     "ambience": "amb_market"

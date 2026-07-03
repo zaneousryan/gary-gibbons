@@ -1,0 +1,12 @@
+{
+  "id": "ded_final",
+  "ref": "I.6.D13",
+  "type": "deduction",
+  "title": "IT WAS JULIAN - hiding, not stealing",
+  "sprite": "card_ded_final",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "Motive, means, opportunity, proof. And underneath all four: a man who emptied fifty years of a town into a hole in the floor because he couldn't finish overhearing a conversation. He wasn't stealing a future. He was hiding from one.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

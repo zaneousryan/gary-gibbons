@@ -1,0 +1,12 @@
+{
+  "id": "wax_fragment",
+  "ref": "I.5.day6",
+  "type": "physical",
+  "title": "THE WAX FRAGMENT - matches the sketch",
+  "sprite": "card_wax_fragment",
+  "source": "the_percolator",
+  "initialStatus": "verified",
+  "text": "Green wax from Julian's coat pocket, ivy leaves aligning with the seal sketch. The seal was intact when Poppy saw it. Broken wax means handled after - by that coat.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

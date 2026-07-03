@@ -1,0 +1,79 @@
+{
+  "id": "ed_d5",
+  "day": 5,
+  "ref": "II.15.1",
+  "draftCards": [
+    "prudences_id",
+    "ded_signet",
+    "evelyn_confirmation"
+  ],
+  "headlines": [
+    {
+      "id": "h_d5_sensational",
+      "tone": "sensational",
+      "text": "VALE FAMILY SEAL ON THE MISSING WILL!",
+      "effects": [
+        {
+          "trust": {
+            "delta": -1,
+            "char": "clara"
+          }
+        },
+        {
+          "trust": {
+            "delta": 1,
+            "char": "margie"
+          }
+        }
+      ],
+      "reactions": {
+        "rumorSeed": "vale_suspected",
+        "chalkboard": "THE FAMILY BLEND - handle with tongs"
+      }
+    },
+    {
+      "id": "h_d5_measured",
+      "tone": "measured",
+      "text": "Seal on Sealed Envelope Identified as Private Signet",
+      "reactions": {
+        "chalkboard": "THE SIGNET SHOT - small, precise, leaves a mark"
+      }
+    },
+    {
+      "id": "h_d5_compassionate",
+      "tone": "compassionate",
+      "text": "Archive Curator Cleared; a Fifty-Year Love Story Surfaces",
+      "effects": [
+        {
+          "trust": {
+            "delta": 1,
+            "char": "prudence"
+          }
+        },
+        {
+          "trust": {
+            "delta": 1,
+            "char": "evelyn"
+          }
+        }
+      ],
+      "reactions": {
+        "chalkboard": "THE LONG CORRESPONDENCE - two cups, one river"
+      }
+    }
+  ],
+  "kickers": [
+    {
+      "id": "k_d5_gentle",
+      "text": "The trail narrows. The Ledger walks it slowly, on purpose."
+    },
+    {
+      "id": "k_d5_romance",
+      "text": "Some stories wait fifty years to be told kindly. This paper can wait one more day for the other one."
+    },
+    {
+      "id": "k_d5_facts",
+      "text": "The Ledger prints what it knows, as it knows it."
+    }
+  ]
+}

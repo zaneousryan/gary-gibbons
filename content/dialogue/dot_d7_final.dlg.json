@@ -1,0 +1,50 @@
+{
+  "id": "dot_d7_final",
+  "character": "dot",
+  "ref": "I.5.day7",
+  "entries": [
+    { "id": "held", "cond": { "all": [{ "day": 7 }, { "flag": "printed_hold_d6" }] }, "node": "h1" },
+    { "id": "main", "cond": { "day": 7 }, "node": "c1" }
+  ],
+  "nodes": {
+    "h1": {
+      "speaker": "dot",
+      "line": "You held the page. Archie held the page once too. I'll tell you about it when you're back.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "c2"
+    },
+    "c1": {
+      "speaker": "dot",
+      "line": "Gibbons. Last pressure test of the week. You know where the story ends. Sell me the way you're going to end it.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "line": "Not with the constable. With a conversation. Truth first — compassion in the same breath.",
+      "authored": "aletheia",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "narrator",
+      "line": "Dot looks at him for a long moment over the reading glasses. The red pen stays down.",
+      "authored": "aletheia",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "dot",
+      "line": "Archie would run it exactly the way you're about to.",
+      "authored": "verbatim",
+      "emote": "happy",
+      "effects": [
+        { "setFlag": "pitch_d7_done" },
+        { "notebook": { "entry": "nb_dot_blessing" } }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "dot_repeat_busy"
+}

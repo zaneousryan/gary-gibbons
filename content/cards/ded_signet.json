@@ -1,0 +1,12 @@
+{
+  "id": "ded_signet",
+  "ref": "I.6.D7",
+  "type": "deduction",
+  "title": "The sealed envelope bears the VALE FAMILY SIGNET",
+  "sprite": "card_ded_signet",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "Not the council's seal - the family's own lantern-in-ivy, from a ring that never left the family. The trail leads to Vale Manor. Careful now, Gibbons. The closer a story gets to a family, the gentler your hands.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

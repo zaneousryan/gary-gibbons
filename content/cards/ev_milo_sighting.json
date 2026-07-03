@@ -1,0 +1,17 @@
+{
+  "id": "ev_milo_sighting",
+  "ref": "II.16.1",
+  "type": "event",
+  "title": "NIGHT -2: Milo sees THE umbrella",
+  "sprite": "card_ev_milo_sighting",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "From the fire escape: the whole him hidden under one particular canopy, silver duck handle and all.",
+  "verifyRoutes": [],
+  "reReadLines": [],
+  "anchor": {
+    "card": "milos_sighting",
+    "status": "verified"
+  },
+  "railSlot": "night_minus_2"
+}

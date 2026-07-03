@@ -1,0 +1,12 @@
+{
+  "id": "ded_toward_river",
+  "ref": "III.22.1",
+  "type": "deduction",
+  "title": "AHA - he was walking TOWARD THE RIVER",
+  "sprite": "card_ded_toward_river",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "Everyone read the sentence backwards. The question was never where he came from - it's where he was carrying everything TO. The rail card flips with a soft snap, and the riverbank quietly gains a question mark.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}
