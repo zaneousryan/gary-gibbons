@@ -1,0 +1,37 @@
+{
+  "id": "ida_d1",
+  "character": "ida",
+  "ref": "I.5.day1",
+  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "narrator",
+      "line": "Ida Wren has the Ceremonial Key's lock on a velvet cloth, oiling it with a brush the size of an eyelash.",
+      "authored": "aletheia",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "ida",
+      "line": "There now. One last time before your big night. Fifty years and never a squeak — because somebody ASKS it how it's doing, don't they. Yes they do.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "gary",
+      "line": "You made that lock, didn't you? At the founding?",
+      "authored": "aletheia",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "ida",
+      "line": "Apprentice hands, Mr. Gibbons, and my best work for forty years after. It'll turn tonight like it turned the first day. Locks keep their promises. It's the rest of us that wobble.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "effects": [{ "notebook": { "entry": "nb_met_ida" } }],
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "ida_repeat_busy"
+}

@@ -105,9 +105,21 @@ function main() {
     refs.flags.forEach((f) => referencedFlags.add(f));
   };
 
+  const notebookEntryIds = new Set(db.notebook.entries.map((n) => n.id));
+  const notebookQuestionIds = new Set(db.notebook.questions.map((q) => q.id));
+
   const checkEffects = (effects: Record<string, unknown>[] | undefined, where: string) => {
     if (!effects) return;
     for (const e of effects) {
+      if (e.notebook && typeof e.notebook === 'object') {
+        const nb = e.notebook as { entry?: string; question?: string };
+        if (nb.entry && !notebookEntryIds.has(nb.entry)) {
+          err(where, `references unknown notebook entry "${nb.entry}" (define it in notebook.json)`);
+        }
+        if (nb.question && !notebookQuestionIds.has(nb.question)) {
+          err(where, `references unknown notebook question "${nb.question}" (define it in notebook.json)`);
+        }
+      }
       if (typeof e.giveCard === 'string') checkCard(e.giveCard, where);
       if (typeof e.verify === 'string') checkCard(e.verify, where);
       if (typeof e.markOffRecord === 'string') checkCard(e.markOffRecord, where);
@@ -130,7 +142,8 @@ function main() {
   }
   for (const dlg of Object.values(db.dialogues)) {
     const file = `dialogue/${dlg.id}`;
-    checkChar(dlg.character, file);
+    // 'narrator' owns set-piece dialogues (scene triggers) — not a real character
+    if (dlg.character !== 'narrator') checkChar(dlg.character, file);
     for (const entry of dlg.entries) {
       checkCond(entry.cond, `${file} entry ${entry.id}`);
       if (!dlg.nodes[entry.node]) err(`${file} entry ${entry.id}`, `points at missing node "${entry.node}"`);
@@ -165,6 +178,11 @@ function main() {
       checkCond(m.cond, `${file} sitSpot`);
       checkBark(m.bark, `${file} sitSpot`);
     });
+    for (const t of loc.triggers) {
+      checkCond(t.cond, `${file} trigger ${t.id}`);
+      if (t.dialogue) checkDialogue(t.dialogue, `${file} trigger ${t.id}`);
+      if (!t.dialogue && !t.effects) err(`${file} trigger ${t.id}`, 'trigger does nothing (no dialogue, no effects)');
+    }
   }
   for (const card of Object.values(db.cards)) {
     const file = `cards/${card.id}`;
@@ -266,7 +284,9 @@ function main() {
   }
 
   // ---- 5. schedule reachability (II.14.1) ----
-  const talkableChars = new Set(Object.values(db.dialogues).map((d) => d.character));
+  const talkableChars = new Set(
+    Object.values(db.dialogues).map((d) => d.character).filter((c) => c !== 'narrator'),
+  );
   for (const charId of talkableChars) {
     const sched = db.schedules[charId];
     if (!sched) {

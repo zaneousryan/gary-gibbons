@@ -54,6 +54,13 @@ export default function Hud({ db }: { db: ContentDB }) {
       </div>
       <div className="pointer-events-auto flex gap-2">
         <button
+          onClick={() => useUiStore.getState().toggleNotebook()}
+          data-testid="hud-notebook"
+          className="bg-cream text-ink border-2 border-ink rounded px-3 py-2 font-bold cursor-pointer hover:brightness-95"
+        >
+          📓 Notebook
+        </button>
+        <button
           onClick={doAdvance}
           data-testid="hud-advance"
           className="bg-dusk text-cream border-2 border-amber/60 rounded px-3 py-2 font-bold cursor-pointer hover:brightness-110"

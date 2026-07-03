@@ -1,0 +1,22 @@
+{
+  "id": "julian",
+  "name": "Julian Vale",
+  "ref": "I.4",
+  "species": "red deer (stag, antlers in velvet)",
+  "portraitSet": "julian",
+  "voice": { "textSpeed": 1, "blipSound": "blip_julian" },
+  "greetings": {
+    "cold": "Mr. Gibbons. I've been advised to say nothing interesting.",
+    "neutral": "Mr. Gibbons! Good to see the press keeping us honest.",
+    "warm": "Gary. No speeches today, I promise."
+  },
+  "tells": [
+    {
+      "id": "ring_spinning",
+      "cond": {},
+      "observeLine": "julian_observe_ring",
+      "noticedFlag": "noticed_julian_ring"
+    }
+  ],
+  "etiquette": { "note": "Speaks in almost-speeches, deflates in private. When cornered, goes quiet rather than sharp. The umbrella is always with him." }
+}

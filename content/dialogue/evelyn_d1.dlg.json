@@ -1,0 +1,31 @@
+{
+  "id": "evelyn_d1",
+  "character": "evelyn",
+  "ref": "I.5.day1",
+  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "evelyn",
+      "line": "Fifty arrangements, one per year of the district. The early decades are easy — everyone remembers what they planted. It's the middle years nobody wrote down.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "line": "What's this year's flower?",
+      "authored": "aletheia",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "evelyn",
+      "line": "Ivy. Not technically a flower — technically a promise. It holds on to what it grows over. Seemed right for an anniversary. Now shoo, or hold stems.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "effects": [{ "notebook": { "entry": "nb_met_evelyn" } }],
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "evelyn_repeat_busy"
+}

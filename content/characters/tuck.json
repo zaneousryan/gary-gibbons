@@ -1,0 +1,15 @@
+{
+  "id": "tuck",
+  "name": "Constable Bram Tuck",
+  "ref": "I.4",
+  "species": "basset hound",
+  "portraitSet": "tuck",
+  "voice": { "textSpeed": 0.8, "blipSound": "blip_tuck" },
+  "greetings": {
+    "cold": "Gibbons. No comment, and I mean it fondly.",
+    "neutral": "Gibbons. Pastry?",
+    "warm": "Ah, the fourth estate. Pull up a lamppost."
+  },
+  "tells": [],
+  "etiquette": { "note": "Solves most crime by waiting near pastry. A fond skeptic of reporters, never an antagonist." }
+}

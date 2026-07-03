@@ -1,0 +1,15 @@
+{
+  "id": "ida",
+  "name": "Ida Wren",
+  "ref": "I.4",
+  "species": "wren",
+  "portraitSet": "ida",
+  "voice": { "textSpeed": 0.95, "blipSound": "blip_ida" },
+  "greetings": {
+    "cold": "Shop's open. Manners aren't, apparently.",
+    "neutral": "Mr. Gibbons. Mind the drawers; they get ideas.",
+    "warm": "Ah, the gentle one. Come in — this lock was just asking about you."
+  },
+  "tells": [],
+  "etiquette": { "note": "Won't talk while holding a lock mid-pick. Talks to locks like they're shy animals." }
+}

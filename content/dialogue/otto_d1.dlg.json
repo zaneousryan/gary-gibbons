@@ -1,0 +1,31 @@
+{
+  "id": "otto_d1",
+  "character": "otto",
+  "ref": "I.5.day1",
+  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "otto",
+      "line": "Big day, Mr. Gibbons. The whole district's been percolating for a week — you can't rush the fiftieth year, but it's rushing anyway.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "line": "Special blend for the occasion?",
+      "authored": "aletheia",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "otto",
+      "line": "The Festival Blend. Fifty years in the making — which is to say, same beans, more hope. Sit anywhere. Tonight, the vault. Tomorrow, everyone tells you they always knew what was inside.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "effects": [{ "notebook": { "entry": "nb_met_otto" } }],
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "otto_repeat_busy"
+}

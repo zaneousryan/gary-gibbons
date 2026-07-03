@@ -1,0 +1,14 @@
+{
+  "id": "grandpas_package",
+  "ref": "I.5.day1",
+  "type": "document",
+  "title": "Grandpa's package was in there",
+  "sprite": "card_grandpas_package",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "Among the missing: a package left at the founding by a young cub reporter named Arthur 'Archie' Gibbons. Gary never knew what was in it. He was going to find out tonight.",
+  "verifyRoutes": [],
+  "reReadLines": [
+    { "cond": { "day": { "gte": 4 } }, "bark": "reread_grandpas_package" }
+  ]
+}

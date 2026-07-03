@@ -1,0 +1,31 @@
+{
+  "id": "tuck_d1",
+  "character": "tuck",
+  "ref": "I.5.day1",
+  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "tuck",
+      "line": "Gibbons. Big night tonight. Crowd control plan is as follows: it's Lanternside. There's no crowd to control. There's neighbors, standing close together, on purpose.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "line": "Any predictions for the vault, Constable?",
+      "authored": "aletheia",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "tuck",
+      "line": "Drawings. A tooth, probably — kids were always sealing teeth in things back then, for science. And fifty years of people getting exactly what they hoped for, which is the rarest thing I police. Pastry?",
+      "authored": "aletheia",
+      "emote": "happy",
+      "effects": [{ "notebook": { "entry": "nb_met_tuck" } }],
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "tuck_repeat_busy"
+}

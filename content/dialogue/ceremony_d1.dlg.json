@@ -1,0 +1,96 @@
+{
+  "id": "ceremony_d1",
+  "character": "narrator",
+  "ref": "I.5.day1",
+  "entries": [{ "id": "main", "cond": {}, "node": "n1" }],
+  "nodes": {
+    "n1": {
+      "speaker": "narrator",
+      "line": "Evening. The whole district, assembled. Bunting overhead, lanterns lit early for the occasion. Warren Holt gives the speech he has rehearsed for eight years, and means every word of it.",
+      "authored": "aletheia",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "warren",
+      "line": "Fifty years ago, our founders sealed away the things they loved best, and trusted us to be the kind of district worth opening them for. Julian — the key, and the honor, are yours.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "narrator",
+      "line": "Julian Vale takes the Ceremonial Key. The lock turns — smooth, well-oiled, Ida's lifetime of care in one quiet click. The vault door swings open.",
+      "authored": "aletheia",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "narrator",
+      "line": "The crowd leans in. Silence. The empty vault holds the stage for a long, long three seconds.",
+      "authored": "verbatim",
+      "next": "n5"
+    },
+    "n5": {
+      "speaker": "poppy",
+      "line": "That's... that's not one of my contingency cards.",
+      "authored": "verbatim",
+      "emote": "surprised",
+      "next": "n6"
+    },
+    "n6": {
+      "speaker": "warren",
+      "line": "Fifty years.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "next": "n7"
+    },
+    "n7": {
+      "speaker": "julian",
+      "line": "Perhaps... perhaps there's been some mistake with the— the masonry.",
+      "authored": "verbatim",
+      "emote": "worried",
+      "next": "n8"
+    },
+    "n8": {
+      "speaker": "narrator",
+      "line": "The ring on Julian's finger spins; he stares into the vault a beat too long.",
+      "authored": "verbatim",
+      "next": "n9"
+    },
+    "n9": {
+      "speaker": "clara",
+      "line": "The masonry.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "n10"
+    },
+    "n10": {
+      "speaker": "dot",
+      "line": "Gibbons. Front page. Go.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "n11"
+    },
+    "n11": {
+      "speaker": "narrator",
+      "line": "Gary's long fingers find the brass badge inside his lapel, the way they always do when the floor tilts.",
+      "authored": "aletheia",
+      "next": "n12"
+    },
+    "n12": {
+      "speaker": "gary",
+      "line": "Okay, Grandpa. Remember who you are.",
+      "authored": "verbatim",
+      "effects": [
+        { "setFlag": "ceremony_done" },
+        { "giveCard": "empty_vault", "status": "verified" },
+        { "giveCard": "unforced_lock", "status": "verified" },
+        { "giveCard": "fifty_years_of_items", "status": "verified" },
+        { "giveCard": "grandpas_package", "status": "verified" },
+        { "notebook": { "entry": "nb_empty_vault" } },
+        { "notebook": { "question": "q_who_emptied_the_capsule" } },
+        { "playBark": "gary_going_home_d1" }
+      ],
+      "next": null
+    }
+  }
+}

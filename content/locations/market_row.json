@@ -1,0 +1,87 @@
+{
+  "id": "market_row",
+  "name": "Market Row",
+  "ref": "I.2",
+  "layers": ["bg", "mid", "fg"],
+  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "exits": [
+    { "to": "the_percolator", "at": [160, 880] },
+    { "to": "founders_square", "at": [1760, 880] }
+  ],
+  "sitSpot": {
+    "at": [980, 880],
+    "monologues": [{ "cond": {}, "bark": "bench_market_d1" }]
+  },
+  "hotspots": [
+    {
+      "id": "talk_gino",
+      "at": [480, 800],
+      "kind": "talk",
+      "character": "gino",
+      "label": "Gino"
+    },
+    {
+      "id": "talk_ida",
+      "at": [900, 800],
+      "kind": "talk",
+      "character": "ida",
+      "label": "Ida"
+    },
+    {
+      "id": "talk_evelyn",
+      "at": [1320, 800],
+      "kind": "talk",
+      "character": "evelyn",
+      "label": "Evelyn"
+    },
+    {
+      "id": "talk_milo",
+      "at": [1550, 800],
+      "kind": "talk",
+      "character": "milo",
+      "label": "Milo"
+    },
+    {
+      "id": "wren_wick_window",
+      "at": [1000, 560],
+      "kind": "chekhov",
+      "label": "Wren & Wick",
+      "detail": {
+        "tier": "texture",
+        "text": "Ten thousand labeled drawers, each scaled to wren hands. A child's first practice lock is mounted by the door like a diploma: 'I.W., age 9.' The sign says WREN & WICK. There is no Wick in sight."
+      },
+      "ref": "III.24"
+    },
+    {
+      "id": "flower_stall",
+      "at": [1380, 560],
+      "kind": "chekhov",
+      "label": "Fifty Years of Flowers",
+      "detail": {
+        "tier": "texture",
+        "text": "Evelyn is building the anniversary arrangements — one variety for each of the district's fifty years. This year's is ivy. 'It holds,' she says, to nobody."
+      },
+      "ref": "I.5.day1"
+    },
+    {
+      "id": "exit_percolator",
+      "at": [160, 820],
+      "kind": "exit",
+      "to": "the_percolator",
+      "label": "To the Percolator"
+    },
+    {
+      "id": "exit_square",
+      "at": [1760, 820],
+      "kind": "exit",
+      "to": "founders_square",
+      "label": "To Founders' Square"
+    }
+  ],
+  "ambient": {
+    "vignetteTags": ["market", "outdoors"],
+    "weatherVariants": true,
+    "music": "music_market",
+    "ambience": "amb_market"
+  }
+}

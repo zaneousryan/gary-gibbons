@@ -1,0 +1,22 @@
+{
+  "id": "warren",
+  "name": "Warren Holt",
+  "ref": "I.4",
+  "species": "badger",
+  "portraitSet": "warren",
+  "voice": { "textSpeed": 0.9, "blipSound": "blip_warren" },
+  "greetings": {
+    "cold": "Mr. Gibbons. Keep it brief; the district doesn't run on interviews.",
+    "neutral": "Mr. Gibbons. Good of you to come by.",
+    "warm": "Ah — Archie's boy. Sit down, the light's good this hour."
+  },
+  "tells": [
+    {
+      "id": "cleaning_clean_glasses",
+      "cond": { "flag": "warren_topic_julian" },
+      "observeLine": "warren_observe_glasses",
+      "noticedFlag": "noticed_warren_glasses"
+    }
+  ],
+  "etiquette": { "note": "Feeds pigeons at 8 a.m. sharp. Never interrupt the pigeons." }
+}

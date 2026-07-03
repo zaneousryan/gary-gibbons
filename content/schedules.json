@@ -2,7 +2,8 @@
   "dot": {
     "d1": {
       "morning": { "loc": "the_percolator", "spot": "corner_table" },
-      "midday": { "loc": "the_percolator", "spot": "corner_table" }
+      "midday": { "loc": "the_percolator", "spot": "corner_table" },
+      "evening": { "loc": "founders_square", "spot": "press_row" }
     }
   },
   "otto": {
@@ -10,6 +11,76 @@
       "morning": { "loc": "the_percolator", "spot": "counter" },
       "midday": { "loc": "the_percolator", "spot": "counter" },
       "evening": { "loc": "the_percolator", "spot": "counter" }
+    }
+  },
+  "margie": {
+    "d1": {
+      "morning": { "loc": "the_percolator", "spot": "window_table" },
+      "midday": { "loc": "the_percolator", "spot": "window_table" },
+      "evening": { "loc": "founders_square", "spot": "crowd" }
+    }
+  },
+  "tuck": {
+    "d1": {
+      "morning": { "loc": "the_percolator", "spot": "pastry_case" },
+      "midday": { "loc": "the_percolator", "spot": "pastry_case" },
+      "evening": { "loc": "founders_square", "spot": "crowd" }
+    }
+  },
+  "gino": {
+    "d1": {
+      "morning": { "loc": "market_row", "spot": "fruit_stall" },
+      "midday": { "loc": "market_row", "spot": "fruit_stall" },
+      "evening": { "loc": "founders_square", "spot": "crowd" }
+    }
+  },
+  "ida": {
+    "d1": {
+      "morning": { "loc": "market_row", "spot": "wren_wick" },
+      "midday": { "loc": "market_row", "spot": "wren_wick" },
+      "evening": { "loc": "founders_square", "spot": "crowd" }
+    }
+  },
+  "evelyn": {
+    "d1": {
+      "morning": { "loc": "market_row", "spot": "flower_shop" },
+      "midday": { "loc": "market_row", "spot": "flower_shop" },
+      "evening": { "loc": "founders_square", "spot": "crowd" }
+    }
+  },
+  "milo": {
+    "d1": {
+      "morning": { "loc": "market_row", "spot": "stakeout_box" },
+      "midday": { "loc": "market_row", "spot": "stakeout_box" },
+      "evening": { "loc": "founders_square", "spot": "crowd" }
+    }
+  },
+  "poppy": {
+    "d1": {
+      "morning": { "loc": "founders_square", "spot": "stage" },
+      "midday": { "loc": "founders_square", "spot": "stage" },
+      "evening": { "loc": "founders_square", "spot": "stage" }
+    }
+  },
+  "warren": {
+    "d1": {
+      "morning": { "loc": "founders_square", "spot": "council_rail" },
+      "midday": { "loc": "founders_square", "spot": "council_rail" },
+      "evening": { "loc": "founders_square", "spot": "stage" }
+    }
+  },
+  "julian": {
+    "d1": {
+      "morning": { "loc": "founders_square", "spot": "receiving_line" },
+      "midday": { "loc": "founders_square", "spot": "receiving_line" },
+      "evening": { "loc": "founders_square", "spot": "stage" }
+    }
+  },
+  "clara": {
+    "d1": {
+      "morning": { "loc": "founders_square", "spot": "bench" },
+      "midday": { "loc": "founders_square", "spot": "bench" },
+      "evening": { "loc": "founders_square", "spot": "stage" }
     }
   }
 }

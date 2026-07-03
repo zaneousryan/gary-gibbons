@@ -61,6 +61,23 @@ export const SitSpotSchema = z
   })
   .strict();
 
+/**
+ * Scene triggers: auto-fire when the player is in the location and the cond
+ * passes (checked on enter and on phase change). Carries set-pieces like the
+ * Day 1 ceremony (I.5.day1 beat 5 — unskippable).
+ */
+export const SceneTriggerSchema = z
+  .object({
+    id: IdSchema,
+    cond: ConditionSchema,
+    /** Dialogue to run (multi-speaker set-pieces use per-node speakers). */
+    dialogue: IdSchema.optional(),
+    effects: EffectsSchema.optional(),
+    once: z.boolean().default(true),
+    ref: RefSchema,
+  })
+  .strict();
+
 export const LocationSchema = z
   .object({
     id: IdSchema,
@@ -75,6 +92,7 @@ export const LocationSchema = z
     exits: z.array(z.object({ to: IdSchema, at: Vec2Schema }).strict()).default([]),
     sitSpot: SitSpotSchema.optional(),
     hotspots: z.array(HotspotSchema).default([]),
+    triggers: z.array(SceneTriggerSchema).default([]),
     ambient: z
       .object({
         vignetteTags: z.array(IdSchema).default([]),

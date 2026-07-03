@@ -1,0 +1,58 @@
+{
+  "id": "poppy_d1",
+  "character": "poppy",
+  "ref": "I.5.day1",
+  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "poppy",
+      "line": "Mr. Gibbons hi hello — the bunting, do you see the bunting, the LEFT side is four centimeters lower and the ceremony is in HOURS and the swan contingency does NOT cover bunting—",
+      "authored": "aletheia",
+      "emote": "worried",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "stances": {
+        "press": {
+          "line": "Four centimeters. Will anyone notice?",
+          "authored": "aletheia",
+          "next": "c3p"
+        },
+        "empathize": {
+          "line": "First big event. How are you holding up?",
+          "authored": "aletheia",
+          "next": "c3e"
+        }
+      }
+    },
+    "c3p": {
+      "speaker": "poppy",
+      "line": "WILL ANYONE— I will notice, Mr. Gibbons. Fifty years of waiting deserves symmetrical bunting. Sorry — sorry, ladder, excuse me, coming through.",
+      "authored": "aletheia",
+      "emote": "worried",
+      "effects": [{ "notebook": { "entry": "nb_met_poppy" } }],
+      "next": "c4"
+    },
+    "c3e": {
+      "speaker": "poppy",
+      "line": "Holding up! Holding up is PLAN C and we are still very much on PLAN A which is 'everything is fine.' ...It's my first major event. Everyone who ever mattered to this district is coming. So. Plan A!",
+      "authored": "aletheia",
+      "emote": "worried",
+      "effects": [
+        { "notebook": { "entry": "nb_met_poppy" } },
+        { "trust": { "char": "poppy", "delta": 1 } }
+      ],
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "poppy",
+      "line": "Tonight it all pays off. Fifty years, one vault, zero surprises. I have a laminated card that says exactly that.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "poppy_repeat_busy"
+}

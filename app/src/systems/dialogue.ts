@@ -81,12 +81,22 @@ function nodeView(session: DialogueSession, done = false): DialogueView {
   };
 }
 
+/**
+ * Off-the-record enforcement (III.23.1): cards gained inside an offRecord node
+ * enter play as status "offrecord" — knowledge, not publishable proof.
+ */
+function applyNodeEffects(effects: Effect[] | undefined, offRecord: boolean) {
+  if (!effects) return;
+  const adjusted = offRecord
+    ? effects.map((e) => ('giveCard' in e ? { ...e, status: 'offrecord' as const } : e))
+    : effects;
+  useGameStore.getState().runEffects(adjusted);
+}
+
 function enterNode(session: DialogueSession) {
   const node = session.dlg.nodes[session.nodeId];
   session.path.push(session.nodeId);
-  if (node.effects) {
-    useGameStore.getState().runEffects(node.effects as Effect[]);
-  }
+  applyNodeEffects(node.effects as Effect[] | undefined, node.offRecord ?? false);
 }
 
 export const useDialogueStore = create<DialogueStore>()((set, get) => ({
@@ -122,7 +132,7 @@ export const useDialogueStore = create<DialogueStore>()((set, get) => ({
     if (!opt) return;
     const state = useGameStore.getState().state;
     if (!evalCondition((opt.cond ?? {}) as Condition, state)) return;
-    if (opt.effects) useGameStore.getState().runEffects(opt.effects as Effect[]);
+    applyNodeEffects(opt.effects as Effect[] | undefined, node.offRecord ?? false);
     session.path.push(`${session.nodeId}:${stance}`);
     followNext(get(), set, session, opt.next);
   },
@@ -135,7 +145,7 @@ export const useDialogueStore = create<DialogueStore>()((set, get) => ({
     if (!choice) return;
     const state = useGameStore.getState().state;
     if (!evalCondition((choice.cond ?? {}) as Condition, state)) return;
-    if (choice.effects) useGameStore.getState().runEffects(choice.effects as Effect[]);
+    applyNodeEffects(choice.effects as Effect[] | undefined, node.offRecord ?? false);
     session.path.push(`${session.nodeId}:choice${index}`);
     followNext(get(), set, session, choice.next);
   },

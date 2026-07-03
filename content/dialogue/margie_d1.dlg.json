@@ -1,0 +1,40 @@
+{
+  "id": "margie_d1",
+  "character": "margie",
+  "ref": "I.5.day1",
+  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "margie",
+      "line": "Out of my kitchen and into Otto's, pet — the inn's full for the first time since the flood year. Every bed taken for the ceremony. Even took a lodger last week, funny little fellow, all maps and whispers.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "line": "Maps and whispers?",
+      "authored": "aletheia",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "margie",
+      "line": "Asks about treasure at breakfast, love. At BREAKFAST. Before the eggs. But he pays on time and compliments the marmalade, so he's welcome to his whispering. You'll be at the square tonight?",
+      "authored": "aletheia",
+      "emote": "happy",
+      "effects": [
+        { "setFlag": "heard_of_lodger" },
+        { "notebook": { "entry": "nb_met_margie" } }
+      ],
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "gary",
+      "line": "Front row. Well — press row. It's the same row, but with worse posture.",
+      "authored": "aletheia",
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "margie_repeat_busy"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "julian_d1",
+  "character": "julian",
+  "ref": "I.5.day1",
+  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "julian",
+      "line": "Mr. Gibbons — of the Ledger, of course. Tonight belongs to the whole district, and I intend to say so, at reasonable length, with two jokes my sister has already vetoed.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "stances": {
+        "press": {
+          "line": "Twenty-four this week, and the chair with it. Ready?",
+          "authored": "aletheia",
+          "next": "c3p"
+        },
+        "empathize": {
+          "line": "Big week for you. Your father would have liked seeing it.",
+          "authored": "aletheia",
+          "next": "c3e"
+        },
+        "observe": {
+          "cond": { "flag": "noticed_julian_ring" },
+          "line": "You spin that ring when you talk about tonight.",
+          "authored": "aletheia",
+          "next": "c3o"
+        }
+      }
+    },
+    "c3p": {
+      "speaker": "julian",
+      "line": "Born ready — that's the phrase, isn't it? Though I've always wondered about it. Nobody's born ready. Some of us are barely ready by the ceremony.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "effects": [{ "notebook": { "entry": "nb_met_julian" } }],
+      "next": "c4"
+    },
+    "c3e": {
+      "speaker": "julian",
+      "line": "...Yes. He would have stood just there, I think, and let Warren have the stage anyway. Father was generous like that. It made following him look easy, which was his one dishonesty.",
+      "authored": "aletheia",
+      "emote": "sad",
+      "effects": [
+        { "notebook": { "entry": "nb_met_julian" } },
+        { "trust": { "char": "julian", "delta": 1 } }
+      ],
+      "next": "c4"
+    },
+    "c3o": {
+      "speaker": "julian",
+      "line": "Do I? Habit. It was Father's. It's a little loose on me — deer fingers run slim in our line. I should have it resized. I keep not having it resized.",
+      "authored": "aletheia",
+      "emote": "worried",
+      "effects": [
+        { "notebook": { "entry": "nb_met_julian" } },
+        { "setFlag": "julian_ring_discussed" }
+      ],
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "julian",
+      "line": "Tonight, then. History gets opened, speeches get survived, and tomorrow the district wakes up exactly the same, only prouder. That's the plan.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "julian_repeat_busy"
+}

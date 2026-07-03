@@ -10,8 +10,13 @@ import type { Day, Phase } from '@engine/types';
 import PixiStage from '@scenes/PixiStage';
 import DialogueBox from '@ui/DialogueBox';
 import Hud from '@ui/Hud';
+import Notebook from '@ui/Notebook';
+import InnerVoice from '@ui/InnerVoice';
 import { ExaminePanel, Toast } from '@ui/Overlays';
 import DevMenu from '@dev/DevMenu';
+import { installTriggerWatcher } from '@systems/triggers';
+import { installBarkWatcher } from '@systems/barks';
+import { installNotebookWatcher } from '@systems/notebook';
 
 export default function App() {
   const [db, setDb] = useState<ContentDB | null>(null);
@@ -35,6 +40,14 @@ export default function App() {
       useGameStore.getState().setGameDef(def);
       useGameStore.getState().newGame(1);
       setDb(content);
+      const un1 = installBarkWatcher(content);
+      const un2 = installNotebookWatcher(content);
+      const un3 = installTriggerWatcher(content);
+      return () => {
+        un1();
+        un2();
+        un3();
+      };
     } catch (err) {
       setBootError(String(err));
     }
@@ -60,6 +73,8 @@ export default function App() {
       {stage}
       <Hud db={db} />
       <DialogueBox db={db} />
+      <Notebook db={db} />
+      <InnerVoice />
       <ExaminePanel />
       <Toast />
       <DevMenu db={db} />

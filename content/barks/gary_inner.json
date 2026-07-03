@@ -32,6 +32,158 @@
       "authored": "aletheia",
       "ref": "II.17.1",
       "tags": []
+    },
+    {
+      "id": "bench_market_d1",
+      "text": "Market Row before a festival: string lights going up, prices going down, and Gino conducting the whole street like an orchestra that owes him money.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "II.18",
+      "tags": ["market"]
+    },
+    {
+      "id": "bench_square_d1",
+      "text": "The monument's been scrubbed so hard it looks embarrassed. Fifty years tonight. Whole district's holding its breath, and the bunting's holding most of it.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "II.18",
+      "tags": ["square"]
+    },
+    {
+      "id": "bench_square_post_ceremony",
+      "text": "The square empties slow after bad news, like nobody wants to be the first to admit it's real. Somebody knew that vault would be empty. Somebody has known for days.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.5.day1",
+      "tags": ["square"]
+    },
+    {
+      "id": "gary_going_home_d1",
+      "text": "That's enough thread for one day. Time to see what it ties to.",
+      "speaker": "gary",
+      "authored": "verbatim",
+      "ref": "I.5",
+      "tags": []
+    },
+    {
+      "id": "reread_grandpas_package",
+      "text": "Four days chasing everyone else's loss. Grandpa's package is still in that dark somewhere too. …Working on it, old man.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "III.27",
+      "tags": []
+    },
+    {
+      "id": "otto_repeat_busy",
+      "text": "Otto's mid-pour. Interrupting a pour is, in this establishment, a crime with witnesses.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.4",
+      "tags": []
+    },
+    {
+      "id": "margie_repeat_busy",
+      "text": "Margie's got a tray in each wing and a rumor on hold. Later.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.4",
+      "tags": []
+    },
+    {
+      "id": "gino_repeat_busy",
+      "text": "Gino is mid-aria about a melon. There is no safe way in.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.4",
+      "tags": []
+    },
+    {
+      "id": "ida_repeat_busy",
+      "text": "Ida's holding a lock mid-pick. House rules: you wait, or you lose the good conversation.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "III.23.4",
+      "tags": []
+    },
+    {
+      "id": "evelyn_repeat_busy",
+      "text": "Evelyn's shears are moving. A wise reporter respects the blade radius.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.4",
+      "tags": []
+    },
+    {
+      "id": "poppy_repeat_busy",
+      "text": "Poppy is three clipboards deep and moving at hummingbird speed. Catching her now would require a net, and ethics.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.4",
+      "tags": []
+    },
+    {
+      "id": "warren_repeat_busy",
+      "text": "Warren's back with the pigeons. The speech must be close; the front row looks moved.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.4",
+      "tags": []
+    },
+    {
+      "id": "julian_repeat_busy",
+      "text": "Julian's shaking hands down a receiving line that keeps refilling. The smile hasn't moved in an hour. That takes training, or fear.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.4",
+      "tags": []
+    },
+    {
+      "id": "clara_repeat_busy",
+      "text": "Clara's reading on the bench with the posture of someone timing everyone who interrupts her. Not twice in one day.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.4",
+      "tags": []
+    },
+    {
+      "id": "milo_repeat_busy",
+      "text": "Milo's on a stakeout. He'd never forgive me for blowing his cover, which is a cardboard box labeled BOX.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.4",
+      "tags": []
+    },
+    {
+      "id": "tuck_repeat_busy",
+      "text": "Tuck has achieved perfect stillness against that lamppost. Waking him would be a crime, and he'd know.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.4",
+      "tags": []
+    },
+    {
+      "id": "poppy_observe_glasses",
+      "text": "Her glasses fog when the key comes up. Every time. Like weather.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "II.12.1",
+      "tags": []
+    },
+    {
+      "id": "warren_observe_glasses",
+      "text": "He's cleaned those glasses three times since I said the boy's name. They were clean the first time.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "II.12.1",
+      "tags": []
+    },
+    {
+      "id": "julian_observe_ring",
+      "text": "The ring again. Around, around. His father's, too loose, and he spins it exactly when the future comes up.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.4",
+      "tags": []
     }
   ]
 }

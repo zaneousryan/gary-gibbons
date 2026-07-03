@@ -18,21 +18,23 @@ async function clickStage(page: Page, x: number, y: number) {
 async function playConversation(page: Page) {
   const box = page.getByTestId('dialogue-box');
   await expect(box).toBeVisible();
-  for (let i = 0; i < 40; i++) {
+  for (let i = 0; i < 80; i++) {
     if (!(await box.isVisible())) return;
     const press = page.getByTestId('stance-press');
     const line = page.getByTestId('dialogue-line');
-    const advance = page.getByTestId('dialogue-advance');
-    if (await press.isVisible()) {
-      await press.click();
-    } else if (await advance.isVisible()) {
-      await advance.click();
-    } else if (await line.isVisible()) {
-      await line.click(); // completes typing, then advances
+    try {
+      if (await press.isVisible()) {
+        await press.click({ timeout: 2000 });
+      } else if (await line.isVisible()) {
+        // first click completes the typewriter, second advances — both land here
+        await line.click({ timeout: 2000 });
+      }
+    } catch {
+      // node changed mid-click — loop re-evaluates
     }
-    await page.waitForTimeout(120);
+    await page.waitForTimeout(140);
   }
-  throw new Error('conversation did not finish in 40 interactions');
+  throw new Error('conversation did not finish in 80 interactions');
 }
 
 test('boot → walk → talk → save → reload', async ({ page }) => {
@@ -67,6 +69,40 @@ test('boot → walk → talk → save → reload', async ({ page }) => {
   await waitForScene(page, 'gary_apartment');
   await page.getByTestId('hud-load').click();
   await expect(page.getByTestId('hud-location')).toHaveText('The Percolator', { timeout: 10_000 });
+});
+
+test('day 1 ceremony set-piece fires at the square', async ({ page }) => {
+  test.setTimeout(180_000); // three scene walks + a 13-node set-piece
+  await page.goto('/');
+  await expect(page.getByTestId('hud-location')).toHaveText("Gary's Apartment", { timeout: 20_000 });
+  await waitForScene(page, 'gary_apartment');
+
+  // walk: apartment → percolator → market row → founders' square
+  await clickStage(page, 1760, 820);
+  await waitForScene(page, 'the_percolator');
+  await clickStage(page, 1760, 820);
+  await waitForScene(page, 'market_row');
+  await clickStage(page, 1760, 820);
+  await waitForScene(page, 'founders_square');
+  await expect(page.getByTestId('hud-location')).toHaveText("Founders' Square");
+
+  // advance to evening — the ceremony trigger fires unskippably
+  await page.getByTestId('hud-advance').click();
+  await page.getByTestId('hud-advance').click();
+  await expect(page.getByTestId('dialogue-box')).toBeVisible({ timeout: 10_000 });
+  await playConversation(page);
+
+  // post-ceremony: the monument examine shows the empty vault text
+  await waitForScene(page, 'founders_square');
+  await clickStage(page, 820, 560);
+  await expect(page.getByTestId('examine-panel')).toBeVisible({ timeout: 15_000 });
+  await expect(page.getByTestId('examine-panel')).toContainText('nothing at all');
+  await page.getByTestId('examine-close').click();
+
+  // the notebook recorded it
+  await page.getByTestId('hud-notebook').click();
+  await page.getByTestId('notebook-tab-questions').click();
+  await expect(page.getByTestId('notebook-question-q_who_emptied_the_capsule')).toBeVisible();
 });
 
 test('examine and phase advance', async ({ page }) => {

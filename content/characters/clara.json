@@ -1,0 +1,15 @@
+{
+  "id": "clara",
+  "name": "Clara Vale",
+  "ref": "I.4",
+  "species": "red deer (doe)",
+  "portraitSet": "clara",
+  "voice": { "textSpeed": 1, "blipSound": "blip_clara" },
+  "greetings": {
+    "cold": "Mr. Gibbons. Ask better questions than the last paper did.",
+    "neutral": "The reporter. What have you noticed today?",
+    "warm": "Mr. Gibbons. I saved you a question you haven't thought of yet."
+  },
+  "tells": [],
+  "etiquette": { "note": "Answers questions with better questions. The only person in town who out-interviews Gary." }
+}

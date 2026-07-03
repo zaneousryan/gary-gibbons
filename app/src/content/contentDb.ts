@@ -15,11 +15,13 @@ import {
   AchievementsFileSchema,
   BarksFileSchema,
   HintsFileSchema,
+  NotebookFileSchema,
   SidestorySchema,
   TimelineFileSchema,
   type AchievementsFile,
   type BarksFile,
   type HintsFile,
+  type NotebookFile,
   type Sidestory,
   type TimelineFile,
 } from './schemas/misc';
@@ -38,6 +40,7 @@ export interface ContentDB {
   timeline: TimelineFile | null;
   hints: HintsFile;
   achievements: AchievementsFile;
+  notebook: NotebookFile;
 }
 
 export interface ContentIssue {
@@ -84,6 +87,7 @@ export function buildContentDB(files: Record<string, unknown>): ContentDB {
     timeline: null,
     hints: { gates: {} },
     achievements: { achievements: [] },
+    notebook: { entries: [], questions: [] },
   };
 
   const put = <T extends { id: string }>(
@@ -129,6 +133,8 @@ export function buildContentDB(files: Record<string, unknown>): ContentDB {
         db.timeline = TimelineFileSchema.parse(json);
       } else if (file === 'hints.json') {
         db.hints = HintsFileSchema.parse(json);
+      } else if (file === 'notebook.json') {
+        db.notebook = NotebookFileSchema.parse(json);
       } else if (file === 'achievements.json') {
         db.achievements = AchievementsFileSchema.parse(json);
       } else {

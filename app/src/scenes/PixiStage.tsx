@@ -4,7 +4,7 @@
 // actors, tab-cycling, tint LUTs, and rain particles.
 
 import { useEffect, useRef } from 'react';
-import { Application, Container, Graphics, Sprite, Text, TextStyle } from 'pixi.js';
+import { Application, Container, Graphics, Sprite, Text, TextStyle, type Texture } from 'pixi.js';
 import type { ContentDB } from '@content/contentDb';
 import type { Hotspot, LocationDef } from '@content/schemas/location';
 import { evalCondition, type Condition } from '@engine/conditions';
@@ -19,12 +19,30 @@ const DESIGN_W = 1920;
 const DESIGN_H = 1080;
 const WALK_SPEED = 520; // px/sec along the walk line
 
+/** Day-phase tint LUT-lite (spec §7): whole-world multiply per phase. */
+const PHASE_TINT: Record<string, number> = {
+  morning: 0xfff2dc,
+  midday: 0xffffff,
+  evening: 0xf2b878,
+  night: 0x7d94a8,
+};
+
+interface NpcView {
+  sprite: Sprite;
+  idle: Texture[];
+  talk: Texture[];
+}
+
 interface SceneRefs {
   app: Application;
   world: Container;
   gary: Sprite | null;
   garyTarget: number | null;
   hotspotViews: { hotspot: Hotspot; marker: Graphics; label: Text; x: number; y: number }[];
+  focusIndex: number; // keyboard tab-cycle (accessibility floor, ALETHEIA §7)
+  npcs: Map<string, NpcView>;
+  sitSpot: { x: number; y: number; marker: Graphics } | null;
+  animClock: number;
   pendingInteract: (() => void) | null;
   location: LocationDef | null;
 }
@@ -36,6 +54,9 @@ async function buildScene(db: ContentDB, refs: SceneRefs, locationId: string) {
   refs.gary = null;
   refs.location = null;
   refs.hotspotViews = [];
+  refs.npcs = new Map();
+  refs.sitSpot = null;
+  refs.focusIndex = -1;
   refs.garyTarget = null;
   refs.pendingInteract = null;
   world.removeChildren().forEach((c) => c.destroy({ children: true }));
@@ -44,6 +65,7 @@ async function buildScene(db: ContentDB, refs: SceneRefs, locationId: string) {
   const loc = db.locations[locationId];
   if (!loc) return;
   refs.location = loc;
+  world.tint = PHASE_TINT[state.phase] ?? 0xffffff;
 
   // parallax layers, back to front
   for (const layer of loc.layers) {
@@ -64,22 +86,30 @@ async function buildScene(db: ContentDB, refs: SceneRefs, locationId: string) {
   }
   const actorLayer = (world.getChildByLabel('actors') as Container) ?? world;
 
-  // scheduled NPCs
+  // scheduled NPCs (with 2-frame idle/talk cycles, spec §7)
+  let spreadIndex = 0;
   for (const placement of actorsAt(db, state, loc.id)) {
     const ch = db.characters[placement.characterId];
     if (!ch) continue;
-    const tex = await loadTexture(spritePath(ch.portraitSet, 'idle_1'));
-    if (!tex) continue;
-    const npc = new Sprite(tex);
+    const [idle1, idle2, talk1, talk2] = await Promise.all(
+      ['idle_1', 'idle_2', 'talk_1', 'talk_2'].map((p) => loadTexture(spritePath(ch.portraitSet, p))),
+    );
+    if (!idle1) continue;
+    const npc = new Sprite(idle1);
     npc.anchor.set(0.5, 1);
     npc.height = 360;
     npc.scale.x = npc.scale.y;
     // stand them near their talk hotspot if one exists, else spread along the line
     const talkSpot = loc.hotspots.find((h) => h.kind === 'talk' && h.character === ch.id);
-    const x = talkSpot?.at?.[0] ?? loc.walkLine.minX + 300;
+    const x = talkSpot?.at?.[0] ?? loc.walkLine.minX + 260 + 220 * spreadIndex++;
     npc.position.set(x, loc.walkLine.y);
     npc.label = `npc_${ch.id}`;
     actorLayer.addChild(npc);
+    refs.npcs.set(ch.id, {
+      sprite: npc,
+      idle: [idle1, idle2 ?? idle1],
+      talk: [talk1 ?? idle1, talk2 ?? talk1 ?? idle1],
+    });
   }
 
   // Gary
@@ -120,6 +150,24 @@ async function buildScene(db: ContentDB, refs: SceneRefs, locationId: string) {
     world.addChild(marker, label);
     refs.hotspotViews.push({ hotspot, marker, label, x: hx, y: hy });
   }
+
+  // sit spot — Bench Time (II.18)
+  if (loc.sitSpot) {
+    const [sx, sy] = loc.sitSpot.at;
+    const marker = new Graphics().roundRect(-26, -12, 52, 24, 6).fill(0x33605d).stroke({ color: 0x2c2620, width: 3 });
+    marker.position.set(sx, sy - 6);
+    marker.eventMode = 'static';
+    marker.cursor = 'pointer';
+    world.addChild(marker);
+    refs.sitSpot = { x: sx, y: sy, marker };
+  }
+}
+
+/** Sit down: play the first passing bench monologue (II.18). */
+function sitDown(loc: LocationDef) {
+  const state = useGameStore.getState().state;
+  const pick = loc.sitSpot?.monologues.find((m) => evalCondition((m.cond ?? {}) as Condition, state));
+  if (pick) useGameStore.getState().runEffects([{ playBark: pick.bark }]);
 }
 
 function centroid(poly: [number, number][]): [number, number] {
@@ -193,12 +241,17 @@ export default function PixiStage({ db }: { db: ContentDB }) {
       gary: null,
       garyTarget: null,
       hotspotViews: [],
+      focusIndex: -1,
+      npcs: new Map(),
+      sitSpot: null,
+      animClock: 0,
       pendingInteract: null,
       location: null,
     };
     let destroyed = false;
     let unsubLocation: (() => void) | null = null;
     let unsubPhase: (() => void) | null = null;
+    let cleanupKeys: (() => void) | null = null;
 
     (async () => {
       await refs.app.init({
@@ -220,16 +273,43 @@ export default function PixiStage({ db }: { db: ContentDB }) {
       // point-to-walk: clicking empty scene walks; clicking a hotspot walks then interacts
       refs.app.stage.eventMode = 'static';
       refs.app.stage.hitArea = { contains: () => true };
+      const walkTo = (x: number, act: (() => void) | null) => {
+        const loc = refs.location;
+        if (!loc || !refs.gary) return;
+        refs.garyTarget = Math.min(Math.max(x, loc.walkLine.minX), loc.walkLine.maxX);
+        refs.pendingInteract = act;
+      };
+
       refs.app.stage.on('pointertap', (e) => {
         if (useDialogueStore.getState().view) return; // conversation holds the floor
         const loc = refs.location;
         if (!loc || !refs.gary) return;
         const point = refs.world.toLocal(e.global);
         const hs = refs.hotspotViews.find((h) => Math.hypot(h.x - point.x, h.y - point.y) < 60);
-        const targetX = Math.min(Math.max(hs ? hs.x : point.x, loc.walkLine.minX), loc.walkLine.maxX);
-        refs.garyTarget = targetX;
-        refs.pendingInteract = hs ? () => interact(db, hs.hotspot) : null;
+        if (hs) {
+          walkTo(hs.x, () => interact(db, hs.hotspot));
+        } else if (refs.sitSpot && Math.hypot(refs.sitSpot.x - point.x, refs.sitSpot.y - point.y) < 60) {
+          const sit = refs.sitSpot;
+          walkTo(sit.x, () => sitDown(loc));
+        } else {
+          walkTo(point.x, null);
+        }
       });
+
+      // keyboard: Tab cycles hotspots, Enter interacts (accessibility floor, spec §7)
+      const onKey = (e: KeyboardEvent) => {
+        if (useDialogueStore.getState().view) return;
+        if (e.key === 'Tab') {
+          e.preventDefault();
+          if (refs.hotspotViews.length === 0) return;
+          refs.focusIndex = (refs.focusIndex + 1) % refs.hotspotViews.length;
+        } else if (e.key === 'Enter' && refs.focusIndex >= 0) {
+          const h = refs.hotspotViews[refs.focusIndex];
+          if (h) walkTo(h.x, () => interact(db, h.hotspot));
+        }
+      };
+      window.addEventListener('keydown', onKey);
+      cleanupKeys = () => window.removeEventListener('keydown', onKey);
 
       refs.app.ticker.add((ticker) => {
         const gary = refs.gary;
@@ -259,11 +339,22 @@ export default function PixiStage({ db }: { db: ContentDB }) {
         const s = minS + (maxS - minS) * Math.min(Math.max(t, 0), 1);
         const base = 380 / (refs.gary?.texture.height ?? 380);
         gary.scale.set(Math.sign(gary.scale.x) * base * s, base * s);
-        // proximity highlight
-        for (const h of refs.hotspotViews) {
+        // proximity + keyboard-focus highlight
+        refs.hotspotViews.forEach((h, i) => {
           const near = Math.hypot(h.x - gary.x, h.y - loc.walkLine.y) < 420;
-          h.label.visible = near;
-          h.marker.alpha = near ? 1 : 0.55;
+          const focused = i === refs.focusIndex;
+          h.label.visible = near || focused;
+          h.marker.alpha = focused ? 1 : near ? 1 : 0.55;
+          h.marker.scale.set(focused ? 1.35 : 1);
+        });
+        // 2-frame talk/idle cycles
+        refs.animClock += ticker.deltaMS;
+        const frame = Math.floor(refs.animClock / 260) % 2;
+        const speaking = useDialogueStore.getState().view?.speaker;
+        for (const [charId, npc] of refs.npcs) {
+          const set = charId === speaking ? npc.talk : npc.idle;
+          const tex = set[frame];
+          if (tex && npc.sprite.texture !== tex) npc.sprite.texture = tex;
         }
       });
 
@@ -290,6 +381,7 @@ export default function PixiStage({ db }: { db: ContentDB }) {
       destroyed = true;
       unsubLocation?.();
       unsubPhase?.();
+      cleanupKeys?.();
       if (refs.app.renderer) refs.app.destroy(true);
       host.replaceChildren();
     };

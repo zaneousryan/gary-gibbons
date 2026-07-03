@@ -1,0 +1,37 @@
+{
+  "id": "warren_d1",
+  "character": "warren",
+  "ref": "I.5.day1",
+  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "narrator",
+      "line": "Warren Holt stands before an audience of pigeons, reading from handwritten pages. The pigeons appear attentive. One has opinions.",
+      "authored": "aletheia",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "warren",
+      "line": "'—and so the waiting ends where it began: together.' Hm. Too much? The pigeons liked the second draft better, but pigeons are sentimental.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "gary",
+      "line": "Eight years of guardianship ends tonight. Any regrets?",
+      "authored": "aletheia",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "warren",
+      "line": "Regrets are for men who kept the wrong things warm, Mr. Gibbons. I kept a chair warm. Tonight I give it back with the seat still good. Come early; Poppy has assigned the press a row, and I'd hate to watch her improvise.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "effects": [{ "notebook": { "entry": "nb_met_warren" } }],
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "warren_repeat_busy"
+}

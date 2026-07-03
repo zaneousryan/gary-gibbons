@@ -1,0 +1,20 @@
+{
+  "entries": [
+    { "id": "nb_empty_vault", "tab": "places", "title": "Founders' Square — the ceremony", "text": "Fifty years of waiting and the vault was empty. Not robbed-looking. Just... empty. The lock turned clean. Dot wants the front page; the town wants an answer. Start with who could open a door without breaking it.", "authored": "aletheia", "ref": "I.5.day1" },
+    { "id": "nb_met_otto", "tab": "people", "title": "Otto Kessler — The Percolator", "text": "Built like a hillside, talks like a slow pour. The café hears everything in this district eventually. So does Otto.", "authored": "aletheia", "ref": "I.4" },
+    { "id": "nb_met_margie", "tab": "people", "title": "Margie Plum — The Drowsy Lantern", "text": "Inn's full for the ceremony. New lodger: 'maps and whispers,' asks about treasure at breakfast. Margie quotes people exactly — useful trait in a witness, terrifying in a landlady.", "authored": "aletheia", "ref": "I.4" },
+    { "id": "nb_met_gino", "tab": "people", "title": "Gino Puglisi — fruit stall", "text": "Forty percent of the stall is grapes. This is not information. This is a threat assessment.", "authored": "aletheia", "ref": "I.7.1" },
+    { "id": "nb_met_ida", "tab": "people", "title": "Ida Wren — Wren & Wick", "text": "Made the capsule's lock with her own apprentice hands, fifty years back. Still oils it. Talks to it. The lock, reportedly, has never once let her down. People are another matter, she implies.", "authored": "aletheia", "ref": "I.4" },
+    { "id": "nb_met_evelyn", "tab": "people", "title": "Evelyn Croft — flower shop", "text": "Fifty arrangements for fifty years. This year's is ivy — 'not technically a flower, technically a promise.' Wrote that one down word for word.", "authored": "aletheia", "ref": "I.4" },
+    { "id": "nb_met_poppy", "tab": "people", "title": "Poppy Finch — event planner", "text": "Runs on fourteen laminated contingency cards and no sleep. Apologized to a ladder. Her whole career is tonight going right.", "authored": "aletheia", "ref": "I.4" },
+    { "id": "nb_met_warren", "tab": "people", "title": "Warren Holt — Council Guardian", "text": "Eight years keeping the seat warm for the Vale heir. Rehearses his handover speech to pigeons, who have notes. Seems genuinely glad to be done — worth remembering how rare that is.", "authored": "aletheia", "ref": "I.4" },
+    { "id": "nb_met_julian", "tab": "people", "title": "Julian Vale — the heir", "text": "Turns 24 this week; takes the chair at the ceremony. Smiles like it's a job. Spins his father's ring when the subject turns to tonight.", "authored": "aletheia", "ref": "I.4" },
+    { "id": "nb_met_clara", "tab": "people", "title": "Clara Vale — the sister", "text": "Answered my question with a better question, twice. Told me to watch the crowd, not the vault. I intend to steal that technique.", "authored": "aletheia", "ref": "I.4" },
+    { "id": "nb_met_milo", "tab": "people", "title": "Milo Tanaka — junior detective", "text": "Age 11. Notebook labeled CRIMES? — the question mark doing heavy lifting. Writes exclusively in red ink. A LOT of red ink. Filed under: hm.", "authored": "aletheia", "ref": "II.17.1" },
+    { "id": "nb_met_tuck", "tab": "people", "title": "Constable Bram Tuck", "text": "Polices by proximity to pastry. Predicted the capsule holds drawings and a tooth. The man has never hurried and has never been late. Respect.", "authored": "aletheia", "ref": "I.4" }
+  ],
+  "questions": [
+    { "id": "q_who_takes_red_pens", "text": "Who keeps taking Dot's red pens? (One a shift. She counts.)", "ref": "II.17.1" },
+    { "id": "q_who_emptied_the_capsule", "text": "Who emptied the capsule — and how did they open it without forcing Ida's lock?", "ref": "I.5.day1" }
+  ]
+}

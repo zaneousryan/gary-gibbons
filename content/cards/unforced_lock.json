@@ -1,0 +1,12 @@
+{
+  "id": "unforced_lock",
+  "ref": "I.5.day1",
+  "type": "physical",
+  "title": "The lock wasn't forced",
+  "sprite": "card_unforced_lock",
+  "source": "founders_square",
+  "initialStatus": "verified",
+  "text": "Ida's lock turned for the Ceremonial Key smooth as the first day — no scratches, no pry marks, no complaints. Whoever emptied the vault opened it properly.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

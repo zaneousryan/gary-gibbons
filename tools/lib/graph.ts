@@ -90,6 +90,12 @@ export function collectEffectSites(db: ContentDB): EffectSite[] {
       }
     }
   }
+  for (const loc of Object.values(db.locations)) {
+    const file = `locations/${loc.id}.json`;
+    for (const t of loc.triggers) {
+      push(file, `trigger ${t.id}`, t.effects, t.cond);
+    }
+  }
   for (const ss of Object.values(db.sidestories)) {
     const file = `sidestories/${ss.id}.json`;
     ss.steps.forEach((s) => push(file, `step ${s.id}`, s.effects, s.cond));

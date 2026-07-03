@@ -1,0 +1,44 @@
+{
+  "id": "clara_d1",
+  "character": "clara",
+  "ref": "I.5.day1",
+  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "clara",
+      "line": "The Ledger sends its best. Or its only — which is it, Mr. Gibbons?",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "line": "Both, I'm afraid. Looking forward to tonight?",
+      "authored": "aletheia",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "clara",
+      "line": "Everyone keeps asking Julian that. Interesting that you'd ask me. What do you think is in the capsule that's worth fifty years of a whole district holding its breath?",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "gary",
+      "line": "Honestly? Probably drawings and a lost tooth. That's usually what people seal away — proof they were here.",
+      "authored": "aletheia",
+      "next": "c5"
+    },
+    "c5": {
+      "speaker": "clara",
+      "line": "...That's a better answer than the constable managed. Enjoy the ceremony, Mr. Gibbons. Watch the crowd, not the vault — the crowd's where the story is.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "effects": [{ "notebook": { "entry": "nb_met_clara" } }],
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "clara_repeat_busy"
+}

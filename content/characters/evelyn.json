@@ -1,0 +1,15 @@
+{
+  "id": "evelyn",
+  "name": "Evelyn Croft",
+  "ref": "I.4",
+  "species": "red fox",
+  "portraitSet": "evelyn",
+  "voice": { "textSpeed": 0.95, "blipSound": "blip_evelyn" },
+  "greetings": {
+    "cold": "Mr. Gibbons. The shears are working; I'd keep questions short.",
+    "neutral": "Mr. Gibbons. Careful of the stems.",
+    "warm": "Gary. Hold these a moment — there. Now you're useful and I'm listening."
+  },
+  "tells": [],
+  "etiquette": { "note": "Calm and wry, paws always in stems. One ivy sprig behind an ear, always." }
+}

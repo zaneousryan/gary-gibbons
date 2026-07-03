@@ -84,6 +84,29 @@ export const HintsFileSchema = z
   })
   .strict();
 
+// ---- notebook.json (spec §6.3 — auto-journal entry texts) ----
+export const NotebookEntryDefSchema = z
+  .object({
+    id: IdSchema,
+    tab: z.enum(['people', 'places', 'questions', 'grapes']),
+    text: z.string(),
+    /** Title line in Gary's hand. */
+    title: z.string().optional(),
+    authored: z.enum(['verbatim', 'aletheia']).optional(),
+    ref: RefSchema,
+  })
+  .strict();
+
+export const NotebookFileSchema = z
+  .object({
+    entries: z.array(NotebookEntryDefSchema),
+    /** Question card texts (id -> prompt in Gary's handwriting). */
+    questions: z.array(
+      z.object({ id: IdSchema, text: z.string(), ref: RefSchema }).strict(),
+    ).default([]),
+  })
+  .strict();
+
 // ---- achievements.json (spec §13) ----
 export const AchievementSchema = z
   .object({
@@ -101,6 +124,8 @@ export const AchievementsFileSchema = z
   .strict();
 
 export type TimelineFile = z.infer<typeof TimelineFileSchema>;
+export type NotebookFile = z.infer<typeof NotebookFileSchema>;
+export type NotebookEntryDef = z.infer<typeof NotebookEntryDefSchema>;
 export type Sidestory = z.infer<typeof SidestorySchema>;
 export type BarksFile = z.infer<typeof BarksFileSchema>;
 export type Bark = z.infer<typeof BarkSchema>;

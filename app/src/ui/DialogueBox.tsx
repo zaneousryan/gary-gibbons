@@ -37,14 +37,15 @@ export default function DialogueBox({ db }: { db: ContentDB }) {
   }, [line, view, db]);
 
   const speakerDef = view ? db.characters[view.speaker] : null;
+  const isNarrator = view?.speaker === 'narrator';
   const portrait = useMemo(() => {
-    if (!speakerDef) return null;
-    return `/_placeholders/${portraitPath(speakerDef.portraitSet, view?.emote ?? 'neutral')}`;
-  }, [speakerDef, view?.emote]);
+    if (!speakerDef || isNarrator) return null;
+    return `/${portraitPath(speakerDef.portraitSet, view?.emote ?? 'neutral')}`;
+  }, [speakerDef, isNarrator, view?.emote]);
 
   if (!view) return null;
   const typing = shown < line.length;
-  const speakerName = view.speaker === 'gary' ? 'Gary' : (speakerDef?.name ?? view.speaker);
+  const speakerName = isNarrator ? '' : view.speaker === 'gary' ? 'Gary' : (speakerDef?.name ?? view.speaker);
 
   return (
     <div className="absolute inset-x-0 bottom-0 flex justify-center pb-6 pointer-events-none" data-testid="dialogue-box">
@@ -54,12 +55,19 @@ export default function DialogueBox({ db }: { db: ContentDB }) {
             src={portrait}
             alt={speakerName}
             className="h-40 w-32 object-cover rounded border-2 border-ink bg-dusk/20"
-            onError={(e) => ((e.target as HTMLImageElement).style.visibility = 'hidden')}
+            onError={(e) => {
+              const img = e.target as HTMLImageElement;
+              if (!img.src.includes('/_placeholders/')) {
+                img.src = `/_placeholders${new URL(img.src).pathname}`;
+              } else {
+                img.style.visibility = 'hidden';
+              }
+            }}
           />
         )}
-        <div className="flex-1 min-w-0">
+        <div className={'flex-1 min-w-0' + (isNarrator ? ' text-center' : '')}>
           <div className="flex items-center gap-3">
-            <span className="font-bold text-ink text-lg">{speakerName}</span>
+            {speakerName && <span className="font-bold text-ink text-lg">{speakerName}</span>}
             {view.offRecord && (
               <span className="text-xs uppercase tracking-widest bg-plum text-cream px-2 py-0.5 rounded" data-testid="offrecord-badge">
                 off the record
@@ -68,7 +76,10 @@ export default function DialogueBox({ db }: { db: ContentDB }) {
           </div>
           {line && (
             <p
-              className="text-ink text-xl leading-relaxed mt-1 cursor-pointer select-none"
+              className={
+                'text-ink text-xl leading-relaxed mt-1 cursor-pointer select-none' +
+                (isNarrator ? ' italic text-ink/75' : '')
+              }
               data-testid="dialogue-line"
               onClick={() => (typing ? setShown(line.length) : advance())}
             >

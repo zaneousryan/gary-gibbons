@@ -1,0 +1,22 @@
+{
+  "id": "poppy",
+  "name": "Poppy Finch",
+  "ref": "I.4",
+  "species": "goldfinch",
+  "portraitSet": "poppy",
+  "voice": { "textSpeed": 1.35, "blipSound": "blip_poppy" },
+  "greetings": {
+    "cold": "Mr. Gibbons.",
+    "neutral": "Oh! Mr. Gibbons, hello— one second, no, two seconds, okay hello!",
+    "warm": "Gary! I laminated you a schedule!"
+  },
+  "tells": [
+    {
+      "id": "fogged_glasses",
+      "cond": { "flag": "poppy_nervous" },
+      "observeLine": "poppy_observe_glasses",
+      "noticedFlag": "noticed_fogged_glasses"
+    }
+  ],
+  "etiquette": { "note": "Accepts questions only after the clipboard is down. Feathers fluff a full size when startled." }
+}

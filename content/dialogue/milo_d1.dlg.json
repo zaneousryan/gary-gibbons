@@ -1,0 +1,40 @@
+{
+  "id": "milo_d1",
+  "character": "milo",
+  "ref": "II.17.1",
+  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "milo",
+      "line": "Mr. Gibbons! Perfect timing. I'm surveilling the fruit stall. Gino gave a customer TWO free plums today. Two! Nobody's that generous. I'm building a file.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "narrator",
+      "line": "Milo brandishes a notebook labeled CRIMES? — question mark included. Every entry is written in red ink. Very red. Very familiar red.",
+      "authored": "aletheia",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "gary",
+      "line": "That's a lot of red ink, Milo.",
+      "authored": "aletheia",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "milo",
+      "line": "Red means URGENT. All crimes are urgent, Mr. Gibbons, that's what makes them crimes. You want to see my file on the pigeons? They're divorced. It's a whole thing.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "effects": [
+        { "setFlag": "milo_red_ink" },
+        { "notebook": { "entry": "nb_met_milo" } }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "milo_repeat_busy"
+}

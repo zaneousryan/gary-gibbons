@@ -4,7 +4,10 @@
   "ref": "I.2",
   "layers": ["bg", "mid", "fg"],
   "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
-  "exits": [{ "to": "gary_apartment", "at": [160, 880] }],
+  "exits": [
+    { "to": "gary_apartment", "at": [160, 880] },
+    { "to": "market_row", "at": [1760, 880] }
+  ],
   "sitSpot": {
     "at": [1500, 880],
     "monologues": [
@@ -18,6 +21,27 @@
       "kind": "talk",
       "character": "dot",
       "label": "Dot"
+    },
+    {
+      "id": "talk_otto",
+      "at": [500, 800],
+      "kind": "talk",
+      "character": "otto",
+      "label": "Otto"
+    },
+    {
+      "id": "talk_margie",
+      "at": [1240, 800],
+      "kind": "talk",
+      "character": "margie",
+      "label": "Margie"
+    },
+    {
+      "id": "talk_tuck",
+      "at": [1450, 800],
+      "kind": "talk",
+      "character": "tuck",
+      "label": "Tuck"
     },
     {
       "id": "chalkboard",
@@ -50,6 +74,13 @@
       "kind": "exit",
       "to": "gary_apartment",
       "label": "Back home"
+    },
+    {
+      "id": "exit_market",
+      "at": [1760, 820],
+      "kind": "exit",
+      "to": "market_row",
+      "label": "To Market Row"
     }
   ],
   "ambient": {

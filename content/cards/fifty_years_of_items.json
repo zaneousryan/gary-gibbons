@@ -1,0 +1,12 @@
+{
+  "id": "fifty_years_of_items",
+  "ref": "I.5.day1",
+  "type": "document",
+  "title": "What the capsule held",
+  "sprite": "card_fifty_years_of_items",
+  "source": "founders_square",
+  "initialStatus": "verified",
+  "text": "Every founding family contributed something: children's drawings, predictions, keepsakes — and, ten years ago, Edmund Vale's sealed final wishes, added at The Founder's Addition. All of it, gone.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

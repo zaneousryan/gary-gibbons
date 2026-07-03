@@ -1,0 +1,12 @@
+{
+  "id": "empty_vault",
+  "ref": "I.5.day1",
+  "type": "physical",
+  "title": "The vault was empty",
+  "sprite": "card_empty_vault",
+  "source": "founders_square",
+  "initialStatus": "verified",
+  "text": "Fifty years of the district's heart, and the chamber held nothing but dust. Gary saw it with his own eyes, along with everyone else in Lanternside.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

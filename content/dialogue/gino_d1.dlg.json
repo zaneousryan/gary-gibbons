@@ -1,0 +1,40 @@
+{
+  "id": "gino_d1",
+  "character": "gino",
+  "ref": "I.7.1",
+  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "narrator",
+      "line": "Gino hoists a flawless bunch of green grapes toward the light, like an offering.",
+      "authored": "aletheia",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gino",
+      "line": "The good ones, just in!",
+      "authored": "verbatim",
+      "emote": "happy",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "gary",
+      "line": "...Not today.",
+      "authored": "verbatim",
+      "effects": [
+        { "grapeDeclined": true },
+        { "notebook": { "entry": "nb_met_gino" } }
+      ],
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "gino",
+      "line": "Every day 'not today'! One day, Gibbons, it will be today, and on that day — bellissimo. Until then: a tragedy. You want an apple? The apples are also a tragedy, but smaller.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "gino_repeat_busy"
+}

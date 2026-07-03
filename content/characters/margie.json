@@ -1,0 +1,15 @@
+{
+  "id": "margie",
+  "name": "Margie Plum",
+  "ref": "I.4",
+  "species": "hen",
+  "portraitSet": "margie",
+  "voice": { "textSpeed": 1.05, "blipSound": "blip_margie" },
+  "greetings": {
+    "cold": "Mr. Gibbons.",
+    "neutral": "Morning, pet. You look underfed and overworked, which is at least consistent.",
+    "warm": "There's my favorite headline, love. Sit, the kettle's ahead of you."
+  },
+  "tells": [],
+  "etiquette": { "note": "Gossip is her love language, never cruel. Everything ends in 'pet' or 'love' — cold tier conspicuously doesn't." }
+}

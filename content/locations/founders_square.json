@@ -1,0 +1,100 @@
+{
+  "id": "founders_square",
+  "name": "Founders' Square",
+  "ref": "I.2",
+  "layers": ["bg", "mid", "fg"],
+  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "exits": [{ "to": "market_row", "at": [160, 880] }],
+  "sitSpot": {
+    "at": [400, 880],
+    "monologues": [
+      { "cond": { "flag": "ceremony_done" }, "bark": "bench_square_post_ceremony" },
+      { "cond": {}, "bark": "bench_square_d1" }
+    ]
+  },
+  "hotspots": [
+    {
+      "id": "talk_poppy",
+      "at": [600, 800],
+      "kind": "talk",
+      "character": "poppy",
+      "label": "Poppy"
+    },
+    {
+      "id": "talk_warren",
+      "at": [1000, 800],
+      "kind": "talk",
+      "character": "warren",
+      "label": "Warren"
+    },
+    {
+      "id": "talk_julian",
+      "at": [1350, 800],
+      "kind": "talk",
+      "character": "julian",
+      "label": "Julian"
+    },
+    {
+      "id": "talk_clara",
+      "at": [1550, 800],
+      "kind": "talk",
+      "character": "clara",
+      "label": "Clara"
+    },
+    {
+      "id": "monument",
+      "at": [820, 560],
+      "kind": "examine",
+      "label": "The Founders' Monument",
+      "interactions": [
+        {
+          "id": "monument_post_ceremony",
+          "cond": { "flag": "ceremony_done" },
+          "text": "The vault door stands open at the monument's base. Fifty years of waiting, and inside: clean stone, old dust, and nothing at all. The bunting overhead has already begun to sag.",
+          "ref": "I.5.day1"
+        },
+        {
+          "id": "monument_pre_ceremony",
+          "text": "The Founders' Monument, scrubbed for its birthday. Behind the brass vault door at its base: the time capsule, sealed fifty years ago tonight. Half the district has touched the door 'for luck' this week.",
+          "ref": "I.2"
+        }
+      ],
+      "ref": "I.2"
+    },
+    {
+      "id": "julians_ring",
+      "at": [1350, 640],
+      "kind": "chekhov",
+      "label": "The Heir at Work",
+      "cond": { "not": { "flag": "ceremony_done" } },
+      "detail": {
+        "tier": "character",
+        "text": "Julian Vale, shaking hands, smiling the practiced smile. Between handshakes his thumb finds his father's signet ring and spins it — around, around. Probably nothing. Gary writes it down anyway.",
+        "cond": {}
+      },
+      "ref": "I.5.day1"
+    },
+    {
+      "id": "exit_market",
+      "at": [160, 820],
+      "kind": "exit",
+      "to": "market_row",
+      "label": "To Market Row"
+    }
+  ],
+  "triggers": [
+    {
+      "id": "ceremony_d1",
+      "cond": { "all": [{ "day": 1 }, { "phase": "evening" }] },
+      "dialogue": "ceremony_d1",
+      "once": true,
+      "ref": "I.5.day1"
+    }
+  ],
+  "ambient": {
+    "vignetteTags": ["square", "outdoors"],
+    "weatherVariants": true,
+    "music": "music_square",
+    "ambience": "amb_square"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "gino",
+  "name": "Gino Puglisi",
+  "ref": "I.4",
+  "species": "boar",
+  "portraitSet": "gino",
+  "voice": { "textSpeed": 1.1, "blipSound": "blip_gino" },
+  "greetings": {
+    "cold": "Signor Gibbons. The fruit today is bellissimo and you are missing it. A tragedy.",
+    "neutral": "Gibbons! Come, come — the good ones, just in!",
+    "warm": "GARY! My friend! Today the grapes sing, and you will suffer, and it will be beautiful!"
+  },
+  "tells": [],
+  "etiquette": { "note": "Interviewing Gino means holding whatever fruit he hands you. The whole time. Everything is bellissimo or a tragedy, no middle." }
+}
