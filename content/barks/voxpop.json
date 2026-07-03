@@ -38,6 +38,15 @@
       "cond": { "day": { "gte": 2 } }
     },
     {
+      "id": "vox_umbrella_d5",
+      "text": "Two in the morning, night before the ceremony? Wasn't out myself — but my sister swears she saw the Vales' posh umbrella crossing the square. In the RAIN, pet, which is what umbrellas are for, so who's to say. Still. Odd hour for posh.",
+      "speaker": "margie",
+      "authored": "aletheia",
+      "ref": "II.15.5",
+      "tags": ["q_who_emptied_the_capsule", "q_second_key"],
+      "cond": { "day": { "gte": 5 } }
+    },
+    {
       "id": "vox_evelyn_capsule",
       "text": "Fifty years of people put something soft in a stone box and trusted the future with it. Find the person who couldn't wait for the future. That's your thief.",
       "speaker": "evelyn",

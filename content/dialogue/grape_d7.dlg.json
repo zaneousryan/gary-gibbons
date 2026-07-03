@@ -22,9 +22,22 @@
     },
     "c3": {
       "speaker": "narrator",
-      "line": "Gary takes ONE grape. Looks at it a long moment — a week, a year, a whole inheritance in one small green sphere. Then he turns and hands it to Milo.",
+      "line": "Gary takes ONE grape. Looks at it a long moment — a week, a year, a whole inheritance in one small green sphere.",
       "authored": "aletheia",
-      "next": "c4"
+      "choices": [
+        {
+          "line": "(Milo is front-row, where a protected source belongs.)",
+          "cond": { "not": { "flag": "named_milo", "value": true } },
+          "authored": "aletheia",
+          "next": "c4"
+        },
+        {
+          "line": "(Milo watches from his window. Grounded. The game just remembers.)",
+          "cond": { "flag": "named_milo", "value": true },
+          "authored": "aletheia",
+          "next": "c4g"
+        }
+      ]
     },
     "c4": {
       "speaker": "gary",
@@ -32,6 +45,18 @@
       "authored": "verbatim",
       "effects": [
         { "setFlag": "grape_beat_d7" },
+        { "notebook": { "entry": "nb_grape_victory" } },
+        { "playBark": "gary_inner_at_peace_ish" }
+      ],
+      "next": null
+    },
+    "c4g": {
+      "speaker": "narrator",
+      "line": "Gary looks up at a curtained window two streets over, where an 11-year-old is watching the ceremony he should have been front-row for. Gary pockets the grape. Some debts wait for the grounding to end.",
+      "authored": "aletheia",
+      "effects": [
+        { "setFlag": "grape_beat_d7" },
+        { "setFlag": "milo_grounded" },
         { "notebook": { "entry": "nb_grape_victory" } },
         { "playBark": "gary_inner_at_peace_ish" }
       ],

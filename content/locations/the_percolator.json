@@ -135,6 +135,21 @@
       "kind": "exit",
       "to": "market_row",
       "label": "To Market Row"
+    },
+    {
+      "id": "festival_photo_wall",
+      "at": [
+        300,
+        560
+      ],
+      "kind": "chekhov",
+      "label": "Fifty Years of Festival Photos",
+      "detail": {
+        "tier": "texture",
+        "text": "A wall of festival photographs, fifty summers deep: young Margie mid-laugh, young Warren already dignified - and in the earliest frame, a young gibbon reporter with a familiar brass badge, arm-in-arm with a young doe. Unlabeled. Unremarked. The frame does not explain itself.",
+        "flag": "seen_festival_photo"
+      },
+      "ref": "III.28"
     }
   ],
   "ambient": {

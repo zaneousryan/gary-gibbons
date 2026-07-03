@@ -12,6 +12,47 @@
       "line": "You held the page. Archie held the page once too. I'll tell you about it when you're back.",
       "authored": "verbatim",
       "emote": "neutral",
+      "effects": [{ "setFlag": "dot_ack_hold" }],
+      "next": "sourcing_check"
+    },
+    "sourcing_check": {
+      "speaker": "narrator",
+      "line": "Dot runs a thumb down the sourcing column of the draft. Stops at 'a witness.'",
+      "authored": "aletheia",
+      "choices": [
+        {
+          "line": "(She noticed the unnamed source.)",
+          "cond": { "flag": "named_milo", "value": false },
+          "authored": "aletheia",
+          "next": "thin1"
+        },
+        {
+          "line": "(The sourcing reads clean.)",
+          "cond": { "not": { "flag": "named_milo", "value": false } },
+          "authored": "aletheia",
+          "next": "c2"
+        }
+      ]
+    },
+    "thin1": {
+      "speaker": "dot",
+      "line": "Thin sourcing, Gibbons.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "thin2"
+    },
+    "thin2": {
+      "speaker": "gary",
+      "line": "Thick enough.",
+      "authored": "verbatim",
+      "next": "thin3"
+    },
+    "thin3": {
+      "speaker": "dot",
+      "line": "...Yeah. Run it.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "effects": [{ "setFlag": "dot_ran_it" }],
       "next": "c2"
     },
     "c1": {

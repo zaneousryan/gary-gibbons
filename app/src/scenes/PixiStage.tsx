@@ -216,7 +216,8 @@ function interact(db: ContentDB, hotspot: Hotspot) {
         // vox pop (II.15.5): the ambient crowd becomes sources
         const vox = voxPopLineFor(db, hotspot.character);
         if (vox && ch) {
-          ui.setExamine({ title: `${ch.name} — vox pop`, text: `“${vox}”` });
+          ui.setExamine({ title: `${ch.name} — vox pop`, text: `“${vox.text}”` });
+          game.runEffects([{ setFlag: `voxpop_seen_${vox.id}` }]);
         } else if (greeting && ch) {
           ui.showGreeting({ name: ch.name, text: greeting });
         } else {

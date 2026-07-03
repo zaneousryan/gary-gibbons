@@ -2,8 +2,24 @@
   "id": "confrontation_d7",
   "character": "narrator",
   "ref": "I.8.2",
-  "entries": [{ "id": "main", "cond": {}, "node": "n1" }],
+  "entries": [
+    { "id": "read_it", "cond": { "flag": "julian_read_it" }, "node": "n1r" },
+    { "id": "main", "cond": {}, "node": "n1" }
+  ],
   "nodes": {
+    "n1r": {
+      "speaker": "narrator",
+      "line": "Julian is already there, sitting on the floor, umbrella against the wall, spinning the ring. He doesn't look up. This morning's Ledger lies beside him, folded to the headline he already read.",
+      "authored": "aletheia",
+      "next": "n2r"
+    },
+    "n2r": {
+      "speaker": "julian",
+      "line": "Front page after all.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "next": "n3"
+    },
     "n1": {
       "speaker": "narrator",
       "line": "Julian is already there, sitting on the floor, umbrella against the wall, spinning the ring. He doesn't look up.",

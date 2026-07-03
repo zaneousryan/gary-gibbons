@@ -11,10 +11,18 @@
     {
       "id": "sightline",
       "ref": "III.20",
-      "hint": "A good reporter checks whether the kid COULD have seen it. Stand where he stood.",
       "cond": {
         "flag": "fire_escape_puzzle_done"
-      }
+      },
+      "hint": "A good reporter checks whether the kid COULD have seen it. Stand where he stood."
+    },
+    {
+      "id": "voxpop_umbrella",
+      "ref": "II.15.5",
+      "cond": {
+        "flag": "voxpop_seen_vox_umbrella_d5"
+      },
+      "hint": "Somebody else's sister was awake at 2 a.m. too. Ask around with the Question of the Day."
     }
   ],
   "reReadLines": [],

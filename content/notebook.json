@@ -1,67 +1,492 @@
 {
   "entries": [
-    { "id": "nb_empty_vault", "tab": "places", "title": "Founders' Square — the ceremony", "text": "Fifty years of waiting and the vault was empty. Not robbed-looking. Just... empty. The lock turned clean. Dot wants the front page; the town wants an answer. Start with who could open a door without breaking it.", "authored": "aletheia", "ref": "I.5.day1" },
-    { "id": "nb_met_otto", "tab": "people", "title": "Otto Kessler — The Percolator", "text": "Built like a hillside, talks like a slow pour. The café hears everything in this district eventually. So does Otto.", "authored": "aletheia", "ref": "I.4" },
-    { "id": "nb_met_margie", "tab": "people", "title": "Margie Plum — The Drowsy Lantern", "text": "Inn's full for the ceremony. New lodger: 'maps and whispers,' asks about treasure at breakfast. Margie quotes people exactly — useful trait in a witness, terrifying in a landlady.", "authored": "aletheia", "ref": "I.4" },
-    { "id": "nb_met_gino", "tab": "people", "title": "Gino Puglisi — fruit stall", "text": "Forty percent of the stall is grapes. This is not information. This is a threat assessment.", "authored": "aletheia", "ref": "I.4" },
-    { "id": "nb_met_ida", "tab": "people", "title": "Ida Wren — Wren & Wick", "text": "Made the capsule's lock with her own apprentice hands, fifty years back. Still oils it. Talks to it. The lock, reportedly, has never once let her down. People are another matter, she implies.", "authored": "aletheia", "ref": "I.4" },
-    { "id": "nb_met_evelyn", "tab": "people", "title": "Evelyn Croft — flower shop", "text": "Fifty arrangements for fifty years. This year's is ivy — 'not technically a flower, technically a promise.' Wrote that one down word for word.", "authored": "aletheia", "ref": "I.4" },
-    { "id": "nb_met_poppy", "tab": "people", "title": "Poppy Finch — event planner", "text": "Runs on fourteen laminated contingency cards and no sleep. Apologized to a ladder. Her whole career is tonight going right.", "authored": "aletheia", "ref": "I.4" },
-    { "id": "nb_met_warren", "tab": "people", "title": "Warren Holt — Council Guardian", "text": "Eight years keeping the seat warm for the Vale heir. Rehearses his handover speech to pigeons, who have notes. Seems genuinely glad to be done — worth remembering how rare that is.", "authored": "aletheia", "ref": "I.4" },
-    { "id": "nb_met_julian", "tab": "people", "title": "Julian Vale — the heir", "text": "Turns 24 this week; takes the chair at the ceremony. Smiles like it's a job. Spins his father's ring when the subject turns to tonight.", "authored": "aletheia", "ref": "I.4" },
-    { "id": "nb_met_clara", "tab": "people", "title": "Clara Vale — the sister", "text": "Answered my question with a better question, twice. Told me to watch the crowd, not the vault. I intend to steal that technique.", "authored": "aletheia", "ref": "I.4" },
-    { "id": "nb_met_milo", "tab": "people", "title": "Milo Tanaka — junior detective", "text": "Age 11. Notebook labeled CRIMES? — the question mark doing heavy lifting. Writes exclusively in red ink. A LOT of red ink. Filed under: hm.", "authored": "aletheia", "ref": "II.17.1" },
-    { "id": "nb_met_tuck", "tab": "people", "title": "Constable Bram Tuck", "text": "Polices by proximity to pastry. Predicted the capsule holds drawings and a tooth. The man has never hurried and has never been late. Respect.", "authored": "aletheia", "ref": "I.4" },
-    { "id": "nb_key_backwards", "tab": "places", "title": "Council Hall — the key cabinet", "text": "The Ceremonial Key was hung back facing the wall, and the dust says it traveled recently. Someone put it back in a hurry, or in the dark, or both.", "authored": "aletheia", "ref": "I.5.day2" },
-    { "id": "nb_dust_library", "tab": "places", "title": "The vault floor — a library of dust", "text": "Every item left its shape. Matched each void to Poppy's checklist. One detail won't let go: the envelope's void has a SHARP edge. Everything else faded soft over decades. It came out last, and it came out carefully.", "authored": "aletheia", "ref": "II.13.1" },
-    { "id": "nb_poppy_confessed", "tab": "people", "title": "Poppy — the confession", "text": "She borrowed the key three nights early, checked everything (MICE, Mr. Gibbons, what if MICE), locked it back, and made a time-stamped laminated inventory. The theft window just shrank to two nights, and Poppy shrank out of the suspect pool.", "authored": "aletheia", "ref": "I.5.day2" },
-    { "id": "nb_seal_sketch", "tab": "places", "title": "The seal — sketched from memory", "text": "Green wax. A lantern wreathed in ivy, three drips. Poppy saw it on top of everything, 'important on purpose.' Somebody in this town knows that seal. Find them.", "authored": "aletheia", "ref": "I.5.day2" },
-    { "id": "nb_poppy_rattled", "tab": "people", "title": "Poppy, the morning after", "text": "Reorganized the contingency binder because something had to be alphabetical today. Filed under: people who cope loudly. Also filed under: people who know something.", "authored": "aletheia", "ref": "I.5.day2" },
-    { "id": "nb_margies_testimony", "tab": "people", "title": "Margie's quote — exact, as always", "text": "'I'm not certain the boy is ready.' One sherry, three nights before the ceremony, quoted to the letter. The town heard doubt. I heard a man checking his own work.", "authored": "aletheia", "ref": "I.5.day3" },
-    { "id": "nb_lodger_gossip", "tab": "people", "title": "The lodger, per Margie", "text": "A week at the inn, key never on its hook past dark, treasure questions before the eggs. Whispering is his indoor voice.", "authored": "aletheia", "ref": "I.5.day3" },
-    { "id": "nb_warren_speech", "tab": "people", "title": "Warren's third draft", "text": "'The happiest sentence I will ever say: the waiting is over.' He rewrote it twice because the JOY wasn't right. Men plotting coups edit differently.", "authored": "aletheia", "ref": "I.5.day3" },
-    { "id": "nb_lighthouse_folio", "tab": "people", "title": "Forty-seven lighthouses", "text": "Tickets. Tide tables. A dream deferred eight years and packed anyway. Warren wasn't holding the chair. He was holding the door.", "authored": "aletheia", "ref": "I.5.day3" },
-    { "id": "nb_night_photo", "tab": "places", "title": "The night photograph", "text": "Night −2, long exposure: lanterns like honey, and a tail at the frame's edge. One weasel tail, in a district with no weasels on the rolls. Warren checked twice. So did I.", "authored": "aletheia", "ref": "I.5.day3" },
-    { "id": "nb_camera", "tab": "people", "title": "The loaner camera", "text": "'You have your grandfather's eye for people. Borrow mine for places.' Warren's bellows camera now lives in the satchel. The satchel is honored.", "authored": "aletheia", "ref": "II.12.3" },
-    { "id": "nb_founders_addition", "tab": "places", "title": "The Founder's Addition — ten years ago", "text": "The capsule was legally opened once before: one hour, one dying founder, one green-sealed envelope added. His final wishes, for the 50th. Everyone assumed they named Julian. Assumed.", "authored": "aletheia", "ref": "II.15.2" },
-    { "id": "nb_morgue_unlocked", "tab": "places", "title": "The Ledger Morgue", "text": "Fifty years of the district in bound volumes and clipping drawers, under my own floor the whole time. The quietest room in town. Archie's desk is down there, one drawer locked.", "authored": "aletheia", "ref": "II.15.2" },
-    { "id": "nb_plaque_moved", "tab": "places", "title": "Then & now: the plaque moved", "text": "The founding photograph against today's square: the dedication plaque migrated a full stride, ten years ago, to make room for the Addition. The vault has opened exactly twice in fifty years — and both times, lawfully. Until now.", "authored": "aletheia", "ref": "II.13.2" },
-    { "id": "nb_met_ferris", "tab": "people", "title": "Ferris Mott — the lodger", "text": "Believes in the treasure the way other people believe in weather. Winked twice. Tail described, unprompted, as 'heritage couture.' Filed under: watch tonight.", "authored": "aletheia", "ref": "I.5.day4" },
-    { "id": "nb_stakeout", "tab": "places", "title": "The stakeout", "text": "Hole number six, one upended sack: trowels, jam, maps, no capsule. 'Wrong crimes, folks. Right weasel, wrong crimes.' The town's tidy ending fell apart on a riverbank at midnight.", "authored": "aletheia", "ref": "I.5.day4" },
-    { "id": "nb_ferris_pivot", "tab": "people", "title": "Ferris's testimony — the pivot", "text": "Night −2: a tall figure, dry under a posh umbrella, used a KEY smooth as butter, moved like the square belonged to him. The red herring turned out to be a lens.", "authored": "aletheia", "ref": "I.5.day4" },
-    { "id": "nb_ferris_tracks", "tab": "places", "title": "The holed sole", "text": "Followed one distinctive boot from six garden crimes to a flattened watching-spot in the reeds. He wasn't digging at the monument that night. He was WATCHING it.", "authored": "aletheia", "ref": "II.12.4" },
-    { "id": "nb_triangulation", "tab": "places", "title": "Where the figure stood", "text": "Warren's balcony plus the tail's place in frame: the figure stood on the river-side line, off the manor shortcut. Light and habit, doing geometry.", "authored": "aletheia", "ref": "III.25.2" },
-    { "id": "nb_fire_escape", "tab": "places", "title": "The fire-escape sightline", "text": "Stood where the witness stood. The chimney hides the manor side; the lantern strip shows the crossing; and from above, an umbrella hides the whole him. The story holds — and now I know WHY it's incomplete.", "authored": "aletheia", "ref": "II.12.6" },
-    { "id": "nb_torn_letter", "tab": "people", "title": "The torn letter (not for the board's strings)", "text": "Eight fragments, one unsent apology. It answers nothing and confirms everything. Some evidence is for understanding, not for presenting.", "authored": "aletheia", "ref": "III.25.1" },
-    { "id": "nb_handwriting", "tab": "places", "title": "Handwriting comparison", "text": "The looped G, the crossed double-t, the pen pressure. Three features, the way Archie taught. Same hand.", "authored": "aletheia", "ref": "II.12.5" },
-    { "id": "nb_ghost_landing", "tab": "places", "title": "Three ghosts on an old map", "text": "The 1890s survey over the modern district: a filled mill race, a lost market cross — and the original VALE BOAT LANDING, unmarked, straight below the old boathouse. Family water.", "authored": "aletheia", "ref": "II.13.4" },
-    { "id": "nb_prudence_motive", "tab": "people", "title": "Prudence — motive on a plate", "text": "Twenty years reconstructing the Theodora–Jonah romance, final proof sealed in the capsule, three sleepless days from touching it. 'Suspect me. I would suspect me.' Noted — and noted that innocent people rarely say that.", "authored": "aletheia", "ref": "I.5.day5" },
-    { "id": "nb_prudence_alibi", "tab": "people", "title": "Prudence's alibi", "text": "Night −2: cataloguing with Evelyn Croft until 3 a.m. Verify with the florist. Bring context. She is armed with shears.", "authored": "aletheia", "ref": "I.5.day5" },
-    { "id": "nb_evelyn_alibi", "tab": "people", "title": "Evelyn confirms — blushing", "text": "Until three, with tea, Jonah's letters read aloud. The rival families' last two descendants have quietly become... the game never says. Neither will I.", "authored": "aletheia", "ref": "I.5.day5" },
-    { "id": "nb_seal_identified", "tab": "places", "title": "THE SEAL IS THE VALE SIGNET", "text": "Not the council's. Edmund Vale's personal mark — the lantern in ivy — from a ring that never left the family. It sits on his son's finger to this day. The loose one. The one he spins.", "authored": "aletheia", "ref": "I.5.day5" },
-    { "id": "nb_ferris_readaloud", "tab": "people", "title": "The lockup, after the headline", "text": "He asked me to read my own front page to him, out loud. He wasn't angry. That's worse. Filed under: rules of Grandpa's I now understand from the inside.", "authored": "aletheia", "ref": "II.15.1" },
-    { "id": "nb_ferris_apology", "tab": "people", "title": "Ferris, reforming", "text": "Composing a formal apology to a marrow. The town may keep him yet.", "authored": "aletheia", "ref": "I.5.day5" },
-    { "id": "nb_clara_fear", "tab": "people", "title": "CLARA CLUE 1 — Julian's fear", "text": "'What if I'm only the shape of Father?' Everyone keeps telling him he'll lead alone — including the sister who loves him most. Fear wears a rehearsed smile in public.", "authored": "aletheia", "ref": "I.5.day6" },
-    { "id": "nb_two_person_puzzles", "tab": "people", "title": "CLARA CLUE 2 — the two-person puzzles", "text": "Every birthday box designed so neither child could open it alone. A game, she thought. A syllabus, she thinks now. SAVE FOR THE CONFRONTATION — this one's a door, not a nail.", "authored": "aletheia", "ref": "I.5.day6" },
-    { "id": "nb_clara_key", "tab": "people", "title": "CLARA CLUE 3 — the backup key (a trust)", "text": "Two keys have always existed. The family's is gone from the study. Given to me with the family in my hands — which means it goes on the record only through Ida's ledger, never through Clara.", "authored": "aletheia", "ref": "I.5.day6" },
-    { "id": "nb_idas_ledger", "tab": "places", "title": "IDA'S LEDGER — exactly two keys", "text": "Fifty years, two keys, apprentice hands, no copies since — the lock would gossip. The most reliable witness in Lanternside is a ledger in a drawer scaled to wren fingers.", "authored": "aletheia", "ref": "I.5.day6" },
-    { "id": "nb_wax_fragment", "tab": "places", "title": "THE WAX FRAGMENT", "text": "Green wax from Julian's coat pocket, skittering across the Percolator floor to my shoe. The ivy aligns with the sketch. A soft, terrible chime.", "authored": "aletheia", "ref": "I.5.day6" },
-    { "id": "nb_milos_sighting", "tab": "people", "title": "MILO'S SIGHTING — the Vale umbrella, 2 a.m.", "text": "Traded a secret for a secret. He saw THE umbrella — silver duck handle — hiding the whole him. Now I owe an 11-year-old the professional courtesy of checking his story instead of just believing it.", "authored": "aletheia", "ref": "I.5.day6" },
-    { "id": "nb_overheard", "tab": "people", "title": "THE OVERHEARD CONVERSATION", "text": "'It isn't fair.' / 'You may be surprised.' A comfort to one child; a verdict overheard by the other. Off the record — the tea in that parlor doesn't even offer the toggle. The garden's own acoustics can carry the fact instead.", "authored": "aletheia", "ref": "I.8.1" },
-    { "id": "nb_garden_acoustics", "tab": "places", "title": "The garden acoustics", "text": "From the study window, the garden arrives only when the wind rests. Physics explains the half-heard conversation better than any confession could.", "authored": "aletheia", "ref": "II.13.7" },
-    { "id": "nb_dot_blessing", "tab": "people", "title": "Dot, on the last morning", "text": "'Archie would run it exactly the way you're about to.' The red pen stayed down. That's the highest compliment this office issues.", "authored": "aletheia", "ref": "I.5.day7" },
-    { "id": "nb_river_walk", "tab": "places", "title": "The river walk", "text": "Clara came as far as the bank. 'I'll be here. For after.' Some sentences hold a whole family up by themselves.", "authored": "aletheia", "ref": "I.8.2" },
-    { "id": "nb_confession", "tab": "people", "title": "The boathouse", "text": "Everything was there — crates, bundles, and the green-sealed envelope, cracked but unopened. Five days in a coat pocket and he couldn't open it. Contents located. Returned intact. The rest is district business.", "authored": "aletheia", "ref": "I.8.2" },
-    { "id": "nb_reading", "tab": "places", "title": "The reading", "text": "The lantern and the ivy. Lead together, argue often, decide once. Poppy sobbed into PLAN A: JOY, and the happiest sentence Warren will ever say got said.", "authored": "aletheia", "ref": "I.8.3" },
-    { "id": "nb_grape_victory", "tab": "grapes", "title": "One grape", "text": "Took one. Looked at it. Gave it to the kid. At peace — ish. The stress ball remains employed.", "authored": "aletheia", "ref": "I.7.1" },
-    { "id": "nb_credits", "tab": "people", "title": "FOR THE GIBBONS WHO COMES NEXT", "text": "A field notebook. A brass magnifying glass — 'Look closer, then look kinder.' And a jar of grape jam labeled 'For emergencies.' It's hereditary. NEXT STORY?", "authored": "aletheia", "ref": "I.8.4" }
+    {
+      "id": "nb_empty_vault",
+      "tab": "places",
+      "title": "Founders' Square — the ceremony",
+      "text": "Fifty years of waiting and the vault was empty. Not robbed-looking. Just... empty. The lock turned clean. Dot wants the front page; the town wants an answer. Start with who could open a door without breaking it.",
+      "authored": "aletheia",
+      "ref": "I.5.day1"
+    },
+    {
+      "id": "nb_met_otto",
+      "tab": "people",
+      "title": "Otto Kessler — The Percolator",
+      "text": "Built like a hillside, talks like a slow pour. The café hears everything in this district eventually. So does Otto.",
+      "authored": "aletheia",
+      "ref": "I.4"
+    },
+    {
+      "id": "nb_met_margie",
+      "tab": "people",
+      "title": "Margie Plum — The Drowsy Lantern",
+      "text": "Inn's full for the ceremony. New lodger: 'maps and whispers,' asks about treasure at breakfast. Margie quotes people exactly — useful trait in a witness, terrifying in a landlady.",
+      "authored": "aletheia",
+      "ref": "I.4"
+    },
+    {
+      "id": "nb_met_gino",
+      "tab": "people",
+      "title": "Gino Puglisi — fruit stall",
+      "text": "Forty percent of the stall is grapes. This is not information. This is a threat assessment.",
+      "authored": "aletheia",
+      "ref": "I.4"
+    },
+    {
+      "id": "nb_met_ida",
+      "tab": "people",
+      "title": "Ida Wren — Wren & Wick",
+      "text": "Made the capsule's lock with her own apprentice hands, fifty years back. Still oils it. Talks to it. The lock, reportedly, has never once let her down. People are another matter, she implies.",
+      "authored": "aletheia",
+      "ref": "I.4"
+    },
+    {
+      "id": "nb_met_evelyn",
+      "tab": "people",
+      "title": "Evelyn Croft — flower shop",
+      "text": "Fifty arrangements for fifty years. This year's is ivy — 'not technically a flower, technically a promise.' Wrote that one down word for word.",
+      "authored": "aletheia",
+      "ref": "I.4"
+    },
+    {
+      "id": "nb_met_poppy",
+      "tab": "people",
+      "title": "Poppy Finch — event planner",
+      "text": "Runs on fourteen laminated contingency cards and no sleep. Apologized to a ladder. Her whole career is tonight going right.",
+      "authored": "aletheia",
+      "ref": "I.4"
+    },
+    {
+      "id": "nb_met_warren",
+      "tab": "people",
+      "title": "Warren Holt — Council Guardian",
+      "text": "Eight years keeping the seat warm for the Vale heir. Rehearses his handover speech to pigeons, who have notes. Seems genuinely glad to be done — worth remembering how rare that is.",
+      "authored": "aletheia",
+      "ref": "I.4"
+    },
+    {
+      "id": "nb_met_julian",
+      "tab": "people",
+      "title": "Julian Vale — the heir",
+      "text": "Turns 24 this week; takes the chair at the ceremony. Smiles like it's a job. Spins his father's ring when the subject turns to tonight.",
+      "authored": "aletheia",
+      "ref": "I.4"
+    },
+    {
+      "id": "nb_met_clara",
+      "tab": "people",
+      "title": "Clara Vale — the sister",
+      "text": "Answered my question with a better question, twice. Told me to watch the crowd, not the vault. I intend to steal that technique.",
+      "authored": "aletheia",
+      "ref": "I.4"
+    },
+    {
+      "id": "nb_met_milo",
+      "tab": "people",
+      "title": "Milo Tanaka — junior detective",
+      "text": "Age 11. Notebook labeled CRIMES? — the question mark doing heavy lifting. Writes exclusively in red ink. A LOT of red ink. Filed under: hm.",
+      "authored": "aletheia",
+      "ref": "II.17.1"
+    },
+    {
+      "id": "nb_met_tuck",
+      "tab": "people",
+      "title": "Constable Bram Tuck",
+      "text": "Polices by proximity to pastry. Predicted the capsule holds drawings and a tooth. The man has never hurried and has never been late. Respect.",
+      "authored": "aletheia",
+      "ref": "I.4"
+    },
+    {
+      "id": "nb_key_backwards",
+      "tab": "places",
+      "title": "Council Hall — the key cabinet",
+      "text": "The Ceremonial Key was hung back facing the wall, and the dust says it traveled recently. Someone put it back in a hurry, or in the dark, or both.",
+      "authored": "aletheia",
+      "ref": "I.5.day2"
+    },
+    {
+      "id": "nb_dust_library",
+      "tab": "places",
+      "title": "The vault floor — a library of dust",
+      "text": "Every item left its shape. Matched each void to Poppy's checklist. One detail won't let go: the envelope's void has a SHARP edge. Everything else faded soft over decades. It came out last, and it came out carefully.",
+      "authored": "aletheia",
+      "ref": "II.13.1"
+    },
+    {
+      "id": "nb_poppy_confessed",
+      "tab": "people",
+      "title": "Poppy — the confession",
+      "text": "She borrowed the key three nights early, checked everything (MICE, Mr. Gibbons, what if MICE), locked it back, and made a time-stamped laminated inventory. The theft window just shrank to two nights, and Poppy shrank out of the suspect pool.",
+      "authored": "aletheia",
+      "ref": "I.5.day2"
+    },
+    {
+      "id": "nb_seal_sketch",
+      "tab": "places",
+      "title": "The seal — sketched from memory",
+      "text": "Green wax. A lantern wreathed in ivy, three drips. Poppy saw it on top of everything, 'important on purpose.' Somebody in this town knows that seal. Find them.",
+      "authored": "aletheia",
+      "ref": "I.5.day2"
+    },
+    {
+      "id": "nb_poppy_rattled",
+      "tab": "people",
+      "title": "Poppy, the morning after",
+      "text": "Reorganized the contingency binder because something had to be alphabetical today. Filed under: people who cope loudly. Also filed under: people who know something.",
+      "authored": "aletheia",
+      "ref": "I.5.day2"
+    },
+    {
+      "id": "nb_margies_testimony",
+      "tab": "people",
+      "title": "Margie's quote — exact, as always",
+      "text": "'I'm not certain the boy is ready.' One sherry, three nights before the ceremony, quoted to the letter. The town heard doubt. I heard a man checking his own work.",
+      "authored": "aletheia",
+      "ref": "I.5.day3"
+    },
+    {
+      "id": "nb_lodger_gossip",
+      "tab": "people",
+      "title": "The lodger, per Margie",
+      "text": "A week at the inn, key never on its hook past dark, treasure questions before the eggs. Whispering is his indoor voice.",
+      "authored": "aletheia",
+      "ref": "I.5.day3"
+    },
+    {
+      "id": "nb_warren_speech",
+      "tab": "people",
+      "title": "Warren's third draft",
+      "text": "'The happiest sentence I will ever say: the waiting is over.' He rewrote it twice because the JOY wasn't right. Men plotting coups edit differently.",
+      "authored": "aletheia",
+      "ref": "I.5.day3"
+    },
+    {
+      "id": "nb_lighthouse_folio",
+      "tab": "people",
+      "title": "Forty-seven lighthouses",
+      "text": "Tickets. Tide tables. A dream deferred eight years and packed anyway. Warren wasn't holding the chair. He was holding the door.",
+      "authored": "aletheia",
+      "ref": "I.5.day3"
+    },
+    {
+      "id": "nb_night_photo",
+      "tab": "places",
+      "title": "The night photograph",
+      "text": "Night −2, long exposure: lanterns like honey, and a tail at the frame's edge. One weasel tail, in a district with no weasels on the rolls. Warren checked twice. So did I.",
+      "authored": "aletheia",
+      "ref": "I.5.day3"
+    },
+    {
+      "id": "nb_camera",
+      "tab": "people",
+      "title": "The loaner camera",
+      "text": "'You have your grandfather's eye for people. Borrow mine for places.' Warren's bellows camera now lives in the satchel. The satchel is honored.",
+      "authored": "aletheia",
+      "ref": "II.12.3"
+    },
+    {
+      "id": "nb_founders_addition",
+      "tab": "places",
+      "title": "The Founder's Addition — ten years ago",
+      "text": "The capsule was legally opened once before: one hour, one dying founder, one green-sealed envelope added. His final wishes, for the 50th. Everyone assumed they named Julian. Assumed.",
+      "authored": "aletheia",
+      "ref": "II.15.2"
+    },
+    {
+      "id": "nb_morgue_unlocked",
+      "tab": "places",
+      "title": "The Ledger Morgue",
+      "text": "Fifty years of the district in bound volumes and clipping drawers, under my own floor the whole time. The quietest room in town. Archie's desk is down there, one drawer locked.",
+      "authored": "aletheia",
+      "ref": "II.15.2"
+    },
+    {
+      "id": "nb_plaque_moved",
+      "tab": "places",
+      "title": "Then & now: the plaque moved",
+      "text": "The founding photograph against today's square: the dedication plaque migrated a full stride, ten years ago, to make room for the Addition. The vault has opened exactly twice in fifty years — and both times, lawfully. Until now.",
+      "authored": "aletheia",
+      "ref": "II.13.2"
+    },
+    {
+      "id": "nb_met_ferris",
+      "tab": "people",
+      "title": "Ferris Mott — the lodger",
+      "text": "Believes in the treasure the way other people believe in weather. Winked twice. Tail described, unprompted, as 'heritage couture.' Filed under: watch tonight.",
+      "authored": "aletheia",
+      "ref": "I.5.day4"
+    },
+    {
+      "id": "nb_stakeout",
+      "tab": "places",
+      "title": "The stakeout",
+      "text": "Hole number six, one upended sack: trowels, jam, maps, no capsule. 'Wrong crimes, folks. Right weasel, wrong crimes.' The town's tidy ending fell apart on a riverbank at midnight.",
+      "authored": "aletheia",
+      "ref": "I.5.day4"
+    },
+    {
+      "id": "nb_ferris_pivot",
+      "tab": "people",
+      "title": "Ferris's testimony — the pivot",
+      "text": "Night −2: a tall figure, dry under a posh umbrella, used a KEY smooth as butter, moved like the square belonged to him. The red herring turned out to be a lens.",
+      "authored": "aletheia",
+      "ref": "I.5.day4"
+    },
+    {
+      "id": "nb_ferris_tracks",
+      "tab": "places",
+      "title": "The holed sole",
+      "text": "Followed one distinctive boot from six garden crimes to a flattened watching-spot in the reeds. He wasn't digging at the monument that night. He was WATCHING it.",
+      "authored": "aletheia",
+      "ref": "II.12.4"
+    },
+    {
+      "id": "nb_triangulation",
+      "tab": "places",
+      "title": "Where the figure stood",
+      "text": "Warren's balcony plus the tail's place in frame: the figure stood on the river-side line, off the manor shortcut. Light and habit, doing geometry.",
+      "authored": "aletheia",
+      "ref": "III.25.2"
+    },
+    {
+      "id": "nb_fire_escape",
+      "tab": "places",
+      "title": "The fire-escape sightline",
+      "text": "Stood where the witness stood. The chimney hides the manor side; the lantern strip shows the crossing; and from above, an umbrella hides the whole him. The story holds — and now I know WHY it's incomplete.",
+      "authored": "aletheia",
+      "ref": "II.12.6"
+    },
+    {
+      "id": "nb_torn_letter",
+      "tab": "people",
+      "title": "The torn letter (not for the board's strings)",
+      "text": "Eight fragments, one unsent apology. It answers nothing and confirms everything. Some evidence is for understanding, not for presenting.",
+      "authored": "aletheia",
+      "ref": "III.25.1"
+    },
+    {
+      "id": "nb_handwriting",
+      "tab": "places",
+      "title": "Handwriting comparison",
+      "text": "The looped G, the crossed double-t, the pen pressure. Three features, the way Archie taught. Same hand.",
+      "authored": "aletheia",
+      "ref": "II.12.5"
+    },
+    {
+      "id": "nb_ghost_landing",
+      "tab": "places",
+      "title": "Three ghosts on an old map",
+      "text": "The 1890s survey over the modern district: a filled mill race, a lost market cross — and the original VALE BOAT LANDING, unmarked, straight below the old boathouse. Family water.",
+      "authored": "aletheia",
+      "ref": "II.13.4"
+    },
+    {
+      "id": "nb_prudence_motive",
+      "tab": "people",
+      "title": "Prudence — motive on a plate",
+      "text": "Twenty years reconstructing the Theodora–Jonah romance, final proof sealed in the capsule, three sleepless days from touching it. 'Suspect me. I would suspect me.' Noted — and noted that innocent people rarely say that.",
+      "authored": "aletheia",
+      "ref": "I.5.day5"
+    },
+    {
+      "id": "nb_prudence_alibi",
+      "tab": "people",
+      "title": "Prudence's alibi",
+      "text": "Night −2: cataloguing with Evelyn Croft until 3 a.m. Verify with the florist. Bring context. She is armed with shears.",
+      "authored": "aletheia",
+      "ref": "I.5.day5"
+    },
+    {
+      "id": "nb_evelyn_alibi",
+      "tab": "people",
+      "title": "Evelyn confirms — blushing",
+      "text": "Until three, with tea, Jonah's letters read aloud. The rival families' last two descendants have quietly become... the game never says. Neither will I.",
+      "authored": "aletheia",
+      "ref": "I.5.day5"
+    },
+    {
+      "id": "nb_seal_identified",
+      "tab": "places",
+      "title": "THE SEAL IS THE VALE SIGNET",
+      "text": "Not the council's. Edmund Vale's personal mark — the lantern in ivy — from a ring that never left the family. It sits on his son's finger to this day. The loose one. The one he spins.",
+      "authored": "aletheia",
+      "ref": "I.5.day5"
+    },
+    {
+      "id": "nb_ferris_readaloud",
+      "tab": "people",
+      "title": "The lockup, after the headline",
+      "text": "He asked me to read my own front page to him, out loud. He wasn't angry. That's worse. Filed under: rules of Grandpa's I now understand from the inside.",
+      "authored": "aletheia",
+      "ref": "II.15.1"
+    },
+    {
+      "id": "nb_ferris_apology",
+      "tab": "people",
+      "title": "Ferris, reforming",
+      "text": "Composing a formal apology to a marrow. The town may keep him yet.",
+      "authored": "aletheia",
+      "ref": "I.5.day5"
+    },
+    {
+      "id": "nb_clara_fear",
+      "tab": "people",
+      "title": "CLARA CLUE 1 — Julian's fear",
+      "text": "'What if I'm only the shape of Father?' Everyone keeps telling him he'll lead alone — including the sister who loves him most. Fear wears a rehearsed smile in public.",
+      "authored": "aletheia",
+      "ref": "I.5.day6"
+    },
+    {
+      "id": "nb_two_person_puzzles",
+      "tab": "people",
+      "title": "CLARA CLUE 2 — the two-person puzzles",
+      "text": "Every birthday box designed so neither child could open it alone. A game, she thought. A syllabus, she thinks now. SAVE FOR THE CONFRONTATION — this one's a door, not a nail.",
+      "authored": "aletheia",
+      "ref": "I.5.day6"
+    },
+    {
+      "id": "nb_clara_key",
+      "tab": "people",
+      "title": "CLARA CLUE 3 — the backup key (a trust)",
+      "text": "Two keys have always existed. The family's is gone from the study. Given to me with the family in my hands — which means it goes on the record only through Ida's ledger, never through Clara.",
+      "authored": "aletheia",
+      "ref": "I.5.day6"
+    },
+    {
+      "id": "nb_idas_ledger",
+      "tab": "places",
+      "title": "IDA'S LEDGER — exactly two keys",
+      "text": "Fifty years, two keys, apprentice hands, no copies since — the lock would gossip. The most reliable witness in Lanternside is a ledger in a drawer scaled to wren fingers.",
+      "authored": "aletheia",
+      "ref": "I.5.day6"
+    },
+    {
+      "id": "nb_wax_fragment",
+      "tab": "places",
+      "title": "THE WAX FRAGMENT",
+      "text": "Green wax from Julian's coat pocket, skittering across the Percolator floor to my shoe. The ivy aligns with the sketch. A soft, terrible chime.",
+      "authored": "aletheia",
+      "ref": "I.5.day6"
+    },
+    {
+      "id": "nb_milos_sighting",
+      "tab": "people",
+      "title": "MILO'S SIGHTING — the Vale umbrella, 2 a.m.",
+      "text": "Traded a secret for a secret. He saw THE umbrella — silver duck handle — hiding the whole him. Now I owe an 11-year-old the professional courtesy of checking his story instead of just believing it.",
+      "authored": "aletheia",
+      "ref": "I.5.day6"
+    },
+    {
+      "id": "nb_overheard",
+      "tab": "people",
+      "title": "THE OVERHEARD CONVERSATION",
+      "text": "'It isn't fair.' / 'You may be surprised.' A comfort to one child; a verdict overheard by the other. Off the record — the tea in that parlor doesn't even offer the toggle. The garden's own acoustics can carry the fact instead.",
+      "authored": "aletheia",
+      "ref": "I.8.1"
+    },
+    {
+      "id": "nb_garden_acoustics",
+      "tab": "places",
+      "title": "The garden acoustics",
+      "text": "From the study window, the garden arrives only when the wind rests. Physics explains the half-heard conversation better than any confession could.",
+      "authored": "aletheia",
+      "ref": "II.13.7"
+    },
+    {
+      "id": "nb_dot_blessing",
+      "tab": "people",
+      "title": "Dot, on the last morning",
+      "text": "'Archie would run it exactly the way you're about to.' The red pen stayed down. That's the highest compliment this office issues.",
+      "authored": "aletheia",
+      "ref": "I.5.day7"
+    },
+    {
+      "id": "nb_river_walk",
+      "tab": "places",
+      "title": "The river walk",
+      "text": "Clara came as far as the bank. 'I'll be here. For after.' Some sentences hold a whole family up by themselves.",
+      "authored": "aletheia",
+      "ref": "I.8.2"
+    },
+    {
+      "id": "nb_confession",
+      "tab": "people",
+      "title": "The boathouse",
+      "text": "Everything was there — crates, bundles, and the green-sealed envelope, cracked but unopened. Five days in a coat pocket and he couldn't open it. Contents located. Returned intact. The rest is district business.",
+      "authored": "aletheia",
+      "ref": "I.8.2"
+    },
+    {
+      "id": "nb_reading",
+      "tab": "places",
+      "title": "The reading",
+      "text": "The lantern and the ivy. Lead together, argue often, decide once. Poppy sobbed into PLAN A: JOY, and the happiest sentence Warren will ever say got said.",
+      "authored": "aletheia",
+      "ref": "I.8.3"
+    },
+    {
+      "id": "nb_grape_victory",
+      "tab": "grapes",
+      "title": "One grape",
+      "text": "Took one. Looked at it. Gave it to the kid. At peace — ish. The stress ball remains employed.",
+      "authored": "aletheia",
+      "ref": "I.7.1"
+    },
+    {
+      "id": "nb_credits",
+      "tab": "people",
+      "title": "FOR THE GIBBONS WHO COMES NEXT",
+      "text": "A field notebook. A brass magnifying glass — 'Look closer, then look kinder.' And a jar of grape jam labeled 'For emergencies.' It's hereditary. NEXT STORY?",
+      "authored": "aletheia",
+      "ref": "I.8.4"
+    },
+    {
+      "id": "nb_handyman_published",
+      "tab": "people",
+      "title": "The handyman, named",
+      "text": "The town loves the story. The repairs continue - watched, thanked, public. Something small and private is gone, and my byline is on the taking of it.",
+      "authored": "aletheia",
+      "ref": "II.17.3"
+    },
+    {
+      "id": "nb_handyman_kept",
+      "tab": "people",
+      "title": "A story that didn't need telling",
+      "text": "One brass screw, worn bright, taped to this page. No reward except the weight of it. Practice, maybe, for a harder page I haven't met yet.",
+      "authored": "aletheia",
+      "ref": "II.17.3"
+    }
   ],
   "questions": [
-    { "id": "q_who_takes_red_pens", "text": "Who keeps taking Dot's red pens? (One a shift. She counts.)", "ref": "II.17.1" },
-    { "id": "q_who_emptied_the_capsule", "text": "Who emptied the capsule — and how did they open it without forcing Ida's lock?", "ref": "I.5.day1" },
-    { "id": "q_why_two_keys", "text": "WHY TWO KEYS? The founding portrait shows Edmund with a second key at his belt.", "ref": "III.21" },
-    { "id": "q_warren_motive", "text": "Which is true — the doubt Margie heard, or the joy in Warren's speech? (They can't both be the whole truth.)", "ref": "II.16.4" },
-    { "id": "q_second_key", "text": "Ferris watched a key turn at 2 a.m. — but the council key was accounted for. ...Is it the only key?", "ref": "II.16.4" },
-    { "id": "q_same_night", "text": "Milo's umbrella and Margie's restless lodger — same night, same square. How many people were out at 2 a.m., and who saw whom?", "ref": "II.16.4" }
+    {
+      "id": "q_who_takes_red_pens",
+      "text": "Who keeps taking Dot's red pens? (One a shift. She counts.)",
+      "ref": "II.17.1"
+    },
+    {
+      "id": "q_who_emptied_the_capsule",
+      "text": "Who emptied the capsule — and how did they open it without forcing Ida's lock?",
+      "ref": "I.5.day1"
+    },
+    {
+      "id": "q_why_two_keys",
+      "text": "WHY TWO KEYS? The founding portrait shows Edmund with a second key at his belt.",
+      "ref": "III.21"
+    },
+    {
+      "id": "q_warren_motive",
+      "text": "Which is true — the doubt Margie heard, or the joy in Warren's speech? (They can't both be the whole truth.)",
+      "ref": "II.16.4"
+    },
+    {
+      "id": "q_second_key",
+      "text": "Ferris watched a key turn at 2 a.m. — but the council key was accounted for. ...Is it the only key?",
+      "ref": "II.16.4"
+    },
+    {
+      "id": "q_same_night",
+      "text": "Milo's umbrella and Margie's restless lodger — same night, same square. How many people were out at 2 a.m., and who saw whom?",
+      "ref": "II.16.4"
+    }
   ]
 }

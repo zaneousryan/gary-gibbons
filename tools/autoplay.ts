@@ -331,7 +331,7 @@ async function runOnce(seed: number): Promise<string[]> {
   if (!commitMorningPages(['q_who_emptied_the_capsule'])) fail('morning pages commit failed');
   assertFlag('morning_focus_q_who_emptied_the_capsule');
   const vox = voxPopLineFor(db, 'otto');
-  if (!vox || !vox.includes('Smooth hands')) fail(`unexpected otto vox pop: ${vox}`);
+  if (!vox || !vox.text.includes('Smooth hands')) fail(`unexpected otto vox pop: ${JSON.stringify(vox)}`);
   const greetingNeutral = greetingFor(db, 'margie');
   if (!greetingNeutral || !greetingNeutral.includes('pet')) fail('margie neutral greeting lost its "pet"');
   log.push('day 2 morning: pages committed, vox pop live, greetings tiered');
@@ -590,6 +590,10 @@ async function runOnce(seed: number): Promise<string[]> {
     fail('clara_key_missing must corroborate via the ledger, never via Clara');
   }
   talkTo(db, 'beatrice', 'beatrice_d6');
+  // acoustics came first, so the tea arrived PRIMED — the one variant that
+  // lands HEAVIER (III.21 path B): "Who was at the window?"
+  const teaLog = log.filter((l) => l.includes('"dialogue":"beatrice_d6"') && l.includes('dialogue:started'));
+  if (!teaLog.some((l) => l.includes('"entry":"primed"'))) fail('beatrice tea should enter PRIMED after the acoustics');
   assertFlag('beatrice_tea_done');
   assertCard('overheard_conversation', 'verified'); // acoustics corroboration (garden_echo)
   assertCard('beatrice_read_will', 'offrecord'); // and this one stays a promise forever
@@ -647,6 +651,8 @@ async function runOnce(seed: number): Promise<string[]> {
   // --- day 7: The Boathouse (I.8) ---
   game.moveTo('the_percolator');
   talkTo(db, 'dot', 'dot_d7_final'); // the held-page entry: "Archie held the page once too."
+  assertFlag('dot_ack_hold'); // printed_hold_d6 (engine tone flag) routes the held entry
+  assertFlag('dot_ran_it'); // "Thin sourcing, Gibbons." / "Thick enough." / "...Yeah. Run it."
   assertFlag('pitch_d7_done');
   game.moveTo('riverbank');
   talkTo(db, 'clara', 'clara_d7_river');

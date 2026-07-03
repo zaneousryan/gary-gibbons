@@ -55,7 +55,7 @@ export function questionOfTheDay(db: ContentDB): { id: string; text: string } | 
 }
 
 /** A scheduled NPC's vox-pop answer for the current focus, if authored. */
-export function voxPopLineFor(db: ContentDB, charId: string): string | null {
+export function voxPopLineFor(db: ContentDB, charId: string): { id: string; text: string } | null {
   const state = useGameStore.getState().state;
   const pool = db.barks['voxpop'];
   if (!pool) return null;
@@ -65,7 +65,7 @@ export function voxPopLineFor(db: ContentDB, charId: string): string | null {
     const topicTag = bark.tags.find((t) => t.startsWith('q_'));
     if (topicTag && !focus.includes(topicTag)) continue;
     if (!evalCondition((bark.cond ?? {}) as Condition, state)) continue;
-    return bark.text;
+    return { id: bark.id, text: bark.text };
   }
   return null;
 }

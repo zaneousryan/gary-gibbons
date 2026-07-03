@@ -1,0 +1,87 @@
+{
+  "id": "warren_d5_dock",
+  "character": "warren",
+  "ref": "II.17.3",
+  "entries": [
+    {
+      "id": "main",
+      "cond": { "all": [{ "day": { "gte": 5 } }, { "flag": "ss_anonymous_handyman_its_warren" }, { "not": { "flag": "handyman_chosen" } }] },
+      "node": "c1"
+    }
+  ],
+  "reentrant": true,
+  "nodes": {
+    "c1": {
+      "speaker": "narrator",
+      "line": "Warren, at the council hall with a small brass screwdriver not quite hidden in his coat pocket. He sees Gary see it. Eight years of anonymous repairs sit between them like a third chair.",
+      "authored": "aletheia",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "warren",
+      "line": "So. The screws. I wondered which of Archie's traits you'd inherit first — the eye, or the discretion.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "gary",
+      "choices": [
+        {
+          "line": "It's a beautiful story, Warren. The town deserves to know who's been holding it together.",
+          "authored": "aletheia",
+          "effects": [
+            { "setFlag": "handyman_chosen" },
+            { "setFlag": "handyman_published" },
+            { "trust": { "char": "warren", "delta": -1 } },
+            { "trust": { "char": "margie", "delta": 1 } }
+          ],
+          "next": "pub1"
+        },
+        {
+          "line": "…What screws? I'm here about council business.",
+          "authored": "aletheia",
+          "effects": [
+            { "setFlag": "handyman_chosen" },
+            { "setFlag": "handyman_kept" }
+          ],
+          "next": "keep1"
+        }
+      ]
+    },
+    "pub1": {
+      "speaker": "warren",
+      "line": "...Then write it kindly, Mr. Gibbons. Anonymity was the only wage I ever drew for it.",
+      "authored": "aletheia",
+      "emote": "sad",
+      "next": "pub2"
+    },
+    "pub2": {
+      "speaker": "narrator",
+      "line": "The town loves the story. The gates and steps still get fixed — but now people watch him do it, and thank him, and something small and private is gone. Both endings were written. This was one of them.",
+      "authored": "aletheia",
+      "effects": [{ "notebook": { "entry": "nb_handyman_published" } }],
+      "next": null
+    },
+    "keep1": {
+      "speaker": "narrator",
+      "line": "A long look. Then Warren presses something into Gary's hand: one brass screw, worn bright.",
+      "authored": "aletheia",
+      "next": "keep2"
+    },
+    "keep2": {
+      "speaker": "warren",
+      "line": "For your board. File under 'stories that didn't need telling.'",
+      "authored": "verbatim",
+      "emote": "happy",
+      "effects": [
+        { "trust": { "char": "warren", "delta": 1 } },
+        { "notebook": { "entry": "nb_handyman_kept" } },
+        { "playBark": "ss_handyman_payoff" }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "warren_repeat_busy"
+}

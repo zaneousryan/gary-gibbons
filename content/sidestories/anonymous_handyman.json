@@ -39,21 +39,9 @@
     {
       "id": "kept_secret",
       "cond": {
-        "day": {
-          "gte": 5
-        }
+        "flag": "handyman_chosen"
       },
-      "text": "Gary keeps the secret. No reward - except a brass screw pressed into his hand at the dock: 'File under stories that didn't need telling.' A rehearsal for the week's hardest choice.",
-      "effects": [
-        {
-          "playBark": "ss_handyman_payoff"
-        },
-        {
-          "notebook": {
-            "doodle": "doodle_brass_screw"
-          }
-        }
-      ]
+      "text": "The choice was Gary's: publish the heartwarming scoop, or keep his secret. Both endings are written. Keeping it earns nothing except Warren, at the dock, and a single brass screw - a rehearsal, it turns out, for the week's hardest choice."
     }
   ],
   "trustFloor": {

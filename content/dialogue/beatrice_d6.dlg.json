@@ -3,10 +3,29 @@
   "character": "beatrice",
   "ref": "I.8.1",
   "entries": [
+    { "id": "primed", "cond": { "all": [{ "day": { "gte": 6 } }, { "flag": "garden_acoustics_done" }, { "not": { "card": "overheard_conversation" } }] }, "node": "p1" },
     { "id": "main", "cond": { "all": [{ "day": { "gte": 6 } }, { "not": { "card": "overheard_conversation" } }] }, "node": "b1" }
   ],
   "reentrant": true,
   "nodes": {
+    "p1": {
+      "speaker": "narrator",
+      "line": "The manor parlor. Tea already poured. Two cups. She was expecting him — and Gary has stood at the study window; he knows what the wind does to a garden's sentences. This is the one primed scene that arrives HEAVIER, not lighter.",
+      "authored": "aletheia",
+      "next": "p2"
+    },
+    "p2": {
+      "speaker": "gary",
+      "line": "Who was at the window?",
+      "authored": "verbatim",
+      "next": "p3"
+    },
+    "p3": {
+      "speaker": "narrator",
+      "line": "Beatrice goes very still.",
+      "authored": "verbatim",
+      "next": "b2"
+    },
     "b1": {
       "speaker": "narrator",
       "line": "The manor parlor. Tea already poured. Two cups. She was expecting him. In this room, there is no off-the-record toggle to decline — the whole conversation simply is, and always will be, hers and his.",
