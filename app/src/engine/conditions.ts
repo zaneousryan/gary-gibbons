@@ -23,7 +23,7 @@ export type Condition =
   | { trust: { char: string } & NumCmp }
   | { weather: Weather }
   | { deduction: string }
-  | { collectible: { lanterns?: number; doodles?: number; clippings?: number } }
+  | { collectible: { lanterns?: number; doodles?: number; clippings?: number; grapesDeclined?: number } }
   | Record<string, never>; // {} = always true
 
 function cmp(value: number, c: NumCmp): boolean {
@@ -83,6 +83,7 @@ export function evalCondition(cond: Condition | undefined | null, state: GameSta
     if (c.lanterns !== undefined && state.collectibles.lanterns.length < c.lanterns) return false;
     if (c.doodles !== undefined && state.collectibles.doodles.length < c.doodles) return false;
     if (c.clippings !== undefined && state.collectibles.clippings.length < c.clippings) return false;
+    if (c.grapesDeclined !== undefined && state.collectibles.grapesDeclined < c.grapesDeclined) return false;
     return true;
   }
 

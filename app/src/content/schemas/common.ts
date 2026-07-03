@@ -66,6 +66,7 @@ export const ConditionSchema: z.ZodType<ConditionShape> = z.lazy(() =>
           lanterns: z.number().int().optional(),
           doodles: z.number().int().optional(),
           clippings: z.number().int().optional(),
+          grapesDeclined: z.number().int().optional(),
         })
         .strict()
         .optional(),
