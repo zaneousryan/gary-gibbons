@@ -4,6 +4,11 @@
 
 import { test, expect, type Page } from '@playwright/test';
 
+/** Wait for PixiStage to finish its async scene build for a location. */
+async function waitForScene(page: Page, locationId: string) {
+  await expect(page.locator(`[data-scene-ready="${locationId}"]`)).toBeAttached({ timeout: 20_000 });
+}
+
 async function clickStage(page: Page, x: number, y: number) {
   const canvas = page.locator('canvas');
   await canvas.click({ position: { x, y }, force: true });
@@ -37,13 +42,14 @@ test('boot → walk → talk → save → reload', async ({ page }) => {
   await expect(page.getByTestId('hud-location')).toHaveText("Gary's Apartment", { timeout: 20_000 });
   await expect(page.getByTestId('hud-clock')).toContainText('Day 1');
   await expect(page.locator('canvas')).toBeVisible();
+  await waitForScene(page, 'gary_apartment');
 
   // walk: click the exit hotspot; Gary walks there, scene changes
   await clickStage(page, 1760, 820);
   await expect(page.getByTestId('hud-location')).toHaveText('The Percolator', { timeout: 15_000 });
 
   // talk: Dot's talk hotspot opens the red-pens conversation
-  await page.waitForTimeout(600); // scene build
+  await waitForScene(page, 'the_percolator');
   await clickStage(page, 820, 800);
   await playConversation(page);
 
@@ -58,6 +64,7 @@ test('boot → walk → talk → save → reload', async ({ page }) => {
   // walk home, then load — we should be back at the Percolator
   await clickStage(page, 160, 820);
   await expect(page.getByTestId('hud-location')).toHaveText("Gary's Apartment", { timeout: 15_000 });
+  await waitForScene(page, 'gary_apartment');
   await page.getByTestId('hud-load').click();
   await expect(page.getByTestId('hud-location')).toHaveText('The Percolator', { timeout: 10_000 });
 });
@@ -65,6 +72,7 @@ test('boot → walk → talk → save → reload', async ({ page }) => {
 test('examine and phase advance', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByTestId('hud-location')).toHaveText("Gary's Apartment", { timeout: 20_000 });
+  await waitForScene(page, 'gary_apartment');
 
   // examine the board hotspot
   await clickStage(page, 960, 520);

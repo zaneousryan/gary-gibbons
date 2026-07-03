@@ -2,11 +2,11 @@
   "id": "dots_missing_pens",
   "ref": "II.17.1",
   "type": "testimony",
-  "title": "Six red pens, gone in two weeks",
-  "sprite": "dots_missing_pens",
+  "title": "Twelve red pens, gone in two weeks",
+  "sprite": "card_dots_missing_pens",
   "source": "dot",
   "initialStatus": "unverified",
-  "text": "Dot's count: six pens, two weeks, one per shift. Not misplacement — a pattern.",
+  "text": "Dot's count: twelve pens, two weeks, one per shift — and she counts her shifts. Not misplacement — a pattern.",
   "verifyRoutes": [
     {
       "id": "red_ink_trail",

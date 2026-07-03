@@ -9,7 +9,7 @@
   "nodes": {
     "c1": {
       "speaker": "dot",
-      "line": "Gibbons. Before you ask: no, the capsule story isn't yours yet, the capsule story is Thursday's. Today's story is smaller. Somebody is stealing my red pens.",
+      "line": "Gibbons. Before you ask: the ceremony's tonight, and until that vault opens it writes itself. Today's story is smaller. Somebody is stealing my red pens.",
       "authored": "aletheia",
       "emote": "neutral",
       "next": "c2"
@@ -37,7 +37,7 @@
     },
     "c3": {
       "speaker": "dot",
-      "line": "Six. In two weeks. A pen a shift, Gibbons, that's not misplacement, that's a pattern. Find my pattern.",
+      "line": "Twelve. Twelve pens in two weeks — one a shift, and I count my shifts, Gibbons. That's not misplacement, that's a pattern. Find my pattern.",
       "authored": "aletheia",
       "emote": "neutral",
       "effects": [
@@ -49,7 +49,7 @@
     },
     "c3e": {
       "speaker": "dot",
-      "line": "I love deadlines, Gibbons. The pens are how I love them. Six gone in two weeks. Find my pattern.",
+      "line": "I love deadlines, Gibbons. The pens are how I love them. Twelve gone in two weeks, one a shift. Find my pattern.",
       "authored": "aletheia",
       "emote": "neutral",
       "effects": [
@@ -78,6 +78,14 @@
       "authored": "aletheia",
       "emote": "neutral",
       "effects": [{ "playBark": "gary_inner_one_sentence" }],
+      "next": "c5"
+    },
+    "c5": {
+      "speaker": "dot",
+      "line": "Archie filed from a rowboat once. One sentence, mid-river, deadline made. (beat) Go earn the rest of that story.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "ref": "I.7.2",
       "next": null
     },
     "p1": {

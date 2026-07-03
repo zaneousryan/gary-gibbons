@@ -141,9 +141,10 @@ function main() {
   }
 
   for (const card of Object.values(db.cards)) {
-    const sprite = card.sprite ?? card.id;
+    // sprite keys are full basenames per spec §5.4/§10: "card_{cardId}"
+    const sprite = card.sprite ?? `card_${card.id}`;
     const accent = card.type === 'question' ? PLUM : card.type === 'deduction' ? AMBER : card.type === 'theory' ? TEAL : IVY;
-    save(`board/card_${sprite}.png`, boardCard(card.id, accent));
+    save(`board/${sprite}.png`, boardCard(card.id, accent));
   }
 
   // board furniture

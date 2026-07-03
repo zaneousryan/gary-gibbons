@@ -35,7 +35,22 @@
         "tier": "character",
         "text": "Archie Gibbons's press badge, brass gone soft-dark with thumbprints. Gary touches it the way other people knock on wood."
       },
-      "ref": "II.7.2"
+      "ref": "I.7.2"
+    },
+    {
+      "id": "stair_rail",
+      "at": [1600, 760],
+      "kind": "examine",
+      "label": "The Stair Rail",
+      "interactions": [
+        {
+          "id": "red_ink_smudge",
+          "text": "The rail down to the Ledger office, polished by fifty years of deadline hands. Near the bottom: a smudge of red ink, low on the rail. Low, like a small hand made it.",
+          "effects": [{ "setFlag": "noticed_red_ink" }],
+          "ref": "II.17.1"
+        }
+      ],
+      "ref": "II.17.1"
     },
     {
       "id": "kettle",

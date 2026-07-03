@@ -31,10 +31,14 @@ interface SceneRefs {
 
 async function buildScene(db: ContentDB, refs: SceneRefs, locationId: string) {
   const { world } = refs;
-  world.removeChildren().forEach((c) => c.destroy({ children: true }));
+  // reset refs BEFORE destroying children — the ticker runs during the async
+  // build and must never touch a destroyed display object
+  refs.gary = null;
+  refs.location = null;
   refs.hotspotViews = [];
   refs.garyTarget = null;
   refs.pendingInteract = null;
+  world.removeChildren().forEach((c) => c.destroy({ children: true }));
 
   const state = useGameStore.getState().state;
   const loc = db.locations[locationId];
@@ -238,8 +242,12 @@ export default function PixiStage({ db }: { db: ContentDB }) {
           if (Math.abs(dx) <= step) {
             gary.x = refs.garyTarget;
             refs.garyTarget = null;
-            refs.pendingInteract?.();
+            const act = refs.pendingInteract;
             refs.pendingInteract = null;
+            if (act) {
+              act();
+              return; // the interaction may have rebuilt the scene — this frame's refs are stale
+            }
           } else {
             gary.x += Math.sign(dx) * step;
             gary.scale.x = Math.abs(gary.scale.x) * (dx < 0 ? -1 : 1);
@@ -260,7 +268,10 @@ export default function PixiStage({ db }: { db: ContentDB }) {
       });
 
       const rebuild = () => {
-        void buildScene(db, refs, useGameStore.getState().state.location);
+        host.removeAttribute('data-scene-ready');
+        void buildScene(db, refs, useGameStore.getState().state.location).then(() => {
+          host.setAttribute('data-scene-ready', useGameStore.getState().state.location);
+        });
       };
       rebuild();
       let lastLocation = useGameStore.getState().state.location;
