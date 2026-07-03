@@ -31,6 +31,26 @@ export function ExaminePanel() {
   );
 }
 
+/** NPC greeting bubble — the trust UI (III.23.3): the greeting IS the meter. */
+export function GreetingBubble() {
+  const greeting = useUiStore((s) => s.greeting);
+  const show = useUiStore((s) => s.showGreeting);
+  useEffect(() => {
+    if (!greeting) return;
+    const t = setTimeout(() => show(null), 3400);
+    return () => clearTimeout(t);
+  }, [greeting, show]);
+  if (!greeting) return null;
+  return (
+    <div className="absolute top-44 inset-x-0 flex justify-center pointer-events-none" data-testid="greeting-bubble">
+      <div className="max-w-[680px] bg-cream/95 text-ink px-5 py-2.5 rounded-2xl border-2 border-ink shadow-xl">
+        <span className="font-bold mr-2">{greeting.name}:</span>
+        <span>“{greeting.text}”</span>
+      </div>
+    </div>
+  );
+}
+
 export function Toast() {
   const toast = useUiStore((s) => s.toast);
   const clearToast = useUiStore((s) => s.clearToast);

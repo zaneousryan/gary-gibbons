@@ -13,12 +13,15 @@ import { PocketRecap, GrandpaModal } from '@ui/BoardExtras';
 import DialogueBox from '@ui/DialogueBox';
 import Hud from '@ui/Hud';
 import Notebook from '@ui/Notebook';
+import Newspaper from '@ui/Newspaper';
+import MorningPages from '@ui/MorningPages';
 import InnerVoice from '@ui/InnerVoice';
-import { ExaminePanel, Toast } from '@ui/Overlays';
+import { ExaminePanel, GreetingBubble, Toast } from '@ui/Overlays';
 import DevMenu from '@dev/DevMenu';
 import { installTriggerWatcher } from '@systems/triggers';
 import { installBarkWatcher } from '@systems/barks';
 import { installNotebookWatcher } from '@systems/notebook';
+import { installVerificationWatcher } from '@systems/verify';
 
 export default function App() {
   const [db, setDb] = useState<ContentDB | null>(null);
@@ -45,10 +48,12 @@ export default function App() {
       const un1 = installBarkWatcher(content);
       const un2 = installNotebookWatcher(content);
       const un3 = installTriggerWatcher(content);
+      const un4 = installVerificationWatcher(content);
       return () => {
         un1();
         un2();
         un3();
+        un4();
       };
     } catch (err) {
       setBootError(String(err));
@@ -77,9 +82,12 @@ export default function App() {
       <DialogueBox db={db} />
       <Notebook db={db} />
       <Board db={db} />
+      <Newspaper db={db} />
+      <MorningPages db={db} />
       <PocketRecap db={db} />
       <GrandpaModal />
       <InnerVoice />
+      <GreetingBubble />
       <ExaminePanel />
       <Toast />
       <DevMenu db={db} />

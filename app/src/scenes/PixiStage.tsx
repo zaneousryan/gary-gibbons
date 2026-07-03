@@ -12,6 +12,8 @@ import type { Effect } from '@engine/effects';
 import { useGameStore } from '@engine/store';
 import { useDialogueStore, selectDialogueFor } from '@systems/dialogue';
 import { actorsAt } from '@systems/schedule';
+import { greetingFor } from '@systems/trust';
+import { voxPopLineFor } from '@systems/morningPages';
 import { useUiStore } from '@ui/uiStore';
 import { loadTexture, locationLayerPath, spritePath } from './assets';
 
@@ -187,12 +189,22 @@ function interact(db: ContentDB, hotspot: Hotspot) {
       return;
     case 'talk': {
       if (!hotspot.character) return;
+      const ch = db.characters[hotspot.character];
+      const greeting = greetingFor(db, hotspot.character);
       const dlgId = selectDialogueFor(db, hotspot.character);
       if (dlgId) {
+        if (greeting && ch) ui.showGreeting({ name: ch.name, text: greeting });
         useDialogueStore.getState().start(db, dlgId);
       } else {
-        const ch = db.characters[hotspot.character];
-        ui.showToast(`${ch?.name ?? hotspot.character} has nothing new right now.`);
+        // vox pop (II.15.5): the ambient crowd becomes sources
+        const vox = voxPopLineFor(db, hotspot.character);
+        if (vox && ch) {
+          ui.setExamine({ title: `${ch.name} — vox pop`, text: `“${vox}”` });
+        } else if (greeting && ch) {
+          ui.showGreeting({ name: ch.name, text: greeting });
+        } else {
+          ui.showToast(`${ch?.name ?? hotspot.character} has nothing new right now.`);
+        }
       }
       return;
     }

@@ -14,6 +14,10 @@ import { installTriggerWatcher } from '../app/src/systems/triggers';
 import { installNotebookWatcher } from '../app/src/systems/notebook';
 import { connectCards, pinCard, resetBoardSession } from '../app/src/systems/board';
 import { askGrandpa } from '../app/src/systems/hints';
+import { installVerificationWatcher } from '../app/src/systems/verify';
+import { publishEdition, editionForToday, assembleDraft } from '../app/src/systems/edition';
+import { commitMorningPages, morningPagesDue, voxPopLineFor } from '../app/src/systems/morningPages';
+import { greetingFor } from '../app/src/systems/trust';
 import { SaveService, MemoryStorage } from '../app/src/engine/save/saveService';
 import { bus } from '../app/src/engine/eventBus';
 import type { ContentDB } from '../app/src/content/contentDb';
@@ -87,6 +91,7 @@ async function runOnce(seed: number): Promise<string[]> {
   const unsubLog = bus.on('*', (e) => log.push(`${e.type} ${JSON.stringify(e.payload)}`));
   const unsubTriggers = installTriggerWatcher(db);
   const unsubNotebook = installNotebookWatcher(db);
+  const unsubVerify = installVerificationWatcher(db);
   resetBoardSession();
 
   const game = useGameStore.getState();
@@ -99,7 +104,12 @@ async function runOnce(seed: number): Promise<string[]> {
   game.runEffects([{ setFlag: 'noticed_red_ink' }]); // stair-rail examine, guaranteed-path equivalent
   game.moveTo('the_percolator');
   talkTo(db, 'dot', 'dot_d1_redpens');
-  assertCard('dots_missing_pens', 'unverified');
+  // the VerificationSystem sweeps on card:gained: noticed_red_ink was set at the
+  // stair rail, so Dot's testimony verifies the moment Gary holds it (§6.4)
+  assertCard('dots_missing_pens', 'verified');
+  if (useGameStore.getState().state.flags['verified_via_dots_missing_pens'] !== 'red_ink_trail') {
+    fail('dots_missing_pens did not verify via the red_ink_trail route');
+  }
   assertFlag('redpens_case_open');
   if (!useGameStore.getState().state.notebook.questions.includes('q_who_takes_red_pens')) {
     fail('red-pens notebook question missing');
@@ -213,15 +223,47 @@ async function runOnce(seed: number): Promise<string[]> {
   if (goldStrings.length < 2) fail('gold strings not tied for both deductions');
   log.push('night 1 board: hint, wrong-pair bark, red-pen tutorial, D1 unlocked');
 
+  // the edition still blocks the night (Dot's page must go to bed — II.15.1)
+  if (game.advancePhase()) fail('night opened without the Evening Edition published');
+  const edition = editionForToday(db);
+  if (!edition || edition.id !== 'ed_d1') fail('ed_d1 not due on night 1');
+  const draft = assembleDraft(db, edition);
+  if (draft.join(',') !== 'empty_vault,unforced_lock,fifty_years_of_items') {
+    fail(`unexpected day-1 draft: ${draft.join(',')}`);
+  }
+  const trustBefore = { ...useGameStore.getState().state.trust };
+  if (!publishEdition(db, { headlineId: 'h_d1_measured', kickerId: 'k_d1_facts' })) {
+    fail('publishing the measured day-1 edition failed');
+  }
+  if (JSON.stringify(useGameStore.getState().state.trust) !== JSON.stringify(trustBefore)) {
+    fail('measured headline moved trust — it must be the neutral play');
+  }
+  if (publishEdition(db, { headlineId: 'h_d1_sensational', kickerId: 'k_d1_facts' })) {
+    fail('published twice in one night');
+  }
+  assertFlag('printed_measured_d1');
+  log.push('evening edition published: measured, draft = 3 verified on-record cards');
+
   // gate now opens into day 2
-  if (!game.advancePhase()) fail('night gate still blocked after D1');
+  if (!game.advancePhase()) fail('night gate still blocked after D1 + edition');
   const d2 = useGameStore.getState().state;
   if (d2.day !== 2 || d2.phase !== 'morning') fail(`expected day 2 morning, got day ${d2.day} ${d2.phase}`);
   log.push(`clock verified through gated night -> day ${d2.day}`);
 
+  // --- day 2 morning: Morning Pages + vox pop (III.26, II.15.5) ---
+  if (!morningPagesDue()) fail('morning pages not due on day 2 morning');
+  if (!commitMorningPages(['q_who_emptied_the_capsule'])) fail('morning pages commit failed');
+  assertFlag('morning_focus_q_who_emptied_the_capsule');
+  const vox = voxPopLineFor(db, 'otto');
+  if (!vox || !vox.includes('Smooth hands')) fail(`unexpected otto vox pop: ${vox}`);
+  const greetingNeutral = greetingFor(db, 'margie');
+  if (!greetingNeutral || !greetingNeutral.includes('pet')) fail('margie neutral greeting lost its "pet"');
+  log.push('day 2 morning: pages committed, vox pop live, greetings tiered');
+
   unsubLog();
   unsubTriggers();
   unsubNotebook();
+  unsubVerify();
   useDialogueStore.setState({ view: null, session: null });
   return log;
 }

@@ -63,13 +63,22 @@ export default function Hud({ db }: { db: ContentDB }) {
           📓 Notebook
         </button>
         {phase === 'night' && location === game?.apartmentLocation ? (
-          <button
-            onClick={() => useUiStore.getState().toggleBoard()}
-            data-testid="hud-board"
-            className="bg-amber text-ink border-2 border-ink rounded px-3 py-2 font-bold cursor-pointer hover:brightness-110"
-          >
-            📌 The Board
-          </button>
+          <>
+            <button
+              onClick={() => useUiStore.getState().toggleNewspaper()}
+              data-testid="hud-edition"
+              className="bg-cream text-ink border-2 border-ink rounded px-3 py-2 font-bold cursor-pointer hover:brightness-95"
+            >
+              🗞 Edition
+            </button>
+            <button
+              onClick={() => useUiStore.getState().toggleBoard()}
+              data-testid="hud-board"
+              className="bg-amber text-ink border-2 border-ink rounded px-3 py-2 font-bold cursor-pointer hover:brightness-110"
+            >
+              📌 The Board
+            </button>
+          </>
         ) : (
           <button
             onClick={() => useUiStore.getState().toggleRecap()}

@@ -55,9 +55,10 @@ test('boot → walk → talk → save → reload', async ({ page }) => {
   await clickStage(page, 820, 800);
   await playConversation(page);
 
-  // the conversation banked its card — verify via a fresh talk attempt (oncePerDay toast)
+  // the conversation banked its card — a fresh talk attempt gets the trust-tier
+  // greeting instead of a re-run (oncePerDay + III.23.3)
   await clickStage(page, 820, 800);
-  await expect(page.getByTestId('toast')).toBeVisible({ timeout: 10_000 });
+  await expect(page.getByTestId('greeting-bubble')).toBeVisible({ timeout: 10_000 });
 
   // save
   await page.getByTestId('hud-save').click();
@@ -112,7 +113,16 @@ test('day 1 ceremony set-piece fires at the square', async ({ page }) => {
   await page.getByTestId('hud-advance').click(); // blocked
   await expect(page.getByTestId('hud-clock')).toContainText('Day 1');
 
-  // the board: pin the two D1 cards from the tray, hold them, tie the string
+  // the night ritual, first movement: the Evening Edition (II.15.1)
+  await page.getByTestId('hud-edition').click();
+  await expect(page.getByTestId('newspaper')).toBeVisible();
+  await page.getByTestId('headline-h_d1_measured').click();
+  await page.getByTestId('kicker-k_d1_facts').click();
+  await page.getByTestId('paper-publish').click();
+  await expect(page.getByTestId('paper-published')).toBeVisible({ timeout: 5_000 });
+  await page.getByTestId('paper-close').click();
+
+  // second movement: the board — pin the two D1 cards, hold them, tie the string
   await page.getByTestId('hud-board').click();
   await expect(page.getByTestId('board')).toBeVisible();
   await page.getByTestId('tray-empty_vault').click();
@@ -123,9 +133,13 @@ test('day 1 ceremony set-piece fires at the square', async ({ page }) => {
   await expect(page.getByTestId('deduction-flash')).toBeVisible({ timeout: 5_000 });
   await page.getByTestId('board-close').click();
 
-  // gate opens: night -> day 2 morning
+  // gate opens: night -> day 2 morning, where Morning Pages waits (III.26)
   await page.getByTestId('hud-advance').click();
   await expect(page.getByTestId('hud-clock')).toContainText('Day 2');
+  await expect(page.getByTestId('morning-pages')).toBeVisible({ timeout: 5_000 });
+  await page.getByTestId('mp-q-q_who_emptied_the_capsule').click();
+  await page.getByTestId('mp-commit').click();
+  await expect(page.getByTestId('morning-pages')).not.toBeVisible();
 });
 
 test('examine and phase advance', async ({ page }) => {

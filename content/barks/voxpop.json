@@ -1,0 +1,50 @@
+{
+  "pool": "voxpop",
+  "barks": [
+    {
+      "id": "vox_gino_capsule",
+      "text": "Who takes MEMORIES? Tomatoes, I understand. Once, a whole crate of plums — a crime with flavor. But memories? Tragedia.",
+      "speaker": "gino",
+      "authored": "aletheia",
+      "ref": "II.15.5",
+      "tags": ["q_who_emptied_the_capsule"],
+      "cond": { "day": { "gte": 2 } }
+    },
+    {
+      "id": "vox_otto_capsule",
+      "text": "Whoever it was, they knew the grind. You don't open a fifty-year vault like a first-timer pulls a shot. Smooth hands. That's all I'll say into a notebook.",
+      "speaker": "otto",
+      "authored": "aletheia",
+      "ref": "II.15.5",
+      "tags": ["q_who_emptied_the_capsule"],
+      "cond": { "day": { "gte": 2 } }
+    },
+    {
+      "id": "vox_margie_capsule",
+      "text": "I've heard four theories before breakfast, pet, and I only served three tables. Write this down: nobody from Lanternside would take the whole heart of the place. Nobody who knew it.",
+      "speaker": "margie",
+      "authored": "aletheia",
+      "ref": "II.15.5",
+      "tags": ["q_who_emptied_the_capsule"],
+      "cond": { "day": { "gte": 2 } }
+    },
+    {
+      "id": "vox_tuck_capsule",
+      "text": "Official statement: the constabulary is pursuing the matter with all appropriate speed. Unofficial statement: same thing, minus the word appropriate.",
+      "speaker": "tuck",
+      "authored": "aletheia",
+      "ref": "II.15.5",
+      "tags": ["q_who_emptied_the_capsule"],
+      "cond": { "day": { "gte": 2 } }
+    },
+    {
+      "id": "vox_evelyn_capsule",
+      "text": "Fifty years of people put something soft in a stone box and trusted the future with it. Find the person who couldn't wait for the future. That's your thief.",
+      "speaker": "evelyn",
+      "authored": "aletheia",
+      "ref": "II.15.5",
+      "tags": ["q_who_emptied_the_capsule"],
+      "cond": { "day": { "gte": 2 } }
+    }
+  ]
+}

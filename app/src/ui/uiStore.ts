@@ -12,7 +12,10 @@ export interface UiStore {
   notebookOpen: boolean;
   boardOpen: boolean;
   recapOpen: boolean;
+  newspaperOpen: boolean;
   grandpaHint: string | null;
+  /** NPC greeting bubble shown when a conversation opens (III.23.3). */
+  greeting: { name: string; text: string } | null;
   setExamine(v: UiStore['examine']): void;
   showToast(text: string): void;
   clearToast(): void;
@@ -21,7 +24,9 @@ export interface UiStore {
   toggleNotebook(): void;
   toggleBoard(): void;
   toggleRecap(): void;
+  toggleNewspaper(): void;
   showGrandpaHint(text: string | null): void;
+  showGreeting(v: UiStore['greeting']): void;
 }
 
 export const useUiStore = create<UiStore>()((set) => ({
@@ -32,7 +37,9 @@ export const useUiStore = create<UiStore>()((set) => ({
   notebookOpen: false,
   boardOpen: false,
   recapOpen: false,
+  newspaperOpen: false,
   grandpaHint: null,
+  greeting: null,
   setExamine: (examine) => set({ examine }),
   showToast: (toast) => set({ toast }),
   clearToast: () => set({ toast: null }),
@@ -41,5 +48,7 @@ export const useUiStore = create<UiStore>()((set) => ({
   toggleNotebook: () => set((s) => ({ notebookOpen: !s.notebookOpen })),
   toggleBoard: () => set((s) => ({ boardOpen: !s.boardOpen })),
   toggleRecap: () => set((s) => ({ recapOpen: !s.recapOpen })),
+  toggleNewspaper: () => set((s) => ({ newspaperOpen: !s.newspaperOpen })),
   showGrandpaHint: (grandpaHint) => set({ grandpaHint }),
+  showGreeting: (greeting) => set({ greeting }),
 }));

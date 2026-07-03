@@ -1,0 +1,55 @@
+{
+  "id": "ed_d1",
+  "day": 1,
+  "ref": "II.15.1",
+  "draftCards": ["empty_vault", "unforced_lock", "fifty_years_of_items"],
+  "headlines": [
+    {
+      "id": "h_d1_sensational",
+      "tone": "sensational",
+      "text": "EMPTY! FIFTY YEARS OF LANTERNSIDE, VANISHED",
+      "effects": [
+        { "trust": { "char": "margie", "delta": 1 } },
+        { "trust": { "char": "clara", "delta": -1 } }
+      ],
+      "reactions": {
+        "chalkboard": "THE EMPTY ESPRESSO — nothing in it, like the capsule",
+        "rumorSeed": "outsider_thief"
+      }
+    },
+    {
+      "id": "h_d1_measured",
+      "tone": "measured",
+      "text": "Questions Remain After Capsule Shock",
+      "reactions": {
+        "chalkboard": "THE EMPTY ESPRESSO — nothing in it, like the capsule"
+      }
+    },
+    {
+      "id": "h_d1_compassionate",
+      "tone": "compassionate",
+      "text": "A District Holds Its Breath, Together",
+      "effects": [
+        { "trust": { "char": "clara", "delta": 1 } },
+        { "trust": { "char": "margie", "delta": -1 } }
+      ],
+      "reactions": {
+        "chalkboard": "THE HOLDING PATTERN — steamed slow, shared warm"
+      }
+    }
+  ],
+  "kickers": [
+    {
+      "id": "k_d1_facts",
+      "text": "The Ledger will print what it knows, as it knows it. Tonight, that is this."
+    },
+    {
+      "id": "k_d1_promise",
+      "text": "Fifty years went into that vault. This paper intends to find out where they went."
+    },
+    {
+      "id": "k_d1_gentle",
+      "text": "Whatever left the vault, the town that filled it is still here."
+    }
+  ]
+}
