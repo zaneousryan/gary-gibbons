@@ -217,3 +217,32 @@ From this point, any content ID rename requires a migration entry in `app/src/en
 
 ### Open DESIGN-QUESTIONs
 - DQ-1, DQ-2 (carried) · **DQ-3 (new)**: side stories ship as observational arcs; four interactive centerpieces flagged for Ryan (handyman choice since implemented — the other three stand).
+
+---
+
+## 2026-07-03 — PHASE 7: Polish & Ship — DONE (RC, web build; native build transfers to Ryan)
+
+### What shipped
+- **Title → Save slots → Game** (spec §8): New Game / Continue (slot + day/phase) / New Game+ (post-completion) / "Your Week in Print" stats — last line "Grapes declined: N", plain, no fanfare (II.19.2).
+- **Settings** (persisted outside saves): text size, text speed incl. instant, master/music/sfx volumes, colorblind string patterns (per-kind dash + mid-string glyphs ★/❦/● — never color alone), reduce motion (instant text + rain particles off). Reachable from title AND the HUD gear.
+- **NG+** (II.19.1): 25 Archie margin notes rendered against their notebook entries (post-review: no invented lore, canon address terms), gallery-carryover scaffold, ngPlus state.
+- **Achievements are content** (spec §13): content/achievements.json on the condition DSL (validator-checked); watcher on 5 event types; hidden ones silent (grapes_declined_23 tracks the real 23-grape tally via new collectible.grapesDeclined DSL support). **10 ship** — two CUT on §29 Law 5 doctrine (an achievement is the forbidden gold star for compassion); DQ-4 for Ryan.
+- **Code-split**: entry 188 kB (was 595 kB) — pixi/react/howler/content chunks.
+- **Tauri 2 scaffold complete**: src-tauri/ (Cargo.toml, tauri.conf.json with fs scope $APPDATA/saves/*, main.rs, build.rs), npm run tauri:build, TauriFsStorage (dynamic import, selected only under __TAURI_INTERNALS__) — **the last engine STUB is retired**. Native build blocked ONLY on Rust not being installed on this box (verifier confirmed cargo absent).
+- Backlog closed: sidestories.test.ts + julian_read_it coverage (5 tests), weather.ts on engine Rng, ConditionShape type alignment.
+
+### gg-content-reviewer verdict
+**LGTM** (after 1 round — 7 gaps, all fixed and independently re-verified): grapes_declined_23 wrong condition -> real tally; kept_promises + held_the_page cut per Law 5 ruling; "Truth With Compassion" achievement retitled "The Waiting Is Over" (3x-only rarity law respected); Archie notes de-invented (no grandmother lineage, Edmund's eleven words stay his, "kid"->"son", §28.3 seed ambiguity preserved).
+
+### gg-verifier verdict (evidence summary)
+**FAIL then PASS.** The RC hand-drive caught a genuine ship-blocker no automated gate covered: SettingsPanel (z-50) rendered under TitleScreen (z-60) — every control click intercepted, no Escape, and no in-game entry point existed. Fixed (z-70 + Escape + HUD gear) and the verifier's exact reproduction is now a permanent e2e test. Final: validator 0 errors/5 by-design warnings; 68/68 tests; autoplay full-game 595 lines deterministic x2; curious sweep clean; build clean (chunk table verified); e2e 5/5; Cut List sweep clean (no trust numbers anywhere incl. stats); save-shape lockdown (types.ts diff empty, GAME_STATE_VERSION 2); stub grep = exactly one honest forward-stub (STUB(steam) in achievements.ts, unlock call only).
+
+### Ship notes for Ryan (the RC handoff)
+1. **Native build**: install Rust (winget install Rustlang.Rustup, then rustup default stable), then `npm run tauri:build` — everything else is in place and verified to the limit of a cargo-less box. Output lands in src-tauri/target/release/bundle/ (msi + nsis).
+2. **Steam depot layout** (spec §13): depot = the bundle output; achievements sync needs steamworks.js wired at the STUB(steam) call site in app/src/systems/achievements.ts with the 10 achievement ids from content/achievements.json; grapes_declined_23 and any future hidden ones should be marked hidden in Steamworks too.
+3. **Art**: 386 placeholders are the asset contract — filenames + sizes in assets/ are the drop-in targets; gen:placeholders never overwrites a real file.
+4. **Decisions waiting**: DQ-1 (spec/doc version), DQ-2 (board-picker pitch), DQ-3 (three side-story interactive centerpieces), DQ-4 (the two Law-5 achievements).
+5. Cleanup nits, non-blocking: gallery_carryover flag is written but unread; ed_d1..d7 could carry per-day vox pools.
+
+### Project status: ALL PHASES 0–7 COMPLETE
+Full game playable boot->credits in the browser (npm run dev), deterministic, gated, canon-reviewed. 46 dialogues, 61 cards, 18 deductions, 7 editions, 9 side stories, 10 achievements, 9 puzzle modules, 4 save-tested days x 7 playable days.
