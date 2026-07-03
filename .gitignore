@@ -7,7 +7,7 @@ dist-web/
 .env.*
 
 # Tauri
-app/src-tauri/target/
+src-tauri/target/
 
 # Generated placeholders are reproducible via tools/gen-placeholders.ts
 assets/_placeholders/
@@ -24,3 +24,5 @@ Thumbs.db
 # stray tool dumps
 diff_names.txt
 tools/_*.mjs
+
+src-tauri/gen/

@@ -1,1 +1,1 @@
-{"root":["./vite.config.ts","./tools/autoplay.ts","./tools/gen-placeholders.ts","./tools/validate-content.ts","./tools/lib/graph.ts","./tools/lib/nodecontent.ts","./tools/lib/png.ts","./tests-e2e/smoke.spec.ts"],"version":"5.9.3"}
+{"root":["./vite.config.ts","./tools/autoplay.ts","./tools/gen-icon.ts","./tools/gen-placeholders.ts","./tools/validate-content.ts","./tools/lib/graph.ts","./tools/lib/nodecontent.ts","./tools/lib/png.ts","./tests-e2e/smoke.spec.ts"],"version":"5.9.3"}
