@@ -14,6 +14,8 @@ export interface UiStore {
   recapOpen: boolean;
   newspaperOpen: boolean;
   cameraOpen: boolean;
+  settingsOpen: boolean;
+  titleOpen: boolean;
   grandpaHint: string | null;
   /** NPC greeting bubble shown when a conversation opens (III.23.3). */
   greeting: { name: string; text: string } | null;
@@ -27,6 +29,8 @@ export interface UiStore {
   toggleRecap(): void;
   toggleNewspaper(): void;
   toggleCamera(): void;
+  toggleSettings(): void;
+  setTitleOpen(open: boolean): void;
   showGrandpaHint(text: string | null): void;
   showGreeting(v: UiStore['greeting']): void;
 }
@@ -41,6 +45,8 @@ export const useUiStore = create<UiStore>()((set) => ({
   recapOpen: false,
   newspaperOpen: false,
   cameraOpen: false,
+  settingsOpen: false,
+  titleOpen: true,
   grandpaHint: null,
   greeting: null,
   setExamine: (examine) => set({ examine }),
@@ -53,6 +59,8 @@ export const useUiStore = create<UiStore>()((set) => ({
   toggleRecap: () => set((s) => ({ recapOpen: !s.recapOpen })),
   toggleNewspaper: () => set((s) => ({ newspaperOpen: !s.newspaperOpen })),
   toggleCamera: () => set((s) => ({ cameraOpen: !s.cameraOpen })),
+  toggleSettings: () => set((s) => ({ settingsOpen: !s.settingsOpen })),
+  setTitleOpen: (titleOpen) => set({ titleOpen }),
   showGrandpaHint: (grandpaHint) => set({ grandpaHint }),
   showGreeting: (greeting) => set({ greeting }),
 }));

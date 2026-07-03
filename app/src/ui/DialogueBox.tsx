@@ -6,6 +6,7 @@ import { useEffect, useMemo, useState } from 'react';
 import type { ContentDB } from '@content/contentDb';
 import { useDialogueStore, type Stance } from '@systems/dialogue';
 import { portraitPath } from '@scenes/assets';
+import { useSettings } from './settingsStore';
 
 const STANCE_LABEL: Record<Stance, string> = {
   press: 'PRESS',
@@ -18,12 +19,18 @@ export default function DialogueBox({ db }: { db: ContentDB }) {
   const { chooseStance, chooseOption, advance } = useDialogueStore.getState();
   const [shown, setShown] = useState(0);
 
+  const textSpeedSetting = useSettings((s) => s.textSpeed);
+  const reduceMotion = useSettings((s) => s.reduceMotion);
   const line = view?.line ?? '';
   useEffect(() => {
     setShown(0);
     if (!line) return;
+    if (textSpeedSetting === 0 || reduceMotion) {
+      setShown(line.length); // instant text (settings / reduce-motion)
+      return;
+    }
     const speaker = view ? db.characters[view.speaker] : null;
-    const speed = speaker?.voice.textSpeed ?? 1;
+    const speed = (speaker?.voice.textSpeed ?? 1) * textSpeedSetting;
     const interval = setInterval(() => {
       setShown((n) => {
         if (n >= line.length) {
@@ -34,7 +41,7 @@ export default function DialogueBox({ db }: { db: ContentDB }) {
       });
     }, 18 / speed);
     return () => clearInterval(interval);
-  }, [line, view, db]);
+  }, [line, view, db, textSpeedSetting, reduceMotion]);
 
   const speakerDef = view ? db.characters[view.speaker] : null;
   const isNarrator = view?.speaker === 'narrator';

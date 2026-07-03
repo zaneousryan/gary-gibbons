@@ -1,0 +1,16 @@
+{
+  "achievements": [
+    { "id": "front_page", "name": "Front Page", "description": "Put your first Evening Edition to bed.", "cond": { "flag": "printed_measured_d1" }, "hidden": false, "ref": "II.15.1" },
+    { "id": "first_string", "name": "Those Two Rhyme", "description": "Tie your first gold string.", "cond": { "deduction": "d1_emptied_before" }, "hidden": false, "ref": "I.6" },
+    { "id": "laminated_alibi", "name": "I Laminate My Alibis", "description": "Clear Poppy the only correct way.", "cond": { "deduction": "poppy_opened_not_emptied" }, "hidden": false, "ref": "I.5.day2" },
+    { "id": "count_the_lighthouses", "name": "Go Count Your Lighthouses", "description": "Clear the Guardian.", "cond": { "deduction": "d4_warren_cleared" }, "hidden": false, "ref": "I.6.D4" },
+    { "id": "right_weasel", "name": "Right Weasel, Wrong Crimes", "description": "Attend the stakeout.", "cond": { "flag": "stakeout_done" }, "hidden": false, "ref": "I.5.day4" },
+    { "id": "believed_enough", "name": "You Believed Me Enough to Check", "description": "Verify Milo's story with your own eyes.", "cond": { "flag": "fire_escape_puzzle_done" }, "hidden": false, "ref": "II.12.6" },
+    { "id": "held_the_page", "name": "The Held Breath", "description": "Hold tomorrow's front page.", "cond": { "flag": "held_the_page_d6" }, "hidden": false, "ref": "II.15.1" },
+    { "id": "the_whole_truth", "name": "Truth With Compassion", "description": "Finish the story the way Archie would have.", "cond": { "flag": "game_complete" }, "hidden": false, "ref": "I.8.4" },
+    { "id": "gentle_hands", "name": "Careful Hands", "description": "Feel the truth before the story names it.", "cond": { "deduction": "careful_hands" }, "hidden": false, "ref": "III.22.3" },
+    { "id": "kept_promises", "name": "A Town, Not a Story", "description": "Keep every promise: Margie's quote corroborated, Clara's trust never printed, Milo never named.", "cond": { "all": [{ "flag": "game_complete" }, { "flag": "named_milo", "value": false }] }, "hidden": false, "ref": "III.23" },
+    { "id": "grapes_declined_23", "name": "Not Today", "description": "…", "cond": { "flag": "grape_beat_d7" }, "hidden": true, "ref": "II.19.2" },
+    { "id": "lantern_counter", "name": "The Lantern Counter", "description": "Photograph every gas lantern in the district.", "cond": { "collectible": { "lanterns": 47 } }, "hidden": false, "ref": "II.19.2" }
+  ]
+}

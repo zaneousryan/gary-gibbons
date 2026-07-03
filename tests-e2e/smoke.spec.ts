@@ -9,6 +9,14 @@ async function waitForScene(page: Page, locationId: string) {
   await expect(page.locator(`[data-scene-ready="${locationId}"]`)).toBeAttached({ timeout: 20_000 });
 }
 
+/** Title → New Game (spec §8: Title → Save slots → Game). */
+async function startNewGame(page: Page) {
+  await page.goto('/');
+  await expect(page.getByTestId('title-screen')).toBeVisible({ timeout: 20_000 });
+  await page.getByTestId('title-new').click();
+  await expect(page.getByTestId('title-screen')).not.toBeVisible();
+}
+
 async function clickStage(page: Page, x: number, y: number) {
   const canvas = page.locator('canvas');
   await canvas.click({ position: { x, y }, force: true });
@@ -38,7 +46,7 @@ async function playConversation(page: Page) {
 }
 
 test('boot → walk → talk → save → reload', async ({ page }) => {
-  await page.goto('/');
+  await startNewGame(page);
 
   // boot: content loads, apartment scene appears
   await expect(page.getByTestId('hud-location')).toHaveText("Gary's Apartment", { timeout: 20_000 });
@@ -74,7 +82,7 @@ test('boot → walk → talk → save → reload', async ({ page }) => {
 
 test('day 1 ceremony set-piece fires at the square', async ({ page }) => {
   test.setTimeout(180_000); // three scene walks + a 13-node set-piece
-  await page.goto('/');
+  await startNewGame(page);
   await expect(page.getByTestId('hud-location')).toHaveText("Gary's Apartment", { timeout: 20_000 });
   await waitForScene(page, 'gary_apartment');
 
@@ -143,7 +151,7 @@ test('day 1 ceremony set-piece fires at the square', async ({ page }) => {
 });
 
 test('day 2 dust library puzzle at the vault', async ({ page }) => {
-  await page.goto('/');
+  await startNewGame(page);
   await expect(page.getByTestId('hud-location')).toHaveText("Gary's Apartment", { timeout: 20_000 });
   await waitForScene(page, 'gary_apartment');
 
@@ -187,7 +195,7 @@ test('day 2 dust library puzzle at the vault', async ({ page }) => {
 });
 
 test('examine and phase advance', async ({ page }) => {
-  await page.goto('/');
+  await startNewGame(page);
   await expect(page.getByTestId('hud-location')).toHaveText("Gary's Apartment", { timeout: 20_000 });
   await waitForScene(page, 'gary_apartment');
 
@@ -200,3 +208,4 @@ test('examine and phase advance', async ({ page }) => {
   await page.getByTestId('hud-advance').click();
   await expect(page.getByTestId('hud-clock')).toContainText('midday');
 });
+

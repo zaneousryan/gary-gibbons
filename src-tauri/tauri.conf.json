@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Gary Gibbons: The Empty Capsule",
+  "version": "0.1.0",
+  "identifier": "com.rcubed.garygibbons",
+  "build": {
+    "beforeDevCommand": "npm run dev -- --port 5920 --strictPort",
+    "devUrl": "http://localhost:5920",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Gary Gibbons: The Empty Capsule",
+        "width": 1600,
+        "height": 900,
+        "minWidth": 1280,
+        "minHeight": 800,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' asset: data:; media-src 'self' asset:; style-src 'self' 'unsafe-inline'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis"],
+    "icon": []
+  },
+  "plugins": {
+    "fs": {
+      "scope": ["$APPDATA/saves/*"]
+    }
+  }
+}

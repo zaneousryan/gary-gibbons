@@ -16,6 +16,7 @@ import { greetingFor } from '@systems/trust';
 import { voxPopLineFor } from '@systems/morningPages';
 import { usePuzzleStore } from '@systems/puzzles';
 import { useUiStore } from '@ui/uiStore';
+import { useSettings } from '@ui/settingsStore';
 import { loadTexture, locationLayerPath, spritePath } from './assets';
 
 const DESIGN_W = 1920;
@@ -158,8 +159,8 @@ async function buildScene(db: ContentDB, refs: SceneRefs, locationId: string) {
     refs.hotspotViews.push({ hotspot, marker, label, x: hx, y: hy });
   }
 
-  // rain particle layer (spec §7)
-  if (state.weather === 'rain') {
+  // rain particle layer (spec §7) — skipped under reduce-motion
+  if (state.weather === 'rain' && !useSettings.getState().reduceMotion) {
     const rain = new Graphics();
     rain.label = 'rain';
     for (let i = 0; i < 220; i++) {

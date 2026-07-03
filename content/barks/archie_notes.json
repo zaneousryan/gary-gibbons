@@ -1,0 +1,30 @@
+{
+  "pool": "archie_notes",
+  "barks": [
+    { "id": "an_empty_vault", "text": "Empty rooms talk loudest, kid. — A.G.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_empty_vault"] },
+    { "id": "an_met_otto", "text": "Befriend whoever pours the coffee. The rest follows. — A.G.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_met_otto"] },
+    { "id": "an_met_margie", "text": "A landlady who quotes exactly is worth three constables.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_met_margie"] },
+    { "id": "an_met_gino", "text": "Ha! Mine was plums. Ask your grandmother. Don't, actually.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_met_gino"] },
+    { "id": "an_met_ida", "text": "Ida was old when I was young. The drawers really do get ideas.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_met_ida"] },
+    { "id": "an_met_poppy", "text": "The nervous ones are the honest ones. Remember that in about four days.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_met_poppy"] },
+    { "id": "an_met_warren", "text": "A man who rehearses joy is not your thief.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_met_warren"] },
+    { "id": "an_met_julian", "text": "Watch the hands, not the smile. You did. Good.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_met_julian"] },
+    { "id": "an_met_clara", "text": "This one interviews YOU. Marry the technique, not the-- never mind.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_met_clara"] },
+    { "id": "an_met_milo", "text": "Every town issues one of these. I was mine.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_met_milo"] },
+    { "id": "an_key_backwards", "text": "Rooms remember. Told you that one myself, didn't I. Still true.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_key_backwards"] },
+    { "id": "an_dust_library", "text": "Dust is the honestest witness there is. Never bribed one yet.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_dust_library"] },
+    { "id": "an_poppy_confessed", "text": "See? Honest. And you were kind about it. That's the whole trade.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_poppy_confessed"] },
+    { "id": "an_seal_sketch", "text": "A sketch shows what it means. You quoted me. I'm insufferable about it.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_seal_sketch"] },
+    { "id": "an_margies_testimony", "text": "Between us and the sherry. You kept it that way. Proud of you.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_margies_testimony"] },
+    { "id": "an_lighthouse_folio", "text": "Forty-seven. I only ever saw eleven. Somebody should finish the count.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_lighthouse_folio"] },
+    { "id": "an_night_photo", "text": "Photographs show the truth. Almost never the one you developed them for.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_night_photo"] },
+    { "id": "an_ferris_pivot", "text": "The loud suspect is the free witness. Works every county I tried it in.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_ferris_pivot"] },
+    { "id": "an_seal_identified", "text": "Gentle hands from here, kid. You know why now.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_seal_identified"] },
+    { "id": "an_clara_key", "text": "She handed you the family. Notice you never dropped it.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_clara_key"] },
+    { "id": "an_milos_sighting", "text": "A secret for a secret. The grape thing was a fair price. Ask me how I know.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_milos_sighting"] },
+    { "id": "an_overheard", "text": "Half a conversation starts most of the world's trouble. The other half usually forgives it.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_overheard"] },
+    { "id": "an_confession", "text": "Sit on the floor with him. Good lad.", "authored": "verbatim", "ref": "II.19.1", "tags": ["nb_confession"] },
+    { "id": "an_reading", "text": "Lead together, argue often, decide once. Edmund stole that from me. I stole it from your grandmother.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_reading"] },
+    { "id": "an_credits", "text": "The jam keeps. So does the rule. Go find the next story. — A.G.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_credits"] }
+  ]
+}

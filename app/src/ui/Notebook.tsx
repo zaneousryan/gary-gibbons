@@ -19,6 +19,7 @@ export default function Notebook({ db }: { db: ContentDB }) {
   const toggle = useUiStore((s) => s.toggleNotebook);
   const entries = useGameStore((s) => s.state.notebook.entries);
   const questions = useGameStore((s) => s.state.notebook.questions);
+  const ngPlus = useGameStore((s) => s.state.ngPlus);
   const [tab, setTab] = useState<(typeof TABS)[number]['key']>('people');
 
   if (!open) return null;
@@ -57,10 +58,20 @@ export default function Notebook({ db }: { db: ContentDB }) {
           {tab !== 'questions' &&
             tabEntries.map((e) => {
               const def = db.notebook.entries.find((n) => n.id === e.id);
+              // NG+ — Archie's Notes (II.19.1): margin commentary from the
+              // ghost the whole game is about
+              const archie = ngPlus
+                ? db.barks['archie_notes']?.barks.find((b) => b.tags.includes(e.id))
+                : undefined;
               return (
                 <div key={e.id} className="border-b border-ink/15 pb-3" data-testid={`notebook-entry-${e.id}`}>
                   {def?.title && <div className="font-bold text-ink">{def.title}</div>}
                   <p className="text-ink/90 italic leading-relaxed">{def?.text ?? e.id}</p>
+                  {archie && (
+                    <p className="text-plum italic text-sm mt-1 pl-4 border-l-2 border-plum/40" data-testid={`archie-note-${e.id}`}>
+                      {archie.text}
+                    </p>
+                  )}
                   <div className="text-xs text-ink/40 mt-1">Day {e.day} · {e.phase}</div>
                 </div>
               );

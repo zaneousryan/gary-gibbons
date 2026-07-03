@@ -13,9 +13,13 @@
     "test:e2e": "playwright test",
     "validate:content": "tsx tools/validate-content.ts",
     "autoplay": "tsx tools/autoplay.ts",
-    "gen:placeholders": "tsx tools/gen-placeholders.ts"
+    "gen:placeholders": "tsx tools/gen-placeholders.ts",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
   },
   "dependencies": {
+    "@tauri-apps/plugin-fs": "^2.5.1",
     "howler": "^2.2.4",
     "immer": "^10.1.1",
     "pixi.js": "^8.6.6",
@@ -27,6 +31,7 @@
   "devDependencies": {
     "@playwright/test": "^1.50.1",
     "@tailwindcss/vite": "^4.0.9",
+    "@tauri-apps/cli": "^2.11.4",
     "@types/howler": "^2.2.12",
     "@types/node": "^22.13.5",
     "@types/react": "^19.0.10",

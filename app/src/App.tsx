@@ -31,6 +31,10 @@ import { installSidestoryWatcher } from '@systems/sidestories';
 import PuzzleHost from '@ui/PuzzleHost';
 import RailCinematic from '@ui/RailCinematic';
 import Camera from '@ui/Camera';
+import TitleScreen from '@ui/TitleScreen';
+import SettingsPanel from '@ui/SettingsPanel';
+import { useSettings } from '@ui/settingsStore';
+import { installAchievementWatcher } from '@systems/achievements';
 
 export default function App() {
   const [db, setDb] = useState<ContentDB | null>(null);
@@ -64,8 +68,9 @@ export default function App() {
       const un8 = installVignetteWatcher(content);
       const un9 = installPhotoPrinter();
       const un10 = installSidestoryWatcher(content);
+      const un11 = installAchievementWatcher(content);
       return () => {
-        [un1, un2, un3, un4, un5, un6, un7, un8, un9, un10].forEach((u) => u());
+        [un1, un2, un3, un4, un5, un6, un7, un8, un9, un10, un11].forEach((u) => u());
       };
     } catch (err) {
       setBootError(String(err));
@@ -73,6 +78,10 @@ export default function App() {
   }, []);
 
   const stage = useMemo(() => (db ? <PixiStage db={db} /> : null), [db]);
+  const textScale = useSettings((s) => s.textScale);
+  useEffect(() => {
+    document.documentElement.style.fontSize = `${textScale * 100}%`;
+  }, [textScale]);
 
   if (bootError) {
     return (
@@ -106,6 +115,8 @@ export default function App() {
       <ExaminePanel />
       <Toast />
       <DevMenu db={db} />
+      <TitleScreen db={db} />
+      <SettingsPanel />
     </div>
   );
 }

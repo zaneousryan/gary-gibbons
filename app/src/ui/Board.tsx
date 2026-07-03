@@ -18,6 +18,7 @@ import {
   checkTheoryRetirements,
 } from '@systems/board';
 import { useUiStore } from './uiStore';
+import { useSettings } from './settingsStore';
 
 const CORK_W = 1280;
 const CORK_H = 640;
@@ -28,6 +29,7 @@ export default function Board({ db }: { db: ContentDB }) {
   const open = useUiStore((s) => s.boardOpen);
   const toggle = useUiStore((s) => s.toggleBoard);
   const showToast = useUiStore((s) => s.showToast);
+  const colorblind = useSettings((s) => s.colorblindStrings);
   const state = useGameStore((s) => s.state);
   const [selected, setSelected] = useState<string[]>([]);
   const [tab, setTab] = useState<SideTab>('ledger');
@@ -181,15 +183,32 @@ export default function Board({ db }: { db: ContentDB }) {
                 const midX = (a.x + b.x) / 2;
                 const midY = (a.y + b.y) / 2 + (st.kind === 'red' ? 34 : 0); // red sags, gold is taut
                 const color = st.kind === 'gold' ? '#e8a34c' : st.kind === 'green' ? '#4f6b3d' : '#b23a2c';
+                // never color alone (ALETHEIA §7): distinct dash per kind when
+                // colorblind patterns are on, plus a mid-string glyph
+                const dash = colorblind
+                  ? st.kind === 'gold'
+                    ? undefined
+                    : st.kind === 'green'
+                      ? '2 8'
+                      : '10 6'
+                  : st.kind === 'green'
+                    ? '8 6'
+                    : undefined;
                 return (
-                  <path
-                    key={i}
-                    d={`M ${a.x} ${a.y} Q ${midX} ${midY} ${b.x} ${b.y}`}
-                    stroke={color}
-                    strokeWidth={st.kind === 'gold' ? 4 : 3}
-                    strokeDasharray={st.kind === 'green' ? '8 6' : undefined}
-                    fill="none"
-                  />
+                  <g key={i}>
+                    <path
+                      d={`M ${a.x} ${a.y} Q ${midX} ${midY} ${b.x} ${b.y}`}
+                      stroke={color}
+                      strokeWidth={st.kind === 'gold' ? 4 : 3}
+                      strokeDasharray={dash}
+                      fill="none"
+                    />
+                    {colorblind && (
+                      <text x={midX} y={midY - 6} textAnchor="middle" fontSize={20} fill={color} data-testid={`string-glyph-${st.kind}`}>
+                        {st.kind === 'gold' ? '★' : st.kind === 'green' ? '❦' : '●'}
+                      </text>
+                    )}
+                  </g>
                 );
               })}
             </svg>

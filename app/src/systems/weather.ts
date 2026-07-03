@@ -5,6 +5,7 @@
 import type { ContentDB } from '@content/contentDb';
 import { useGameStore } from '@engine/store';
 import { bus } from '@engine/eventBus';
+import { Rng } from '@engine/rng';
 
 /** Decide the weather for the current day/phase. Deterministic per seed+day. */
 export function weatherFor(db: ContentDB, day: number, phase: string, seed: number): 'clear' | 'rain' {
@@ -12,19 +13,12 @@ export function weatherFor(db: ContentDB, day: number, phase: string, seed: numb
   if (!wx) return 'clear';
   if (wx.scheduledRain.some((r) => r.day === day && r.phase === phase)) return 'rain';
   if (wx.dailyRainChance > 0) {
-    // one seeded roll per day, applied to a single random midday phase — no
-    // Math.random, reproducible for the autoplayer (ALETHEIA §7)
-    const roll = mulberryOnce(seed + day * 7919);
+    // one seeded roll per day, landing on midday — the engine Rng, reproducible
+    // for the autoplayer (ALETHEIA §7)
+    const roll = new Rng(seed + day * 7919).next();
     if (roll < wx.dailyRainChance && phase === 'midday') return 'rain';
   }
   return 'clear';
-}
-
-function mulberryOnce(seed: number): number {
-  let t = (seed + 0x6d2b79f5) >>> 0;
-  t = Math.imul(t ^ (t >>> 15), t | 1);
-  t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-  return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
 }
 
 export function installWeatherWatcher(db: ContentDB): () => void {

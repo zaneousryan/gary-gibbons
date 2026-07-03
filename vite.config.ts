@@ -13,6 +13,18 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, 'dist'),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        // keep the heavy renderer and framework out of the app chunk
+        manualChunks(id) {
+          if (id.includes('pixi.js')) return 'pixi';
+          if (id.includes('node_modules/react')) return 'react';
+          if (id.includes('howler')) return 'howler';
+          if (id.includes('/content/') && id.endsWith('.json')) return 'content';
+          return undefined;
+        },
+      },
+    },
   },
   resolve: {
     alias: {

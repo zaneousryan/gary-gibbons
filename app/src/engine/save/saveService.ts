@@ -51,8 +51,53 @@ export class LocalStorageStorage implements SaveStorage {
   }
 }
 
-// STUB(phase-7): TauriFsStorage lands with Tauri packaging; the interface is
-// already the contract, so nothing upstream changes.
+/**
+ * Tauri desktop storage: saves as JSON files under $APPDATA/saves via the fs
+ * plugin. The plugin modules are dynamic imports so the web build never pulls
+ * them; defaultStorage() only selects this backend inside a Tauri window.
+ */
+export class TauriFsStorage implements SaveStorage {
+  private async fs() {
+    // dynamic import: the web bundle only loads this inside a Tauri window
+    return await import('@tauri-apps/plugin-fs');
+  }
+
+  private async ensureDir() {
+    const fs = await this.fs();
+    const opts = { baseDir: fs.BaseDirectory.AppData };
+    if (!(await fs.exists('saves', opts))) await fs.mkdir('saves', opts);
+    return { fs, opts };
+  }
+
+  async read(slot: string) {
+    try {
+      const { fs, opts } = await this.ensureDir();
+      return await fs.readTextFile(`saves/${slot}.json`, opts);
+    } catch {
+      return null;
+    }
+  }
+
+  async write(slot: string, data: string) {
+    const { fs, opts } = await this.ensureDir();
+    await fs.writeTextFile(`saves/${slot}.json`, data, opts);
+  }
+
+  async list() {
+    const { fs, opts } = await this.ensureDir();
+    const entries = await fs.readDir('saves', opts);
+    return entries.filter((e) => e.name.endsWith('.json')).map((e) => e.name.slice(0, -'.json'.length));
+  }
+
+  async remove(slot: string) {
+    const { fs, opts } = await this.ensureDir();
+    await fs.remove(`saves/${slot}.json`, opts);
+  }
+}
+
+function inTauri(): boolean {
+  return typeof globalThis !== 'undefined' && '__TAURI_INTERNALS__' in globalThis;
+}
 
 export class SaveService {
   constructor(private storage: SaveStorage) {}
@@ -82,6 +127,7 @@ export class SaveService {
 }
 
 export function defaultStorage(): SaveStorage {
+  if (inTauri()) return new TauriFsStorage();
   if (typeof globalThis.localStorage !== 'undefined') return new LocalStorageStorage();
   return new MemoryStorage();
 }
