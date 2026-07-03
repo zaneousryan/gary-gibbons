@@ -1,0 +1,12 @@
+{
+  "id": "ferris_tracks",
+  "ref": "II.12.4",
+  "type": "physical",
+  "title": "The holed-sole trail — garden to riverbank",
+  "sprite": "card_ferris_tracks",
+  "source": "riverbank",
+  "initialStatus": "verified",
+  "text": "One distinctive boot, hole worn through the left sole, walking from six garden holes to a flattened watching-spot in the reeds — with a fine view of the old boathouse fence.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

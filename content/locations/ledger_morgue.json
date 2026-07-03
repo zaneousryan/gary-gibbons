@@ -1,0 +1,74 @@
+{
+  "id": "ledger_morgue",
+  "name": "The Ledger Morgue",
+  "ref": "II.15.2",
+  "layers": ["bg", "mid", "fg"],
+  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "exits": [{ "to": "gary_apartment", "at": [160, 880] }],
+  "sitSpot": {
+    "at": [1500, 880],
+    "monologues": [{ "cond": {}, "bark": "bench_morgue_d3" }]
+  },
+  "hotspots": [
+    {
+      "id": "addition_drawer",
+      "at": [700, 620],
+      "kind": "examine",
+      "label": "Drawer: TEN YEARS AGO — CIVIC",
+      "cond": { "flag": "morgue_unlocked" },
+      "interactions": [
+        {
+          "id": "addition_clipping",
+          "cond": { "not": { "card": "founders_addition_clipping" } },
+          "text": "THE FOUNDER'S ADDITION — front page, ten years old. A dying Edmund Vale legally reopens the capsule for one hour and places a single green-wax-sealed envelope inside: his final wishes, to be read at the 50th. The whole district watched him seal it back.",
+          "effects": [
+            { "giveCard": "founders_addition_clipping", "status": "verified" },
+            { "collect": { "clipping": "clip_founders_addition" } },
+            { "notebook": { "entry": "nb_founders_addition" } }
+          ],
+          "ref": "II.15.2"
+        },
+        {
+          "id": "addition_again",
+          "text": "The Addition coverage, re-filed where it belongs. Archie's byline sits three columns over, reviewing a soup competition with tremendous seriousness.",
+          "ref": "II.15.2"
+        }
+      ],
+      "ref": "II.15.2"
+    },
+    {
+      "id": "archies_desk",
+      "at": [1200, 640],
+      "kind": "chekhov",
+      "label": "Archie's Desk",
+      "detail": {
+        "tier": "character",
+        "text": "Preserved as he left it: blotter, pencil cup, a drawer with a lock even Ida couldn't sweet-talk. He was smiling when he asked for it, she says. Gary doesn't open drawers that were closed with a smile. Not yet."
+      },
+      "ref": "III.28"
+    },
+    {
+      "id": "front_page_wall",
+      "at": [420, 560],
+      "kind": "chekhov",
+      "label": "The Front Page Wall",
+      "detail": {
+        "tier": "texture",
+        "text": "Fifty years of front pages, edge to edge — except one conspicuous gap, fifty years back. The bound volume for that week is simply absent from the shelf. Dot, if asked: 'Before my time. Ask the shelf.'"
+      },
+      "ref": "III.28"
+    },
+    {
+      "id": "exit_up",
+      "at": [160, 820],
+      "kind": "exit",
+      "to": "gary_apartment",
+      "label": "Up the stairs"
+    }
+  ],
+  "ambient": {
+    "vignetteTags": ["morgue", "indoors"],
+    "weatherVariants": false,
+    "ambience": "amb_clock_paper"
+  }
+}

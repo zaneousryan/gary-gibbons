@@ -1,0 +1,15 @@
+{
+  "id": "ferris",
+  "name": "Ferris Mott",
+  "ref": "I.4",
+  "species": "weasel (the only one in Lanternside)",
+  "portraitSet": "ferris",
+  "voice": { "textSpeed": 1.15, "blipSound": "blip_ferris" },
+  "greetings": {
+    "cold": "The reporter. Ferris Mott has been misquoted before, you know. Twice. In two counties.",
+    "neutral": "Psst. Reporter. You have the look of a man who knows things. Ferris Mott also knows things.",
+    "warm": "Ah! The only journalist Ferris Mott trusts. Sit. Whisper. The walls have opinions."
+  },
+  "tells": [],
+  "etiquette": { "note": "Conspiratorial whisper at all times, even ordering soup. Third person when excited. The tail is 'heritage couture' — compliment it and lose ten minutes." }
+}

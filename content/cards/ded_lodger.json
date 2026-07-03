@@ -1,0 +1,12 @@
+{
+  "id": "ded_lodger",
+  "ref": "I.6.D5",
+  "type": "deduction",
+  "title": "The figure at the monument is the stranger at the inn",
+  "sprite": "card_ded_lodger",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "One weasel tail in a night photograph. One weasel in fifty years of district rolls, checked in a week before the ceremony, key never on its hook past dark. The Drowsy Lantern has a guest worth watching.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

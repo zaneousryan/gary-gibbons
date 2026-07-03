@@ -1,0 +1,12 @@
+{
+  "id": "plaque_moved",
+  "ref": "II.13.2",
+  "type": "physical",
+  "title": "The dedication plaque was MOVED",
+  "sprite": "card_plaque_moved",
+  "source": "founders_square",
+  "initialStatus": "verified",
+  "text": "Warren's founding photograph against the modern square: the plaque sits a full stride from where it hung for forty years. Moved ten years ago, for The Founder's Addition. The vault has a history of opening.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

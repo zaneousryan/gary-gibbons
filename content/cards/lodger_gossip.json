@@ -1,0 +1,12 @@
+{
+  "id": "lodger_gossip",
+  "ref": "I.5.day3",
+  "type": "testimony",
+  "title": "The inn's new lodger — maps, whispers, treasure at breakfast",
+  "sprite": "card_lodger_gossip",
+  "source": "margie",
+  "initialStatus": "verified",
+  "text": "Checked in a week before the ceremony. Key never on its hook past dark. Asks about treasure before the eggs. Margie quotes exactly.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

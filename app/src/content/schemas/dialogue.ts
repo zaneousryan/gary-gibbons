@@ -72,6 +72,12 @@ export const DialogueSchema = z
     entries: z.array(EntrySchema).min(1),
     nodes: z.record(IdSchema, DialogueNodeSchema),
     oncePerDay: z.boolean().optional(),
+    /**
+     * Re-entrant scenes (II.12.1 cozy failure model): completion never blocks
+     * re-selection — entry conds alone decide availability. Use for scenes a
+     * wrong stance can exit early (the fact resurfaces at higher cost).
+     */
+    reentrant: z.boolean().optional(),
     /** Bark played if the dialogue is re-approached after exhaustion. */
     repeatBark: IdSchema.optional(),
   })

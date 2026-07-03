@@ -4,7 +4,10 @@
   "ref": "I.2",
   "layers": ["bg", "mid", "fg"],
   "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
-  "exits": [{ "to": "the_percolator", "at": [1760, 880] }],
+  "exits": [
+    { "to": "the_percolator", "at": [1760, 880] },
+    { "to": "ledger_morgue", "at": [320, 880] }
+  ],
   "sitSpot": {
     "at": [420, 880],
     "monologues": [
@@ -87,6 +90,14 @@
       "kind": "exit",
       "to": "the_percolator",
       "label": "Down to the street"
+    },
+    {
+      "id": "exit_to_morgue",
+      "at": [320, 820],
+      "kind": "exit",
+      "to": "ledger_morgue",
+      "label": "Down to the Morgue",
+      "cond": { "flag": "morgue_unlocked" }
     }
   ],
   "ambient": {

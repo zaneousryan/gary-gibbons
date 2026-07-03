@@ -17,6 +17,8 @@ export const DeductionSchema = z
       .object({
         card: IdSchema.optional(),
         ledgerCell: z.object({ suspect: IdSchema, col: z.enum(['motive', 'means', 'opportunity']) }).strict().optional(),
+        /** Elimination deductions (D4, D8): the row stamps CLEARED (II.16.2). */
+        clearSuspect: IdSchema.optional(),
         railFlip: IdSchema.optional(),
         mapMark: IdSchema.optional(),
       })

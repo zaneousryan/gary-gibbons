@@ -1,0 +1,98 @@
+{
+  "id": "warren_d3_speech",
+  "character": "warren",
+  "ref": "I.5.day3",
+  "entries": [
+    { "id": "main", "cond": { "all": [{ "day": { "gte": 3 } }, { "card": "margies_testimony" }, { "not": { "card": "lighthouse_folio" } }] }, "node": "c1" }
+  ],
+  "reentrant": true,
+  "nodes": {
+    "c1": {
+      "speaker": "warren",
+      "line": "You've heard, then. That I doubted him.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "effects": [{ "setFlag": "warren_topic_julian" }],
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "narrator",
+      "line": "He takes off his glasses and cleans them, slowly. They were clean already.",
+      "authored": "aletheia",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "gary",
+      "stances": {
+        "press": {
+          "line": "Did you want to keep the chair?",
+          "authored": "verbatim",
+          "next": "c4p"
+        },
+        "empathize": {
+          "line": "Eight years is a long time to keep someone else's seat warm.",
+          "authored": "verbatim",
+          "next": "c4"
+        },
+        "observe": {
+          "cond": { "flag": "noticed_warren_glasses" },
+          "line": "You've cleaned those glasses three times since I said his name.",
+          "authored": "verbatim",
+          "next": "c4o"
+        }
+      }
+    },
+    "c4p": {
+      "speaker": "warren",
+      "line": "No.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "c4pb"
+    },
+    "c4pb": {
+      "speaker": "narrator",
+      "line": "True. Closed. The room gets one degree colder — the fact will have to come back through a longer door.",
+      "authored": "aletheia",
+      "effects": [{ "setFlag": "warren_pressed" }],
+      "next": null
+    },
+    "c4o": {
+      "speaker": "warren",
+      "line": "...You're Archie's, all right. Sit down, Mr. Gibbons.",
+      "authored": "verbatim",
+      "emote": "surprised",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "warren",
+      "line": "I did. I do. That is not the same as wanting his chair, Mr. Gibbons. Here. My speech. Read the third draft. I couldn't get the joy right in the first two.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "c5"
+    },
+    "c5": {
+      "speaker": "gary",
+      "line": "\"...the happiest sentence I will ever say: the waiting is over.\"",
+      "authored": "verbatim",
+      "effects": [
+        { "giveCard": "warrens_speech", "status": "verified" },
+        { "notebook": { "entry": "nb_warren_speech" } }
+      ],
+      "next": "c6"
+    },
+    "c6": {
+      "speaker": "warren",
+      "line": "Eight years I've kept a seat warm for someone else. Do you know what I've kept cold? Forty-seven of them. I intend to photograph every one before my knees give out. I wasn't afraid of losing the chair. I was afraid of the boy losing himself in it.",
+      "authored": "verbatim",
+      "emote": "happy",
+      "effects": [
+        { "giveCard": "lighthouse_folio", "status": "verified" },
+        { "notebook": { "entry": "nb_lighthouse_folio" } },
+        { "setFlag": "warren_speech_done" }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "warren_repeat_busy"
+}

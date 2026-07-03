@@ -200,8 +200,10 @@ export function selectDialogueFor(db: ContentDB, characterId: string): string | 
     .filter((d) => d.character === characterId)
     .sort((a, b) => a.id.localeCompare(b.id));
   for (const dlg of candidates) {
-    if (dlg.oncePerDay && state.flags[`dlg_done_${dlg.id}_d${state.day}`]) continue;
-    if (state.flags[`dlg_done_${dlg.id}`] && !dlg.oncePerDay) continue;
+    if (!dlg.reentrant) {
+      if (dlg.oncePerDay && state.flags[`dlg_done_${dlg.id}_d${state.day}`]) continue;
+      if (state.flags[`dlg_done_${dlg.id}`] && !dlg.oncePerDay) continue;
+    }
     if (dlg.entries.some((e) => evalCondition((e.cond ?? {}) as Condition, state))) return dlg.id;
   }
   return null;

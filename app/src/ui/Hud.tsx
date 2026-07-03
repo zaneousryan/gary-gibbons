@@ -16,6 +16,7 @@ export default function Hud({ db }: { db: ContentDB }) {
   const phase = useGameStore((s) => s.state.phase);
   const location = useGameStore((s) => s.state.location);
   const game = useGameStore((s) => s.game);
+  const hasCameraFlag = useGameStore((s) => !!s.state.flags['has_camera']);
   const showToast = useUiStore((s) => s.showToast);
   const [busy, setBusy] = useState(false);
 
@@ -62,6 +63,15 @@ export default function Hud({ db }: { db: ContentDB }) {
         >
           📓 Notebook
         </button>
+        {hasCameraFlag && (
+          <button
+            onClick={() => useUiStore.getState().toggleCamera()}
+            data-testid="hud-camera"
+            className="bg-cream text-ink border-2 border-ink rounded px-3 py-2 font-bold cursor-pointer hover:brightness-95"
+          >
+            📷
+          </button>
+        )}
         {phase === 'night' && location === game?.apartmentLocation ? (
           <>
             <button

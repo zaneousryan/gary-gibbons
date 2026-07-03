@@ -1,0 +1,45 @@
+{
+  "id": "ed_d4",
+  "day": 4,
+  "ref": "II.15.1",
+  "draftCards": ["ferris_testimony", "survey_map", "ferris_tracks"],
+  "headlines": [
+    {
+      "id": "h_d4_sensational",
+      "tone": "sensational",
+      "text": "WEASEL CAUGHT RED-PAWED!",
+      "effects": [
+        { "trust": { "char": "ferris", "delta": -1 } },
+        { "trust": { "char": "margie", "delta": 1 } }
+      ],
+      "reactions": {
+        "chalkboard": "THE RED-PAWED ROAST — bitter finish, someone reads it aloud tomorrow",
+        "rumorSeed": "weasel_did_it"
+      }
+    },
+    {
+      "id": "h_d4_measured",
+      "tone": "measured",
+      "text": "Digging Suspect Detained; Capsule Contents Still Missing",
+      "reactions": {
+        "chalkboard": "THE WRONG CRIME — strong start, empty middle"
+      }
+    },
+    {
+      "id": "h_d4_compassionate",
+      "tone": "compassionate",
+      "text": "The Wrong Crimes: A Newcomer's Very Bad Week",
+      "effects": [
+        { "trust": { "char": "ferris", "delta": 1 } }
+      ],
+      "reactions": {
+        "chalkboard": "THE SECOND CHANCE — served to anyone who asks"
+      }
+    }
+  ],
+  "kickers": [
+    { "id": "k_d4_witness", "text": "The man in the lockup saw more than he dug. The Ledger is listening." },
+    { "id": "k_d4_garden", "text": "The community garden will be repaired. The marrow will be memorialized. Lanternside endures." },
+    { "id": "k_d4_open", "text": "The capsule is still out there. So is this paper." }
+  ]
+}

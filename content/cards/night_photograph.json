@@ -1,0 +1,19 @@
+{
+  "id": "night_photograph",
+  "ref": "I.5.day3",
+  "type": "photo",
+  "title": "THE NIGHT PHOTOGRAPH — a tail at the frame's edge",
+  "sprite": "card_night_photograph",
+  "source": "warren",
+  "initialStatus": "verified",
+  "text": "Long exposure, two nights before the ceremony. Lanterns smeared like honey, the monument in shadow — and bottom left, mid-stride, a blurred tail. Long, low, unmistakably a weasel's. Lanternside hasn't had a weasel on the rolls in fifty years.",
+  "verifyRoutes": [],
+  "reReadLines": [
+    {
+      "cond": {
+        "deduction": "photo_witness"
+      },
+      "bark": "reread_photo_witness"
+    }
+  ]
+}

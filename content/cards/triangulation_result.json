@@ -1,0 +1,12 @@
+{
+  "id": "triangulation_result",
+  "ref": "III.25.2",
+  "type": "photo",
+  "title": "Where the figure stood — the river-side line",
+  "sprite": "card_triangulation_result",
+  "source": "founders_square",
+  "initialStatus": "verified",
+  "text": "Warren's balcony, the tail's place in frame, the lantern smears: the figure stood OFF the worn manor-monument shortcut, on the river-side line. Where someone stood, derived from light and habit.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

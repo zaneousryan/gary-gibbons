@@ -9,6 +9,14 @@
       { "text": "Grandpa always said: when a story feels too big, find the witness who counted. Somebody in this town counts everything.", "ref": "I.6.D3" },
       { "text": "The checklist, Gibbons. Laminated, time-stamped, three nights early. Read what it proves — not about her. About the calendar.", "ref": "I.6.D3" }
     ],
+    "d5_lodger": [
+      { "text": "Grandpa always said: a photograph is a witness that never blinks. Yours caught something the district rolls say doesn't exist.", "ref": "I.6.D5" },
+      { "text": "The tail, Gibbons. Fifty years of records without a weasel — and Margie's inn took in somebody new last week. Read her gossip again.", "ref": "I.6.D5" }
+    ],
+    "d6_insider": [
+      { "text": "Grandpa always said: when a witness gives you one strange detail, that detail is the story. Ferris gave you a key.", "ref": "I.6.D6" },
+      { "text": "Your very first deduction, Gibbons — the one from the ceremony night. It's been waiting on the board for a partner all week.", "ref": "I.6.D6" }
+    ],
     "poppy_opened_not_emptied": [
       { "text": "Grandpa always said: re-read the witness who was most embarrassed. Embarrassment and guilt wear different coats.", "ref": "I.5.day2" },
       { "text": "The backwards key. A thief wipes her tracks; a worrier makes a list of them. Which kind hung that key back wrong?", "ref": "I.5.day2" }

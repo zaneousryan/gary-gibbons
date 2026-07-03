@@ -1,0 +1,16 @@
+{
+  "id": "ev_photo_night",
+  "ref": "II.16.1",
+  "type": "event",
+  "title": "NIGHT -2: a weasel watches the monument",
+  "sprite": "card_ev_photo_night",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "Warren's long exposure catches a tail at the frame's edge, mid-stride, 2 a.m.-ish.",
+  "verifyRoutes": [],
+  "reReadLines": [],
+  "anchor": {
+    "card": "night_photograph"
+  },
+  "railSlot": "night_minus_2"
+}

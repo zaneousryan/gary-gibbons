@@ -24,7 +24,12 @@ import { installNotebookWatcher } from '@systems/notebook';
 import { installVerificationWatcher } from '@systems/verify';
 import { installPuzzleWatcher } from '@systems/puzzles';
 import { installAudioWatcher } from '@systems/audio';
+import { installWeatherWatcher } from '@systems/weather';
+import { installVignetteWatcher } from '@systems/livingTown';
+import { installPhotoPrinter } from '@systems/photo';
 import PuzzleHost from '@ui/PuzzleHost';
+import RailCinematic from '@ui/RailCinematic';
+import Camera from '@ui/Camera';
 
 export default function App() {
   const [db, setDb] = useState<ContentDB | null>(null);
@@ -54,13 +59,11 @@ export default function App() {
       const un4 = installVerificationWatcher(content);
       const un5 = installPuzzleWatcher();
       const un6 = installAudioWatcher();
+      const un7 = installWeatherWatcher(content);
+      const un8 = installVignetteWatcher(content);
+      const un9 = installPhotoPrinter();
       return () => {
-        un1();
-        un2();
-        un3();
-        un4();
-        un5();
-        un6();
+        [un1, un2, un3, un4, un5, un6, un7, un8, un9].forEach((u) => u());
       };
     } catch (err) {
       setBootError(String(err));
@@ -92,6 +95,8 @@ export default function App() {
       <Newspaper db={db} />
       <MorningPages db={db} />
       <PuzzleHost />
+      <Camera db={db} />
+      <RailCinematic db={db} />
       <PocketRecap db={db} />
       <GrandpaModal />
       <InnerVoice />

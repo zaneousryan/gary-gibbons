@@ -1,0 +1,53 @@
+{
+  "id": "ferris_d4_lockup",
+  "character": "ferris",
+  "ref": "I.5.day4",
+  "entries": [
+    { "id": "main", "cond": { "all": [{ "flag": "stakeout_done" }, { "not": { "card": "ferris_testimony" } }] }, "node": "c1" }
+  ],
+  "nodes": {
+    "c1": {
+      "speaker": "narrator",
+      "line": "The lockup is quiet. Ferris sits deflated on the cot, tail unbrushed — honest, for the first time since the marsh.",
+      "authored": "aletheia",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "ferris",
+      "line": "Ferris Mott didn't take your memories, reporter. But two nights before the ceremony, Ferris Mott saw who might have. I was — surveying — by the monument. A figure came across the square. Tall. Rain falling, and him dry under a great posh umbrella.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "ferris",
+      "line": "And here's the thing that itched me: he didn't pick that lock. He used a key. Smooth as butter. Didn't look around once. Moved like the square belonged to him.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "effects": [
+        { "giveCard": "ferris_testimony", "status": "verified" },
+        { "giveCard": "ev_crossing", "status": "verified" },
+        { "setFlag": "ferris_testimony_heard" },
+        { "notebook": { "entry": "nb_ferris_pivot" } },
+        { "playBark": "gary_inner_belonged" }
+      ],
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "gary",
+      "line": "Why tell me, Ferris?",
+      "authored": "aletheia",
+      "next": "c5"
+    },
+    "c5": {
+      "speaker": "ferris",
+      "line": "Because the constable owns a notebook and you own a newspaper, and Ferris Mott knows which one the truth prefers. Also the garden thing. Ferris Mott would like the record to show he intends to fix the garden thing.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": null
+    }
+  },
+  "reentrant": true,
+  "oncePerDay": false,
+  "repeatBark": "ferris_repeat_busy"
+}

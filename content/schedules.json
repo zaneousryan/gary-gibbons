@@ -23,6 +23,26 @@
         "loc": "the_percolator",
         "spot": "corner_table"
       }
+    },
+    "d3": {
+      "morning": {
+        "loc": "the_percolator",
+        "spot": "corner_table"
+      },
+      "midday": {
+        "loc": "the_percolator",
+        "spot": "corner_table"
+      }
+    },
+    "d4": {
+      "morning": {
+        "loc": "the_percolator",
+        "spot": "corner_table"
+      },
+      "midday": {
+        "loc": "the_percolator",
+        "spot": "corner_table"
+      }
     }
   },
   "otto": {
@@ -41,6 +61,34 @@
       }
     },
     "d2": {
+      "morning": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      },
+      "midday": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      },
+      "evening": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      }
+    },
+    "d3": {
+      "morning": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      },
+      "midday": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      },
+      "evening": {
+        "loc": "the_percolator",
+        "spot": "counter"
+      }
+    },
+    "d4": {
       "morning": {
         "loc": "the_percolator",
         "spot": "counter"
@@ -79,6 +127,30 @@
         "loc": "the_percolator",
         "spot": "window_table"
       }
+    },
+    "d3": {
+      "morning": {
+        "loc": "drowsy_lantern",
+        "spot": "bar"
+      },
+      "midday": {
+        "loc": "drowsy_lantern",
+        "spot": "bar"
+      },
+      "evening": {
+        "loc": "drowsy_lantern",
+        "spot": "bar"
+      }
+    },
+    "d4": {
+      "morning": {
+        "loc": "drowsy_lantern",
+        "spot": "bar"
+      },
+      "midday": {
+        "loc": "drowsy_lantern",
+        "spot": "bar"
+      }
     }
   },
   "tuck": {
@@ -105,6 +177,26 @@
         "loc": "the_percolator",
         "spot": "pastry_case"
       }
+    },
+    "d3": {
+      "morning": {
+        "loc": "the_percolator",
+        "spot": "pastry_case"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "lamppost"
+      }
+    },
+    "d4": {
+      "morning": {
+        "loc": "the_percolator",
+        "spot": "pastry_case"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "lamppost"
+      }
     }
   },
   "gino": {
@@ -123,6 +215,26 @@
       }
     },
     "d2": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "fruit_stall"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "fruit_stall"
+      }
+    },
+    "d3": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "fruit_stall"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "fruit_stall"
+      }
+    },
+    "d4": {
       "morning": {
         "loc": "market_row",
         "spot": "fruit_stall"
@@ -157,6 +269,26 @@
         "loc": "market_row",
         "spot": "wren_wick"
       }
+    },
+    "d3": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "wren_wick"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "wren_wick"
+      }
+    },
+    "d4": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "wren_wick"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "wren_wick"
+      }
     }
   },
   "evelyn": {
@@ -183,6 +315,26 @@
         "loc": "market_row",
         "spot": "flower_shop"
       }
+    },
+    "d3": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "flower_shop"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "flower_shop"
+      }
+    },
+    "d4": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "flower_shop"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "flower_shop"
+      }
     }
   },
   "milo": {
@@ -201,6 +353,26 @@
       }
     },
     "d2": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "stakeout_box"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "stakeout_box"
+      }
+    },
+    "d3": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "stakeout_box"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "stakeout_box"
+      }
+    },
+    "d4": {
       "morning": {
         "loc": "market_row",
         "spot": "stakeout_box"
@@ -239,6 +411,26 @@
         "loc": "founders_square",
         "spot": "monument"
       }
+    },
+    "d3": {
+      "morning": {
+        "loc": "founders_square",
+        "spot": "monument"
+      },
+      "midday": {
+        "loc": "founders_square",
+        "spot": "monument"
+      }
+    },
+    "d4": {
+      "morning": {
+        "loc": "founders_square",
+        "spot": "monument"
+      },
+      "midday": {
+        "loc": "founders_square",
+        "spot": "monument"
+      }
     }
   },
   "warren": {
@@ -264,6 +456,30 @@
       "midday": {
         "loc": "founders_square",
         "spot": "council_rail"
+      }
+    },
+    "d3": {
+      "morning": {
+        "loc": "founders_square",
+        "spot": "council_rail"
+      },
+      "midday": {
+        "loc": "council_hall",
+        "spot": "office"
+      },
+      "evening": {
+        "loc": "council_hall",
+        "spot": "office"
+      }
+    },
+    "d4": {
+      "morning": {
+        "loc": "council_hall",
+        "spot": "office"
+      },
+      "midday": {
+        "loc": "council_hall",
+        "spot": "office"
       }
     }
   },
@@ -296,6 +512,64 @@
       "evening": {
         "loc": "founders_square",
         "spot": "stage"
+      }
+    }
+  },
+  "ferris": {
+    "d3": {
+      "evening": {
+        "loc": "drowsy_lantern",
+        "spot": "corner"
+      },
+      "midday": {
+        "loc": "drowsy_lantern",
+        "spot": "corner"
+      }
+    },
+    "d4": {
+      "morning": {
+        "loc": "drowsy_lantern",
+        "spot": "corner"
+      },
+      "midday": {
+        "loc": "drowsy_lantern",
+        "spot": "corner"
+      },
+      "evening": {
+        "loc": "lockup",
+        "spot": "cell"
+      }
+    },
+    "d5": {
+      "morning": {
+        "loc": "lockup",
+        "spot": "cell"
+      },
+      "midday": {
+        "loc": "lockup",
+        "spot": "cell"
+      }
+    }
+  },
+  "prudence": {
+    "d3": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "flower_shop"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "flower_shop"
+      }
+    },
+    "d4": {
+      "morning": {
+        "loc": "market_row",
+        "spot": "flower_shop"
+      },
+      "midday": {
+        "loc": "market_row",
+        "spot": "flower_shop"
       }
     }
   }

@@ -25,6 +25,7 @@
       "next": null
     }
   },
+  "reentrant": true,
   "oncePerDay": false,
   "repeatBark": "poppy_repeat_busy"
 }

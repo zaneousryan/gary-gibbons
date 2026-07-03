@@ -48,7 +48,17 @@ describe('sketch_memory (the seal)', () => {
 });
 
 describe('puzzle registry', () => {
-  it('every shipped module registers its resolve effects for the validator', () => {
-    expect(Object.keys(PUZZLE_RESOLVE_EFFECTS).sort()).toEqual(['dust_library', 'sketch_memory_seal']);
+  it('all nine §6.7 modules register their resolve effects for the validator', () => {
+    expect(Object.keys(PUZZLE_RESOLVE_EFFECTS).sort()).toEqual([
+      'dust_library',
+      'fire_escape_sightline',
+      'handwriting_match',
+      'map_overlay',
+      'photo_triangulation',
+      'sketch_memory_seal',
+      'then_now_founding',
+      'torn_letter',
+      'trace_ferris',
+    ]);
   });
 });

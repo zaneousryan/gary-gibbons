@@ -60,6 +60,47 @@
       "produces": { "card": "ded_careful_hands" },
       "garyLine": "bark_ded_careful_hands",
       "cinematic": "theory_curl_outsider"
+    },
+    {
+      "id": "d4_warren_cleared",
+      "ref": "I.6.D4",
+      "kind": "standard",
+      "inputs": ["margies_testimony", "warrens_speech", "lighthouse_folio"],
+      "requireVerified": true,
+      "requireOnRecordForFinale": false,
+      "produces": { "card": "ded_warren_cleared", "clearSuspect": "warren" },
+      "garyLine": "bark_ded_warren_cleared"
+    },
+    {
+      "id": "d5_lodger",
+      "ref": "I.6.D5",
+      "kind": "standard",
+      "inputs": ["night_photograph", "lodger_gossip"],
+      "requireVerified": true,
+      "requireOnRecordForFinale": false,
+      "produces": { "card": "ded_lodger" },
+      "garyLine": "bark_ded_lodger"
+    },
+    {
+      "id": "d6_insider",
+      "ref": "I.6.D6",
+      "kind": "standard",
+      "inputs": ["ferris_testimony", "ded_emptied_before"],
+      "requireVerified": true,
+      "requireOnRecordForFinale": false,
+      "produces": { "card": "ded_insider" },
+      "garyLine": "bark_ded_insider"
+    },
+    {
+      "id": "photo_witness",
+      "ref": "III.22.2",
+      "kind": "aha",
+      "inputs": ["night_photograph", "ferris_testimony"],
+      "requireVerified": true,
+      "requireOnRecordForFinale": false,
+      "produces": { "card": "ded_photo_witness" },
+      "garyLine": "bark_ded_photo_witness",
+      "cinematic": "photo_to_witness_column"
     }
   ],
   "wrongPairBarks": "wrong_pairs",
@@ -77,5 +118,20 @@
       "retireWhen": { "card": "poppys_checklist", "status": "verified" }
     }
   ],
-  "contradictions": []
+  "contradictions": [
+    {
+      "id": "cx_warren",
+      "pair": ["margies_testimony", "warrens_speech"],
+      "producesQuestion": "q_warren_motive",
+      "ref": "II.16.4",
+      "line": "These two can't both be the whole truth."
+    },
+    {
+      "id": "cx_two_keys",
+      "pair": ["ferris_testimony", "poppys_checklist"],
+      "producesQuestion": "q_second_key",
+      "ref": "II.16.4",
+      "line": "These two can't both be the whole truth."
+    }
+  ]
 }

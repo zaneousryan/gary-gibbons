@@ -1,0 +1,53 @@
+{
+  "id": "dot_d3_morgue",
+  "character": "dot",
+  "ref": "II.15.2",
+  "entries": [{ "id": "main", "cond": { "day": 3 }, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "dot",
+      "line": "Gibbons. Two nights, one key, a town full of theories. Sell me today.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "choices": [
+        {
+          "line": "The seal on the missing will was the Vale family's own — and the town's been whispering about the Guardian.",
+          "authored": "aletheia",
+          "effects": [{ "setFlag": "pitch_d3_done" }],
+          "next": "c3"
+        },
+        {
+          "line": "Still two nights and a key. But the key had to come from somewhere official.",
+          "authored": "aletheia",
+          "effects": [{ "setFlag": "pitch_d3_done" }],
+          "next": "c3"
+        }
+      ]
+    },
+    "c3": {
+      "speaker": "dot",
+      "line": "Mm. Before you chase whispers: the capsule was opened once already, legally, ten years back. The Founder's Addition. We covered it — front page. Go down to the Morgue and read your own paper, Gibbons. Key's under the marmalade tin, which is a sentence I never planned to say to a journalist.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "effects": [
+        { "setFlag": "morgue_unlocked" },
+        { "notebook": { "entry": "nb_morgue_unlocked" } }
+      ],
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "dot",
+      "line": "Your grandfather practically lived down there. Said the morgue was the only room in town where everyone finally agrees on what happened. He was wrong, obviously. But he said it beautifully.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "ref": "I.7.2",
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "dot_repeat_busy"
+}

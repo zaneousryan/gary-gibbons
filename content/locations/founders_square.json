@@ -91,11 +91,55 @@
       "ref": "I.5.day1"
     },
     {
+      "id": "dedication_plaque",
+      "at": [620, 620],
+      "kind": "examine",
+      "label": "The Dedication Plaque",
+      "cond": { "day": { "gte": 3 } },
+      "interactions": [
+        {
+          "id": "then_now",
+          "cond": { "all": [{ "card": "founding_photograph" }, { "not": { "flag": "then_now_founding_done" } }] },
+          "opens": "puzzle:then_now_founding",
+          "ref": "II.13.2"
+        },
+        {
+          "id": "plaque_after",
+          "cond": { "flag": "then_now_founding_done" },
+          "text": "The dedication plaque, a full stride from where the founding photograph shows it. Moved ten years ago — to make room for something added behind it.",
+          "ref": "II.13.2"
+        },
+        {
+          "id": "plaque_look",
+          "text": "The founders' dedication plaque, polished for the anniversary. Something about its position itches at Gary — the kind of itch that wants an old photograph.",
+          "ref": "II.13.2"
+        }
+      ],
+      "ref": "II.13.2"
+    },
+    {
+      "id": "square_lantern_photo",
+      "at": [1180, 500],
+      "kind": "photo",
+      "label": "The Square's Oldest Lantern",
+      "interactions": [
+        { "id": "lantern_sq_01", "text": "Lantern #1 of 47, if anyone were counting.", "ref": "II.19.2" }
+      ],
+      "ref": "II.19.2"
+    },
+    {
       "id": "exit_market",
       "at": [160, 820],
       "kind": "exit",
       "to": "market_row",
       "label": "To Market Row"
+    },
+    {
+      "id": "exit_hall",
+      "at": [1760, 820],
+      "kind": "exit",
+      "to": "council_hall",
+      "label": "To the Council Hall"
     }
   ],
   "triggers": [

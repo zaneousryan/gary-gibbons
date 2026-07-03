@@ -1,0 +1,12 @@
+{
+  "id": "ferris_testimony",
+  "ref": "I.5.day4",
+  "type": "testimony",
+  "title": "FERRIS'S TESTIMONY — tall, posh umbrella, used a KEY",
+  "sprite": "card_ferris_testimony",
+  "source": "ferris",
+  "initialStatus": "verified",
+  "text": "Two nights before the ceremony: a tall figure crossed the square in the rain, dry under a posh umbrella. Didn't pick the lock — used a key, smooth as butter. Didn't look around once. Moved like the square belonged to him.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

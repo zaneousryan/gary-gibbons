@@ -1,0 +1,12 @@
+{
+  "id": "ded_insider",
+  "ref": "I.6.D6",
+  "type": "deduction",
+  "title": "The thief was an insider - with legitimate key access",
+  "sprite": "card_ded_insider",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "No forced lock, and a witness who watched a key turn smooth as butter at 2 a.m. But Poppy had the ONLY council key, and her window is closed... is it the only key?",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

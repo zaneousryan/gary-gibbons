@@ -1,0 +1,65 @@
+{
+  "id": "drowsy_lantern",
+  "name": "The Drowsy Lantern",
+  "ref": "I.2",
+  "layers": ["bg", "mid", "fg"],
+  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "exits": [{ "to": "market_row", "at": [160, 880] }],
+  "sitSpot": {
+    "at": [1500, 880],
+    "monologues": [{ "cond": {}, "bark": "bench_lantern_d3" }]
+  },
+  "hotspots": [
+    {
+      "id": "talk_margie",
+      "at": [700, 800],
+      "kind": "talk",
+      "character": "margie",
+      "label": "Margie"
+    },
+    {
+      "id": "talk_ferris",
+      "at": [1200, 800],
+      "kind": "talk",
+      "character": "ferris",
+      "label": "The Lodger"
+    },
+    {
+      "id": "corner_sherry_glass",
+      "at": [450, 620],
+      "kind": "chekhov",
+      "label": "The Corner Seat",
+      "detail": {
+        "tier": "character",
+        "text": "One sherry glass kept upside-down at the corner seat — Margie's quiet reservation. Standing hospitality for a lonely man who gives too many speeches and means all of them."
+      },
+      "ref": "III.24"
+    },
+    {
+      "id": "key_hooks",
+      "at": [980, 560],
+      "kind": "chekhov",
+      "label": "The Room Keys",
+      "cond": { "day": { "gte": 3 } },
+      "detail": {
+        "tier": "clue",
+        "text": "Room keys on brass hooks behind the bar. Rooms one through six, all present and dozing — except lodger's room four. Margie says his key is never on its hook at night. Never.",
+        "cond": {}
+      },
+      "ref": "III.24"
+    },
+    {
+      "id": "exit_market",
+      "at": [160, 820],
+      "kind": "exit",
+      "to": "market_row",
+      "label": "To Market Row"
+    }
+  ],
+  "ambient": {
+    "vignetteTags": ["inn", "indoors"],
+    "weatherVariants": false,
+    "music": "music_inn",
+    "ambience": "amb_inn"
+  }
+}

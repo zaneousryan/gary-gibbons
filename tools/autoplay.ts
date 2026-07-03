@@ -12,8 +12,9 @@ import { useGameStore } from '../app/src/engine/store';
 import { useDialogueStore, selectDialogueFor } from '../app/src/systems/dialogue';
 import { installTriggerWatcher } from '../app/src/systems/triggers';
 import { installNotebookWatcher } from '../app/src/systems/notebook';
-import { connectCards, pinCard, resetBoardSession, retireTheory, checkTheoryRetirements } from '../app/src/systems/board';
-import { solveDustLibrary, solveSealSketch } from '../app/src/systems/puzzles';
+import { connectCards, pinCard, resetBoardSession, retireTheory, checkTheoryRetirements, layOnDesk, seatRailCard } from '../app/src/systems/board';
+import { solveDustLibrary, solveSealSketch, solveThenNow, solveMapOverlay, solveTraceFerris } from '../app/src/systems/puzzles';
+import { takePhoto } from '../app/src/systems/photo';
 import { askGrandpa } from '../app/src/systems/hints';
 import { installVerificationWatcher } from '../app/src/systems/verify';
 import { publishEdition, editionForToday, assembleDraft } from '../app/src/systems/edition';
@@ -33,7 +34,7 @@ function fail(msg: string): never {
   process.exit(1);
 }
 
-function driveDialogue(maxSteps = 60): string[] {
+function driveDialogue(maxSteps = 60, stanceOrder: string[] = ['press', 'empathize', 'observe']): string[] {
   let guard = 0;
   const path: string[] = [];
   while (useDialogueStore.getState().view && guard++ < maxSteps) {
@@ -41,8 +42,7 @@ function driveDialogue(maxSteps = 60): string[] {
     if (view.stances) {
       const enabled = view.stances.filter((s) => s.enabled);
       if (enabled.length === 0) fail(`node ${view.nodeId}: no enabled stances`);
-      // deterministic: prefer press, then empathize, then observe
-      const pick = ['press', 'empathize', 'observe'].find((s) => enabled.some((e) => e.stance === s))!;
+      const pick = stanceOrder.find((s) => enabled.some((e) => e.stance === s))!;
       useDialogueStore.getState().chooseStance(pick as 'press' | 'empathize' | 'observe');
     } else if (view.choices) {
       if (view.choices.length === 0) fail(`node ${view.nodeId}: choice node with zero passing choices`);
@@ -56,12 +56,12 @@ function driveDialogue(maxSteps = 60): string[] {
   return path;
 }
 
-function talkTo(db: ContentDB, characterId: string, expectDialogue?: string): void {
+function talkTo(db: ContentDB, characterId: string, expectDialogue?: string, stanceOrder?: string[]): void {
   const dlgId = selectDialogueFor(db, characterId);
   if (!dlgId) fail(`no dialogue available for ${characterId}`);
   if (expectDialogue && dlgId !== expectDialogue) fail(`expected ${expectDialogue} for ${characterId}, got ${dlgId}`);
   if (!useDialogueStore.getState().start(db, dlgId)) fail(`dialogue ${dlgId} did not start`);
-  driveDialogue();
+  driveDialogue(60, stanceOrder);
 }
 
 function assertFlag(flag: string) {
@@ -71,6 +71,9 @@ function assertFlag(flag: string) {
 const HEADLESS_PUZZLES: Record<string, () => import('../app/src/engine/effects').Effect[]> = {
   dust_library: solveDustLibrary,
   sketch_memory_seal: solveSealSketch,
+  then_now_founding: solveThenNow,
+  trace_ferris: solveTraceFerris,
+  map_overlay: solveMapOverlay,
 };
 
 /** Run a location hotspot's first passing interaction, exactly as the scene layer would. */
@@ -363,6 +366,116 @@ async function runOnce(seed: number): Promise<string[]> {
   if (d3state.day !== 3 || d3state.phase !== 'morning') fail(`expected day 3 morning, got ${d3state.day} ${d3state.phase}`);
   log.push('night 2: theories retired, 4 deductions incl. careful-hands aha, edition, gate -> day 3');
 
+  // --- day 3: The Man Who Counts Lighthouses (I.5.day3) ---
+  if (!commitMorningPages(useGameStore.getState().state.notebook.questions.slice(0, 2))) fail('day 3 pages failed');
+  game.moveTo('the_percolator');
+  talkTo(db, 'dot', 'dot_d3_morgue');
+  assertFlag('morgue_unlocked');
+  game.moveTo('ledger_morgue');
+  runHotspot(db, 'ledger_morgue', 'addition_drawer');
+  assertCard('founders_addition_clipping', 'verified');
+  if (useGameStore.getState().state.collectibles.clippings.length !== 1) fail('clipping not collected');
+
+  game.moveTo('drowsy_lantern');
+  talkTo(db, 'margie', 'margie_d3');
+  assertCard('margies_testimony', 'verified');
+  assertCard('lodger_gossip', 'verified');
+
+  // contradiction desk (II.16.4): Margie vs the speech — a question is born
+  game.moveTo('council_hall');
+  talkTo(db, 'warren', 'warren_d3_speech'); // press/empathize path (driveDialogue prefers press: c4p cold exit)
+  // pressed Warren: "No." — true, closed; the folio comes back via the longer door (II.12.1 reroute)
+  if (!useGameStore.getState().state.flags['warren_pressed']) fail('press route should have closed the scene');
+  talkTo(db, 'warren', 'warren_d3_speech', ['empathize', 'press']); // return with better manners
+  assertCard('warrens_speech', 'verified');
+  assertCard('lighthouse_folio', 'verified');
+  const cx1 = layOnDesk(db, 'margies_testimony', 'warrens_speech');
+  if (cx1.kind !== 'contradiction' || cx1.id !== 'cx_warren') fail('cx_warren did not fire');
+  talkTo(db, 'warren', 'warren_d3_photo');
+  assertCard('night_photograph', 'verified');
+  assertFlag('has_camera');
+  assertCard('founding_photograph', 'verified');
+
+  // then & now (II.13.2): the plaque moved
+  game.moveTo('founders_square');
+  runHotspot(db, 'founders_square', 'dedication_plaque');
+  game.runEffects(solveThenNow());
+  assertFlag('then_now_founding_done');
+  assertCard('plaque_moved', 'verified');
+
+  // photo mode: the square's oldest lantern (II.19.2)
+  if (!takePhoto(db, 'square_lantern_photo')) fail('photo mode capture failed');
+  if (useGameStore.getState().state.photos.length !== 1) fail('photo not stored');
+
+  // night 3: D4 clears Warren (CLEARED stamp via clearSuspect), D5 gates
+  if (!game.advancePhase() || !game.advancePhase() || !game.advancePhase()) fail('day 3 clock failed');
+  for (const [i, card] of ['margies_testimony', 'warrens_speech', 'lighthouse_folio', 'night_photograph', 'lodger_gossip'].entries()) {
+    pinCard(card, 180 + i * 200, 300);
+  }
+  const d4ded = connectCards(db, ['margies_testimony', 'warrens_speech', 'lighthouse_folio']);
+  if (d4ded.kind !== 'deduction' || d4ded.deduction.id !== 'd4_warren_cleared') fail('D4 recipe failed');
+  if (!useGameStore.getState().state.board.cleared.includes('warren')) fail('warren not CLEARED by D4');
+  const d5ded = connectCards(db, ['night_photograph', 'lodger_gossip']);
+  if (d5ded.kind !== 'deduction' || d5ded.deduction.id !== 'd5_lodger') fail('D5 recipe failed');
+  if (!publishEdition(db, { headlineId: 'h_d3_compassionate', kickerId: 'k_d3_folio' })) fail('ed_d3 publish failed');
+  if ((useGameStore.getState().state.trust.warren ?? 0) < 1) fail('compassionate d3 headline should warm Warren');
+  if (!game.advancePhase()) fail('night 3 gate blocked');
+  log.push('day 3 complete: morgue, testimony, folio via reroute, photograph, camera, then&now, D4 CLEARED + D5');
+
+  // --- day 4: The Weasel Digs at Midnight (I.5.day4) ---
+  if (!commitMorningPages(useGameStore.getState().state.notebook.questions.slice(0, 3))) fail('day 4 pages failed');
+  game.moveTo('the_percolator');
+  talkTo(db, 'dot', 'dot_d4_pitch');
+  game.moveTo('drowsy_lantern');
+  talkTo(db, 'ferris', 'ferris_d4_inn');
+  assertFlag('met_ferris');
+
+  // trace the boot prints (II.12.4), then the evening stakeout fires at the riverbank
+  game.moveTo('riverbank');
+  runHotspot(db, 'riverbank', 'boot_prints');
+  assertFlag('ferris_tracks_followed');
+  assertCard('ferris_tracks', 'verified');
+  if (!game.advancePhase()) fail('d4 morning->midday failed');
+  if (!game.advancePhase()) fail('d4 midday->evening failed');
+  game.moveTo('riverbank'); // evening: the stakeout trigger
+  if (!useDialogueStore.getState().view) fail('stakeout trigger did not fire');
+  const grapesBeforeStakeout = useGameStore.getState().state.collectibles.grapesDeclined;
+  driveDialogue();
+  if (useGameStore.getState().state.collectibles.grapesDeclined !== grapesBeforeStakeout + 1) {
+    fail('grape beat 4 (the longest silence) did not count');
+  }
+  assertFlag('stakeout_done');
+  assertCard('survey_map', 'verified');
+
+  // the lockup pivot + map overlay foreshadowing (II.13.4)
+  game.moveTo('lockup');
+  talkTo(db, 'ferris', 'ferris_d4_lockup');
+  assertCard('ferris_testimony', 'verified');
+  game.runEffects(solveMapOverlay());
+  assertFlag('found_ghost_landing');
+
+  // night 4: rail seating incl. the composite pair, aha 22.2, D6, edition
+  if (!game.advancePhase()) fail('d4 evening->night failed');
+  if (seatRailCard(db, 'ev_poppy_check', 'night_minus_3') !== 'seated') fail('ev_poppy_check refused');
+  if (seatRailCard(db, 'ev_ceremony', 'ceremony') !== 'seated') fail('ev_ceremony refused');
+  if (seatRailCard(db, 'ev_photo_night', 'night_minus_2') !== 'seated') fail('ev_photo_night refused');
+  if (seatRailCard(db, 'ev_crossing', 'night_minus_2') !== 'composite') fail('composite pair did not seat (III.22.5)');
+  assertFlag('rail_composite_seen');
+  const cx2 = layOnDesk(db, 'ferris_testimony', 'poppys_checklist');
+  if (cx2.kind !== 'contradiction' || cx2.id !== 'cx_two_keys') fail('cx_two_keys did not fire');
+  pinCard('ferris_testimony', 900, 300);
+  pinCard('ded_emptied_before', 1100, 300);
+  const aha22 = connectCards(db, ['night_photograph', 'ferris_testimony']);
+  if (aha22.kind !== 'deduction' || aha22.deduction.id !== 'photo_witness') fail('photo_witness aha failed');
+  const d6ded = connectCards(db, ['ferris_testimony', 'ded_emptied_before']);
+  if (d6ded.kind !== 'deduction' || d6ded.deduction.id !== 'd6_insider') fail('D6 recipe failed');
+  if (game.advancePhase()) fail('night 4 opened without edition');
+  if (!publishEdition(db, { headlineId: 'h_d4_measured', kickerId: 'k_d4_witness' })) fail('ed_d4 publish failed');
+  if (!game.advancePhase()) fail('night 4 gate blocked');
+  const d5state = useGameStore.getState().state;
+  if (d5state.day !== 5) fail(`expected day 5, got ${d5state.day}`);
+  log.push('day 4 complete: stakeout, pivot, tracks, rail composite, photo-witness aha, D6, gate -> day 5');
+
   unsubLog();
   unsubTriggers();
   unsubNotebook();
@@ -371,10 +484,70 @@ async function runOnce(seed: number): Promise<string[]> {
   return log;
 }
 
+/**
+ * The curious run (spec §11): after the guaranteed path, sweep every location,
+ * poke every passing hotspot interaction and chekhov detail, talk to everyone
+ * who'll talk (OBSERVE-first), and pull every vox pop — crash coverage for the
+ * optional graph. Any throw is a FAIL.
+ */
+async function runCurious(seed: number): Promise<void> {
+  await runOnce(seed);
+  const db = loadContentDB();
+  const game = useGameStore.getState();
+  let interactions = 0;
+  let conversations = 0;
+  let voxpops = 0;
+
+  for (const loc of Object.values(db.locations)) {
+    game.moveTo(loc.id);
+    // drain any trigger that fired on entry
+    if (useDialogueStore.getState().view) {
+      driveDialogue(80, ['observe', 'empathize', 'press']);
+      conversations++;
+    }
+    for (const hotspot of loc.hotspots) {
+      const state = useGameStore.getState().state;
+      if (!evalCondition((hotspot.cond ?? {}) as never, state)) continue;
+      if (hotspot.kind === 'examine' || hotspot.kind === 'puzzle' || hotspot.kind === 'photo') {
+        for (const it of hotspot.interactions) {
+          if (!evalCondition((it.cond ?? {}) as never, useGameStore.getState().state)) continue;
+          if (it.effects) game.runEffects(it.effects as never);
+          if (it.opens) {
+            const pid = it.opens.startsWith('puzzle:') ? it.opens.slice('puzzle:'.length) : it.opens;
+            const solve = HEADLESS_PUZZLES[pid];
+            if (solve) game.runEffects(solve());
+          }
+          interactions++;
+          break;
+        }
+      } else if (hotspot.kind === 'chekhov' && hotspot.detail) {
+        const state2 = useGameStore.getState().state;
+        if (!evalCondition((hotspot.detail.cond ?? {}) as never, state2)) continue;
+        const effects: import('../app/src/engine/effects').Effect[] = [];
+        if (hotspot.detail.card) effects.push({ giveCard: hotspot.detail.card });
+        if (hotspot.detail.question) effects.push({ notebook: { question: hotspot.detail.question } });
+        if (effects.length) game.runEffects(effects);
+        interactions++;
+      } else if (hotspot.kind === 'talk' && hotspot.character) {
+        const dlgId = selectDialogueFor(db, hotspot.character);
+        if (dlgId) {
+          useDialogueStore.getState().start(db, dlgId);
+          driveDialogue(80, ['observe', 'empathize', 'press']);
+          conversations++;
+        } else if (voxPopLineFor(db, hotspot.character)) {
+          voxpops++;
+        }
+      }
+    }
+  }
+  console.log(
+    `autoplay --curious: PASS — guaranteed path + optional sweep (${interactions} interactions, ${conversations} conversations, ${voxpops} vox pops) with zero crashes`,
+  );
+}
+
 async function main() {
   if (curious) {
-    // STUB(phase-5): the curious run exercises optional paths once they exist.
-    console.log('autoplay --curious: NOT RUN — no optional-path content until Phase 5. Exiting 0 by design.');
+    await runCurious(42);
     return;
   }
   const run1 = await runOnce(42);

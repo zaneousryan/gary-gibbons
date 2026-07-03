@@ -1,0 +1,12 @@
+{
+  "id": "margies_testimony",
+  "ref": "I.5.day3",
+  "type": "testimony",
+  "title": "Margie's testimony — 'not certain the boy is ready'",
+  "sprite": "card_margies_testimony",
+  "source": "margie",
+  "initialStatus": "verified",
+  "text": "Three nights before the ceremony, the Guardian nursed one (1) sherry and said he wasn't certain the boy was ready. Margie always quotes exactly. The town's whisper mill has done the rest.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

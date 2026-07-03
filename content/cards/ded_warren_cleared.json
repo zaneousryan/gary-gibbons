@@ -1,0 +1,12 @@
+{
+  "id": "ded_warren_cleared",
+  "ref": "I.6.D4",
+  "type": "deduction",
+  "title": "Warren wanted OUT, not power - CLEARED",
+  "sprite": "card_ded_warren_cleared",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "The doubt Margie heard and the joy in the speech are the same sentence read twice. He wasn't afraid of losing the chair. He was afraid of the boy losing himself in it. Go count your lighthouses.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

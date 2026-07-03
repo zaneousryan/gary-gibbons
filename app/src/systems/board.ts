@@ -149,6 +149,10 @@ export function unlockDeduction(db: ContentDB, ded: Deduction): void {
       const { suspect, col } = ded.produces.ledgerCell;
       s.state.board.ledger[`${suspect}.${col}`] = ded.produces.card ?? ded.id;
     }
+    // elimination deductions clear their suspect outright (II.16.2 — D4, D8)
+    if (ded.produces.clearSuspect && !s.state.board.cleared.includes(ded.produces.clearSuspect)) {
+      s.state.board.cleared.push(ded.produces.clearSuspect);
+    }
   });
 
   if (ded.produces.card) {
@@ -164,7 +168,7 @@ export function unlockDeduction(db: ContentDB, ded: Deduction): void {
 
 // ---------- timeline rail (II.16.1) ----------
 
-export type RailResult = 'seated' | 'no-anchor' | 'occupied' | 'not-event' | 'complete';
+export type RailResult = 'seated' | 'composite' | 'no-anchor' | 'occupied' | 'not-event' | 'complete';
 
 export function seatRailCard(db: ContentDB, cardId: string, slotId: string): RailResult {
   const state = useGameStore.getState().state;
@@ -172,19 +176,33 @@ export function seatRailCard(db: ContentDB, cardId: string, slotId: string): Rai
   if (!card || card.type !== 'event') return 'not-event';
   if (card.railSlot !== slotId) return 'no-anchor';
   if (!evalCondition((card.anchor ?? {}) as Condition, state)) return 'no-anchor';
-  if (state.board.rail[slotId]) return 'occupied';
+
+  let composite = false;
+  const occupant = state.board.rail[slotId];
+  if (occupant) {
+    // "Two Witnesses, One Minute" (III.22.5): the composite pair shares a slot —
+    // two imperfect vantages assembled into one complete moment
+    const pair = db.timeline?.compositePair;
+    const isPair = pair && new Set(pair).has(cardId) && new Set(pair).has(occupant) && occupant !== cardId;
+    if (!isPair) return 'occupied';
+    composite = true;
+  }
   useGameStore.setState((s) => {
-    s.state.board.rail[slotId] = cardId;
+    s.state.board.rail[composite ? `${slotId}__composite` : slotId] = cardId;
   });
+  if (composite) {
+    useGameStore.getState().runEffects([{ setFlag: 'rail_composite_seen' }, { playBark: 'gary_inner_composite' }]);
+  }
   const slots = db.timeline?.slots ?? [];
-  const filled = Object.keys(useGameStore.getState().state.board.rail).length;
-  bus.emit({ type: 'card:gained', payload: { rail: slotId, card: cardId } });
-  if (slots.length > 0 && filled === slots.length) {
-    // STUB(phase-5): the Night-6 silent chronology cinematic plays here (II.16.1)
+  const rail = useGameStore.getState().state.board.rail;
+  bus.emit({ type: 'card:gained', payload: { rail: slotId, card: cardId, composite } });
+  if (slots.length > 0 && slots.every((s) => rail[s.id])) {
+    // the silent chronology cinematic (II.16.1) — RailCinematic listens for this
     bus.emit({ type: 'puzzle:opened', payload: { kind: 'rail-complete' } });
+    useGameStore.getState().runEffects([{ setFlag: 'rail_complete' }]);
     return 'complete';
   }
-  return 'seated';
+  return composite ? 'composite' : 'seated';
 }
 
 // ---------- suspect ledger (II.16.2) ----------

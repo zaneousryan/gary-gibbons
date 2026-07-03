@@ -1,0 +1,46 @@
+{
+  "id": "ed_d3",
+  "day": 3,
+  "ref": "II.15.1",
+  "draftCards": ["margies_testimony", "warrens_speech", "lighthouse_folio", "night_photograph", "founders_addition_clipping"],
+  "headlines": [
+    {
+      "id": "h_d3_sensational",
+      "tone": "sensational",
+      "text": "GUARDIAN UNDER SUSPICION!",
+      "effects": [
+        { "trust": { "char": "warren", "delta": -1 } },
+        { "trust": { "char": "margie", "delta": 1 } }
+      ],
+      "reactions": {
+        "chalkboard": "THE GUARDIAN'S SHERRY — one (1), served with doubt",
+        "rumorSeed": "guardian_suspected"
+      }
+    },
+    {
+      "id": "h_d3_measured",
+      "tone": "measured",
+      "text": "Night Photograph Places Unknown Figure at Monument",
+      "reactions": {
+        "chalkboard": "THE LONG EXPOSURE — takes a while, shows everything"
+      }
+    },
+    {
+      "id": "h_d3_compassionate",
+      "tone": "compassionate",
+      "text": "Eight Years of Waiting: The Guardian Who Kept the Seat Warm",
+      "effects": [
+        { "trust": { "char": "warren", "delta": 1 } },
+        { "trust": { "char": "margie", "delta": -1 } }
+      ],
+      "reactions": {
+        "chalkboard": "THE LIGHTHOUSE ROAST — bright, patient, forty-seven ways"
+      }
+    }
+  ],
+  "kickers": [
+    { "id": "k_d3_tail", "text": "Somewhere in Lanternside is a tail that owes this paper an interview." },
+    { "id": "k_d3_folio", "text": "Forty-seven lighthouses are waiting for a badger with a camera. The Ledger hopes they won't wait much longer." },
+    { "id": "k_d3_facts", "text": "The Ledger prints what it knows, as it knows it." }
+  ]
+}

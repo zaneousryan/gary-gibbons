@@ -1,0 +1,13 @@
+{
+  "pool": "vignettes",
+  "barks": [
+    { "id": "vg_divorced_pigeons", "text": "Two pigeons share the lamppost without looking at each other. There is a story there, and it is a divorce, and Gary sketches them without meaning to.", "speaker": "gary", "authored": "aletheia", "ref": "II.14.4", "tags": ["square", "market"] },
+    { "id": "vg_warren_lamppost", "text": "Warren photographs the same lamppost as yesterday. 'It's a very consistent lamppost,' he says, to nobody. 'I respect that.'", "speaker": "gary", "authored": "verbatim", "ref": "II.14.4", "tags": ["square"], "cond": { "day": { "lte": 6 } } },
+    { "id": "vg_tuck_pastry", "text": "Constable Tuck is 'testing' the pastry vendor for compliance. The vendor is complying. Everyone is deeply satisfied with the arrangement.", "speaker": "gary", "authored": "aletheia", "ref": "II.14.4", "tags": ["market", "percolator"] },
+    { "id": "vg_otto_breathing", "text": "Otto is teaching Poppy to breathe using espresso timing. 'In for the pull. Hold for the crema. Out for the pour.' Poppy holds for the crema. Progress.", "speaker": "gary", "authored": "aletheia", "ref": "II.14.4", "tags": ["percolator"] },
+    { "id": "vg_evelyn_flower", "text": "A single flower rests on the Archive step, same as yesterday morning. Evelyn's shop is two streets away. Nobody says anything. The town keeps its gentlest secrets in plain sight.", "speaker": "gary", "authored": "aletheia", "ref": "II.14.4", "tags": ["market"] },
+    { "id": "vg_hopscotch", "text": "The chalk hopscotch grid has gained another square since yesterday. At the current rate of civic expansion it reaches the monument by autumn.", "speaker": "gary", "authored": "aletheia", "ref": "III.24", "tags": ["square"] },
+    { "id": "vg_rain_percolator", "text": "Rain herds the whole street into the Percolator: Gino arguing that grapes are history, Prudence arguing that history is history, Otto pulling shots like a man conducting weather.", "speaker": "gary", "authored": "aletheia", "ref": "II.14.2", "tags": ["percolator"], "weather": "rain" },
+    { "id": "vg_bunting_sag", "text": "The festival bunting sags a little lower today. Nobody's taken it down. Taking it down would mean deciding what the town is now, and nobody wants that job.", "speaker": "gary", "authored": "aletheia", "ref": "II.14.5", "tags": ["square"], "cond": { "day": { "gte": 2 } } }
+  ]
+}

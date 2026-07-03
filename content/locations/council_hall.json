@@ -4,7 +4,10 @@
   "ref": "III.24",
   "layers": ["bg", "mid", "fg"],
   "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
-  "exits": [{ "to": "founders_square", "at": [160, 880] }],
+  "exits": [
+    { "to": "founders_square", "at": [160, 880] },
+    { "to": "lockup", "at": [1760, 880] }
+  ],
   "sitSpot": {
     "at": [1500, 880],
     "monologues": [{ "cond": {}, "bark": "bench_council_d2" }]
@@ -79,6 +82,14 @@
       "kind": "exit",
       "to": "founders_square",
       "label": "To Founders' Square"
+    },
+    {
+      "id": "exit_lockup",
+      "at": [1760, 820],
+      "kind": "exit",
+      "to": "lockup",
+      "label": "To the Lockup",
+      "cond": { "flag": "stakeout_done" }
     }
   ],
   "ambient": {

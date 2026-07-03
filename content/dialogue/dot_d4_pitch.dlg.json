@@ -1,0 +1,56 @@
+{
+  "id": "dot_d4_pitch",
+  "character": "dot",
+  "ref": "II.16.6",
+  "entries": [{ "id": "main", "cond": { "day": 4 }, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "dot",
+      "line": "Gibbons. The town thinks the new lodger's our thief and the town is enjoying itself far too much about it. Sell me today. One sentence.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "choices": [
+        {
+          "line": "If the lodger's our thief, I'll eat the front page — but tonight I find out what he was actually doing at that monument.",
+          "authored": "aletheia",
+          "effects": [{ "setFlag": "pitch_d4_done" }],
+          "next": "c3"
+        },
+        {
+          "line": "A stranger, a shovel, and a legend about treasure. It writes itself.",
+          "authored": "aletheia",
+          "effects": [{ "setFlag": "pitch_d4_done" }],
+          "next": "c3weak"
+        }
+      ]
+    },
+    "c3": {
+      "speaker": "dot",
+      "line": "Good. Stories that write themselves are usually writing fiction. Follow him, watch, and print what you SEE.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "next": "c4"
+    },
+    "c3weak": {
+      "speaker": "dot",
+      "line": "It writes itself, does it? Then it doesn't need you, and I don't pay the desk. Go watch him with your own eyes tonight.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "dot",
+      "line": "Archie staked out a bakery for three nights once, over missing flour. Third night he fell asleep and the baker covered him with a coat. Solved it anyway — the coat smelled of the flour. Even his naps did journalism.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "ref": "I.7.2",
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "dot_repeat_busy"
+}

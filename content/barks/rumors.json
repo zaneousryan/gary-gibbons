@@ -1,0 +1,10 @@
+{
+  "pool": "rumors",
+  "barks": [
+    { "id": "rm_outsider_1", "text": "Heard it was professionals. From the city. They use gloves, you know. That's how you can tell.", "authored": "aletheia", "ref": "II.27", "tags": ["rumor_outsider_thief"] },
+    { "id": "rm_outsider_2", "text": "An outsider, obviously. No one from Lanternside would. No one from Lanternside COULD — we'd have heard about it at the Percolator by lunch.", "authored": "aletheia", "ref": "II.27", "tags": ["rumor_outsider_thief"] },
+    { "id": "rm_poppy_1", "text": "They say the little planner opened it early. I say: anyone who laminates that much has nothing to hide. Laminating IS confessing, if you think about it.", "authored": "aletheia", "ref": "II.27", "tags": ["rumor_poppy_suspected"] },
+    { "id": "rm_guardian_1", "text": "Eight years in the chair and suddenly the will's gone missing? I'm not saying. I'm just saying. Somebody's been auditing his window boxes, is all.", "authored": "aletheia", "ref": "II.27", "tags": ["rumor_guardian_suspected"] },
+    { "id": "rm_weasel_1", "text": "Caught him with the shovel IN HIS PAWS. Case closed, I say. ...Well. Except for the part where he didn't have anything. But other than that: closed.", "authored": "aletheia", "ref": "II.27", "tags": ["rumor_weasel_did_it"] }
+  ]
+}

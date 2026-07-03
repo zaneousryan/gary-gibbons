@@ -1,0 +1,27 @@
+{
+  "pool": "day34",
+  "barks": [
+    { "id": "gary_inner_margie_or", "text": "Or the week a man wonders if he's spent eight years building something a boy could drop.", "speaker": "gary", "authored": "verbatim", "ref": "I.5.day3", "tags": [] },
+    { "id": "gary_inner_whose_tail", "text": "The Drowsy Lantern took in a new lodger last week. Margie said he asks about treasure at breakfast. ...Oh no. I know exactly whose tail that is.", "speaker": "gary", "authored": "verbatim", "ref": "I.5.day3", "tags": [] },
+    { "id": "gary_inner_wink_twice", "text": "He winked twice. Innocent men don't wink twice. ...Or they wink exactly twice. I need more data.", "speaker": "gary", "authored": "verbatim", "ref": "I.5.day4", "tags": [] },
+    { "id": "gary_inner_belonged", "text": "Like it belonged to him.", "speaker": "gary", "authored": "verbatim", "ref": "I.5.day4", "tags": [] },
+    { "id": "gary_inner_wrong_crimes", "text": "Right weasel, wrong crimes. The town got its ending tonight and it's the wrong one. Tomorrow that gets harder to say out loud, not easier.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day4", "tags": [] },
+    { "id": "gary_inner_plaque", "text": "The plaque moved. Ten years ago something was ADDED behind it — and the whole district watched it happen and called it a ceremony. The morgue will have the front page.", "speaker": "gary", "authored": "aletheia", "ref": "II.13.2", "tags": [] },
+    { "id": "gary_inner_ghost_landing", "text": "Three ghosts on one map — and one of them is a private Vale boat landing, straight under the old boathouse. A family place. The kind of place you'd go to feel safe.", "speaker": "gary", "authored": "aletheia", "ref": "II.13.4", "tags": [] },
+    { "id": "gary_inner_torn_letter", "text": "No. He gets to say this part out loud himself.", "speaker": "gary", "authored": "verbatim", "ref": "III.25.1", "tags": [] },
+    { "id": "gary_inner_composite", "text": "Two witnesses, one minute. Ferris saw the front; Milo saw the top. Between them: one whole figure, crossing one whole square. That's journalism — imperfect eyes, assembled honestly.", "speaker": "gary", "authored": "aletheia", "ref": "III.22.5", "tags": [] },
+    { "id": "milo_believed_enough", "text": "You believed me enough to check. That's better than just believing me.", "speaker": "milo", "authored": "verbatim", "ref": "II.12.6", "tags": [] },
+    { "id": "bark_ded_warren_cleared", "text": "The doubt and the joy are the same sentence read twice. Warren's row gets the stamp. Go count your lighthouses.", "speaker": "gary", "authored": "aletheia", "ref": "II.16.2", "tags": [] },
+    { "id": "bark_ded_lodger", "text": "One tail in the photograph. One weasel at the inn. The figure at the monument has a room number, and tomorrow it gets a stakeout.", "speaker": "gary", "authored": "aletheia", "ref": "I.6.D5", "tags": [] },
+    { "id": "bark_ded_insider", "text": "An insider, with legitimate key access. But Poppy had the only council key, and her window is closed... The board practically glows with it: is it the ONLY key?", "speaker": "gary", "authored": "aletheia", "ref": "I.6.D6", "tags": [] },
+    { "id": "bark_ded_photo_witness", "text": "Grandpa's first rule of photographs: they always show the truth. Just almost never the truth you developed them for.", "speaker": "gary", "authored": "verbatim", "ref": "III.22.2", "tags": [] },
+    { "id": "reread_photo_witness", "text": "The photograph again. Two days it was a picture of a thief. Now it's a picture of a witness. Same silver, new truth — fourth time this photo has changed under my thumb.", "speaker": "gary", "authored": "aletheia", "ref": "III.27", "tags": [] },
+    { "id": "bench_lantern_d3", "text": "The Drowsy Lantern hums like a banked fire. Margie runs this room the way Ida runs locks — everything oiled, everything remembered, nothing rushed.", "speaker": "gary", "authored": "aletheia", "ref": "II.18", "tags": ["inn"] },
+    { "id": "bench_morgue_d3", "text": "No music down here. Just the clock, the paper, and fifty years of the town agreeing with itself in print. Grandpa's desk is three steps away and I'm not ready to sit at it.", "speaker": "gary", "authored": "aletheia", "ref": "II.15.2", "tags": ["morgue"] },
+    { "id": "bench_river_d4", "text": "The river doesn't gossip. First thing in this town that hasn't. Mist coming off the water, and the old boathouse sitting there like a held breath.", "speaker": "gary", "authored": "aletheia", "ref": "II.18", "tags": ["river"] },
+    { "id": "bench_river_post_stakeout", "text": "Six holes, one weasel, zero capsules. The town exhaled too early tonight, and tomorrow's paper decides whether the exhale was kind.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day4", "tags": ["river"] },
+    { "id": "bench_lockup_d4", "text": "Tuck's lockup: one cot, one window, and more dignity than most guest rooms. 'District business, not police business' — the whole cozy contract, in stone.", "speaker": "gary", "authored": "aletheia", "ref": "I.5.day4", "tags": ["lockup"] },
+    { "id": "ferris_repeat_busy", "text": "Ferris Mott is communing with a map. Interrupting felt legally unwise.", "speaker": "gary", "authored": "aletheia", "ref": "I.4", "tags": [] },
+    { "id": "prudence_repeat_busy", "text": "Prudence has the loupe up. When the loupe is up, the Archive speaks to no one.", "speaker": "gary", "authored": "aletheia", "ref": "I.4", "tags": [] }
+  ]
+}

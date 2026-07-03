@@ -1,0 +1,58 @@
+{
+  "id": "warren_d3_photo",
+  "character": "warren",
+  "ref": "I.5.day3",
+  "entries": [
+    { "id": "main", "cond": { "all": [{ "day": { "gte": 3 } }, { "flag": "warren_speech_done" }, { "not": { "card": "night_photograph" } }] }, "node": "c1" }
+  ],
+  "reentrant": true,
+  "nodes": {
+    "c1": {
+      "speaker": "warren",
+      "line": "Since you're here — a curiosity. I take long exposures of the square at night. The lanterns smear like honey; it's the only art I have. This one's from two nights before the ceremony. Look at the monument. Bottom left.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "line": "...Is that a tail?",
+      "authored": "verbatim",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "warren",
+      "line": "A weasel's tail, unless my lenses lie. And Lanternside hasn't had a weasel on the district rolls in fifty years of records, Mr. Gibbons. I checked twice.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "effects": [
+        { "giveCard": "night_photograph", "status": "verified" },
+        { "giveCard": "ev_photo_night", "status": "verified" },
+        { "notebook": { "entry": "nb_night_photo" } },
+        { "playBark": "gary_inner_whose_tail" }
+      ],
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "warren",
+      "line": "Take the camera, while you're at it. You have your grandfather's eye for people. Borrow mine for places.",
+      "authored": "verbatim",
+      "emote": "happy",
+      "effects": [
+        { "setFlag": "has_camera" },
+        { "giveCard": "founding_photograph", "status": "verified" },
+        { "notebook": { "entry": "nb_camera" } }
+      ],
+      "next": "c5"
+    },
+    "c5": {
+      "speaker": "warren",
+      "line": "And the founding photograph — my predecessor's work, fifty years old. Hold it against the square sometime. Old pictures argue with new streets, and the argument is always worth hearing.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "warren_repeat_busy"
+}

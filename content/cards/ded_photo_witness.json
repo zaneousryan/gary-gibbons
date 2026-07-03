@@ -1,0 +1,12 @@
+{
+  "id": "ded_photo_witness",
+  "ref": "III.22.2",
+  "type": "deduction",
+  "title": "The photograph never showed the thief",
+  "sprite": "card_ded_photo_witness",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "Two days spent staring at a picture of the culprit - except the tail belongs to the WITNESS. The photo was never a picture of the thief. It was a picture of the man watching the thief.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

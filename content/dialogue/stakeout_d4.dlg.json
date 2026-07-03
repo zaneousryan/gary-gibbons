@@ -1,0 +1,87 @@
+{
+  "id": "stakeout_d4",
+  "character": "narrator",
+  "ref": "I.5.day4",
+  "entries": [{ "id": "main", "cond": {}, "node": "n1" }],
+  "nodes": {
+    "n1": {
+      "speaker": "narrator",
+      "line": "Nightfall at the riverbank. Gary settles into the reeds to watch the watching-spot. Ferris Mott's idea of stealth arrives ten minutes later, humming.",
+      "authored": "aletheia",
+      "next": "n2"
+    },
+    "n2": {
+      "speaker": "narrator",
+      "line": "In the dark, a rustle of shared rations. A pause. An offering, extended weasel-to-gibbon across the reeds:",
+      "authored": "aletheia",
+      "next": "n3"
+    },
+    "n3": {
+      "speaker": "ferris",
+      "line": "Grape?",
+      "authored": "verbatim",
+      "emote": "happy",
+      "next": "n4"
+    },
+    "n4": {
+      "speaker": "narrator",
+      "line": "The longest silence in the history of Lanternside journalism.",
+      "authored": "aletheia",
+      "next": "n5"
+    },
+    "n5": {
+      "speaker": "gary",
+      "line": "...I'm working.",
+      "authored": "verbatim",
+      "effects": [{ "grapeDeclined": true }],
+      "next": "n6"
+    },
+    "n6": {
+      "speaker": "narrator",
+      "line": "By the boathouse fence: digging. Hole number six is underway when a shape ambles out of the dark, eating a pastry with the unhurried confidence of the law.",
+      "authored": "aletheia",
+      "next": "n7"
+    },
+    "n7": {
+      "speaker": "tuck",
+      "line": "Evening, Mott. That'd be hole number six.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "n8"
+    },
+    "n8": {
+      "speaker": "ferris",
+      "line": "Ferris Mott can explain everything using this map!",
+      "authored": "verbatim",
+      "emote": "worried",
+      "next": "n9"
+    },
+    "n9": {
+      "speaker": "prudence",
+      "line": "That is MY map. That is an 1890s survey document and it has JAM on it.",
+      "authored": "verbatim",
+      "emote": "surprised",
+      "next": "n10"
+    },
+    "n10": {
+      "speaker": "narrator",
+      "line": "A crowd gathers, nightclothes and lanterns. The town exhales: solved! Then Tuck upends the sack — trowels, jam, maps, one bent curtain rail. No capsule. No contents. The exhale curdles.",
+      "authored": "aletheia",
+      "next": "n11"
+    },
+    "n11": {
+      "speaker": "tuck",
+      "line": "Wrong crimes, folks. Right weasel, wrong crimes.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "effects": [
+        { "setFlag": "stakeout_done" },
+        { "setFlag": "ferris_caught" },
+        { "giveCard": "survey_map", "status": "verified" },
+        { "notebook": { "entry": "nb_stakeout" } },
+        { "playBark": "gary_inner_wrong_crimes" }
+      ],
+      "next": null
+    }
+  }
+}

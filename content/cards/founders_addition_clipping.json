@@ -1,0 +1,12 @@
+{
+  "id": "founders_addition_clipping",
+  "ref": "II.15.2",
+  "type": "document",
+  "title": "THE FOUNDER'S ADDITION — the capsule opened once before",
+  "sprite": "card_founders_addition_clipping",
+  "source": "ledger_morgue",
+  "initialStatus": "verified",
+  "text": "Ten years ago, a dying Edmund Vale legally reopened the vault for one hour and placed a single green-wax-sealed envelope inside: his final wishes, for the 50th. The plaque was moved to make room. The whole district watched him seal it back.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

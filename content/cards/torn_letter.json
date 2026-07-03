@@ -1,0 +1,12 @@
+{
+  "id": "torn_letter",
+  "ref": "III.25.1",
+  "type": "document",
+  "title": "The torn letter — unsent, unsigned",
+  "sprite": "card_torn_letter",
+  "source": "vale_manor",
+  "initialStatus": "verified",
+  "text": "'—not what you think. When I know what it says I'll— / —should have been yours anyway, it was always— / —can't open it. Isn't that funny. I can't even—' It answers nothing and confirms everything. Gary will not present this. He gets to say this part out loud himself.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

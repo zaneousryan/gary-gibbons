@@ -1,0 +1,46 @@
+{
+  "id": "lockup",
+  "name": "The Lockup",
+  "ref": "I.5.day4",
+  "layers": ["bg", "mid", "fg"],
+  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "exits": [{ "to": "council_hall", "at": [160, 880] }],
+  "sitSpot": {
+    "at": [400, 880],
+    "monologues": [{ "cond": {}, "bark": "bench_lockup_d4" }]
+  },
+  "hotspots": [
+    {
+      "id": "talk_ferris_lockup",
+      "at": [1100, 800],
+      "kind": "talk",
+      "character": "ferris",
+      "label": "Ferris",
+      "cond": { "flag": "stakeout_done" }
+    },
+    {
+      "id": "ferris_effects_sack",
+      "at": [600, 640],
+      "kind": "chekhov",
+      "label": "Confiscated Effects",
+      "cond": { "flag": "stakeout_done" },
+      "detail": {
+        "tier": "texture",
+        "text": "One sack, upended and inventoried in Tuck's careful hand: trowels (4), jam (1, open), maps (11), divining rod (1, curtain rail (1)). Capsule contents: none. The town exhaled too early."
+      },
+      "ref": "I.5.day4"
+    },
+    {
+      "id": "exit_hall",
+      "at": [160, 820],
+      "kind": "exit",
+      "to": "council_hall",
+      "label": "To the Council Hall"
+    }
+  ],
+  "ambient": {
+    "vignetteTags": ["lockup", "indoors"],
+    "weatherVariants": false,
+    "ambience": "amb_quiet_stone"
+  }
+}

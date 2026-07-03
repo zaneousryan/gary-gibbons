@@ -1,0 +1,16 @@
+{
+  "id": "ev_crossing",
+  "ref": "II.16.1",
+  "type": "event",
+  "title": "NIGHT -2: a tall figure crosses with a key",
+  "sprite": "card_ev_crossing",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "Dry under a posh umbrella, key smooth as butter, moving like the square belonged to him.",
+  "verifyRoutes": [],
+  "reReadLines": [],
+  "anchor": {
+    "card": "ferris_testimony"
+  },
+  "railSlot": "night_minus_2"
+}

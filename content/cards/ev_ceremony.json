@@ -1,0 +1,16 @@
+{
+  "id": "ev_ceremony",
+  "ref": "II.16.1",
+  "type": "event",
+  "title": "THE CEREMONY: the vault opens empty",
+  "sprite": "card_ev_ceremony",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "Fifty years of waiting, three seconds of silence.",
+  "verifyRoutes": [],
+  "reReadLines": [],
+  "anchor": {
+    "flag": "ceremony_done"
+  },
+  "railSlot": "ceremony"
+}

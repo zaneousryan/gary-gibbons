@@ -1,0 +1,49 @@
+{
+  "id": "ferris_d4_inn",
+  "character": "ferris",
+  "ref": "I.5.day4",
+  "entries": [
+    { "id": "main", "cond": { "all": [{ "day": 4 }, { "not": { "flag": "stakeout_done" } }] }, "node": "c1" }
+  ],
+  "nodes": {
+    "c1": {
+      "speaker": "narrator",
+      "line": "The lodger leans in before Gary says anything at all.",
+      "authored": "aletheia",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "ferris",
+      "line": "You have the look of a man who knows about the map.",
+      "authored": "verbatim",
+      "emote": "happy",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "gary",
+      "line": "...The map.",
+      "authored": "verbatim",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "ferris",
+      "line": "Edmund Vale's treasure. Sealed in the capsule, waiting fifty years. Ferris Mott has followed this legend across four counties and one regrettable marsh. And now the capsule is \"empty\"? Empty. Sure. SURE.",
+      "authored": "verbatim",
+      "emote": "happy",
+      "effects": [
+        { "setFlag": "met_ferris" },
+        { "notebook": { "entry": "nb_met_ferris" } },
+        { "playBark": "gary_inner_wink_twice" }
+      ],
+      "next": "c5"
+    },
+    "c5": {
+      "speaker": "narrator",
+      "line": "He winks. Then, in case the first one was lost in the post, he winks again.",
+      "authored": "aletheia",
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "ferris_repeat_busy"
+}

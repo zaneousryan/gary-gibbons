@@ -1,0 +1,15 @@
+{
+  "id": "prudence",
+  "name": "Prudence Marlowe",
+  "ref": "I.4",
+  "species": "grey heron",
+  "portraitSet": "prudence",
+  "voice": { "textSpeed": 0.95, "blipSound": "blip_prudence" },
+  "greetings": {
+    "cold": "The Archive closes at five, Mr. Gibbons. It is currently open to those with citations.",
+    "neutral": "Mr. Gibbons. Sign the ledger; the Archive keeps better records of its visitors than the visitors do.",
+    "warm": "Ah, the careful one. Come in — I've set aside something with a marvelous provenance."
+  },
+  "tells": [],
+  "etiquette": { "note": "Answers better if you sign the visitor ledger first (she checks — it's an archive). Lecture-mode melts into girlish excitement about dead people's love lives." }
+}

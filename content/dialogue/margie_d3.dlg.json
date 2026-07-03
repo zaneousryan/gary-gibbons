@@ -1,0 +1,39 @@
+{
+  "id": "margie_d3",
+  "character": "margie",
+  "ref": "I.5.day3",
+  "entries": [{ "id": "main", "cond": { "day": 3 }, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "margie",
+      "line": "I don't like saying it, pet. But three nights back, His Guardianship sat in that corner nursing one (1) sherry and said — and I quote, because I always quote — \"I'm not certain the boy is ready.\" Now what does a man mean by that, the week the boy takes his chair?",
+      "authored": "verbatim",
+      "emote": "worried",
+      "effects": [
+        { "giveCard": "margies_testimony", "status": "verified" },
+        { "notebook": { "entry": "nb_margies_testimony" } },
+        { "playBark": "gary_inner_margie_or" }
+      ],
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "line": "And your lodger — the one with the maps. Still whispering about treasure?",
+      "authored": "aletheia",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "margie",
+      "line": "Worse since the ceremony, love. Checked in a week back, key's never on its hook past dark, and yesterday he asked me — at BREAKFAST — whether the monument has a false bottom. I quote exactly, you know I do.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "effects": [
+        { "giveCard": "lodger_gossip", "status": "verified" },
+        { "notebook": { "entry": "nb_lodger_gossip" } }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "margie_repeat_busy"
+}

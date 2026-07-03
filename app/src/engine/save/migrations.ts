@@ -10,8 +10,13 @@ type Migration = {
   up: (save: Record<string, unknown>) => Record<string, unknown>;
 };
 
-// Version 1 is the first shipped shape — no migrations yet.
-const MIGRATIONS: Migration[] = [];
+const MIGRATIONS: Migration[] = [
+  {
+    // v1 -> v2: photo mode lands (Phase 5); older saves simply have no photos yet.
+    from: 1,
+    up: (save) => ({ ...save, photos: [], version: 2 }),
+  },
+];
 
 export function migrate(raw: Record<string, unknown>): GameState {
   let save = raw;

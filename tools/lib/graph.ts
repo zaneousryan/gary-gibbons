@@ -122,7 +122,8 @@ export function collectEffectSites(db: ContentDB): EffectSite[] {
         where: `deduction ${ded.id}`,
         cond: undefined,
         offRecord: false,
-        effects: [{ giveCard: ded.produces.card }],
+        // unlockDeduction grants produced cards verified (board.ts)
+        effects: [{ giveCard: ded.produces.card, status: 'verified' }],
       });
     }
   }

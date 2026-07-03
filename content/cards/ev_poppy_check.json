@@ -1,0 +1,16 @@
+{
+  "id": "ev_poppy_check",
+  "ref": "II.16.1",
+  "type": "event",
+  "title": "NIGHT -3: Poppy checks the capsule - all there",
+  "sprite": "card_ev_poppy_check",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "Three nights out, everything intact, counted twice and laminated once.",
+  "verifyRoutes": [],
+  "reReadLines": [],
+  "anchor": {
+    "card": "poppys_checklist"
+  },
+  "railSlot": "night_minus_3"
+}

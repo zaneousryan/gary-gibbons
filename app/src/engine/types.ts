@@ -98,6 +98,8 @@ export interface GameState {
   editions: PublishedEdition[];
   weather: Weather;
   rngSeed: number;
+  /** Photo mode (II.12.3): subjects captured; prints appear at the apartment the next night. */
+  photos: { id: string; day: Day; printed: boolean }[];
   collectibles: {
     lanterns: string[];
     doodles: string[];
@@ -108,7 +110,7 @@ export interface GameState {
   meta: { playtimeSec: number; savedAt: string };
 }
 
-export const GAME_STATE_VERSION = 1;
+export const GAME_STATE_VERSION = 2;
 
 export function initialBoardState(): BoardState {
   return {
@@ -141,6 +143,7 @@ export function initialGameState(startLocation: LocationId, seed = 1): GameState
     editions: [],
     weather: 'clear',
     rngSeed: seed,
+    photos: [],
     collectibles: { lanterns: [], doodles: [], clippings: [], grapesDeclined: 0 },
     ngPlus: false,
     meta: { playtimeSec: 0, savedAt: '' },

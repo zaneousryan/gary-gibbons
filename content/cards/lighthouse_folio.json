@@ -1,0 +1,12 @@
+{
+  "id": "lighthouse_folio",
+  "ref": "I.5.day3",
+  "type": "document",
+  "title": "The lighthouse folio — 47 of them, waiting",
+  "sprite": "card_lighthouse_folio",
+  "source": "warren",
+  "initialStatus": "verified",
+  "text": "Tickets, tide tables, a map of the Meridian Coast pinned with forty-seven tiny lighthouses. Eight years of a dream deferred, packed and ready. Men plotting to keep power don't book the ferry out.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

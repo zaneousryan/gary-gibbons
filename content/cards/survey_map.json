@@ -1,0 +1,12 @@
+{
+  "id": "survey_map",
+  "ref": "I.5.day4",
+  "type": "document",
+  "title": "The 1890s survey map (recovered, jam included)",
+  "sprite": "card_survey_map",
+  "source": "prudence",
+  "initialStatus": "verified",
+  "text": "Prudence's stolen Archive map, back in custody. Old rivers, old lanes — and, laid over the modern district, three locations that no longer exist. Worth a longer look.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

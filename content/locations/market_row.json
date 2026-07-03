@@ -6,7 +6,9 @@
   "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
   "exits": [
     { "to": "the_percolator", "at": [160, 880] },
-    { "to": "founders_square", "at": [1760, 880] }
+    { "to": "founders_square", "at": [1760, 880] },
+    { "to": "drowsy_lantern", "at": [960, 880] },
+    { "to": "riverbank", "at": [520, 880] }
   ],
   "sitSpot": {
     "at": [980, 880],
@@ -76,6 +78,20 @@
       "kind": "exit",
       "to": "founders_square",
       "label": "To Founders' Square"
+    },
+    {
+      "id": "exit_inn",
+      "at": [960, 560],
+      "kind": "exit",
+      "to": "drowsy_lantern",
+      "label": "The Drowsy Lantern"
+    },
+    {
+      "id": "exit_river",
+      "at": [520, 820],
+      "kind": "exit",
+      "to": "riverbank",
+      "label": "Down to the river"
     }
   ],
   "ambient": {

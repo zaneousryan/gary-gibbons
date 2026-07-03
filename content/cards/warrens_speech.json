@@ -1,0 +1,12 @@
+{
+  "id": "warrens_speech",
+  "ref": "I.5.day3",
+  "type": "document",
+  "title": "Warren's speech — third draft, the joy finally right",
+  "sprite": "card_warrens_speech",
+  "source": "warren",
+  "initialStatus": "verified",
+  "text": "Crossed out and rewritten twice, because he couldn't get the joy right: '...the happiest sentence I will ever say: the waiting is over.'",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

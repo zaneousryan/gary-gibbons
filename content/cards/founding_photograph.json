@@ -1,0 +1,12 @@
+{
+  "id": "founding_photograph",
+  "ref": "II.13.2",
+  "type": "photo",
+  "title": "The founding photograph - fifty years old",
+  "sprite": "card_founding_photograph",
+  "source": "warren",
+  "initialStatus": "verified",
+  "text": "The square on founding day: the monument young, the plaque in its original place, and a crowd of families who believed in the future enough to bury presents for it.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

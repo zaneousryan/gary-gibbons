@@ -70,9 +70,13 @@ async function buildScene(db: ContentDB, refs: SceneRefs, locationId: string) {
   refs.location = loc;
   world.tint = PHASE_TINT[state.phase] ?? 0xffffff;
 
-  // parallax layers, back to front
+  // parallax layers, back to front — rain variants swap in when the location
+  // has them (II.14.2)
+  const rainy = state.weather === 'rain' && loc.ambient?.weatherVariants;
   for (const layer of loc.layers) {
-    const tex = await loadTexture(locationLayerPath(loc.id, state.phase, layer));
+    const tex = await loadTexture(
+      rainy ? `locations/${loc.id}/rain_${layer}.png` : locationLayerPath(loc.id, state.phase, layer),
+    );
     if (tex) {
       const sprite = new Sprite(tex);
       sprite.width = DESIGN_W * (layer === 'bg' ? 1 : 1.05);
@@ -152,6 +156,18 @@ async function buildScene(db: ContentDB, refs: SceneRefs, locationId: string) {
     label.visible = false;
     world.addChild(marker, label);
     refs.hotspotViews.push({ hotspot, marker, label, x: hx, y: hy });
+  }
+
+  // rain particle layer (spec §7)
+  if (state.weather === 'rain') {
+    const rain = new Graphics();
+    rain.label = 'rain';
+    for (let i = 0; i < 220; i++) {
+      const x = (i * 173) % DESIGN_W;
+      const y = (i * 389) % DESIGN_H;
+      rain.rect(x, y, 2, 16).fill({ color: 0x9fc2c9, alpha: 0.5 });
+    }
+    world.addChild(rain);
   }
 
   // sit spot — Bench Time (II.18)
@@ -360,6 +376,11 @@ export default function PixiStage({ db }: { db: ContentDB }) {
           h.marker.alpha = focused ? 1 : near ? 1 : 0.55;
           h.marker.scale.set(focused ? 1.35 : 1);
         });
+        // rain falls
+        const rain = refs.world.getChildByLabel('rain');
+        if (rain) {
+          rain.y = (rain.y + ticker.deltaMS * 0.55) % 32;
+        }
         // 2-frame talk/idle cycles
         refs.animClock += ticker.deltaMS;
         const frame = Math.floor(refs.animClock / 260) % 2;
@@ -380,10 +401,12 @@ export default function PixiStage({ db }: { db: ContentDB }) {
       rebuild();
       let lastLocation = useGameStore.getState().state.location;
       let lastPhase = useGameStore.getState().state.phase;
+      let lastWeather = useGameStore.getState().state.weather;
       unsubLocation = useGameStore.subscribe((s) => {
-        if (s.state.location !== lastLocation || s.state.phase !== lastPhase) {
+        if (s.state.location !== lastLocation || s.state.phase !== lastPhase || s.state.weather !== lastWeather) {
           lastLocation = s.state.location;
           lastPhase = s.state.phase;
+          lastWeather = s.state.weather;
           rebuild();
         }
       });
