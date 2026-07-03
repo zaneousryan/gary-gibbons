@@ -82,3 +82,31 @@ Hand inspections: 3 honest STUBs (phase-4/5/7); Math.random clean; off-record me
 
 ### Open DESIGN-QUESTIONs
 - DQ-1 only (carried). No new questions.
+
+---
+
+## 2026-07-02/03 — PHASE 2: The Board — DONE
+
+### What shipped
+- **BoardSystem** (`app/src/systems/board.ts` + `app/src/ui/Board.tsx`): PinCanvas (drag, free placement, positions in the save — the player's mess is theirs), string matcher (order-free, supersets ≤3, requireVerified refusal, off-record refusal + "promised" III.23.1), gold-string promotion + ledger cell fill, TimelineRail seating with anchor conditions, SuspectLedger + CLEARED stamps, TheoryRack retirement, ContradictionDesk → question cards, session-unique wrong-pair barks.
+- **Night loop**: "Send Them Home" (night transition relocates Gary home — I.5), I.6 gate blocking, HintService (4-min stall + ordered Ask-Grandpa hints, node-not-pair rule), pocket recap away from home, badge button + grandpa modal.
+- **Content**: d1_emptied_before (I.6.D1, gates Day 1) + red_pen_bandit tutorial recipes, 2 deduction cards, timeline slots NIGHT−5→CEREMONY, d1 hint ladder, 15 wrong-pair barks (of the eventual ≥40 — Phase 6 owns the rest).
+- **Dev menu**: 60-pin stress case, clear stress, replay deductions.
+- **ID convention locked**: recipe ids = I.6 row label (dN_*) or plain snake for non-table recipes; produced card = ded_ + recipe suffix.
+
+### gg-content-reviewer verdict
+**LGTM** (after 1 fix round; 2 gaps: a wrong-pair bark pre-echoed Archie's credits-letter phrase "the question under the question" (§8.4/§19.3 — reserved payoff, replaced entirely), deduction id convention inconsistency fixed before the freeze). Reviewer verified fixes independently via grep + gate re-runs. For Ryan's skim: d1 hints 2–3 are both lock-centric — flat escalation, quality note only.
+
+### gg-verifier verdict (evidence summary)
+**PASS** — all 6 gates: validator 0 errors/2 known warnings; 40/40 tests (9 board suites); autoplay ×2 process-level IDENTICAL, 114 lines, full night-1 assertions (Send-Them-Home, gate-blocked-before-deduction, hint ladder, wrong-pair miss, both recipes, gold strings, gate opens to Day 2); --curious explicit NOT RUN; build exit 0; e2e 3/3 incl. board flow.
+**60-pin perf (spec §14)**: headed Chromium on GTX 1660 SUPER @1080p — empty board 56.36 avg / 53.48 worst fps; 60 pins + strings 56.52 avg / 52.91 worst fps. Delta <1fps = zero measurable regression. The ~56fps ceiling exists with zero pins (virtualized-display artifact — "Meta Virtual Monitor" present); **Ryan: spot-check on bare metal**, not chargeable to the board.
+Hand inspections: 4 honest STUBs (now incl. phase-5 rail cinematic), Math.random clean, full board state in the save shape, Cut List clean, id convention verified, no stale ids repo-wide.
+
+### ⚠ ID FREEZE IN EFFECT (ALETHEIA §7)
+From this point, any content ID rename requires a migration entry in `app/src/engine/save/migrations.ts`.
+
+### Stubs (open)
+- STUB(phase-4) puzzle modules · STUB(phase-5) curious run + rail-complete cinematic · STUB(phase-7) TauriFsStorage.
+
+### Open DESIGN-QUESTIONs
+- DQ-1 only (carried).
