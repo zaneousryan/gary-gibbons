@@ -182,9 +182,13 @@ async function runOnce(seed: number): Promise<string[]> {
   for (const [i, card] of ['empty_vault', 'unforced_lock', 'fifty_years_of_items', 'grandpas_package'].entries()) {
     if (!pinCard(card, 200 + i * 240, 220)) fail(`could not pin ${card}`);
   }
-  // Ask Grandpa produces an ordered hint while the gate is unmet
+  // Ask Grandpa produces ordered hints while the gate is unmet — and per the
+  // design doc §6 rule, every hint names a node, never a pair
   const hint = askGrandpa(db, def);
   if (!hint || !hint.includes('room told everyone')) fail(`unexpected first grandpa hint: ${hint}`);
+  askGrandpa(db, def);
+  const lastHint = askGrandpa(db, def);
+  if (!lastHint || !lastHint.includes('The lock')) fail(`unexpected last grandpa hint: ${lastHint}`);
 
   // wrong pair first: red string + bark, never a deduction
   const miss = connectCards(db, ['empty_vault', 'grandpas_package']);
