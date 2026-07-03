@@ -1,0 +1,12 @@
+{
+  "id": "ded_theft_window",
+  "ref": "I.6.D3",
+  "type": "deduction",
+  "title": "Theft window: the final two nights",
+  "sprite": "card_ded_theft_window",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "Poppy counted everything intact three nights before the ceremony. The vault opened empty. The story just got smaller: two nights. Grandpa liked small stories. Small stories have doors.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

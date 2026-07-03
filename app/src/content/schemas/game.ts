@@ -31,6 +31,8 @@ export const GameFileSchema = z
       })
       .strict()
       .optional(),
+    /** DEMO build (spec §13): ends gracefully after this day with a wishlist card. */
+    demo: z.object({ endAfterDay: DaySchema }).strict().optional(),
   })
   .strict();
 

@@ -6,6 +6,7 @@
 
 import type { ContentDB } from '../../app/src/content/contentDb';
 import type { ConditionShape } from '../../app/src/content/schemas/common';
+import { PUZZLE_RESOLVE_EFFECTS } from '../../app/src/systems/puzzles';
 
 export interface GrantSource {
   file: string;
@@ -72,11 +73,20 @@ export function collectEffectSites(db: ContentDB): EffectSite[] {
       }
     }
   }
+  const pushPuzzle = (file: string, where: string, opens: string, cond?: ConditionShape) => {
+    const puzzleId = opens.startsWith('puzzle:') ? opens.slice('puzzle:'.length) : opens;
+    const effects = PUZZLE_RESOLVE_EFFECTS[puzzleId];
+    if (effects) {
+      sites.push({ file, where: `${where} -> puzzle ${puzzleId}`, cond, offRecord: false, effects: effects as unknown as Record<string, unknown>[] });
+    }
+  };
+
   for (const loc of Object.values(db.locations)) {
     const file = `locations/${loc.id}.json`;
     for (const h of loc.hotspots) {
       for (const it of h.interactions) {
         push(file, `hotspot ${h.id}.${it.id}`, it.effects, mergeCond(h.cond, it.cond));
+        if (it.opens) pushPuzzle(file, `hotspot ${h.id}.${it.id}`, it.opens, mergeCond(h.cond, it.cond));
       }
       if (h.detail?.card) {
         // chekhov details grant their card implicitly
@@ -114,6 +124,16 @@ export function collectEffectSites(db: ContentDB): EffectSite[] {
         offRecord: false,
         effects: [{ giveCard: ded.produces.card }],
       });
+    }
+  }
+
+  // openPuzzle effects anywhere (dialogue nodes, triggers, …) grant that
+  // puzzle's registered resolve effects
+  for (const site of [...sites]) {
+    for (const e of site.effects) {
+      if (typeof e.openPuzzle === 'string') {
+        pushPuzzle(site.file, site.where, e.openPuzzle, site.cond);
+      }
     }
   }
   return sites;

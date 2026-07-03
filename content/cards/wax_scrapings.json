@@ -1,0 +1,12 @@
+{
+  "id": "wax_scrapings",
+  "ref": "II.12.4",
+  "type": "physical",
+  "title": "Wax scrapings on the vault lip",
+  "sprite": "card_wax_scrapings",
+  "source": "founders_square",
+  "initialStatus": "verified",
+  "text": "Green wax, scraped thin on the vault's lip — exactly where a hand would rest the sealed envelope on the way out. It came out last, over everything else. Deliberately.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

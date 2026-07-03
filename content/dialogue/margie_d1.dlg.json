@@ -2,7 +2,15 @@
   "id": "margie_d1",
   "character": "margie",
   "ref": "I.5.day1",
-  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "entries": [
+    {
+      "id": "cold",
+      "cond": {
+        "day": 1
+      },
+      "node": "c1"
+    }
+  ],
   "nodes": {
     "c1": {
       "speaker": "margie",
@@ -23,8 +31,14 @@
       "authored": "aletheia",
       "emote": "happy",
       "effects": [
-        { "setFlag": "heard_of_lodger" },
-        { "notebook": { "entry": "nb_met_margie" } }
+        {
+          "setFlag": "heard_of_lodger"
+        },
+        {
+          "notebook": {
+            "entry": "nb_met_margie"
+          }
+        }
       ],
       "next": "c4"
     },

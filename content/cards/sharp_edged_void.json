@@ -1,0 +1,12 @@
+{
+  "id": "sharp_edged_void",
+  "ref": "II.13.1",
+  "type": "physical",
+  "title": "The top void has a sharp edge",
+  "sprite": "card_sharp_edged_void",
+  "source": "founders_square",
+  "initialStatus": "verified",
+  "text": "Every void in the vault dust is decades soft — except the topmost, where the sealed envelope sat. Its edge is sharp. Removed recently, and removed CAREFULLY. Not ransacked. Lifted.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

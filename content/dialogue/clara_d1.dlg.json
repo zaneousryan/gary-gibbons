@@ -2,7 +2,15 @@
   "id": "clara_d1",
   "character": "clara",
   "ref": "I.5.day1",
-  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "entries": [
+    {
+      "id": "cold",
+      "cond": {
+        "day": 1
+      },
+      "node": "c1"
+    }
+  ],
   "nodes": {
     "c1": {
       "speaker": "clara",
@@ -35,7 +43,13 @@
       "line": "...That's a better answer than the constable managed. Enjoy the ceremony, Mr. Gibbons. Watch the crowd, not the vault — the crowd's where the story is.",
       "authored": "aletheia",
       "emote": "happy",
-      "effects": [{ "notebook": { "entry": "nb_met_clara" } }],
+      "effects": [
+        {
+          "notebook": {
+            "entry": "nb_met_clara"
+          }
+        }
+      ],
       "next": null
     }
   },

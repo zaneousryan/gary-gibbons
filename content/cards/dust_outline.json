@@ -1,0 +1,12 @@
+{
+  "id": "dust_outline",
+  "ref": "I.5.day2",
+  "type": "physical",
+  "title": "The dust says: recently",
+  "sprite": "card_dust_outline",
+  "source": "council_hall",
+  "initialStatus": "verified",
+  "text": "A clean outline in the cabinet dust where the key was lifted and returned. Weeks of dust everywhere else; days of it here. The key traveled recently.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

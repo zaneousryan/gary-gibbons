@@ -1,0 +1,14 @@
+{
+  "id": "poppys_checklist",
+  "ref": "I.5.day2",
+  "type": "document",
+  "title": "Poppy's checklist — contents intact Night −3",
+  "sprite": "card_poppys_checklist",
+  "source": "poppy",
+  "initialStatus": "verified",
+  "text": "Item by item. Laminated. Time-stamped. Three nights before the ceremony, everything was still in the vault — counted by the most careful pair of eyes in Lanternside. She laminates her alibis.",
+  "verifyRoutes": [],
+  "reReadLines": [
+    { "cond": { "deduction": "d3_theft_window" }, "bark": "reread_checklist_window" }
+  ]
+}

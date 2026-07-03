@@ -1,0 +1,113 @@
+{
+  "id": "poppy_d2_confession",
+  "character": "poppy",
+  "ref": "I.5.day2",
+  "entries": [
+    {
+      "id": "primed",
+      "cond": { "all": [{ "day": 2 }, { "flag": "examined_key_hook" }, { "flag": "dust_library_done" }] },
+      "node": "p1"
+    },
+    {
+      "id": "cold",
+      "cond": { "all": [{ "day": 2 }, { "card": "key_backwards" }] },
+      "node": "c1"
+    }
+  ],
+  "nodes": {
+    "c1": {
+      "speaker": "poppy",
+      "line": "Mr. Gibbons! If this is about the bunting, the bunting has been addressed—",
+      "authored": "verbatim",
+      "emote": "worried",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "line": "It's about the key, Poppy.",
+      "authored": "verbatim",
+      "next": "c3"
+    },
+    "c3": {
+      "speaker": "poppy",
+      "line": "...Which key.",
+      "authored": "verbatim",
+      "emote": "worried",
+      "effects": [{ "setFlag": "poppy_nervous" }],
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "gary",
+      "line": "The one you hung back facing the wall.",
+      "authored": "verbatim",
+      "next": "c5"
+    },
+    "c5": {
+      "speaker": "narrator",
+      "line": "An eleven-second pause. Her glasses fog, feather by feather she fluffs a full size — and then the dam bursts.",
+      "authored": "aletheia",
+      "next": "c6"
+    },
+    "c6": {
+      "speaker": "poppy",
+      "line": "I checked it I checked the capsule three nights before the ceremony because what if the seal had degraded or MICE Mr. Gibbons what if MICE and it was my FIRST major event so I borrowed the key and I opened it and everything was FINE, it was all there, all of it, I counted, I have a checklist—",
+      "authored": "verbatim",
+      "emote": "worried",
+      "next": "c7"
+    },
+    "c7": {
+      "speaker": "gary",
+      "line": "Wait. All there? Three nights before?",
+      "authored": "verbatim",
+      "next": "c8"
+    },
+    "c8": {
+      "speaker": "poppy",
+      "line": "Item by item. Laminated. Time-stamped. I laminate my alibis.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "effects": [
+        { "giveCard": "poppys_checklist", "status": "verified" },
+        { "setFlag": "poppy_confessed" },
+        { "notebook": { "entry": "nb_poppy_confessed" } },
+        { "playBark": "gary_inner_small_stories" }
+      ],
+      "next": null
+    },
+    "p1": {
+      "speaker": "narrator",
+      "line": "Gary doesn't ask a question at all. He sets his sketch of the dust layout on her clipboard. Poppy looks at it for three seconds.",
+      "authored": "verbatim",
+      "next": "p2"
+    },
+    "p2": {
+      "speaker": "poppy",
+      "line": "...You drew the inside of the vault.",
+      "authored": "verbatim",
+      "emote": "surprised",
+      "next": "p3"
+    },
+    "p3": {
+      "speaker": "gary",
+      "line": "You checked it, didn't you? Before the ceremony. Everything was still there.",
+      "authored": "verbatim",
+      "next": "p4"
+    },
+    "p4": {
+      "speaker": "poppy",
+      "line": "I laminate my alibis.",
+      "authored": "verbatim",
+      "emote": "sad",
+      "effects": [
+        { "giveCard": "poppys_checklist", "status": "verified" },
+        { "setFlag": "poppy_confessed" },
+        { "setFlag": "poppy_confessed_primed" },
+        { "notebook": { "entry": "nb_poppy_confessed" } },
+        { "playBark": "gary_inner_small_stories" }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "poppy_repeat_busy"
+}

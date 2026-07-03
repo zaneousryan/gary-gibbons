@@ -1,0 +1,12 @@
+{
+  "id": "seal_sketch",
+  "ref": "I.5.day2",
+  "type": "sketch",
+  "title": "THE SEAL SKETCH — a lantern wreathed in ivy",
+  "sprite": "card_seal_sketch",
+  "source": "poppy",
+  "initialStatus": "verified",
+  "text": "Drawn from Poppy's memory: green wax, a lantern wreathed in ivy, three drips. Photographs show what a thing looks like. A sketch shows what it means. Permanent board item — gold border.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

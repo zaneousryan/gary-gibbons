@@ -4,7 +4,10 @@
   "ref": "I.2",
   "layers": ["bg", "mid", "fg"],
   "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
-  "exits": [{ "to": "market_row", "at": [160, 880] }],
+  "exits": [
+    { "to": "market_row", "at": [160, 880] },
+    { "to": "council_hall", "at": [1760, 880] }
+  ],
   "sitSpot": {
     "at": [400, 880],
     "monologues": [
@@ -47,6 +50,19 @@
       "kind": "examine",
       "label": "The Founders' Monument",
       "interactions": [
+        {
+          "id": "dust_library",
+          "cond": { "all": [{ "day": { "gte": 2 } }, { "not": { "flag": "dust_library_done" } }] },
+          "opens": "puzzle:dust_library",
+          "ref": "II.13.1"
+        },
+        {
+          "id": "wax_scrapings",
+          "cond": { "all": [{ "flag": "dust_library_done" }, { "not": { "card": "wax_scrapings" } }] },
+          "text": "On the vault's lip, where a careful hand would rest an envelope on the way out: flecks of green wax, scraped thin. The sealed envelope came out LAST — lifted deliberately, over everything else.",
+          "effects": [{ "giveCard": "wax_scrapings", "status": "verified" }],
+          "ref": "II.12.4"
+        },
         {
           "id": "monument_post_ceremony",
           "cond": { "flag": "ceremony_done" },

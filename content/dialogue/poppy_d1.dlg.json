@@ -2,7 +2,15 @@
   "id": "poppy_d1",
   "character": "poppy",
   "ref": "I.5.day1",
-  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "entries": [
+    {
+      "id": "cold",
+      "cond": {
+        "day": 1
+      },
+      "node": "c1"
+    }
+  ],
   "nodes": {
     "c1": {
       "speaker": "poppy",
@@ -31,7 +39,13 @@
       "line": "WILL ANYONE— I will notice, Mr. Gibbons. Fifty years of waiting deserves symmetrical bunting. Sorry — sorry, ladder, excuse me, coming through.",
       "authored": "aletheia",
       "emote": "worried",
-      "effects": [{ "notebook": { "entry": "nb_met_poppy" } }],
+      "effects": [
+        {
+          "notebook": {
+            "entry": "nb_met_poppy"
+          }
+        }
+      ],
       "next": "c4"
     },
     "c3e": {
@@ -40,8 +54,17 @@
       "authored": "aletheia",
       "emote": "worried",
       "effects": [
-        { "notebook": { "entry": "nb_met_poppy" } },
-        { "trust": { "char": "poppy", "delta": 1 } }
+        {
+          "notebook": {
+            "entry": "nb_met_poppy"
+          }
+        },
+        {
+          "trust": {
+            "char": "poppy",
+            "delta": 1
+          }
+        }
       ],
       "next": "c4"
     },

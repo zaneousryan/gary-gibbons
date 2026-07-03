@@ -1,0 +1,40 @@
+{
+  "id": "poppy_d2_seal_after",
+  "character": "poppy",
+  "ref": "I.5.day2",
+  "entries": [
+    {
+      "id": "main",
+      "cond": { "all": [{ "card": "seal_sketch" }, { "not": { "flag": "seal_after_done" } }] },
+      "node": "a1"
+    }
+  ],
+  "nodes": {
+    "a1": {
+      "speaker": "gary",
+      "line": "Like this?",
+      "authored": "verbatim",
+      "next": "a2"
+    },
+    "a2": {
+      "speaker": "poppy",
+      "line": "Exactly like that. How did you—",
+      "authored": "verbatim",
+      "emote": "surprised",
+      "next": "a3"
+    },
+    "a3": {
+      "speaker": "gary",
+      "line": "Grandpa drew everything. Photographs show what a thing looks like. A sketch shows what it means.",
+      "authored": "verbatim",
+      "effects": [
+        { "setFlag": "seal_after_done" },
+        { "trust": { "char": "poppy", "delta": 1 } },
+        { "playBark": "gary_going_home_d2" }
+      ],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "poppy_repeat_busy"
+}

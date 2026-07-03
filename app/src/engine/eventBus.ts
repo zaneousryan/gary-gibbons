@@ -27,6 +27,7 @@ export type GameEventType =
   | 'grape:declined'
   | 'save:written'
   | 'save:loaded'
+  | 'puzzle:open'
   | 'puzzle:opened'
   | 'puzzle:resolved'
   | 'weather:changed';

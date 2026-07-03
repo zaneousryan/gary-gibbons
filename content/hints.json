@@ -4,6 +4,14 @@
       { "text": "Grandpa always said: start with what the room told everyone and nobody heard. The whole district saw that vault. What else did the vault show them?", "ref": "I.6.D1" },
       { "text": "Grandpa always said: locks are witnesses too. Ida's lock had fifty years to learn how to complain, and tonight it didn't.", "ref": "I.6.D1" },
       { "text": "The lock, Gibbons. Fifty years of Ida's care, and tonight — not one complaint. Sit with what that means.", "ref": "I.6.D1" }
+    ],
+    "d3_theft_window": [
+      { "text": "Grandpa always said: when a story feels too big, find the witness who counted. Somebody in this town counts everything.", "ref": "I.6.D3" },
+      { "text": "The checklist, Gibbons. Laminated, time-stamped, three nights early. Read what it proves — not about her. About the calendar.", "ref": "I.6.D3" }
+    ],
+    "poppy_opened_not_emptied": [
+      { "text": "Grandpa always said: re-read the witness who was most embarrassed. Embarrassment and guilt wear different coats.", "ref": "I.5.day2" },
+      { "text": "The backwards key. A thief wipes her tracks; a worrier makes a list of them. Which kind hung that key back wrong?", "ref": "I.5.day2" }
     ]
   }
 }

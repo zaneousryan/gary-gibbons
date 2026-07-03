@@ -1,0 +1,69 @@
+{
+  "id": "dot_d2_pitch",
+  "character": "dot",
+  "ref": "II.16.6",
+  "entries": [{ "id": "main", "cond": { "day": 2 }, "node": "c1" }],
+  "nodes": {
+    "c1": {
+      "speaker": "dot",
+      "line": "Gibbons. Front page ran, town read it, nobody threw eggs — that's a passing grade. Now sell me today. One sentence.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "choices": [
+        {
+          "line": "The vault didn't open once — somebody opened it before us, with a key.",
+          "authored": "aletheia",
+          "effects": [{ "setFlag": "pitch_d2_done" }, { "trust": { "char": "dot", "delta": 1 } }],
+          "next": "c3good"
+        },
+        {
+          "line": "Fifty years of stuff is missing and everyone's very sad about it.",
+          "authored": "aletheia",
+          "effects": [{ "setFlag": "pitch_d2_done" }],
+          "next": "c3weak"
+        },
+        {
+          "line": "I'm still pulling threads. Ask me at lunch.",
+          "authored": "aletheia",
+          "effects": [{ "setFlag": "pitch_d2_done" }],
+          "next": "c3stall"
+        }
+      ]
+    },
+    "c3good": {
+      "speaker": "dot",
+      "line": "There it is. 'Before us, with a key.' That's a door, Gibbons — go knock on whoever's behind it.",
+      "authored": "aletheia",
+      "emote": "happy",
+      "next": "c4"
+    },
+    "c3weak": {
+      "speaker": "dot",
+      "line": "That's a weather report, not a story. Where's the door? Find me the door.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c4"
+    },
+    "c3stall": {
+      "speaker": "dot",
+      "line": "Lunch is for people with drafts. Go get me a draft.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "dot",
+      "line": "Your grandfather once rewrote a lede nine times while the press was already rolling. Made the pressman cry. The ninth one was four words. Go find your four words.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "ref": "I.7.2",
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "dot_repeat_busy"
+}

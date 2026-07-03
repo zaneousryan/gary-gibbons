@@ -17,6 +17,7 @@ export type Effect =
   | { playBark: string }
   | { startSidestory: string }
   | { goTo: string }
+  | { openPuzzle: string }
   | { advancePhase: true }
   | { collect: { lantern?: string; clipping?: string } }
   | { grapeDeclined: true };
@@ -36,6 +37,7 @@ export interface EffectEvent {
     | 'bark:play'
     | 'sidestory:started'
     | 'location:goto'
+    | 'puzzle:open'
     | 'phase:advance'
     | 'collectible:gained'
     | 'grape:declined';
@@ -130,6 +132,8 @@ export function applyEffect(state: GameState, effect: Effect): EffectEvent[] {
   } else if ('goTo' in effect) {
     state.location = effect.goTo;
     events.push({ type: 'location:goto', payload: { location: effect.goTo } });
+  } else if ('openPuzzle' in effect) {
+    events.push({ type: 'puzzle:open', payload: { puzzle: effect.openPuzzle } });
   } else if ('advancePhase' in effect) {
     events.push({ type: 'phase:advance', payload: {} });
   } else if ('collect' in effect) {

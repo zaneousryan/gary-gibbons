@@ -2,7 +2,15 @@
   "id": "warren_d1",
   "character": "warren",
   "ref": "I.5.day1",
-  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "entries": [
+    {
+      "id": "cold",
+      "cond": {
+        "day": 1
+      },
+      "node": "c1"
+    }
+  ],
   "nodes": {
     "c1": {
       "speaker": "narrator",
@@ -28,7 +36,13 @@
       "line": "Regrets are for men who kept the wrong things warm, Mr. Gibbons. I kept a chair warm. Tonight I give it back with the seat still good. Come early; Poppy has assigned the press a row, and I'd hate to watch her improvise.",
       "authored": "aletheia",
       "emote": "happy",
-      "effects": [{ "notebook": { "entry": "nb_met_warren" } }],
+      "effects": [
+        {
+          "notebook": {
+            "entry": "nb_met_warren"
+          }
+        }
+      ],
       "next": null
     }
   },

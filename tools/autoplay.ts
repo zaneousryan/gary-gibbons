@@ -12,13 +12,15 @@ import { useGameStore } from '../app/src/engine/store';
 import { useDialogueStore, selectDialogueFor } from '../app/src/systems/dialogue';
 import { installTriggerWatcher } from '../app/src/systems/triggers';
 import { installNotebookWatcher } from '../app/src/systems/notebook';
-import { connectCards, pinCard, resetBoardSession } from '../app/src/systems/board';
+import { connectCards, pinCard, resetBoardSession, retireTheory, checkTheoryRetirements } from '../app/src/systems/board';
+import { solveDustLibrary, solveSealSketch } from '../app/src/systems/puzzles';
 import { askGrandpa } from '../app/src/systems/hints';
 import { installVerificationWatcher } from '../app/src/systems/verify';
 import { publishEdition, editionForToday, assembleDraft } from '../app/src/systems/edition';
 import { commitMorningPages, morningPagesDue, voxPopLineFor } from '../app/src/systems/morningPages';
 import { greetingFor } from '../app/src/systems/trust';
 import { SaveService, MemoryStorage } from '../app/src/engine/save/saveService';
+import { evalCondition } from '../app/src/engine/conditions';
 import { bus } from '../app/src/engine/eventBus';
 import type { ContentDB } from '../app/src/content/contentDb';
 import type { GameDef } from '../app/src/engine/clock';
@@ -64,6 +66,36 @@ function talkTo(db: ContentDB, characterId: string, expectDialogue?: string): vo
 
 function assertFlag(flag: string) {
   if (!useGameStore.getState().state.flags[flag]) fail(`flag "${flag}" not set`);
+}
+
+const HEADLESS_PUZZLES: Record<string, () => import('../app/src/engine/effects').Effect[]> = {
+  dust_library: solveDustLibrary,
+  sketch_memory_seal: solveSealSketch,
+};
+
+/** Run a location hotspot's first passing interaction, exactly as the scene layer would. */
+function runHotspot(db: ContentDB, locationId: string, hotspotId: string) {
+  const game = useGameStore.getState();
+  const state = game.state;
+  const loc = db.locations[locationId];
+  const hotspot = loc?.hotspots.find((h) => h.id === hotspotId);
+  if (!hotspot) fail(`no hotspot ${hotspotId} at ${locationId}`);
+  for (const it of hotspot.interactions) {
+    if (!evalCondition((it.cond ?? {}) as never, state)) continue;
+    if (it.once && state.flags[`done_${hotspot.id}_${it.id}`]) continue;
+    if (it.oncePerDay && state.flags[`done_${hotspot.id}_${it.id}_d${state.day}`]) continue;
+    if (it.effects) game.runEffects(it.effects as import('../app/src/engine/effects').Effect[]);
+    if (it.once) game.runEffects([{ setFlag: `done_${hotspot.id}_${it.id}` }]);
+    if (it.oncePerDay) game.runEffects([{ setFlag: `done_${hotspot.id}_${it.id}_d${state.day}` }]);
+    if (it.opens) {
+      const puzzleId = it.opens.startsWith('puzzle:') ? it.opens.slice('puzzle:'.length) : it.opens;
+      const solve = HEADLESS_PUZZLES[puzzleId];
+      if (!solve) fail(`no headless solver for puzzle ${puzzleId}`);
+      game.runEffects(solve());
+    }
+    return it.id;
+  }
+  fail(`no passing interaction on ${locationId}/${hotspotId}`);
 }
 
 function assertCard(card: string, status?: string) {
@@ -259,6 +291,77 @@ async function runOnce(seed: number): Promise<string[]> {
   const greetingNeutral = greetingFor(db, 'margie');
   if (!greetingNeutral || !greetingNeutral.includes('pet')) fail('margie neutral greeting lost its "pet"');
   log.push('day 2 morning: pages committed, vox pop live, greetings tiered');
+
+  // --- day 2: The Backwards Key (I.5.day2) ---
+  game.moveTo('the_percolator');
+  talkTo(db, 'dot', 'dot_d2_pitch'); // driveDialogue picks choice[0]: the sharp pitch
+  assertFlag('pitch_d2_done');
+
+  // Poppy before the key: the brush-off, not the confession
+  game.moveTo('founders_square');
+  talkTo(db, 'poppy', 'poppy_d2_pre');
+
+  // council hall: the key hook (verbatim observe beat)
+  game.moveTo('council_hall');
+  runHotspot(db, 'council_hall', 'key_cabinet');
+  assertCard('key_backwards', 'verified');
+  assertCard('dust_outline', 'verified');
+  assertFlag('examined_key_hook');
+
+  // the vault: Dust Library puzzle (II.13.1), then the wax scrapings (II.12.4)
+  game.moveTo('founders_square');
+  runHotspot(db, 'founders_square', 'monument'); // opens + solves dust_library
+  assertFlag('dust_library_done');
+  assertCard('sharp_edged_void', 'verified');
+  runHotspot(db, 'founders_square', 'monument'); // now yields the wax scrapings
+  assertCard('wax_scrapings', 'verified');
+
+  // Poppy: PRIMED confession (III.20 — the sketch does the asking)
+  talkTo(db, 'poppy', 'poppy_d2_confession');
+  assertFlag('poppy_confessed');
+  assertFlag('poppy_confessed_primed');
+  assertCard('poppys_checklist', 'verified');
+
+  // the seal: describe -> sketch_memory puzzle -> confirm
+  talkTo(db, 'poppy', 'poppy_d2_seal');
+  game.runEffects(solveSealSketch()); // the puzzle:open effect resolves headless
+  assertCard('seal_sketch', 'verified');
+  talkTo(db, 'poppy', 'poppy_d2_seal_after');
+  assertFlag('seal_after_done');
+  log.push('day 2 core: key hook, dust library, PRIMED confession, seal sketch — complete');
+
+  // --- night 2: theories, deductions, edition, gate ---
+  if (!game.advancePhase()) fail('day2 morning->midday failed');
+  if (!game.advancePhase()) fail('day2 midday->evening failed');
+  if (!game.advancePhase()) fail('day2 evening->night failed');
+  if (useGameStore.getState().state.location !== db.game.apartmentLocation) fail('night 2 did not send Gary home');
+
+  // theory rack (II.16.3): "IT WAS NEVER THERE AT ALL" retires against the checklist
+  const retirable = checkTheoryRetirements(db);
+  if (!retirable.includes('th_never_there')) fail('th_never_there should be retirable after the checklist');
+  if (retirable.includes('th_outsider')) fail('th_outsider must still stand before careful_hands');
+  if (!retireTheory(db, 'th_never_there')) fail('retiring th_never_there failed');
+
+  for (const [i, card] of ['key_backwards', 'dust_outline', 'poppys_checklist', 'sharp_edged_void'].entries()) {
+    pinCard(card, 200 + i * 240, 420);
+  }
+  const d2ded = connectCards(db, ['key_backwards', 'dust_outline']);
+  if (d2ded.kind !== 'deduction' || d2ded.deduction.id !== 'd2_borrowed_recently') fail('D2 recipe failed');
+  const d3ded = connectCards(db, ['poppys_checklist', 'empty_vault']);
+  if (d3ded.kind !== 'deduction' || d3ded.deduction.id !== 'd3_theft_window') fail('D3 recipe failed');
+  const popded = connectCards(db, ['key_backwards', 'poppys_checklist']);
+  if (popded.kind !== 'deduction' || popded.deduction.id !== 'poppy_opened_not_emptied') fail('poppy recipe failed');
+  const aha = connectCards(db, ['sharp_edged_void', 'poppys_checklist']);
+  if (aha.kind !== 'deduction' || aha.deduction.id !== 'careful_hands') fail('careful_hands aha failed');
+  if (!checkTheoryRetirements(db).includes('th_outsider')) fail('careful_hands should make th_outsider retirable (III.22.3)');
+  if (!retireTheory(db, 'th_outsider')) fail('retiring th_outsider failed');
+
+  if (game.advancePhase()) fail('night 2 opened without the edition');
+  if (!publishEdition(db, { headlineId: 'h_d2_measured', kickerId: 'k_d2_window' })) fail('publishing ed_d2 failed');
+  if (!game.advancePhase()) fail('night 2 gate still blocked after deductions + edition');
+  const d3state = useGameStore.getState().state;
+  if (d3state.day !== 3 || d3state.phase !== 'morning') fail(`expected day 3 morning, got ${d3state.day} ${d3state.phase}`);
+  log.push('night 2: theories retired, 4 deductions incl. careful-hands aha, edition, gate -> day 3');
 
   unsubLog();
   unsubTriggers();

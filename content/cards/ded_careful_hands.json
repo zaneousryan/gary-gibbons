@@ -1,0 +1,12 @@
+{
+  "id": "ded_careful_hands",
+  "ref": "III.22.3",
+  "type": "deduction",
+  "title": "Careful hands",
+  "sprite": "card_ded_careful_hands",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "The thief removed fifty years of a town's memories without disturbing a single dust line. This wasn't a ransacking. It was someone being gentle with things he thought he was losing.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

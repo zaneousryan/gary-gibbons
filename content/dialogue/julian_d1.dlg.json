@@ -2,7 +2,15 @@
   "id": "julian_d1",
   "character": "julian",
   "ref": "I.5.day1",
-  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "entries": [
+    {
+      "id": "cold",
+      "cond": {
+        "day": 1
+      },
+      "node": "c1"
+    }
+  ],
   "nodes": {
     "c1": {
       "speaker": "julian",
@@ -25,7 +33,9 @@
           "next": "c3e"
         },
         "observe": {
-          "cond": { "flag": "noticed_julian_ring" },
+          "cond": {
+            "flag": "noticed_julian_ring"
+          },
           "line": "You spin that ring when you talk about tonight.",
           "authored": "aletheia",
           "next": "c3o"
@@ -37,7 +47,13 @@
       "line": "Born ready — that's the phrase, isn't it? Though I've always wondered about it. Nobody's born ready. Some of us are barely ready by the ceremony.",
       "authored": "aletheia",
       "emote": "happy",
-      "effects": [{ "notebook": { "entry": "nb_met_julian" } }],
+      "effects": [
+        {
+          "notebook": {
+            "entry": "nb_met_julian"
+          }
+        }
+      ],
       "next": "c4"
     },
     "c3e": {
@@ -46,8 +62,17 @@
       "authored": "aletheia",
       "emote": "sad",
       "effects": [
-        { "notebook": { "entry": "nb_met_julian" } },
-        { "trust": { "char": "julian", "delta": 1 } }
+        {
+          "notebook": {
+            "entry": "nb_met_julian"
+          }
+        },
+        {
+          "trust": {
+            "char": "julian",
+            "delta": 1
+          }
+        }
       ],
       "next": "c4"
     },
@@ -57,8 +82,14 @@
       "authored": "aletheia",
       "emote": "worried",
       "effects": [
-        { "notebook": { "entry": "nb_met_julian" } },
-        { "setFlag": "julian_ring_discussed" }
+        {
+          "notebook": {
+            "entry": "nb_met_julian"
+          }
+        },
+        {
+          "setFlag": "julian_ring_discussed"
+        }
       ],
       "next": "c4"
     },

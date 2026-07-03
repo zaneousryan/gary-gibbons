@@ -14,6 +14,7 @@ import { useDialogueStore, selectDialogueFor } from '@systems/dialogue';
 import { actorsAt } from '@systems/schedule';
 import { greetingFor } from '@systems/trust';
 import { voxPopLineFor } from '@systems/morningPages';
+import { usePuzzleStore } from '@systems/puzzles';
 import { useUiStore } from '@ui/uiStore';
 import { loadTexture, locationLayerPath, spritePath } from './assets';
 
@@ -228,8 +229,8 @@ function interact(db: ContentDB, hotspot: Hotspot) {
         if (it.oncePerDay && state.flags[`done_${hotspot.id}_${it.id}_d${state.day}`]) continue;
         if (it.text) ui.setExamine({ title: hotspot.label ?? hotspot.id, text: it.text });
         if (it.opens) {
-          // STUB(phase-4): puzzle modules open here via the §6.7 contract.
-          ui.showToast(`[puzzle "${it.opens}" arrives in Phase 4+]`);
+          const puzzleId = it.opens.startsWith('puzzle:') ? it.opens.slice('puzzle:'.length) : it.opens;
+          usePuzzleStore.getState().open(puzzleId);
         }
         const effects: Effect[] = [...(it.effects ?? [])] as Effect[];
         if (it.once) effects.push({ setFlag: `done_${hotspot.id}_${it.id}` });

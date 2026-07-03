@@ -202,6 +202,78 @@
       "tags": []
     },
     {
+      "id": "gary_inner_small_stories",
+      "text": "Which means the theft happened in a two-night window. The story just got smaller. Grandpa liked small stories. Small stories have doors.",
+      "speaker": "gary",
+      "authored": "verbatim",
+      "ref": "I.5.day2",
+      "tags": []
+    },
+    {
+      "id": "gary_inner_sharp_edge",
+      "text": "Every void soft with fifty years — except the top one. Sharp edge. Recent, and careful. Not ransacked. This thief was gentle, and I don't know yet why that scares me more.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "II.13.1",
+      "tags": []
+    },
+    {
+      "id": "gary_going_home_d2",
+      "text": "That's enough thread for one day. Time to see what it ties to.",
+      "speaker": "gary",
+      "authored": "verbatim",
+      "ref": "I.5",
+      "tags": []
+    },
+    {
+      "id": "bench_council_d2",
+      "text": "The council hall smells like beeswax and fifty years of second readings. Somewhere in this room is the exact spot a key hung wrong, and nobody walked past slow enough to notice. Except me. Slow is the job.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "II.18",
+      "tags": ["council"]
+    },
+    {
+      "id": "bark_ded_borrowed_recently",
+      "text": "Backwards key, fresh dust line. Someone borrowed the council key — recently, and put it back nervous. Rooms remember.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.6.D2",
+      "tags": []
+    },
+    {
+      "id": "bark_ded_theft_window",
+      "text": "Intact three nights out. Empty on the night. Two nights, Gibbons. The story has a door now — two of them.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.6.D3",
+      "tags": []
+    },
+    {
+      "id": "bark_ded_poppy_cleared",
+      "text": "Poppy opened it — and Poppy didn't empty it. Nobody inventories what they're about to steal. She goes on the board as a witness, not a suspect.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.5.day2",
+      "tags": []
+    },
+    {
+      "id": "bark_ded_careful_hands",
+      "text": "Orderly, Poppy said. Sharp edge, the dust said. The thief removed fifty years of a town without bruising a single memory. That's not greed's handwriting.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "III.22.3",
+      "tags": []
+    },
+    {
+      "id": "reread_checklist_window",
+      "text": "Her checklist again. Funny — the most nervous person in Lanternside built the calmest piece of evidence I own.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "III.27",
+      "tags": []
+    },
+    {
       "id": "gary_inner_promised",
       "text": "A reporter who burns a source gets one story. A reporter who keeps a promise gets a town.",
       "speaker": "gary",

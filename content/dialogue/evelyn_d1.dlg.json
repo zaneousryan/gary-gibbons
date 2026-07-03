@@ -2,7 +2,15 @@
   "id": "evelyn_d1",
   "character": "evelyn",
   "ref": "I.5.day1",
-  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "entries": [
+    {
+      "id": "cold",
+      "cond": {
+        "day": 1
+      },
+      "node": "c1"
+    }
+  ],
   "nodes": {
     "c1": {
       "speaker": "evelyn",
@@ -22,7 +30,13 @@
       "line": "Ivy. Not technically a flower — technically a promise. It holds on to what it grows over. Seemed right for an anniversary. Now shoo, or hold stems.",
       "authored": "aletheia",
       "emote": "happy",
-      "effects": [{ "notebook": { "entry": "nb_met_evelyn" } }],
+      "effects": [
+        {
+          "notebook": {
+            "entry": "nb_met_evelyn"
+          }
+        }
+      ],
       "next": null
     }
   },

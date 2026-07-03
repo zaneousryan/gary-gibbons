@@ -22,11 +22,14 @@ export interface GameDef {
   startPhase: Phase;
   apartmentLocation: string;
   days: DayDef[];
+  /** DEMO build (spec §13): night of this day ends the demo gracefully. */
+  demoEndAfterDay?: Day;
 }
 
 export type ClockBlocker =
   | { kind: 'gate'; missing: string[] }
   | { kind: 'edition'; edition: string }
+  | { kind: 'demo-end' }
   | { kind: 'end-of-game' };
 
 export interface ClockResult {
@@ -64,6 +67,9 @@ export function advance(game: GameDef, state: GameState, opts?: { editionPublish
   }
   if (def.edition && !opts?.editionPublished && !state.editions.some((e) => e.day === day)) {
     return { ok: false, blocked: { kind: 'edition', edition: def.edition } };
+  }
+  if (game.demoEndAfterDay !== undefined && day >= game.demoEndAfterDay) {
+    return { ok: false, blocked: { kind: 'demo-end' } };
   }
   if (day === 7) {
     return { ok: false, blocked: { kind: 'end-of-game' } };

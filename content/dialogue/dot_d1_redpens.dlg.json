@@ -3,8 +3,8 @@
   "character": "dot",
   "ref": "II.17.1",
   "entries": [
-    { "id": "primed", "cond": { "flag": "noticed_red_ink" }, "node": "p1" },
-    { "id": "cold", "cond": {}, "node": "c1" }
+    { "id": "primed", "cond": { "all": [{ "day": 1 }, { "flag": "noticed_red_ink" }] }, "node": "p1" },
+    { "id": "cold", "cond": { "day": 1 }, "node": "c1" }
   ],
   "nodes": {
     "c1": {

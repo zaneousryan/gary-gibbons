@@ -1,0 +1,90 @@
+{
+  "id": "council_hall",
+  "name": "The Council Hall",
+  "ref": "III.24",
+  "layers": ["bg", "mid", "fg"],
+  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "exits": [{ "to": "founders_square", "at": [160, 880] }],
+  "sitSpot": {
+    "at": [1500, 880],
+    "monologues": [{ "cond": {}, "bark": "bench_council_d2" }]
+  },
+  "hotspots": [
+    {
+      "id": "key_cabinet",
+      "at": [700, 620],
+      "kind": "examine",
+      "label": "The Key Cabinet",
+      "cond": { "day": { "gte": 2 } },
+      "interactions": [
+        {
+          "id": "key_hook_observed",
+          "cond": { "not": { "flag": "examined_key_hook" } },
+          "text": "Grandpa always said: rooms remember. This key's been hung facing the wall. Someone put it back in a hurry — or in the dark. And the dust says: recently.",
+          "effects": [
+            { "setFlag": "examined_key_hook" },
+            { "giveCard": "key_backwards", "status": "verified" },
+            { "giveCard": "dust_outline", "status": "verified" },
+            { "notebook": { "entry": "nb_key_backwards" } }
+          ],
+          "ref": "I.5.day2"
+        },
+        {
+          "id": "key_hook_again",
+          "text": "The Ceremonial Key, back on its hook — facing the right way now, because Gary turned it around. Rooms remember. So do reporters.",
+          "ref": "I.5.day2"
+        }
+      ],
+      "ref": "I.5.day2"
+    },
+    {
+      "id": "founding_portrait_view",
+      "at": [1200, 560],
+      "kind": "chekhov",
+      "label": "The Founding Portrait",
+      "detail": {
+        "tier": "clue",
+        "text": "Edmund Vale at the sealing ceremony, fifty years young, one key raised high for the crowd. The painter caught everything: the smile, the morning light — and, at his belt, on a ribbon, something small that catches the varnish like brass.",
+        "question": "q_why_two_keys",
+        "cond": { "day": { "gte": 4 } }
+      },
+      "ref": "III.21"
+    },
+    {
+      "id": "founding_portrait_early",
+      "at": [1310, 560],
+      "kind": "chekhov",
+      "label": "Portrait Plaque",
+      "cond": { "day": { "lte": 3 } },
+      "detail": {
+        "tier": "texture",
+        "text": "\"THE SEALING OF THE CAPSULE — FOUNDING DAY.\" Edmund Vale raises the Ceremonial Key. The whole district walks under this painting weekly and mostly remembers to dust it."
+      },
+      "ref": "III.24"
+    },
+    {
+      "id": "guardians_chair",
+      "at": [420, 620],
+      "kind": "chekhov",
+      "label": "The Guardian's Chair",
+      "detail": {
+        "tier": "character",
+        "text": "The council chair. One armrest carries eight years of the same coat's wear; the other is nearly new. Warren sits leaning toward the door, like a man keeping a seat rather than holding one."
+      },
+      "ref": "III.24"
+    },
+    {
+      "id": "exit_square",
+      "at": [160, 820],
+      "kind": "exit",
+      "to": "founders_square",
+      "label": "To Founders' Square"
+    }
+  ],
+  "ambient": {
+    "vignetteTags": ["council", "indoors"],
+    "weatherVariants": false,
+    "music": "music_council",
+    "ambience": "amb_hall"
+  }
+}

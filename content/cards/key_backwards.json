@@ -1,0 +1,12 @@
+{
+  "id": "key_backwards",
+  "ref": "I.5.day2",
+  "type": "physical",
+  "title": "The key was hung backwards",
+  "sprite": "card_key_backwards",
+  "source": "council_hall",
+  "initialStatus": "verified",
+  "text": "The Ceremonial Key, back on its council hook — facing the wall. Put back in a hurry, or in the dark. Gary saw it himself.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

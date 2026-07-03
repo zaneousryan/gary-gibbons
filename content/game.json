@@ -5,7 +5,7 @@
   "apartmentLocation": "gary_apartment",
   "days": [
     { "day": 1, "title": "An Ordinary Thursday", "ref": "I.5.day1", "gateDeductions": ["d1_emptied_before"], "coreCompleteFlag": "ceremony_done", "edition": "ed_d1" },
-    { "day": 2, "title": "The Backwards Key", "ref": "I.5.day2", "gateDeductions": [] },
+    { "day": 2, "title": "The Backwards Key", "ref": "I.5.day2", "gateDeductions": ["d3_theft_window", "poppy_opened_not_emptied"], "coreCompleteFlag": "seal_after_done", "edition": "ed_d2" },
     { "day": 3, "title": "The Man Who Counts Lighthouses", "ref": "I.5.day3", "gateDeductions": [] },
     { "day": 4, "title": "The Weasel Digs at Midnight", "ref": "I.5.day4", "gateDeductions": [] },
     { "day": 5, "title": "The Lantern in Ivy", "ref": "I.5.day5", "gateDeductions": [] },

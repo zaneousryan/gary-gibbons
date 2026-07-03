@@ -1,0 +1,30 @@
+{
+  "id": "poppy_d2_pre",
+  "character": "poppy",
+  "ref": "I.5.day2",
+  "entries": [
+    {
+      "id": "main",
+      "cond": { "all": [{ "day": 2 }, { "not": { "card": "key_backwards" } }] },
+      "node": "c1"
+    }
+  ],
+  "nodes": {
+    "c1": {
+      "speaker": "poppy",
+      "line": "Mr. Gibbons — if it's about last night I have prepared a statement, the statement is 'I don't know anything,' which is TRUE, and also I've reorganized the entire contingency binder because SOMETHING had to be alphabetical today—",
+      "authored": "aletheia",
+      "emote": "worried",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "line": "Deep breath, Poppy. I'm still working out where the door of this story is. When I find it, I'll knock gently.",
+      "authored": "aletheia",
+      "effects": [{ "notebook": { "entry": "nb_poppy_rattled" } }],
+      "next": null
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "poppy_repeat_busy"
+}

@@ -94,6 +94,7 @@ export const EffectSchema = z
     playBark: IdSchema.optional(),
     startSidestory: IdSchema.optional(),
     goTo: IdSchema.optional(),
+    openPuzzle: IdSchema.optional(),
     advancePhase: z.literal(true).optional(),
     collect: z.object({ lantern: IdSchema.optional(), clipping: IdSchema.optional() }).strict().optional(),
     grapeDeclined: z.literal(true).optional(),

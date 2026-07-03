@@ -1,0 +1,55 @@
+{
+  "id": "ed_d2",
+  "day": 2,
+  "ref": "II.15.1",
+  "draftCards": ["poppys_checklist", "key_backwards", "dust_outline", "sharp_edged_void"],
+  "headlines": [
+    {
+      "id": "h_d2_sensational",
+      "tone": "sensational",
+      "text": "PLANNER PEEKED! VAULT OPENED DAYS BEFORE CEREMONY",
+      "effects": [
+        { "trust": { "char": "poppy", "delta": -1 } },
+        { "trust": { "char": "margie", "delta": 1 } }
+      ],
+      "reactions": {
+        "chalkboard": "THE ELEVEN-SECOND ESPRESSO — cracks under gentle pressure",
+        "rumorSeed": "poppy_suspected"
+      }
+    },
+    {
+      "id": "h_d2_measured",
+      "tone": "measured",
+      "text": "Theft Window Narrows to Final Two Nights",
+      "reactions": {
+        "chalkboard": "THE TWO-NIGHT BLEND — short window, strong finish"
+      }
+    },
+    {
+      "id": "h_d2_compassionate",
+      "tone": "compassionate",
+      "text": "Capsule Was Whole Three Nights Before Opening, Witness Confirms",
+      "effects": [
+        { "trust": { "char": "poppy", "delta": 1 } },
+        { "trust": { "char": "margie", "delta": -1 } }
+      ],
+      "reactions": {
+        "chalkboard": "THE UNNAMED SOURCE — served warm, no questions"
+      }
+    }
+  ],
+  "kickers": [
+    {
+      "id": "k_d2_window",
+      "text": "Two nights. Somewhere in Lanternside, somebody is counting them too."
+    },
+    {
+      "id": "k_d2_careful",
+      "text": "Whoever opened that vault closed it gently. The Ledger finds that detail worth your attention."
+    },
+    {
+      "id": "k_d2_thanks",
+      "text": "The Ledger thanks the neighbors who answered questions today. All of them. Even the fourth time."
+    }
+  ]
+}

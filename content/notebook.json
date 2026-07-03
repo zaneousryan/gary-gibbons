@@ -11,10 +11,16 @@
     { "id": "nb_met_julian", "tab": "people", "title": "Julian Vale — the heir", "text": "Turns 24 this week; takes the chair at the ceremony. Smiles like it's a job. Spins his father's ring when the subject turns to tonight.", "authored": "aletheia", "ref": "I.4" },
     { "id": "nb_met_clara", "tab": "people", "title": "Clara Vale — the sister", "text": "Answered my question with a better question, twice. Told me to watch the crowd, not the vault. I intend to steal that technique.", "authored": "aletheia", "ref": "I.4" },
     { "id": "nb_met_milo", "tab": "people", "title": "Milo Tanaka — junior detective", "text": "Age 11. Notebook labeled CRIMES? — the question mark doing heavy lifting. Writes exclusively in red ink. A LOT of red ink. Filed under: hm.", "authored": "aletheia", "ref": "II.17.1" },
-    { "id": "nb_met_tuck", "tab": "people", "title": "Constable Bram Tuck", "text": "Polices by proximity to pastry. Predicted the capsule holds drawings and a tooth. The man has never hurried and has never been late. Respect.", "authored": "aletheia", "ref": "I.4" }
+    { "id": "nb_met_tuck", "tab": "people", "title": "Constable Bram Tuck", "text": "Polices by proximity to pastry. Predicted the capsule holds drawings and a tooth. The man has never hurried and has never been late. Respect.", "authored": "aletheia", "ref": "I.4" },
+    { "id": "nb_key_backwards", "tab": "places", "title": "Council Hall — the key cabinet", "text": "The Ceremonial Key was hung back facing the wall, and the dust says it traveled recently. Someone put it back in a hurry, or in the dark, or both.", "authored": "aletheia", "ref": "I.5.day2" },
+    { "id": "nb_dust_library", "tab": "places", "title": "The vault floor — a library of dust", "text": "Every item left its shape. Matched each void to Poppy's checklist. One detail won't let go: the envelope's void has a SHARP edge. Everything else faded soft over decades. It came out last, and it came out carefully.", "authored": "aletheia", "ref": "II.13.1" },
+    { "id": "nb_poppy_confessed", "tab": "people", "title": "Poppy — the confession", "text": "She borrowed the key three nights early, checked everything (MICE, Mr. Gibbons, what if MICE), locked it back, and made a time-stamped laminated inventory. The theft window just shrank to two nights, and Poppy shrank out of the suspect pool.", "authored": "aletheia", "ref": "I.5.day2" },
+    { "id": "nb_seal_sketch", "tab": "places", "title": "The seal — sketched from memory", "text": "Green wax. A lantern wreathed in ivy, three drips. Poppy saw it on top of everything, 'important on purpose.' Somebody in this town knows that seal. Find them.", "authored": "aletheia", "ref": "I.5.day2" },
+    { "id": "nb_poppy_rattled", "tab": "people", "title": "Poppy, the morning after", "text": "Reorganized the contingency binder because something had to be alphabetical today. Filed under: people who cope loudly. Also filed under: people who know something.", "authored": "aletheia", "ref": "I.5.day2" }
   ],
   "questions": [
     { "id": "q_who_takes_red_pens", "text": "Who keeps taking Dot's red pens? (One a shift. She counts.)", "ref": "II.17.1" },
-    { "id": "q_who_emptied_the_capsule", "text": "Who emptied the capsule — and how did they open it without forcing Ida's lock?", "ref": "I.5.day1" }
+    { "id": "q_who_emptied_the_capsule", "text": "Who emptied the capsule — and how did they open it without forcing Ida's lock?", "ref": "I.5.day1" },
+    { "id": "q_why_two_keys", "text": "WHY TWO KEYS? The founding portrait shows Edmund with a second key at his belt.", "ref": "III.21" }
   ]
 }

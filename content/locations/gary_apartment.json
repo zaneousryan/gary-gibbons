@@ -53,6 +53,21 @@
       "ref": "II.17.1"
     },
     {
+      "id": "grape_stress_ball",
+      "at": [1180, 700],
+      "kind": "examine",
+      "label": "A Grape-Shaped Stress Ball",
+      "cond": { "day": { "gte": 2 } },
+      "interactions": [
+        {
+          "id": "stress_ball_look",
+          "text": "It's therapeutic. It's THERAPEUTIC.",
+          "ref": "I.7.1"
+        }
+      ],
+      "ref": "I.7.1"
+    },
+    {
       "id": "kettle",
       "at": [1400, 700],
       "kind": "examine",

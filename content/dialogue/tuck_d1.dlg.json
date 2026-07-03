@@ -2,7 +2,15 @@
   "id": "tuck_d1",
   "character": "tuck",
   "ref": "I.5.day1",
-  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "entries": [
+    {
+      "id": "cold",
+      "cond": {
+        "day": 1
+      },
+      "node": "c1"
+    }
+  ],
   "nodes": {
     "c1": {
       "speaker": "tuck",
@@ -22,7 +30,13 @@
       "line": "Drawings. A tooth, probably — kids were always sealing teeth in things back then, for science. And fifty years of people getting exactly what they hoped for, which is the rarest thing I police. Pastry?",
       "authored": "aletheia",
       "emote": "happy",
-      "effects": [{ "notebook": { "entry": "nb_met_tuck" } }],
+      "effects": [
+        {
+          "notebook": {
+            "entry": "nb_met_tuck"
+          }
+        }
+      ],
       "next": null
     }
   },

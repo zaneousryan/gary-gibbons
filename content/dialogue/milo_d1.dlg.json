@@ -2,7 +2,15 @@
   "id": "milo_d1",
   "character": "milo",
   "ref": "II.17.1",
-  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "entries": [
+    {
+      "id": "cold",
+      "cond": {
+        "day": 1
+      },
+      "node": "c1"
+    }
+  ],
   "nodes": {
     "c1": {
       "speaker": "milo",
@@ -29,8 +37,15 @@
       "authored": "aletheia",
       "emote": "happy",
       "effects": [
-        { "giveCard": "milos_crimes_notebook", "status": "verified" },
-        { "notebook": { "entry": "nb_met_milo" } }
+        {
+          "giveCard": "milos_crimes_notebook",
+          "status": "verified"
+        },
+        {
+          "notebook": {
+            "entry": "nb_met_milo"
+          }
+        }
       ],
       "next": null
     }

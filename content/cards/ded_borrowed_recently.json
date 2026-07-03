@@ -1,0 +1,12 @@
+{
+  "id": "ded_borrowed_recently",
+  "ref": "I.6.D2",
+  "type": "deduction",
+  "title": "Someone borrowed the council key — recently",
+  "sprite": "card_ded_borrowed_recently",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "A backwards key and a fresh dust outline: the Ceremonial Key left its hook and came back wrong, within days. Somebody used the front door of this mystery.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

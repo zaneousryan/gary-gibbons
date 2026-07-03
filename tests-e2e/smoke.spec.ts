@@ -142,6 +142,50 @@ test('day 1 ceremony set-piece fires at the square', async ({ page }) => {
   await expect(page.getByTestId('morning-pages')).not.toBeVisible();
 });
 
+test('day 2 dust library puzzle at the vault', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.getByTestId('hud-location')).toHaveText("Gary's Apartment", { timeout: 20_000 });
+  await waitForScene(page, 'gary_apartment');
+
+  // dev shortcut: jump the clock to Day 2 and teleport to the square
+  await page.keyboard.press('`');
+  await expect(page.getByTestId('dev-menu')).toBeVisible();
+  await page.getByRole('button', { name: 'D2', exact: true }).click();
+  await page.getByRole('button', { name: "Founders' Square" }).click();
+  await page.keyboard.press('`');
+  await waitForScene(page, 'founders_square');
+
+  // Morning Pages fires on Day 2 — commit and carry on
+  const mp = page.getByTestId('morning-pages');
+  if (await mp.isVisible().catch(() => false)) {
+    await page.getByTestId('mp-commit').click();
+  }
+
+  // the monument opens the Dust Library
+  await clickStage(page, 820, 560);
+  await expect(page.getByTestId('puzzle')).toBeVisible({ timeout: 15_000 });
+
+  // match all four voids to Poppy's checklist
+  const pairs: [string, string][] = [
+    ['void_crate', 'item_crates'],
+    ['void_bundle', 'item_letter_bundles'],
+    ['void_tin', 'item_keepsake_tin'],
+    ['void_envelope', 'item_sealed_envelope'],
+  ];
+  for (const [v, item] of pairs) {
+    await page.getByTestId(`void-${v}`).click();
+    await page.getByTestId(`checkitem-${item}`).click();
+  }
+  await page.getByTestId('puzzle-submit').click();
+  await expect(page.getByTestId('puzzle')).not.toBeVisible({ timeout: 5_000 });
+  await expect(page.getByTestId('inner-voice')).toBeVisible({ timeout: 5_000 }); // the sharp-edge chill
+
+  // second visit yields the wax scrapings (II.12.4)
+  await clickStage(page, 820, 560);
+  await expect(page.getByTestId('examine-panel')).toBeVisible({ timeout: 15_000 });
+  await expect(page.getByTestId('examine-panel')).toContainText('green wax');
+});
+
 test('examine and phase advance', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByTestId('hud-location')).toHaveText("Gary's Apartment", { timeout: 20_000 });

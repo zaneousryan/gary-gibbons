@@ -1,0 +1,12 @@
+{
+  "id": "ded_poppy_opened_not_emptied",
+  "ref": "I.5.day2",
+  "type": "deduction",
+  "title": "Poppy opened it — but Poppy didn't empty it",
+  "sprite": "card_ded_poppy_opened_not_emptied",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "She borrowed the key, checked the capsule, locked it back, and counted every item onto a laminated, time-stamped list. A thief doesn't inventory what she leaves behind. Poppy's window closed with everything inside.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

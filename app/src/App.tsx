@@ -22,6 +22,9 @@ import { installTriggerWatcher } from '@systems/triggers';
 import { installBarkWatcher } from '@systems/barks';
 import { installNotebookWatcher } from '@systems/notebook';
 import { installVerificationWatcher } from '@systems/verify';
+import { installPuzzleWatcher } from '@systems/puzzles';
+import { installAudioWatcher } from '@systems/audio';
+import PuzzleHost from '@ui/PuzzleHost';
 
 export default function App() {
   const [db, setDb] = useState<ContentDB | null>(null);
@@ -49,11 +52,15 @@ export default function App() {
       const un2 = installNotebookWatcher(content);
       const un3 = installTriggerWatcher(content);
       const un4 = installVerificationWatcher(content);
+      const un5 = installPuzzleWatcher();
+      const un6 = installAudioWatcher();
       return () => {
         un1();
         un2();
         un3();
         un4();
+        un5();
+        un6();
       };
     } catch (err) {
       setBootError(String(err));
@@ -84,6 +91,7 @@ export default function App() {
       <Board db={db} />
       <Newspaper db={db} />
       <MorningPages db={db} />
+      <PuzzleHost />
       <PocketRecap db={db} />
       <GrandpaModal />
       <InnerVoice />

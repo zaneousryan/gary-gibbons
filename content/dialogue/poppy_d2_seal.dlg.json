@@ -1,0 +1,30 @@
+{
+  "id": "poppy_d2_seal",
+  "character": "poppy",
+  "ref": "I.5.day2",
+  "entries": [
+    {
+      "id": "main",
+      "cond": { "all": [{ "flag": "poppy_confessed" }, { "not": { "flag": "sketch_seal_done" } }] },
+      "node": "s1"
+    }
+  ],
+  "nodes": {
+    "s1": {
+      "speaker": "poppy",
+      "line": "There was one thing I keep thinking about. An envelope, on top. The wax was green, and the seal was — a lantern? Wrapped in leaves. Ivy, maybe. It was beautiful. It looked... important on purpose.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "next": "s2"
+    },
+    "s2": {
+      "speaker": "gary",
+      "line": "Hold that thought — exactly that thought. Let me get it down while it's still in your voice.",
+      "authored": "aletheia",
+      "effects": [{ "openPuzzle": "sketch_memory_seal" }],
+      "next": null
+    }
+  },
+  "oncePerDay": false,
+  "repeatBark": "poppy_repeat_busy"
+}

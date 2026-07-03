@@ -2,7 +2,15 @@
   "id": "otto_d1",
   "character": "otto",
   "ref": "I.5.day1",
-  "entries": [{ "id": "cold", "cond": {}, "node": "c1" }],
+  "entries": [
+    {
+      "id": "cold",
+      "cond": {
+        "day": 1
+      },
+      "node": "c1"
+    }
+  ],
   "nodes": {
     "c1": {
       "speaker": "otto",
@@ -22,7 +30,13 @@
       "line": "The Festival Blend. Fifty years in the making — which is to say, same beans, more hope. Sit anywhere. Tonight, the vault. Tomorrow, everyone tells you they always knew what was inside.",
       "authored": "aletheia",
       "emote": "happy",
-      "effects": [{ "notebook": { "entry": "nb_met_otto" } }],
+      "effects": [
+        {
+          "notebook": {
+            "entry": "nb_met_otto"
+          }
+        }
+      ],
       "next": null
     }
   },

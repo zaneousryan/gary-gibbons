@@ -19,9 +19,63 @@
       "requireOnRecordForFinale": false,
       "produces": { "card": "ded_emptied_before" },
       "garyLine": "bark_ded_emptied_before"
+    },
+    {
+      "id": "d2_borrowed_recently",
+      "ref": "I.6.D2",
+      "kind": "standard",
+      "inputs": ["key_backwards", "dust_outline"],
+      "requireVerified": true,
+      "requireOnRecordForFinale": false,
+      "produces": { "card": "ded_borrowed_recently" },
+      "garyLine": "bark_ded_borrowed_recently"
+    },
+    {
+      "id": "d3_theft_window",
+      "ref": "I.6.D3",
+      "kind": "standard",
+      "inputs": ["poppys_checklist", "empty_vault"],
+      "requireVerified": true,
+      "requireOnRecordForFinale": false,
+      "produces": { "card": "ded_theft_window" },
+      "garyLine": "bark_ded_theft_window"
+    },
+    {
+      "id": "poppy_opened_not_emptied",
+      "ref": "I.5.day2",
+      "kind": "standard",
+      "inputs": ["key_backwards", "poppys_checklist"],
+      "requireVerified": true,
+      "requireOnRecordForFinale": false,
+      "produces": { "card": "ded_poppy_opened_not_emptied" },
+      "garyLine": "bark_ded_poppy_cleared"
+    },
+    {
+      "id": "careful_hands",
+      "ref": "III.22.3",
+      "kind": "aha",
+      "inputs": ["sharp_edged_void", "poppys_checklist"],
+      "requireVerified": true,
+      "requireOnRecordForFinale": false,
+      "produces": { "card": "ded_careful_hands" },
+      "garyLine": "bark_ded_careful_hands",
+      "cinematic": "theory_curl_outsider"
     }
   ],
   "wrongPairBarks": "wrong_pairs",
-  "theories": [],
+  "theories": [
+    {
+      "id": "th_outsider",
+      "ref": "II.16.3",
+      "title": "AN OUTSIDER STOLE IT FOR PROFIT",
+      "retireWhen": { "card": "ded_careful_hands" }
+    },
+    {
+      "id": "th_never_there",
+      "ref": "II.16.3",
+      "title": "IT WAS NEVER THERE AT ALL",
+      "retireWhen": { "card": "poppys_checklist", "status": "verified" }
+    }
+  ],
   "contradictions": []
 }
