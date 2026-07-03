@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "strict": true,
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@engine/*": ["app/src/engine/*"],
+      "@systems/*": ["app/src/systems/*"],
+      "@scenes/*": ["app/src/scenes/*"],
+      "@ui/*": ["app/src/ui/*"],
+      "@content/*": ["app/src/content/*"],
+      "@dev/*": ["app/src/dev/*"]
+    }
+  },
+  "include": ["vite.config.ts", "tools", "tests-e2e"]
+}

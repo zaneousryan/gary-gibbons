@@ -1,0 +1,15 @@
+{
+  "dot": {
+    "d1": {
+      "morning": { "loc": "the_percolator", "spot": "corner_table" },
+      "midday": { "loc": "the_percolator", "spot": "corner_table" }
+    }
+  },
+  "otto": {
+    "d1": {
+      "morning": { "loc": "the_percolator", "spot": "counter" },
+      "midday": { "loc": "the_percolator", "spot": "counter" },
+      "evening": { "loc": "the_percolator", "spot": "counter" }
+    }
+  }
+}

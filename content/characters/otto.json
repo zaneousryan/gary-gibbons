@@ -1,0 +1,15 @@
+{
+  "id": "otto",
+  "name": "Otto Kessler",
+  "ref": "I.4",
+  "species": "brown bear",
+  "portraitSet": "otto",
+  "voice": { "textSpeed": 0.85, "blipSound": "blip_otto" },
+  "greetings": {
+    "cold": "Mr. Gibbons. The usual, no conversation. Understood.",
+    "neutral": "Mr. Gibbons. Sit. The kettle was just thinking about you.",
+    "warm": "Gary. Your cup's already pulled. It knew before I did."
+  },
+  "tells": [],
+  "etiquette": { "note": "Speaks in coffee metaphors. Keeps a bowl of grapes on the counter — Gary's personal Everest." }
+}

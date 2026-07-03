@@ -1,0 +1,37 @@
+{
+  "pool": "gary_inner",
+  "barks": [
+    {
+      "id": "gary_inner_one_sentence",
+      "text": "One sentence. Grandpa could do it in five words. I usually need nine and a comma I regret.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "II.16.6",
+      "tags": []
+    },
+    {
+      "id": "bench_apartment_d1",
+      "text": "Home. The board's empty and the kettle's patient. Enjoy that, Gibbons — empty boards don't stay empty in this business.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "II.18",
+      "tags": ["apartment"]
+    },
+    {
+      "id": "bench_percolator_d1",
+      "text": "The Percolator, mid-morning. If Lanternside has a heartbeat, it's the espresso machine. Steady. A little dramatic on the steam wand.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "II.18",
+      "tags": ["percolator"]
+    },
+    {
+      "id": "dot_repeat_busy",
+      "text": "Dot's already three paragraphs deep in someone else's mistake. Best not.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "II.17.1",
+      "tags": []
+    }
+  ]
+}

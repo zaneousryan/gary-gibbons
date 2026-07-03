@@ -1,0 +1,93 @@
+{
+  "id": "dot_d1_redpens",
+  "character": "dot",
+  "ref": "II.17.1",
+  "entries": [
+    { "id": "primed", "cond": { "flag": "noticed_red_ink" }, "node": "p1" },
+    { "id": "cold", "cond": {}, "node": "c1" }
+  ],
+  "nodes": {
+    "c1": {
+      "speaker": "dot",
+      "line": "Gibbons. Before you ask: no, the capsule story isn't yours yet, the capsule story is Thursday's. Today's story is smaller. Somebody is stealing my red pens.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c2"
+    },
+    "c2": {
+      "speaker": "gary",
+      "stances": {
+        "press": {
+          "line": "How many pens are we talking about?",
+          "authored": "aletheia",
+          "next": "c3"
+        },
+        "empathize": {
+          "line": "You loved those pens.",
+          "authored": "aletheia",
+          "next": "c3e"
+        },
+        "observe": {
+          "cond": { "flag": "noticed_red_ink" },
+          "line": "There's red ink on the stair rail. Small hands.",
+          "authored": "aletheia",
+          "next": "c3o"
+        }
+      }
+    },
+    "c3": {
+      "speaker": "dot",
+      "line": "Six. In two weeks. A pen a shift, Gibbons, that's not misplacement, that's a pattern. Find my pattern.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "effects": [
+        { "giveCard": "dots_missing_pens" },
+        { "setFlag": "redpens_case_open" },
+        { "notebook": { "question": "q_who_takes_red_pens" } }
+      ],
+      "next": "c4"
+    },
+    "c3e": {
+      "speaker": "dot",
+      "line": "I love deadlines, Gibbons. The pens are how I love them. Six gone in two weeks. Find my pattern.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "effects": [
+        { "giveCard": "dots_missing_pens" },
+        { "setFlag": "redpens_case_open" },
+        { "notebook": { "question": "q_who_takes_red_pens" } }
+      ],
+      "next": "c4"
+    },
+    "c3o": {
+      "speaker": "dot",
+      "line": "...Small hands. Hm. You're Archie's, all right — he'd have said the same thing before his coffee. Go on then. Follow the ink.",
+      "authored": "aletheia",
+      "emote": "surprised",
+      "effects": [
+        { "giveCard": "dots_missing_pens" },
+        { "setFlag": "redpens_case_open" },
+        { "setFlag": "redpens_primed_start" },
+        { "notebook": { "question": "q_who_takes_red_pens" } }
+      ],
+      "next": "c4"
+    },
+    "c4": {
+      "speaker": "dot",
+      "line": "And Gibbons — sell me the story. In one sentence. That's the job. Every morning, that's the job.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "effects": [{ "playBark": "gary_inner_one_sentence" }],
+      "next": null
+    },
+    "p1": {
+      "speaker": "dot",
+      "line": "You've got that look. The one where you already followed something. Out with it.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c2"
+    }
+  },
+  "oncePerDay": true,
+  "repeatBark": "dot_repeat_busy"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "gary",
+  "name": "Gary Gibbons",
+  "ref": "I.4",
+  "species": "gibbon",
+  "portraitSet": "gary",
+  "voice": { "textSpeed": 1, "blipSound": "blip_gary" },
+  "greetings": {
+    "cold": "...",
+    "neutral": "...",
+    "warm": "..."
+  },
+  "tells": [],
+  "etiquette": { "note": "Protagonist — greetings unused; he does the greeting." }
+}

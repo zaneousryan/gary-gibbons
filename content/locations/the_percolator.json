@@ -1,0 +1,61 @@
+{
+  "id": "the_percolator",
+  "name": "The Percolator",
+  "ref": "I.2",
+  "layers": ["bg", "mid", "fg"],
+  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "exits": [{ "to": "gary_apartment", "at": [160, 880] }],
+  "sitSpot": {
+    "at": [1500, 880],
+    "monologues": [
+      { "cond": {}, "bark": "bench_percolator_d1" }
+    ]
+  },
+  "hotspots": [
+    {
+      "id": "talk_dot",
+      "at": [820, 800],
+      "kind": "talk",
+      "character": "dot",
+      "label": "Dot"
+    },
+    {
+      "id": "chalkboard",
+      "at": [500, 560],
+      "kind": "examine",
+      "label": "The Chalkboard",
+      "interactions": [
+        {
+          "id": "chalkboard_d1",
+          "text": "Otto's chalkboard, today: 'THE FESTIVAL BLEND — fifty years in the making.' The town's mood, in specials.",
+          "ref": "II.14"
+        }
+      ],
+      "ref": "III.24"
+    },
+    {
+      "id": "grape_bowl",
+      "at": [1120, 640],
+      "kind": "chekhov",
+      "label": "A Bowl on the Counter",
+      "detail": {
+        "tier": "character",
+        "text": "A bowl of green grapes catches the window light. Gary does not look at it. He is very good at not looking at it, which requires looking at it a little."
+      },
+      "ref": "I.7.1"
+    },
+    {
+      "id": "exit_home",
+      "at": [160, 820],
+      "kind": "exit",
+      "to": "gary_apartment",
+      "label": "Back home"
+    }
+  ],
+  "ambient": {
+    "vignetteTags": ["percolator", "indoors"],
+    "weatherVariants": false,
+    "music": "music_percolator",
+    "ambience": "amb_cafe"
+  }
+}

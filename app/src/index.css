@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+/* Lanternside Master Palette (art bible §2.4) */
+@theme {
+  --color-amber: #e8a34c;
+  --color-dusk: #33605d;
+  --color-plum: #6e4468;
+  --color-cream: #f4ead3;
+  --color-ivy: #4f6b3d;
+  --color-ink: #2c2620;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  background: var(--color-ink);
+  overflow: hidden;
+  font-family: Georgia, 'Times New Roman', serif;
+}

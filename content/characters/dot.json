@@ -1,0 +1,15 @@
+{
+  "id": "dot",
+  "name": "Dot Ramirez",
+  "ref": "I.4",
+  "species": "wire-haired terrier",
+  "portraitSet": "dot",
+  "voice": { "textSpeed": 1.1, "blipSound": "blip_dot" },
+  "greetings": {
+    "cold": "Gibbons. Copy. Where.",
+    "neutral": "Gibbons. Coffee's old, get moving.",
+    "warm": "Morning, Gibbons. Saved you the crossword. Don't tell anyone."
+  },
+  "tells": [],
+  "etiquette": { "note": "Bites only at lazy paragraphs. Do not show her a draft you haven't read aloud once." }
+}

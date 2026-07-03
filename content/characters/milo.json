@@ -1,0 +1,15 @@
+{
+  "id": "milo",
+  "name": "Milo Tanaka",
+  "ref": "I.4",
+  "species": "raccoon kit",
+  "portraitSet": "milo",
+  "voice": { "textSpeed": 1.3, "blipSound": "blip_milo" },
+  "greetings": {
+    "cold": "Mr. Gibbons. I'm on a case. It's confidential.",
+    "neutral": "Mr. Gibbons! Any crimes today? Asking for my notebook.",
+    "warm": "GARY! Okay so I have THREE leads and one of them is DEFINITELY a crime."
+  },
+  "tells": [],
+  "etiquette": { "note": "Junior detective. Notebook labeled CRIMES?. Trades secrets for secrets only." }
+}

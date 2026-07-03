@@ -1,0 +1,68 @@
+{
+  "id": "gary_apartment",
+  "name": "Gary's Apartment",
+  "ref": "I.2",
+  "layers": ["bg", "mid", "fg"],
+  "walkLine": { "y": 880, "minX": 160, "maxX": 1760, "depthScale": [0.92, 1.0] },
+  "exits": [{ "to": "the_percolator", "at": [1760, 880] }],
+  "sitSpot": {
+    "at": [420, 880],
+    "monologues": [
+      { "cond": {}, "bark": "bench_apartment_d1" }
+    ]
+  },
+  "hotspots": [
+    {
+      "id": "the_board",
+      "at": [960, 520],
+      "kind": "examine",
+      "label": "The Board",
+      "interactions": [
+        {
+          "id": "board_look",
+          "text": "The corkboard. Empty, for now — a wall-sized held breath. Grandpa's rule hangs in the corner where a braver man would hang a mirror.",
+          "ref": "I.6"
+        }
+      ],
+      "ref": "I.2"
+    },
+    {
+      "id": "grandpas_badge",
+      "at": [640, 700],
+      "kind": "chekhov",
+      "label": "Grandpa's Badge",
+      "detail": {
+        "tier": "character",
+        "text": "Archie Gibbons's press badge, brass gone soft-dark with thumbprints. Gary touches it the way other people knock on wood."
+      },
+      "ref": "II.7.2"
+    },
+    {
+      "id": "kettle",
+      "at": [1400, 700],
+      "kind": "examine",
+      "label": "The Kettle",
+      "interactions": [
+        {
+          "id": "kettle_look",
+          "text": "The kettle. First movement of the nightly triptych: kettle, typewriter, board.",
+          "ref": "II.19.3"
+        }
+      ],
+      "ref": "II.19.3"
+    },
+    {
+      "id": "exit_to_percolator",
+      "at": [1760, 820],
+      "kind": "exit",
+      "to": "the_percolator",
+      "label": "Down to the street"
+    }
+  ],
+  "ambient": {
+    "vignetteTags": ["apartment"],
+    "weatherVariants": true,
+    "music": "music_apartment",
+    "ambience": "amb_apartment"
+  }
+}

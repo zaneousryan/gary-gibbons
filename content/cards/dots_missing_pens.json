@@ -1,0 +1,19 @@
+{
+  "id": "dots_missing_pens",
+  "ref": "II.17.1",
+  "type": "testimony",
+  "title": "Six red pens, gone in two weeks",
+  "sprite": "dots_missing_pens",
+  "source": "dot",
+  "initialStatus": "unverified",
+  "text": "Dot's count: six pens, two weeks, one per shift. Not misplacement — a pattern.",
+  "verifyRoutes": [
+    {
+      "id": "red_ink_trail",
+      "ref": "II.17.1",
+      "cond": { "flag": "noticed_red_ink" },
+      "hint": "Somebody used those pens somewhere. Ink dries where hands go."
+    }
+  ],
+  "reReadLines": []
+}
