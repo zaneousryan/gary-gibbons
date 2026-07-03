@@ -29,7 +29,7 @@
       "authored": "aletheia",
       "emote": "happy",
       "effects": [
-        { "setFlag": "milo_red_ink" },
+        { "giveCard": "milos_crimes_notebook", "status": "verified" },
         { "notebook": { "entry": "nb_met_milo" } }
       ],
       "next": null

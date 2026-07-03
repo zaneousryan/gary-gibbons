@@ -118,8 +118,8 @@ async function runOnce(seed: number): Promise<string[]> {
   talkTo(db, 'ida', 'ida_d1');
   talkTo(db, 'evelyn', 'evelyn_d1');
   talkTo(db, 'milo', 'milo_d1');
-  assertFlag('milo_red_ink');
-  log.push('market row complete (grape declined, red ink noticed)');
+  assertCard('milos_crimes_notebook', 'verified');
+  log.push('market row complete (grape declined, red notebook seen)');
 
   // --- founders' square ---
   game.moveTo('founders_square');

@@ -1,0 +1,12 @@
+{
+  "id": "milos_crimes_notebook",
+  "ref": "II.17.1",
+  "type": "physical",
+  "title": "Milo's CRIMES? notebook — all in red ink",
+  "sprite": "card_milos_crimes_notebook",
+  "source": "milo",
+  "initialStatus": "verified",
+  "text": "Every entry in Milo's case file is written in urgent red. The same urgent red that's been walking out of Dot's pen cup, one shift at a time. Gary saw it himself.",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

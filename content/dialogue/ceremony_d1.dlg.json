@@ -26,7 +26,7 @@
     "n4": {
       "speaker": "narrator",
       "line": "The crowd leans in. Silence. The empty vault holds the stage for a long, long three seconds.",
-      "authored": "verbatim",
+      "authored": "aletheia",
       "next": "n5"
     },
     "n5": {
@@ -53,7 +53,7 @@
     "n8": {
       "speaker": "narrator",
       "line": "The ring on Julian's finger spins; he stares into the vault a beat too long.",
-      "authored": "verbatim",
+      "authored": "aletheia",
       "next": "n9"
     },
     "n9": {
