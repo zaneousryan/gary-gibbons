@@ -44,7 +44,7 @@ export function installVerificationWatcher(db: ContentDB): () => void {
     for (const cardId of upgraded) {
       const title = db.cards[cardId]?.title ?? cardId;
       useUiStore.getState().showToast(`✓ CONFIRMED — G.G. · ${title}`);
-      // STUB(phase-4): the *thock* sfx lands with the audio pass
+      // the *thock* itself plays via audio.ts on card:verified
     }
   };
   const un1 = bus.on('flag:set', sweep);

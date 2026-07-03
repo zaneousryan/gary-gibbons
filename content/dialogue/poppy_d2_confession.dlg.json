@@ -59,13 +59,19 @@
       "speaker": "gary",
       "line": "Wait. All there? Three nights before?",
       "authored": "verbatim",
+      "next": "c7n"
+    },
+    "c7n": {
+      "speaker": "narrator",
+      "line": "She produces it — laminated, time-stamped, trembling in her wing.",
+      "authored": "aletheia",
       "next": "c8"
     },
     "c8": {
       "speaker": "poppy",
       "line": "Item by item. Laminated. Time-stamped. I laminate my alibis.",
       "authored": "verbatim",
-      "emote": "neutral",
+      "emote": "worried",
       "effects": [
         { "giveCard": "poppys_checklist", "status": "verified" },
         { "setFlag": "poppy_confessed" },

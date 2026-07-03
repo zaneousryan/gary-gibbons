@@ -169,7 +169,7 @@ test('day 2 dust library puzzle at the vault', async ({ page }) => {
   const pairs: [string, string][] = [
     ['void_crate', 'item_crates'],
     ['void_bundle', 'item_letter_bundles'],
-    ['void_tin', 'item_keepsake_tin'],
+    ['void_tin', 'item_oilcloth_parcel'],
     ['void_envelope', 'item_sealed_envelope'],
   ];
   for (const [v, item] of pairs) {

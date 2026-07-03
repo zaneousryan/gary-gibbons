@@ -56,13 +56,13 @@ export const DUST_LIBRARY = {
   voids: [
     { id: 'void_crate', label: 'A long low rectangle, dust-ringed, decades deep', answer: 'item_crates' },
     { id: 'void_bundle', label: 'A soft-edged stack, corners rounded by settling paper', answer: 'item_letter_bundles' },
-    { id: 'void_tin', label: 'A small circle, crisp as a coin', answer: 'item_keepsake_tin' },
+    { id: 'void_tin', label: 'A small soft-cornered square, pressed deep, off in its own corner', answer: 'item_oilcloth_parcel' },
     { id: 'void_envelope', label: 'A slim rectangle on top of everything — its edge is SHARP', answer: 'item_sealed_envelope' },
   ] as DustVoid[],
   checklist: [
     { id: 'item_crates', label: 'Founding family crates (4)' },
-    { id: 'item_letter_bundles', label: 'Letter bundles, ribbon-tied' },
-    { id: 'item_keepsake_tin', label: 'Keepsake tin, round' },
+    { id: 'item_letter_bundles', label: "Children's bundles — drawings, predictions, letters" },
+    { id: 'item_oilcloth_parcel', label: 'Small parcel in oilcloth, addressee unlisted' },
     { id: 'item_sealed_envelope', label: 'One sealed envelope — added at The Founder’s Addition' },
   ],
   resolveEffects: [
