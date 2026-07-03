@@ -50,4 +50,35 @@ Boot → stair-rail examine (flag set) → walk → PRIMED entry fired ("You've 
 
 ### Notes for later phases
 - Vite chunk >500 kB — plan manualChunks split in Phase 7.
-- Project subagent types not registered with the session's Agent tool; reviewer/verifier dispatched via general-purpose agents bound to the .claude/agents/*.md charters — same effect.
+- Project subagent types not registered with the session's Agent tool; reviewer/verifier dispatched via general-purpose agents bound to the .claude/agents/*.md charters — same effect. (Resolved mid-session: gg-* agent types registered from Phase 1 on.)
+
+---
+
+## 2026-07-02 — PHASE 1: World & Words — DONE
+
+### What shipped
+- **SceneRenderer full** (`app/src/scenes/PixiStage.tsx`): parallax layers, hotspots incl. chekhov detail layer (III.24), scheduled NPC actors with 2-frame idle/talk cycles, point-to-walk with depth scaling, day-phase tint LUT-lite, sit-spots with Bench Time monologues (II.18), Tab-cycle keyboard hotspot focus + Enter (accessibility floor).
+- **DialogueSystem full** (`app/src/systems/dialogue.ts`): PRIMED-first entries (III.20), three stances with OBSERVE disabled-with-tooltip (II.12.1), choices, off-record card enforcement in code (III.23.1 — content arrives Day 2+), oncePerDay/repeatBark, narrator set-piece speaker.
+- **NotebookSystem core** (§6.3): notebook.json content family (entries + question texts), auto-entries via bus, PEOPLE/PLACES/QUESTIONS overlay. GRAPES tab, Morning Pages, tear-out: later phases.
+- **Scheduler v1** (§6.6): day/phase placement + ifRain routing.
+- **Scene triggers**: location-level auto-firing set-pieces; Day 1 ceremony fires once at founders_square evening.
+- **Inner-voice bark overlay**; **Content**: 9 new characters, market_row + founders_square, 11 new Day 1 dialogues (ceremony verbatim), 5 new cards, notebook.json, full d1 schedules, ~20 new barks.
+
+### gg-content-reviewer verdict
+**LGTM** (after 1 fix round; 4 gaps: two mislabeled authored:"verbatim" stage-direction adaptations in ceremony_d1, invented "Arthur" first name for Archie (removed — no lore not traceable to the doc), orphaned milo_red_ink flag replaced with milos_crimes_notebook card scaffolding the Phase 2 Red Pen recipe). Reviewer note for Ryan: ~84 aletheia-authored Day 1 lines all read in-voice; spot-check Poppy's run-ons and Gino's bellissimo/tragedy binary by ear.
+
+### gg-verifier verdict (evidence summary; full report in session log)
+**PASS** — all 6 gates:
+1. validate:content — exit 0; 13 characters, 4 locations, 13 dialogues, 6 cards; 0 errors, 6 known warnings (cards feed Phase 2's graph).
+2. test — 31/31.
+3. autoplay ×2 — RUNS IDENTICAL; "PASS (103 log lines, deterministic across 2 runs, seed 42)"; full Day 1 path incl. grape:declined total 1, ceremony trigger + 4 verified cards + question, no-refire assert, save/reload byte-identical, night→day 2.
+4. --curious — explicit NOT RUN notice (Phase 5).
+5. build — exit 0 (chunk-size advisory carried to Phase 7).
+6. test:e2e — 3/3 incl. "day 1 ceremony set-piece fires at the square" (1.1m).
+Hand inspections: 3 honest STUBs (phase-4/5/7); Math.random clean; off-record mechanism live but content-untested (correct for Day 1); 190 placeholder files, zero real assets, boots green; no Cut List violations; SceneRenderer/Dialogue/Notebook/Scheduler claims verified in code line-by-line.
+
+### Stubs (open)
+- STUB(phase-4) puzzle modules · STUB(phase-5) curious run · STUB(phase-7) TauriFsStorage.
+
+### Open DESIGN-QUESTIONs
+- DQ-1 only (carried). No new questions.
