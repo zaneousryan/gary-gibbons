@@ -1,9 +1,9 @@
 {
-  "id": "ded_red_pens",
+  "id": "ded_red_pen_bandit",
   "ref": "II.17.1",
   "type": "deduction",
   "title": "The Red Pen Bandit is Milo",
-  "sprite": "card_ded_red_pens",
+  "sprite": "card_ded_red_pen_bandit",
   "source": "gary",
   "initialStatus": "verified",
   "text": "One pen a shift, straight into the CRIMES? notebook. Case closed the only correct way: Gary buys the kid his own pens tomorrow. Dot never needs the byline.",

@@ -1,14 +1,14 @@
 {
   "deductions": [
     {
-      "id": "ded_red_pen_bandit",
+      "id": "red_pen_bandit",
       "ref": "II.17.1",
       "kind": "standard",
       "inputs": ["dots_missing_pens", "milos_crimes_notebook"],
       "requireVerified": false,
       "requireOnRecordForFinale": false,
-      "produces": { "card": "ded_red_pens" },
-      "garyLine": "bark_ded_red_pens"
+      "produces": { "card": "ded_red_pen_bandit" },
+      "garyLine": "bark_ded_red_pen_bandit"
     },
     {
       "id": "d1_emptied_before",

@@ -198,9 +198,10 @@ async function runOnce(seed: number): Promise<string[]> {
   pinCard('dots_missing_pens', 900, 420);
   pinCard('milos_crimes_notebook', 1100, 420);
   const pens = connectCards(db, ['dots_missing_pens', 'milos_crimes_notebook']);
-  if (pens.kind !== 'deduction' || pens.deduction.id !== 'ded_red_pen_bandit') {
+  if (pens.kind !== 'deduction' || pens.deduction.id !== 'red_pen_bandit') {
     fail(`red pen recipe failed: ${JSON.stringify(pens)}`);
   }
+  assertCard('ded_red_pen_bandit', 'verified');
 
   // D1 — the gate deduction
   const d1 = connectCards(db, ['empty_vault', 'unforced_lock']);
