@@ -3,10 +3,18 @@
   "character": "warren",
   "ref": "I.5.day3",
   "entries": [
+    { "id": "pressed_return", "cond": { "all": [{ "day": { "gte": 3 } }, { "flag": "warren_pressed" }, { "not": { "card": "lighthouse_folio" } }] }, "node": "r1" },
     { "id": "main", "cond": { "all": [{ "day": { "gte": 3 } }, { "card": "margies_testimony" }, { "not": { "card": "lighthouse_folio" } }] }, "node": "c1" }
   ],
   "reentrant": true,
   "nodes": {
+    "r1": {
+      "speaker": "warren",
+      "line": "Back again. The direct question didn't fit through the door, I take it. Try a different shape, Mr. Gibbons — I'll wait.",
+      "authored": "aletheia",
+      "emote": "neutral",
+      "next": "c3"
+    },
     "c1": {
       "speaker": "warren",
       "line": "You've heard, then. That I doubted him.",
@@ -19,6 +27,7 @@
       "speaker": "narrator",
       "line": "He takes off his glasses and cleans them, slowly. They were clean already.",
       "authored": "aletheia",
+      "effects": [{ "setFlag": "noticed_warren_glasses" }],
       "next": "c3"
     },
     "c3": {
@@ -68,6 +77,7 @@
       "line": "I did. I do. That is not the same as wanting his chair, Mr. Gibbons. Here. My speech. Read the third draft. I couldn't get the joy right in the first two.",
       "authored": "verbatim",
       "emote": "neutral",
+      "effects": [{ "setFlag": "warren_confirmed_doubt" }],
       "next": "c5"
     },
     "c5": {

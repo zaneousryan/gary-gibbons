@@ -86,6 +86,7 @@
       "detail": {
         "tier": "character",
         "text": "Julian Vale, shaking hands, smiling the practiced smile. Between handshakes his thumb finds his father's signet ring and spins it — around, around. Probably nothing. Gary writes it down anyway.",
+        "flag": "noticed_julian_ring",
         "cond": {}
       },
       "ref": "I.5.day1"

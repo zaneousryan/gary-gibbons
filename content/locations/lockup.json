@@ -26,7 +26,7 @@
       "cond": { "flag": "stakeout_done" },
       "detail": {
         "tier": "texture",
-        "text": "One sack, upended and inventoried in Tuck's careful hand: trowels (4), jam (1, open), maps (11), divining rod (1, curtain rail (1)). Capsule contents: none. The town exhaled too early."
+        "text": "One sack, upended and inventoried in Tuck's careful hand: trowels (4), jam (1, open), maps (11), divining rod (1 — obviously a bent curtain rail). Capsule contents: none. The town exhaled too early."
       },
       "ref": "I.5.day4"
     },

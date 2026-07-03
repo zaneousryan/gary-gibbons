@@ -9,17 +9,24 @@ import { useGameStore } from '@engine/store';
 import { bus } from '@engine/eventBus';
 import { useUiStore } from '@ui/uiStore';
 
-/** Scan every owned unverified card; upgrade those whose routes now pass. */
+/**
+ * Scan every owned unverified OR off-record card; upgrade those whose routes
+ * now pass. For off-record cards a passing route is on-record corroboration
+ * (III.23.1: knowledge becomes publishable proof only when earned elsewhere).
+ */
 export function sweepVerifications(db: ContentDB): string[] {
   const state = useGameStore.getState().state;
   const upgraded: string[] = [];
   for (const [cardId, cardState] of Object.entries(state.cards)) {
-    if (cardState.status !== 'unverified') continue;
+    if (cardState.status === 'verified') continue;
     const def = db.cards[cardId];
     if (!def || def.verifyRoutes.length === 0) continue;
     const route = def.verifyRoutes.find((r) => evalCondition(r.cond as Condition, state));
     if (route) {
-      useGameStore.getState().runEffects([{ verify: cardId }]);
+      useGameStore.setState((s) => {
+        s.state.cards[cardId].status = 'verified';
+      });
+      bus.emit({ type: 'card:verified', payload: { card: cardId, via: route.id } });
       upgraded.push(cardId);
       useGameStore.getState().runEffects([{ setFlag: `verified_via_${cardId}`, value: route.id }]);
     }

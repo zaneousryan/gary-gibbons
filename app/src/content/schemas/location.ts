@@ -27,6 +27,8 @@ export const ChekhovDetailSchema = z
     text: z.string().optional(),
     card: IdSchema.optional(),
     question: IdSchema.optional(),
+    /** Set when observed — the OBSERVE-stance fuel (II.12.1 tells). */
+    flag: IdSchema.optional(),
     cond: ConditionSchema.optional(),
   })
   .strict();

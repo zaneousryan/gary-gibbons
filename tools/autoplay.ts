@@ -101,6 +101,22 @@ function runHotspot(db: ContentDB, locationId: string, hotspotId: string) {
   fail(`no passing interaction on ${locationId}/${hotspotId}`);
 }
 
+/** Observe a chekhov detail exactly as the scene layer would (III.24). */
+function runChekhov(db: ContentDB, locationId: string, hotspotId: string) {
+  const game = useGameStore.getState();
+  const loc = db.locations[locationId];
+  const hotspot = loc?.hotspots.find((h) => h.id === hotspotId && h.kind === 'chekhov');
+  if (!hotspot?.detail) fail(`no chekhov detail ${hotspotId} at ${locationId}`);
+  const state = useGameStore.getState().state;
+  if (!evalCondition((hotspot.cond ?? {}) as never, state)) fail(`chekhov ${hotspotId} cond fails`);
+  if (!evalCondition((hotspot.detail.cond ?? {}) as never, state)) fail(`chekhov ${hotspotId} detail cond fails`);
+  const effects: import('../app/src/engine/effects').Effect[] = [];
+  if (hotspot.detail.card) effects.push({ giveCard: hotspot.detail.card });
+  if (hotspot.detail.question) effects.push({ notebook: { question: hotspot.detail.question } });
+  if (hotspot.detail.flag) effects.push({ setFlag: hotspot.detail.flag });
+  if (effects.length) game.runEffects(effects);
+}
+
 function assertCard(card: string, status?: string) {
   const c = useGameStore.getState().state.cards[card];
   if (!c) fail(`card "${card}" not gained`);
@@ -173,8 +189,9 @@ async function runOnce(seed: number): Promise<string[]> {
   game.moveTo('founders_square');
   talkTo(db, 'poppy', 'poppy_d1');
   talkTo(db, 'warren', 'warren_d1');
-  // observe Julian's ring first (chekhov detail), so OBSERVE is earnable
-  game.runEffects([{ setFlag: 'noticed_julian_ring' }]);
+  // observe Julian's ring (chekhov detail flag — the OBSERVE fuel, II.12.1)
+  runChekhov(db, 'founders_square', 'julians_ring');
+  assertFlag('noticed_julian_ring');
   talkTo(db, 'julian', 'julian_d1');
   talkTo(db, 'clara', 'clara_d1');
   log.push('square complete, all of day 1 cast met');
@@ -378,8 +395,13 @@ async function runOnce(seed: number): Promise<string[]> {
 
   game.moveTo('drowsy_lantern');
   talkTo(db, 'margie', 'margie_d3');
-  assertCard('margies_testimony', 'verified');
+  // the off-the-record tutorial (III.23.1): Margie's quote is knowledge, not proof
+  assertCard('margies_testimony', 'offrecord');
   assertCard('lodger_gossip', 'verified');
+  pinCard('margies_testimony', 500, 200);
+  pinCard('empty_vault', 700, 200);
+  const refusal = connectCards(db, ['margies_testimony', 'empty_vault']);
+  if (refusal.kind !== 'refused-offrecord') fail('off-record card should refuse the string ("promised")');
 
   // contradiction desk (II.16.4): Margie vs the speech — a question is born
   game.moveTo('council_hall');
@@ -389,6 +411,12 @@ async function runOnce(seed: number): Promise<string[]> {
   talkTo(db, 'warren', 'warren_d3_speech', ['empathize', 'press']); // return with better manners
   assertCard('warrens_speech', 'verified');
   assertCard('lighthouse_folio', 'verified');
+  // Warren's own admission is the on-record corroboration — Margie's promise holds,
+  // the FACT goes on the record (III.23.1)
+  assertCard('margies_testimony', 'verified');
+  if (useGameStore.getState().state.flags['verified_via_margies_testimony'] !== 'warren_admits') {
+    fail('margies_testimony should corroborate via warren_admits route');
+  }
   const cx1 = layOnDesk(db, 'margies_testimony', 'warrens_speech');
   if (cx1.kind !== 'contradiction' || cx1.id !== 'cx_warren') fail('cx_warren did not fire');
   talkTo(db, 'warren', 'warren_d3_photo');
@@ -453,13 +481,13 @@ async function runOnce(seed: number): Promise<string[]> {
   game.runEffects(solveMapOverlay());
   assertFlag('found_ghost_landing');
 
-  // night 4: rail seating incl. the composite pair, aha 22.2, D6, edition
+  // night 4: rail seating (the rail completes Night 6 — night_minus_5 waits
+  // for the garden card; the composite pair arrives with Milo's sighting)
   if (!game.advancePhase()) fail('d4 evening->night failed');
   if (seatRailCard(db, 'ev_poppy_check', 'night_minus_3') !== 'seated') fail('ev_poppy_check refused');
   if (seatRailCard(db, 'ev_ceremony', 'ceremony') !== 'seated') fail('ev_ceremony refused');
-  if (seatRailCard(db, 'ev_photo_night', 'night_minus_2') !== 'seated') fail('ev_photo_night refused');
-  if (seatRailCard(db, 'ev_crossing', 'night_minus_2') !== 'composite') fail('composite pair did not seat (III.22.5)');
-  assertFlag('rail_composite_seen');
+  if (seatRailCard(db, 'ev_crossing', 'night_minus_2') !== 'seated') fail('ev_crossing refused');
+  if (useGameStore.getState().state.flags['rail_complete']) fail('rail completed early — night_minus_5 must wait for Day 6');
   const cx2 = layOnDesk(db, 'ferris_testimony', 'poppys_checklist');
   if (cx2.kind !== 'contradiction' || cx2.id !== 'cx_two_keys') fail('cx_two_keys did not fire');
   pinCard('ferris_testimony', 900, 300);
@@ -525,6 +553,7 @@ async function runCurious(seed: number): Promise<void> {
         const effects: import('../app/src/engine/effects').Effect[] = [];
         if (hotspot.detail.card) effects.push({ giveCard: hotspot.detail.card });
         if (hotspot.detail.question) effects.push({ notebook: { question: hotspot.detail.question } });
+        if (hotspot.detail.flag) effects.push({ setFlag: hotspot.detail.flag });
         if (effects.length) game.runEffects(effects);
         interactions++;
       } else if (hotspot.kind === 'talk' && hotspot.character) {

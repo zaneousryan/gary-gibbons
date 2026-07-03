@@ -199,6 +199,18 @@ function main() {
       err(file, `railSlot "${card.railSlot}" not in timeline.json`);
     }
   }
+  if (db.timeline?.compositePair) {
+    for (const c of db.timeline.compositePair) {
+      checkCard(c, 'timeline.json compositePair');
+      if (db.cards[c] && db.cards[c].type !== 'event') {
+        err('timeline.json compositePair', `"${c}" must be an event card`);
+      }
+    }
+    const [a, b] = db.timeline.compositePair;
+    if (db.cards[a] && db.cards[b] && db.cards[a].railSlot !== db.cards[b].railSlot) {
+      err('timeline.json compositePair', 'pair members must share a rail slot (III.22.5 — same minute, two vantages)');
+    }
+  }
   for (const ded of db.deductions.deductions) {
     const where = `deductions.json ${ded.id}`;
     ded.inputs.forEach((c) => {

@@ -9,11 +9,20 @@
       "line": "I don't like saying it, pet. But three nights back, His Guardianship sat in that corner nursing one (1) sherry and said — and I quote, because I always quote — \"I'm not certain the boy is ready.\" Now what does a man mean by that, the week the boy takes his chair?",
       "authored": "verbatim",
       "emote": "worried",
+      "next": "c1b"
+    },
+    "c1b": {
+      "speaker": "margie",
+      "line": "That's between us and the sherry, pet.",
+      "authored": "verbatim",
+      "emote": "neutral",
+      "offRecord": true,
       "effects": [
-        { "giveCard": "margies_testimony", "status": "verified" },
+        { "giveCard": "margies_testimony" },
         { "notebook": { "entry": "nb_margies_testimony" } },
         { "playBark": "gary_inner_margie_or" }
       ],
+      "ref": "III.23.1",
       "next": "c2"
     },
     "c2": {

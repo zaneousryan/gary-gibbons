@@ -233,6 +233,7 @@ function interact(db: ContentDB, hotspot: Hotspot) {
       const effects: Effect[] = [];
       if (detail.card) effects.push({ giveCard: detail.card });
       if (detail.question) effects.push({ notebook: { question: detail.question } });
+      if (detail.flag) effects.push({ setFlag: detail.flag });
       if (effects.length) game.runEffects(effects);
       return;
     }

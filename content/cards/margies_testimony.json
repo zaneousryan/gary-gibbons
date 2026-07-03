@@ -5,8 +5,17 @@
   "title": "Margie's testimony — 'not certain the boy is ready'",
   "sprite": "card_margies_testimony",
   "source": "margie",
-  "initialStatus": "verified",
-  "text": "Three nights before the ceremony, the Guardian nursed one (1) sherry and said he wasn't certain the boy was ready. Margie always quotes exactly. The town's whisper mill has done the rest.",
-  "verifyRoutes": [],
+  "initialStatus": "offrecord",
+  "text": "Three nights before the ceremony: 'I'm not certain the boy is ready.' One (1) sherry, quoted exactly - and between us and the sherry, pet. Knowledge, not yet publishable proof.",
+  "verifyRoutes": [
+    {
+      "id": "warren_admits",
+      "ref": "I.5.day3",
+      "cond": {
+        "flag": "warren_confirmed_doubt"
+      },
+      "hint": "Margie's quote is hers to keep. The doubt itself belongs to the man who said it - ask HIM."
+    }
+  ],
   "reReadLines": []
 }

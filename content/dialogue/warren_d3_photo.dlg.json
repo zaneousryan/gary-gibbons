@@ -27,7 +27,6 @@
       "emote": "neutral",
       "effects": [
         { "giveCard": "night_photograph", "status": "verified" },
-        { "giveCard": "ev_photo_night", "status": "verified" },
         { "notebook": { "entry": "nb_night_photo" } },
         { "playBark": "gary_inner_whose_tail" }
       ],

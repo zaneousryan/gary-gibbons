@@ -46,6 +46,7 @@
       "speaker": "narrator",
       "line": "An eleven-second pause. Her glasses fog, feather by feather she fluffs a full size — and then the dam bursts.",
       "authored": "aletheia",
+      "effects": [{ "setFlag": "noticed_fogged_glasses" }],
       "next": "c6"
     },
     "c6": {
