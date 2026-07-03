@@ -5,6 +5,7 @@ import { useState } from 'react';
 import type { ContentDB } from '@content/contentDb';
 import { useGameStore } from '@engine/store';
 import { SaveService, defaultStorage } from '@engine/save/saveService';
+import { askGrandpa } from '@systems/hints';
 import { useUiStore } from './uiStore';
 
 const saveService = new SaveService(defaultStorage());
@@ -14,6 +15,7 @@ export default function Hud({ db }: { db: ContentDB }) {
   const day = useGameStore((s) => s.state.day);
   const phase = useGameStore((s) => s.state.phase);
   const location = useGameStore((s) => s.state.location);
+  const game = useGameStore((s) => s.game);
   const showToast = useUiStore((s) => s.showToast);
   const [busy, setBusy] = useState(false);
 
@@ -60,6 +62,37 @@ export default function Hud({ db }: { db: ContentDB }) {
         >
           📓 Notebook
         </button>
+        {phase === 'night' && location === game?.apartmentLocation ? (
+          <button
+            onClick={() => useUiStore.getState().toggleBoard()}
+            data-testid="hud-board"
+            className="bg-amber text-ink border-2 border-ink rounded px-3 py-2 font-bold cursor-pointer hover:brightness-110"
+          >
+            📌 The Board
+          </button>
+        ) : (
+          <button
+            onClick={() => useUiStore.getState().toggleRecap()}
+            data-testid="hud-recap"
+            className="bg-cream text-ink border-2 border-ink rounded px-3 py-2 font-bold cursor-pointer hover:brightness-95"
+          >
+            🗂 Recap
+          </button>
+        )}
+        {phase === 'night' && game && (
+          <button
+            onClick={() => {
+              const hint = askGrandpa(db, game);
+              if (hint) useUiStore.getState().showGrandpaHint(hint);
+              else showToast('The badge is quiet. Gary already knows what to do — he just has to do it.');
+            }}
+            data-testid="hud-badge"
+            className="bg-ink/85 text-amber border-2 border-amber/70 rounded px-3 py-2 font-bold cursor-pointer hover:brightness-125"
+            title="Ask Grandpa"
+          >
+            🎖
+          </button>
+        )}
         <button
           onClick={doAdvance}
           data-testid="hud-advance"

@@ -88,6 +88,11 @@ export const useGameStore = create<GameStore>()(
       set((s) => {
         s.state.day = result.next!.day as Day;
         s.state.phase = result.next!.phase as Phase;
+        // "Send Them Home" (I.5): every day ends at Gary's apartment — night
+        // always opens at the board's side of the room
+        if (result.next!.phase === 'night' && s.game) {
+          s.state.location = s.game.apartmentLocation;
+        }
         // persist the RNG stream position across the transition
         s.state.rngSeed = s.rng.state;
       });

@@ -87,8 +87,64 @@ export default function DevMenu({ db }: { db: ContentDB }) {
         </button>
       </div>
 
+      <div>
+        <div className="opacity-70 mb-1">Board</div>
+        <div className="flex flex-wrap gap-1">
+          <button
+            className="px-2 py-0.5 border border-cream/40 rounded cursor-pointer hover:bg-dusk"
+            data-testid="dev-stress-pins"
+            onClick={() => {
+              // 60-pin perf stress case (spec §14, verifier requirement)
+              useGameStore.setState((s) => {
+                for (let i = 0; i < 60; i++) {
+                  const id = `stress_card_${i}`;
+                  if (!s.state.cards[id]) {
+                    s.state.cards[id] = { status: 'unverified', discoveredVia: 'dev', readCount: 0 };
+                  }
+                  if (!s.state.board.pins.some((p) => p.cardId === id)) {
+                    s.state.board.pins.push({ cardId: id, x: 80 + (i % 10) * 120, y: 80 + Math.floor(i / 10) * 95 });
+                  }
+                  if (i > 0 && i % 3 === 0) {
+                    s.state.board.strings.push({ from: `stress_card_${i - 1}`, to: id, kind: 'red' });
+                  }
+                }
+              });
+            }}
+          >
+            stress: 60 pins
+          </button>
+          <button
+            className="px-2 py-0.5 border border-cream/40 rounded cursor-pointer hover:bg-dusk"
+            onClick={() => {
+              useGameStore.setState((s) => {
+                s.state.board.pins = s.state.board.pins.filter((p) => !p.cardId.startsWith('stress_card_'));
+                s.state.board.strings = s.state.board.strings.filter(
+                  (st) => !st.from.startsWith('stress_card_') && !st.to.startsWith('stress_card_'),
+                );
+                for (const k of Object.keys(s.state.cards)) {
+                  if (k.startsWith('stress_card_')) delete s.state.cards[k];
+                }
+              });
+            }}
+          >
+            clear stress
+          </button>
+          <button
+            className="px-2 py-0.5 border border-cream/40 rounded cursor-pointer hover:bg-dusk"
+            onClick={() => {
+              useGameStore.setState((s) => {
+                s.state.board.deductions = [];
+                s.state.board.strings = s.state.board.strings.filter((st) => st.kind !== 'gold');
+              });
+            }}
+          >
+            replay deductions
+          </button>
+        </div>
+      </div>
+
       <div className="opacity-70">
-        flags: {Object.keys(state.flags).length} · cards: {Object.keys(state.cards).length} · questions: {state.notebook.questions.length}
+        flags: {Object.keys(state.flags).length} · cards: {Object.keys(state.cards).length} · questions: {state.notebook.questions.length} · deductions: {state.board.deductions.length}
       </div>
     </div>
   );

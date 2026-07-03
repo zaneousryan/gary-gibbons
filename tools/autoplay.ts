@@ -12,6 +12,8 @@ import { useGameStore } from '../app/src/engine/store';
 import { useDialogueStore, selectDialogueFor } from '../app/src/systems/dialogue';
 import { installTriggerWatcher } from '../app/src/systems/triggers';
 import { installNotebookWatcher } from '../app/src/systems/notebook';
+import { connectCards, pinCard, resetBoardSession } from '../app/src/systems/board';
+import { askGrandpa } from '../app/src/systems/hints';
 import { SaveService, MemoryStorage } from '../app/src/engine/save/saveService';
 import { bus } from '../app/src/engine/eventBus';
 import type { ContentDB } from '../app/src/content/contentDb';
@@ -85,6 +87,7 @@ async function runOnce(seed: number): Promise<string[]> {
   const unsubLog = bus.on('*', (e) => log.push(`${e.type} ${JSON.stringify(e.payload)}`));
   const unsubTriggers = installTriggerWatcher(db);
   const unsubNotebook = installNotebookWatcher(db);
+  resetBoardSession();
 
   const game = useGameStore.getState();
   game.setGameDef(def);
@@ -168,12 +171,48 @@ async function runOnce(seed: number): Promise<string[]> {
   if (before !== after) fail('reloaded state differs from saved state');
   log.push('save/reload verified byte-identical (meta aside)');
 
-  // --- night, then day 2 ---
+  // --- night 1: Send Them Home + the tutorial board (I.5 night 1, I.6.D1) ---
   if (!game.advancePhase()) fail('evening->night advance failed');
-  if (!game.advancePhase()) fail('night gate blocked despite empty gateDeductions');
+  if (useGameStore.getState().state.location !== db.game.apartmentLocation) {
+    fail('night did not send Gary home (I.5 Send Them Home)');
+  }
+  if (game.advancePhase()) fail('night gate opened without d1_emptied_before');
+
+  // pin the night-1 cards
+  for (const [i, card] of ['empty_vault', 'unforced_lock', 'fifty_years_of_items', 'grandpas_package'].entries()) {
+    if (!pinCard(card, 200 + i * 240, 220)) fail(`could not pin ${card}`);
+  }
+  // Ask Grandpa produces an ordered hint while the gate is unmet
+  const hint = askGrandpa(db, def);
+  if (!hint || !hint.includes('room told everyone')) fail(`unexpected first grandpa hint: ${hint}`);
+
+  // wrong pair first: red string + bark, never a deduction
+  const miss = connectCards(db, ['empty_vault', 'grandpas_package']);
+  if (miss.kind !== 'miss') fail(`expected miss on wrong pair, got ${miss.kind}`);
+
+  // red pen tutorial deduction (unverified inputs allowed by recipe)
+  pinCard('dots_missing_pens', 900, 420);
+  pinCard('milos_crimes_notebook', 1100, 420);
+  const pens = connectCards(db, ['dots_missing_pens', 'milos_crimes_notebook']);
+  if (pens.kind !== 'deduction' || pens.deduction.id !== 'ded_red_pen_bandit') {
+    fail(`red pen recipe failed: ${JSON.stringify(pens)}`);
+  }
+
+  // D1 — the gate deduction
+  const d1 = connectCards(db, ['empty_vault', 'unforced_lock']);
+  if (d1.kind !== 'deduction' || d1.deduction.id !== 'd1_emptied_before') {
+    fail(`D1 recipe failed: ${JSON.stringify(d1)}`);
+  }
+  assertCard('ded_emptied_before', 'verified');
+  const goldStrings = useGameStore.getState().state.board.strings.filter((s) => s.kind === 'gold');
+  if (goldStrings.length < 2) fail('gold strings not tied for both deductions');
+  log.push('night 1 board: hint, wrong-pair bark, red-pen tutorial, D1 unlocked');
+
+  // gate now opens into day 2
+  if (!game.advancePhase()) fail('night gate still blocked after D1');
   const d2 = useGameStore.getState().state;
   if (d2.day !== 2 || d2.phase !== 'morning') fail(`expected day 2 morning, got day ${d2.day} ${d2.phase}`);
-  log.push(`clock verified through night -> day ${d2.day}`);
+  log.push(`clock verified through gated night -> day ${d2.day}`);
 
   unsubLog();
   unsubTriggers();

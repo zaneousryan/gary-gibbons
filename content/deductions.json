@@ -1,5 +1,27 @@
 {
-  "deductions": [],
+  "deductions": [
+    {
+      "id": "ded_red_pen_bandit",
+      "ref": "II.17.1",
+      "kind": "standard",
+      "inputs": ["dots_missing_pens", "milos_crimes_notebook"],
+      "requireVerified": false,
+      "requireOnRecordForFinale": false,
+      "produces": { "card": "ded_red_pens" },
+      "garyLine": "bark_ded_red_pens"
+    },
+    {
+      "id": "d1_emptied_before",
+      "ref": "I.6.D1",
+      "kind": "standard",
+      "inputs": ["empty_vault", "unforced_lock"],
+      "requireVerified": true,
+      "requireOnRecordForFinale": false,
+      "produces": { "card": "ded_emptied_before" },
+      "garyLine": "bark_ded_emptied_before"
+    }
+  ],
+  "wrongPairBarks": "wrong_pairs",
   "theories": [],
   "contradictions": []
 }

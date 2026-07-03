@@ -1,0 +1,12 @@
+{
+  "ref": "II.16.1",
+  "slots": [
+    { "id": "night_minus_5", "label": "NIGHT −5", "order": 1 },
+    { "id": "night_minus_4", "label": "NIGHT −4", "order": 2 },
+    { "id": "night_minus_3", "label": "NIGHT −3", "order": 3 },
+    { "id": "night_minus_2", "label": "NIGHT −2", "order": 4 },
+    { "id": "night_minus_1", "label": "NIGHT −1", "order": 5 },
+    { "id": "ceremony", "label": "CEREMONY", "order": 6 }
+  ],
+  "completionCinematic": "rail_chronology"
+}

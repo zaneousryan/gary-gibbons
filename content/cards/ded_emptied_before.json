@@ -1,0 +1,12 @@
+{
+  "id": "ded_emptied_before",
+  "ref": "I.6.D1",
+  "type": "deduction",
+  "title": "Emptied BEFORE the ceremony — by key",
+  "sprite": "card_ded_emptied_before",
+  "source": "gary",
+  "initialStatus": "verified",
+  "text": "The vault was already empty when the whole district watched it open, and the lock never complained. No break-in. A key turned, sometime before tonight. Which raises the morning's question: who had key access?",
+  "verifyRoutes": [],
+  "reReadLines": []
+}

@@ -1,0 +1,20 @@
+{
+  "pool": "wrong_pairs",
+  "barks": [
+    { "id": "wp_dont_rhyme", "text": "No... those two don't rhyme.", "speaker": "gary", "authored": "verbatim", "ref": "I.6", "tags": [] },
+    { "id": "wp_almost", "text": "Almost. The string wants to be somewhere, just not there.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] },
+    { "id": "wp_grandpa_hunch", "text": "Grandpa always said a hunch is a fact you haven't earned yet. This one I haven't even met.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] },
+    { "id": "wp_sags", "text": "The string sags like it's embarrassed for me. Fair.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] },
+    { "id": "wp_headline", "text": "LOCAL REPORTER CONNECTS TWO UNRELATED THINGS — town unimpressed, string exhausted.", "speaker": "gary", "authored": "aletheia", "ref": "II.19.3", "tags": [] },
+    { "id": "wp_tea_first", "text": "Nope. Maybe after tea. Some strings only tie after tea.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] },
+    { "id": "wp_wrong_wall", "text": "If that were true, half my other cards would be lying. Cards don't lie. Reporters just read them wrong.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] },
+    { "id": "wp_kettle_agrees", "text": "No. And the kettle whistled right when I tried it, which felt like an opinion.", "speaker": "gary", "authored": "aletheia", "ref": "II.19.3", "tags": [] },
+    { "id": "wp_sideways", "text": "That's not a connection, that's two pins sharing a wall. Neighbors, not family.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] },
+    { "id": "wp_sleep_on_it", "text": "Mm. If I still believe that in the morning, I'll owe the board an apology.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] },
+    { "id": "wp_question_under", "text": "Ask the question under the question, Gibbons. That one was just the question on top.", "speaker": "gary", "authored": "aletheia", "ref": "III.28", "tags": [] },
+    { "id": "wp_not_yet", "text": "Not yet. Some pairs are true and still not ready. This one's neither.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] },
+    { "id": "wp_generous", "text": "That's generous thinking. Generous like putting a hat on a lamppost.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] },
+    { "id": "wp_editor_voice", "text": "I can hear Dot already: 'Sell me that in one sentence.' I could not sell that in a paragraph.", "speaker": "gary", "authored": "aletheia", "ref": "II.16.6", "tags": [] },
+    { "id": "wp_string_budget", "text": "No. And I'm starting to think the string budget should count against me personally.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": [] }
+  ]
+}

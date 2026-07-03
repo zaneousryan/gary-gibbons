@@ -103,6 +103,29 @@ test('day 1 ceremony set-piece fires at the square', async ({ page }) => {
   await page.getByTestId('hud-notebook').click();
   await page.getByTestId('notebook-tab-questions').click();
   await expect(page.getByTestId('notebook-question-q_who_emptied_the_capsule')).toBeVisible();
+  await page.getByTestId('notebook-close').click();
+
+  // night 1: "Later" sends Gary home; the gate holds until D1 is deduced
+  await page.getByTestId('hud-advance').click();
+  await expect(page.getByTestId('hud-clock')).toContainText('night');
+  await expect(page.getByTestId('hud-location')).toHaveText("Gary's Apartment");
+  await page.getByTestId('hud-advance').click(); // blocked
+  await expect(page.getByTestId('hud-clock')).toContainText('Day 1');
+
+  // the board: pin the two D1 cards from the tray, hold them, tie the string
+  await page.getByTestId('hud-board').click();
+  await expect(page.getByTestId('board')).toBeVisible();
+  await page.getByTestId('tray-empty_vault').click();
+  await page.getByTestId('tray-unforced_lock').click();
+  await page.getByTestId('pin-empty_vault').click();
+  await page.getByTestId('pin-unforced_lock').click();
+  await page.getByTestId('board-tie').click();
+  await expect(page.getByTestId('deduction-flash')).toBeVisible({ timeout: 5_000 });
+  await page.getByTestId('board-close').click();
+
+  // gate opens: night -> day 2 morning
+  await page.getByTestId('hud-advance').click();
+  await expect(page.getByTestId('hud-clock')).toContainText('Day 2');
 });
 
 test('examine and phase advance', async ({ page }) => {

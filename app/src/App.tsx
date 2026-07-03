@@ -8,6 +8,8 @@ import { useGameStore } from '@engine/store';
 import type { GameDef } from '@engine/clock';
 import type { Day, Phase } from '@engine/types';
 import PixiStage from '@scenes/PixiStage';
+import Board from '@ui/Board';
+import { PocketRecap, GrandpaModal } from '@ui/BoardExtras';
 import DialogueBox from '@ui/DialogueBox';
 import Hud from '@ui/Hud';
 import Notebook from '@ui/Notebook';
@@ -74,6 +76,9 @@ export default function App() {
       <Hud db={db} />
       <DialogueBox db={db} />
       <Notebook db={db} />
+      <Board db={db} />
+      <PocketRecap db={db} />
+      <GrandpaModal />
       <InnerVoice />
       <ExaminePanel />
       <Toast />

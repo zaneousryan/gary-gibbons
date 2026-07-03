@@ -184,6 +184,30 @@
       "authored": "aletheia",
       "ref": "I.4",
       "tags": []
+    },
+    {
+      "id": "bark_ded_emptied_before",
+      "text": "There it is. The capsule was emptied before the ceremony — and whoever did it used a key. The story isn't 'what happened tonight.' It's 'what happened before tonight.'",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "I.6.D1",
+      "tags": []
+    },
+    {
+      "id": "bark_ded_red_pens",
+      "text": "One pen a shift, one very red notebook. Case closed, no byline needed. Tomorrow I buy that kid his own pens — the good kind, so the crime wave retires with dignity.",
+      "speaker": "gary",
+      "authored": "aletheia",
+      "ref": "II.17.1",
+      "tags": []
+    },
+    {
+      "id": "gary_inner_promised",
+      "text": "A reporter who burns a source gets one story. A reporter who keeps a promise gets a town.",
+      "speaker": "gary",
+      "authored": "verbatim",
+      "ref": "III.23.1",
+      "tags": []
     }
   ]
 }
