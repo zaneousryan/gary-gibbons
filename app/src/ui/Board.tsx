@@ -82,7 +82,7 @@ function BoardTutorial({ db }: { db: ContentDB }) {
       className="absolute top-2 left-1/2 -translate-x-1/2 z-10 w-[min(680px,80%)] bg-cream border-4 border-ink rounded-lg shadow-2xl p-3 rotate-[-0.5deg]"
       data-testid="board-tutorial"
     >
-      <div className="text-[10px] tracking-[0.3em] font-bold text-ink/50 uppercase">Grandpa's board — first night</div>
+      <div className="text-[10px] tracking-[0.3em] font-bold text-ink/50 uppercase">The board — first night</div>
       <p className="text-ink italic leading-snug mt-1" data-testid={current.testid}>
         {tutLine(db, current.bark)}
       </p>

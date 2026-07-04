@@ -1,10 +1,10 @@
 {
   "pool": "board_tutorial",
   "barks": [
-    { "id": "tut_sit", "text": "Okay. Grandpa's board. He'd sit here every night with his coffee going cold and say: a story you can't SEE isn't a story yet, it's a rumor with a byline.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": ["tutorial"] },
+    { "id": "tut_sit", "text": "Okay. The board. Grandpa always said a story you can't SEE isn't a story yet — it's a rumor with a byline. Time to see one.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": ["tutorial"] },
     { "id": "tut_pin", "text": "First rule: everything I learned today goes on the cork. Doesn't matter how small. Pin it. Let's start easy — the case of Dot's disappearing red pens. Pin what I know.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.1", "tags": ["tutorial"] },
     { "id": "tut_pin2", "text": "Good. Now the other half. A fact alone is just lonely. Pin the notebook — the one labeled CRIMES, question mark, written entirely in urgent red ink.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.1", "tags": ["tutorial"] },
-    { "id": "tut_string", "text": "Here's the whole job, kid — Grandpa's words, not mine: when two things SUPPORT each other, you tie them together. Hold both cards, tie the string, and see if the story clicks.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": ["tutorial"] },
+    { "id": "tut_string", "text": "Here's the whole job, son — Grandpa's words, not mine: when two things SUPPORT each other, you tie them together. Hold both cards, tie the string, and see if the story clicks.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": ["tutorial"] },
     { "id": "tut_click", "text": "THERE. Hear that? That's the click. Missing pens plus a kid who writes in nothing but red — that's not two facts anymore, that's a STORY. Gold string means it holds.", "speaker": "gary", "authored": "aletheia", "ref": "II.17.1", "tags": ["tutorial"] },
     { "id": "tut_questions", "text": "One more thing. Those index cards along the bottom — my open questions, in my own handwriting, with slots for what each answer still needs. When a question's slots fill up, tie its cards and the story clicks. That's the loop. Every night, same loop.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": ["tutorial"] },
     { "id": "tut_skip_ack", "text": "Right. You know the drill. The cork remembers even when I don't.", "speaker": "gary", "authored": "aletheia", "ref": "I.6", "tags": ["tutorial"] },
