@@ -249,3 +249,27 @@ Full game playable boot->credits in the browser (npm run dev), deterministic, ga
 
 ### Addendum 2026-07-03 (morning) — Native build VERIFIED
 Rust + MSVC Build Tools installed by Ryan. Two packaging fixes landed: productName colon (Windows filename rule) and the startup panic (v1-style plugins.fs.scope -> Tauri 2 capabilities/default.json scoped to $APPDATA/saves). Placeholder icon generated (tools/gen-icon.ts — lantern in ivy, wax drips). **Evidence: release gary-gibbons.exe (4.6 MB) alive 10s+ and closed cleanly; bundles produced: msi (2.8 MB) + nsis setup (2.3 MB) under src-tauri/target/release/bundle/. The game is now a shippable Windows app.**
+
+---
+
+## 2026-07-04 — PLAYTEST REVISION ROUND 1 — DONE (canon changes, Ryan-directed)
+
+Source: Ryan playtest directive 2026-07-04. Logged as **DQ-5 + DQ-6, both RESOLVED** in design-questions.md.
+
+### Revision 1 — Interview presentation (replaces walk-to-talk)
+Conversations are no longer spatial. Talk-clicks (mouse and keyboard) enter INTERVIEW MODE immediately from anywhere in the room - composed close-up two-shot (NPC portrait left, Gary mirrored right) over the current location's phase-correct art, blurred + ink-washed; the speaker leans in (opacity + scale), emotes track dialogue data; fade/soft-zoom entry honors reduce-motion; exit restores the scene exactly (Gary never moved; clock untouched). Narrator set-pieces stay full-scene; ambient greetings/vox pops stay in-scene. DialogueBox suppresses its thumbnail during interviews. Walking remains for traversal + examinables only.
+
+### Revision 2 — Board legibility (tutorial + visible recipes)
+(a) NIGHT 1 BOARD TUTORIAL - first board open ever, Gary teaches pin -> string -> click in his own voice (8 aletheia lines, board_tutorial pool), performed FOR REAL on the Red Pen Bandit; action steps advance by watching game state; skippable at every step; words-only degradation if the tutorial cards are missing; completion flag persists in saves.
+(b) OPEN QUESTIONS strip - index cards along the board's bottom edge: 15 authored recipe questions in Gary's words (schema gains optional `question`), silhouette input slots (empty / pencil-needs-verifying / ready), tonight's gate starred and sorted first, non-gate questions appear once partially owned, retire when the story clicks. The 3 aha recipes carry no question and never surface - surprises stay surprises. Wrong pairs keep sag + bark and now pulse the strip with Gary's glance line. Ask-Grandpa gating unchanged.
+
+### gg-content-reviewer verdict
+**LGTM** (after 1 round - 3 gaps, all fixed and independently re-verified in the diff): invented Archie board-ownership lore removed from tut_sit + Board header (only the sanctioned "Grandpa always said: X" device remains); "kid" -> "son" in the quoted Grandpa line per the standing address-term ruling; d5_lodger's question no longer leaks the 2 a.m. hour that belongs to Milo's Day 6 disclosure. Note for Ryan: read tut_sit aloud once for rhythm ("Time to see one.").
+
+### gg-verifier verdict (evidence summary)
+**PASS** - validator 0 errors/5 known warnings (11 bark pools); 70/70 tests (2 new open-questions cases); autoplay 595 lines deterministic x2 (unchanged - diff provably touches no autoplay-driven path); curious sweep clean; build clean; e2e 5/5 including the rewritten ceremony test that plays Night 1 unaided through the tutorial. HAND-DRIVE: clicked Milo from 590px away - interview mode in <200ms, before/after screenshots pixel-identical on Gary's position, clock string-equal, keyboard path identical; tutorial soft-lock impossible (skip rendered on every step, words-only fallback, flag via runEffects); engine/save layer untouched (no migration needed); ID freeze additive-only; Math.random clean; Cut List clean.
+
+### Acceptance vs. directive
+- Start a conversation from anywhere / no pathing / clean enter+exit / scene+time preserved: verified by hand-drive and e2e.
+- First-time player completes Night 1 unaided: the ceremony e2e now does exactly this (tutorial cycle on red pens, then D1 via the starred open question).
+- Autoplayer passes, validator green, reviewer LGTM, verifier PASS: all above.
