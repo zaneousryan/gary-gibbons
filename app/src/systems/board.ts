@@ -166,6 +166,43 @@ export function unlockDeduction(db: ContentDB, ded: Deduction): void {
   checkTheoryRetirements(db);
 }
 
+// ---------- open questions strip (playtest revision 2, 2026-07-04) ----------
+
+export type SlotState = 'empty' | 'unverified' | 'ready';
+
+export interface PendingDeduction {
+  id: string;
+  question: string;
+  /** Tonight's gate deductions sort first and wear the star. */
+  gate: boolean;
+  /** One entry per required input — silhouette only, contents never spoiled. */
+  slots: SlotState[];
+}
+
+/**
+ * The board's Open Questions: recipes that carry an authored question (aha
+ * bonuses never do — surprises stay surprises), aren't produced yet, and are
+ * either gating tonight or already partially owned. Slots fill as matching
+ * cards are owned; owned-but-unverified shows as a pencil outline.
+ */
+export function pendingDeductions(db: ContentDB, gateIds: string[]): PendingDeduction[] {
+  const state = useGameStore.getState().state;
+  const owned = new Set(state.board.deductions);
+  const out: PendingDeduction[] = [];
+  for (const ded of db.deductions.deductions) {
+    if (!ded.question || owned.has(ded.id)) continue;
+    const gate = gateIds.includes(ded.id);
+    const slots: SlotState[] = ded.inputs.map((input) => {
+      const held = state.cards[input];
+      if (!held) return 'empty';
+      return held.status === 'verified' ? 'ready' : 'unverified';
+    });
+    if (!gate && !slots.some((s) => s !== 'empty')) continue;
+    out.push({ id: ded.id, question: ded.question, gate, slots });
+  }
+  return out.sort((a, b) => Number(b.gate) - Number(a.gate));
+}
+
 // ---------- timeline rail (II.16.1) ----------
 
 export type RailResult = 'seated' | 'composite' | 'no-anchor' | 'occupied' | 'not-event' | 'complete';

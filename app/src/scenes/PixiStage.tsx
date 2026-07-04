@@ -319,6 +319,13 @@ export default function PixiStage({ db }: { db: ContentDB }) {
         const point = refs.world.toLocal(e.global);
         const hs = refs.hotspotViews.find((h) => Math.hypot(h.x - point.x, h.y - point.y) < 60);
         if (hs) {
+          // conversations are not spatial (playtest revision 1, 2026-07-04):
+          // talking enters interview mode from anywhere in the room — Gary
+          // stays where he stands. Walking is for traversal and examinables.
+          if (hs.hotspot.kind === 'talk') {
+            interact(db, hs.hotspot);
+            return;
+          }
           walkTo(hs.x, () => interact(db, hs.hotspot));
         } else if (refs.sitSpot && Math.hypot(refs.sitSpot.x - point.x, refs.sitSpot.y - point.y) < 60) {
           const sit = refs.sitSpot;
@@ -337,7 +344,10 @@ export default function PixiStage({ db }: { db: ContentDB }) {
           refs.focusIndex = (refs.focusIndex + 1) % refs.hotspotViews.length;
         } else if (e.key === 'Enter' && refs.focusIndex >= 0) {
           const h = refs.hotspotViews[refs.focusIndex];
-          if (h) walkTo(h.x, () => interact(db, h.hotspot));
+          if (h) {
+            if (h.hotspot.kind === 'talk') interact(db, h.hotspot);
+            else walkTo(h.x, () => interact(db, h.hotspot));
+          }
         }
       };
       window.addEventListener('keydown', onKey);

@@ -111,11 +111,21 @@ test('day 1 ceremony set-piece fires at the square', async ({ page }) => {
   await expect(page.getByTestId('hud-location')).toHaveText("Gary's Apartment", { timeout: 20_000 });
   await waitForScene(page, 'gary_apartment');
 
-  // walk: apartment → percolator → market row → founders' square
+  // walk: apartment → percolator (Dot: the red-pens case — tutorial fodder)
   await clickStage(page, 1760, 820);
   await waitForScene(page, 'the_percolator');
+  await clickStage(page, 820, 800); // interview mode: no pathing, immediate
+  await expect(page.getByTestId('interview-mode')).toBeVisible({ timeout: 10_000 });
+  await playConversation(page);
+  await expect(page.getByTestId('interview-mode')).not.toBeVisible();
+
+  // → market row (Milo: the CRIMES? notebook)
   await clickStage(page, 1760, 820);
   await waitForScene(page, 'market_row');
+  await clickStage(page, 1550, 800);
+  await playConversation(page);
+
+  // → founders' square
   await clickStage(page, 1760, 820);
   await waitForScene(page, 'founders_square');
   await expect(page.getByTestId('hud-location')).toHaveText("Founders' Square");
@@ -155,15 +165,42 @@ test('day 1 ceremony set-piece fires at the square', async ({ page }) => {
   await expect(page.getByTestId('paper-published')).toBeVisible({ timeout: 5_000 });
   await page.getByTestId('paper-close').click();
 
-  // second movement: the board — pin the two D1 cards, hold them, tie the string
+  // second movement: the board. First open ever → Gary teaches the loop
+  // (playtest revision 2) using the Red Pen Bandit — a real pin→string→click
+  // cycle, unaided, before the real case.
   await page.getByTestId('hud-board').click();
   await expect(page.getByTestId('board')).toBeVisible();
+  await expect(page.getByTestId('board-tutorial')).toBeVisible();
+  await expect(page.getByTestId('tut-sit')).toBeVisible();
+  await page.getByTestId('tut-next').click();
+  await expect(page.getByTestId('tut-pin')).toBeVisible();
+  await page.getByTestId('tray-dots_missing_pens').click(); // tutorial advances by watching state
+  await expect(page.getByTestId('tut-pin2')).toBeVisible();
+  await page.getByTestId('tray-milos_crimes_notebook').click();
+  await expect(page.getByTestId('tut-string')).toBeVisible();
+  await page.getByTestId('pin-dots_missing_pens').click();
+  await page.getByTestId('pin-milos_crimes_notebook').click();
+  await page.getByTestId('board-tie').click();
+  await expect(page.getByTestId('deduction-flash')).toBeVisible({ timeout: 5_000 });
+  await expect(page.getByTestId('tut-click')).toBeVisible();
+  await page.getByTestId('tut-next').click();
+  await expect(page.getByTestId('tut-questions')).toBeVisible();
+  await page.getByTestId('tut-done').click();
+  await expect(page.getByTestId('board-tutorial')).not.toBeVisible();
+  await expect(page.getByTestId('deduction-flash')).not.toBeVisible({ timeout: 6_000 });
+
+  // the Open Questions strip shows tonight's gate with its slots ready
+  await expect(page.getByTestId('open-q-d1_emptied_before')).toBeVisible();
+
+  // now the real case: pin the two D1 cards, hold them, tie the string
   await page.getByTestId('tray-empty_vault').click();
   await page.getByTestId('tray-unforced_lock').click();
   await page.getByTestId('pin-empty_vault').click();
   await page.getByTestId('pin-unforced_lock').click();
   await page.getByTestId('board-tie').click();
   await expect(page.getByTestId('deduction-flash')).toBeVisible({ timeout: 5_000 });
+  // its open question retires from the strip once the story clicks
+  await expect(page.getByTestId('open-q-d1_emptied_before')).not.toBeVisible();
   await page.getByTestId('board-close').click();
 
   // gate opens: night -> day 2 morning, where Morning Pages waits (III.26)

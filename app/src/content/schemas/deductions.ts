@@ -27,6 +27,12 @@ export const DeductionSchema = z
     garyLine: IdSchema.optional(),
     /** Aha deductions get a cinematic key (III.22). */
     cinematic: IdSchema.optional(),
+    /**
+     * The recipe's question in Gary's words, shown on the board's Open
+     * Questions strip (playtest revision 2, 2026-07-04). Recipes WITHOUT a
+     * question never appear on the strip — aha bonuses stay surprises.
+     */
+    question: z.string().optional(),
   })
   .strict();
 

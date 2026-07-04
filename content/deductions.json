@@ -13,7 +13,8 @@
       "produces": {
         "card": "ded_red_pen_bandit"
       },
-      "garyLine": "bark_ded_red_pen_bandit"
+      "garyLine": "bark_ded_red_pen_bandit",
+      "question": "Who keeps stealing Dot's red pens?"
     },
     {
       "id": "d1_emptied_before",
@@ -28,7 +29,8 @@
       "produces": {
         "card": "ded_emptied_before"
       },
-      "garyLine": "bark_ded_emptied_before"
+      "garyLine": "bark_ded_emptied_before",
+      "question": "How do you rob a vault without breaking in?"
     },
     {
       "id": "d2_borrowed_recently",
@@ -43,7 +45,8 @@
       "produces": {
         "card": "ded_borrowed_recently"
       },
-      "garyLine": "bark_ded_borrowed_recently"
+      "garyLine": "bark_ded_borrowed_recently",
+      "question": "Who moved the Ceremonial Key - and when?"
     },
     {
       "id": "d3_theft_window",
@@ -58,7 +61,8 @@
       "produces": {
         "card": "ded_theft_window"
       },
-      "garyLine": "bark_ded_theft_window"
+      "garyLine": "bark_ded_theft_window",
+      "question": "How wide is the window when the theft could have happened?"
     },
     {
       "id": "poppy_opened_not_emptied",
@@ -73,7 +77,8 @@
       "produces": {
         "card": "ded_poppy_opened_not_emptied"
       },
-      "garyLine": "bark_ded_poppy_cleared"
+      "garyLine": "bark_ded_poppy_cleared",
+      "question": "Poppy had the key. Did Poppy take the treasure?"
     },
     {
       "id": "careful_hands",
@@ -106,7 +111,8 @@
         "card": "ded_warren_cleared",
         "clearSuspect": "warren"
       },
-      "garyLine": "bark_ded_warren_cleared"
+      "garyLine": "bark_ded_warren_cleared",
+      "question": "Warren doubted the boy. Does doubt make him a thief?"
     },
     {
       "id": "d5_lodger",
@@ -121,7 +127,8 @@
       "produces": {
         "card": "ded_lodger"
       },
-      "garyLine": "bark_ded_lodger"
+      "garyLine": "bark_ded_lodger",
+      "question": "Who was out in the square at two in the morning?"
     },
     {
       "id": "d6_insider",
@@ -136,7 +143,8 @@
       "produces": {
         "card": "ded_insider"
       },
-      "garyLine": "bark_ded_insider"
+      "garyLine": "bark_ded_insider",
+      "question": "The weasel dug at midnight - but who opened the door?"
     },
     {
       "id": "photo_witness",
@@ -167,7 +175,8 @@
       "produces": {
         "card": "ded_signet"
       },
-      "garyLine": "bark_ded_signet"
+      "garyLine": "bark_ded_signet",
+      "question": "Whose mark is the lantern in ivy?"
     },
     {
       "id": "d8_prudence_cleared",
@@ -183,7 +192,8 @@
         "card": "ded_prudence_cleared",
         "clearSuspect": "prudence"
       },
-      "garyLine": "bark_ded_prudence_cleared"
+      "garyLine": "bark_ded_prudence_cleared",
+      "question": "Prudence wanted what was in that envelope for twenty years. Where was she that night?"
     },
     {
       "id": "d9_means",
@@ -202,7 +212,8 @@
           "col": "means"
         }
       },
-      "garyLine": "bark_ded_means"
+      "garyLine": "bark_ded_means",
+      "question": "Two keys have always existed. Where's the second one?"
     },
     {
       "id": "d10_motive",
@@ -221,7 +232,8 @@
           "col": "motive"
         }
       },
-      "garyLine": "bark_ded_motive"
+      "garyLine": "bark_ded_motive",
+      "question": "Not greed. Then what was he so afraid of losing?"
     },
     {
       "id": "d11_opportunity",
@@ -240,7 +252,8 @@
           "col": "opportunity"
         }
       },
-      "garyLine": "bark_ded_opportunity"
+      "garyLine": "bark_ded_opportunity",
+      "question": "Could he actually have been there - and can two witnesses put him there?"
     },
     {
       "id": "d12_proof",
@@ -255,7 +268,8 @@
       "produces": {
         "card": "ded_proof"
       },
-      "garyLine": "bark_ded_proof"
+      "garyLine": "bark_ded_proof",
+      "question": "Can I hold the proof in my hand, or is it all still string?"
     },
     {
       "id": "d13_final",
@@ -272,7 +286,8 @@
       "produces": {
         "card": "ded_final"
       },
-      "garyLine": "bark_ded_final"
+      "garyLine": "bark_ded_final",
+      "question": "Motive. Means. Opportunity. Proof. Do all four point at the same person?"
     },
     {
       "id": "aha_direction",

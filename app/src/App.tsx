@@ -11,6 +11,7 @@ import PixiStage from '@scenes/PixiStage';
 import Board from '@ui/Board';
 import { PocketRecap, GrandpaModal } from '@ui/BoardExtras';
 import DialogueBox from '@ui/DialogueBox';
+import InterviewMode from '@ui/InterviewMode';
 import Hud from '@ui/Hud';
 import Notebook from '@ui/Notebook';
 import Newspaper from '@ui/Newspaper';
@@ -100,6 +101,7 @@ export default function App() {
     <div className="relative h-full w-full" data-testid="app-root">
       {stage}
       <Hud db={db} />
+      <InterviewMode db={db} />
       <DialogueBox db={db} />
       <Notebook db={db} />
       <Board db={db} />

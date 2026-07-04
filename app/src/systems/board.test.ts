@@ -7,6 +7,7 @@ import {
   layOnDesk,
   ledgerRowComplete,
   matchDeduction,
+  pendingDeductions,
   pinCard,
   resetBoardSession,
   retireTheory,
@@ -38,6 +39,17 @@ function fakeDb(): ContentDB {
           requireVerified: true,
           requireOnRecordForFinale: false,
           produces: { card: 'ded_ab', ledgerCell: { suspect: 'julian', col: 'means' } },
+          question: 'Do A and B rhyme?',
+        },
+        {
+          id: 'd_hidden_aha',
+          ref: 'x',
+          kind: 'aha',
+          inputs: ['c', 'ev1'],
+          requireVerified: true,
+          requireOnRecordForFinale: false,
+          produces: {},
+          // no question — aha recipes never surface on the strip
         },
       ],
       wrongPairBarks: 'wrong_pairs',
@@ -90,6 +102,38 @@ describe('pins', () => {
     const board = useGameStore.getState().state.board;
     expect(board.pins.map((p) => p.cardId)).toEqual(['b']);
     expect(board.strings.filter((s) => s.from === 'a' || s.to === 'a')).toHaveLength(0);
+  });
+});
+
+describe('open questions strip (playtest revision 2)', () => {
+  it('gate recipes always show; non-gate only once partially owned; ahas never', () => {
+    const db = fakeDb();
+    // nothing owned: gate recipe still shows with empty slots
+    let pending = pendingDeductions(db, ['d_ab']);
+    expect(pending.map((p) => p.id)).toEqual(['d_ab']);
+    expect(pending[0].gate).toBe(true);
+    expect(pending[0].slots).toEqual(['empty', 'empty']);
+    // not gating and nothing owned: hidden
+    expect(pendingDeductions(db, [])).toEqual([]);
+    // partially owned: appears without being a gate; slot states track status
+    giveCard('a', 'verified');
+    pending = pendingDeductions(db, []);
+    expect(pending.map((p) => p.id)).toEqual(['d_ab']);
+    expect(pending[0].slots).toEqual(['ready', 'empty']);
+    giveCard('b'); // unverified → pencil outline
+    expect(pendingDeductions(db, [])[0].slots).toEqual(['ready', 'unverified']);
+    // aha with an owned input still never surfaces (no question authored)
+    giveCard('c', 'verified');
+    expect(pendingDeductions(db, []).map((p) => p.id)).toEqual(['d_ab']);
+  });
+
+  it('retires from the strip once the deduction is made', () => {
+    const db = fakeDb();
+    giveCard('a', 'verified');
+    giveCard('b', 'verified');
+    expect(pendingDeductions(db, ['d_ab'])).toHaveLength(1);
+    connectCards(db, ['a', 'b']);
+    expect(pendingDeductions(db, ['d_ab'])).toHaveLength(0);
   });
 });
 

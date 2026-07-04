@@ -45,10 +45,12 @@ export default function DialogueBox({ db }: { db: ContentDB }) {
 
   const speakerDef = view ? db.characters[view.speaker] : null;
   const isNarrator = view?.speaker === 'narrator';
+  // interview mode already shows the two-shot — no thumbnail doubling
+  const inInterview = !!view && view.characterId !== 'narrator' && view.characterId !== 'gary';
   const portrait = useMemo(() => {
-    if (!speakerDef || isNarrator) return null;
+    if (!speakerDef || isNarrator || inInterview) return null;
     return `/${portraitPath(speakerDef.portraitSet, view?.emote ?? 'neutral')}`;
-  }, [speakerDef, isNarrator, view?.emote]);
+  }, [speakerDef, isNarrator, inInterview, view?.emote]);
 
   if (!view) return null;
   const typing = shown < line.length;

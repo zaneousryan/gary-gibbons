@@ -3,7 +3,7 @@
 // SuspectLedger, TheoryRack, ContradictionDesk, TimelineRail seating.
 // Night-6 rail cinematic and zoom/pan polish arrive in Phase 5.
 
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { ContentDB } from '@content/contentDb';
 import { useGameStore } from '@engine/store';
 import {
@@ -11,6 +11,7 @@ import {
   layOnDesk,
   ledgerRowComplete,
   movePin,
+  pendingDeductions,
   pinCard,
   retireTheory,
   seatRailCard,
@@ -19,6 +20,104 @@ import {
 } from '@systems/board';
 import { useUiStore } from './uiStore';
 import { useSettings } from './settingsStore';
+
+/** Bark text from the board_tutorial pool — content stays in /content. */
+function tutLine(db: ContentDB, id: string): string {
+  return db.barks['board_tutorial']?.barks.find((b) => b.id === id)?.text ?? '';
+}
+
+/**
+ * Night 1 board tutorial (playtest revision 2, 2026-07-04): first board open
+ * ever, Gary teaches the loop in his own voice — pin → string → click — driven
+ * by the Red Pen Bandit. Skippable at every step. Action steps advance by
+ * watching real state, so the player performs the cycle, not a simulation.
+ */
+function BoardTutorial({ db }: { db: ContentDB }) {
+  const state = useGameStore((s) => s.state);
+  const [step, setStep] = useState(0);
+
+  const havePens = !!state.cards['dots_missing_pens'];
+  const haveNotebook = !!state.cards['milos_crimes_notebook'];
+  const pensPinned = state.board.pins.some((p) => p.cardId === 'dots_missing_pens');
+  const notebookPinned = state.board.pins.some((p) => p.cardId === 'milos_crimes_notebook');
+  const redPenSolved = state.board.deductions.includes('red_pen_bandit');
+
+  // if the tutorial cards aren't in hand (shouldn't happen on the golden
+  // path), teach the model in words only rather than blocking the night
+  const wordsOnly = !havePens || !haveNotebook;
+
+  const steps: { bark: string; waitFor?: boolean; testid: string }[] = wordsOnly
+    ? [
+        { bark: 'tut_sit', testid: 'tut-sit' },
+        { bark: 'tut_string', testid: 'tut-string' },
+        { bark: 'tut_questions', testid: 'tut-questions' },
+      ]
+    : [
+        { bark: 'tut_sit', testid: 'tut-sit' },
+        { bark: 'tut_pin', waitFor: pensPinned, testid: 'tut-pin' },
+        { bark: 'tut_pin2', waitFor: notebookPinned, testid: 'tut-pin2' },
+        { bark: 'tut_string', waitFor: redPenSolved, testid: 'tut-string' },
+        { bark: 'tut_click', testid: 'tut-click' },
+        { bark: 'tut_questions', testid: 'tut-questions' },
+      ];
+
+  const current = steps[Math.min(step, steps.length - 1)];
+  const isAction = current.waitFor !== undefined;
+
+  // action steps advance themselves the moment the player does the thing
+  useEffect(() => {
+    if (isAction && current.waitFor) setStep((s) => s + 1);
+  }, [isAction, current.waitFor]);
+
+  const finish = (skipped: boolean) => {
+    const game = useGameStore.getState();
+    game.runEffects([{ setFlag: 'board_tutorial_done' }]);
+    if (skipped) game.runEffects([{ playBark: 'tut_skip_ack' }]);
+  };
+
+  const last = step >= steps.length - 1;
+
+  return (
+    <div
+      className="absolute top-2 left-1/2 -translate-x-1/2 z-10 w-[min(680px,80%)] bg-cream border-4 border-ink rounded-lg shadow-2xl p-3 rotate-[-0.5deg]"
+      data-testid="board-tutorial"
+    >
+      <div className="text-[10px] tracking-[0.3em] font-bold text-ink/50 uppercase">Grandpa's board — first night</div>
+      <p className="text-ink italic leading-snug mt-1" data-testid={current.testid}>
+        {tutLine(db, current.bark)}
+      </p>
+      <div className="flex items-center gap-2 mt-2">
+        {!isAction &&
+          (last ? (
+            <button
+              className="px-3 py-1 rounded border-2 border-ink bg-amber font-bold text-ink text-sm cursor-pointer"
+              data-testid="tut-done"
+              onClick={() => finish(false)}
+            >
+              got it
+            </button>
+          ) : (
+            <button
+              className="px-3 py-1 rounded border-2 border-ink bg-amber font-bold text-ink text-sm cursor-pointer"
+              data-testid="tut-next"
+              onClick={() => setStep((s) => s + 1)}
+            >
+              →
+            </button>
+          ))}
+        {isAction && <span className="text-ink/50 text-xs italic">(go on — the board's right there)</span>}
+        <div className="flex-1" />
+        <button
+          className="px-2 py-1 rounded border border-ink/40 text-ink/60 text-xs cursor-pointer hover:text-ink"
+          data-testid="tut-skip"
+          onClick={() => finish(true)}
+        >
+          I know the drill
+        </button>
+      </div>
+    </div>
+  );
+}
 
 const CORK_W = 1280;
 const CORK_H = 640;
@@ -36,11 +135,17 @@ export default function Board({ db }: { db: ContentDB }) {
   const [deskSlots, setDeskSlots] = useState<(string | null)[]>([null, null]);
   const [railPick, setRailPick] = useState<string | null>(null);
   const [flash, setFlash] = useState<string | null>(null);
+  const [stripHint, setStripHint] = useState(false);
   const corkRef = useRef<HTMLDivElement>(null);
   const dragRef = useRef<{ cardId: string; dx: number; dy: number } | null>(null);
+  const hintTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const pinned = new Set(state.board.pins.map((p) => p.cardId));
   const trayCards = Object.keys(state.cards).filter((c) => !pinned.has(c));
+  const game = useGameStore((s) => s.game);
+  const gateIds = game?.days.find((d) => d.day === state.day)?.gateDeductions ?? [];
+  const openQuestions = pendingDeductions(db, gateIds);
+  const tutorialActive = !state.flags['board_tutorial_done'];
   const suspects = useMemo(
     () => [...new Set(db.deductions.deductions.flatMap((d) => (d.produces.ledgerCell ? [d.produces.ledgerCell.suspect] : [])))],
     [db],
@@ -82,7 +187,12 @@ export default function Board({ db }: { db: ContentDB }) {
         showToast('Those two are already tied.');
         break;
       case 'miss':
-        break; // the wrong-pair bark speaks for itself
+        // the wrong-pair bark speaks for itself — but Gary glances at the
+        // Open Questions strip so the player knows where to reorient
+        setStripHint(true);
+        if (hintTimer.current) clearTimeout(hintTimer.current);
+        hintTimer.current = setTimeout(() => setStripHint(false), 4500);
+        break;
     }
   };
 
@@ -140,7 +250,8 @@ export default function Board({ db }: { db: ContentDB }) {
 
   return (
     <div className="absolute inset-0 bg-ink/70 flex items-center justify-center pointer-events-auto z-40" data-testid="board">
-      <div className="w-[min(1500px,97vw)] h-[min(860px,95vh)] bg-[#8a6a48] border-4 border-ink rounded-lg shadow-2xl flex flex-col p-3 gap-2">
+      <div className="relative w-[min(1500px,97vw)] h-[min(860px,95vh)] bg-[#8a6a48] border-4 border-ink rounded-lg shadow-2xl flex flex-col p-3 gap-2">
+        {tutorialActive && <BoardTutorial db={db} />}
         <div className="flex items-center gap-3 text-cream">
           <h2 className="font-bold text-2xl tracking-wide">THE BOARD</h2>
           <span className="opacity-70 text-sm">
@@ -402,6 +513,59 @@ export default function Board({ db }: { db: ContentDB }) {
               )}
             </div>
           </div>
+        </div>
+
+        {/* Open Questions strip (playtest revision 2): index cards in Gary's
+            hand — each pending recipe's question + silhouette slots. */}
+        <div
+          className={
+            'h-[118px] rounded border-2 flex items-stretch gap-2 px-3 py-2 overflow-x-auto transition-colors ' +
+            (stripHint ? 'border-amber bg-amber/20 animate-pulse' : 'border-ink bg-cream/90')
+          }
+          data-testid="open-questions"
+        >
+          {stripHint && (
+            <div className="absolute -mt-8 text-cream bg-ink/90 rounded px-3 py-1 text-sm italic" data-testid="strip-glance">
+              {tutLine(db, 'gary_glance_questions')}
+            </div>
+          )}
+          {openQuestions.length === 0 && (
+            <span className="text-ink/40 italic text-sm self-center">
+              No open questions on the desk. Either the night is done, or tomorrow will bring new ones.
+            </span>
+          )}
+          {openQuestions.map((pq) => (
+            <div
+              key={pq.id}
+              data-testid={`open-q-${pq.id}`}
+              className={
+                'shrink-0 w-[230px] rounded border-2 p-2 rotate-[-0.6deg] flex flex-col justify-between ' +
+                (pq.gate ? 'border-amber bg-cream shadow-[0_0_8px_rgba(232,163,76,0.5)]' : 'border-ink/50 bg-cream')
+              }
+            >
+              <div className="text-[12px] italic leading-tight text-ink">
+                {pq.gate && <span className="not-italic font-bold text-amber-700 mr-1" title="tonight's page needs this">★</span>}
+                {pq.question}
+              </div>
+              <div className="flex gap-1.5 mt-1">
+                {pq.slots.map((slot, i) => (
+                  <div
+                    key={i}
+                    data-testid={`open-q-slot-${slot}`}
+                    title={slot === 'empty' ? 'still missing a piece' : slot === 'unverified' ? 'in pencil — needs verifying' : 'ready'}
+                    className={
+                      'w-8 h-10 rounded-sm border-2 ' +
+                      (slot === 'ready'
+                        ? 'border-ink bg-amber/70'
+                        : slot === 'unverified'
+                          ? 'border-ink/60 border-dashed bg-cream [background-image:repeating-linear-gradient(45deg,transparent,transparent_3px,rgba(30,34,42,0.15)_3px,rgba(30,34,42,0.15)_5px)]'
+                          : 'border-ink/25 border-dashed bg-ink/5')
+                    }
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* evidence tray */}
