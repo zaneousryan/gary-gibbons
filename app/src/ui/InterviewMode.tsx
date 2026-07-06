@@ -70,7 +70,7 @@ export default function InterviewMode({ db }: { db: ContentDB }) {
   return (
     <div
       className={
-        'absolute inset-0 z-30 pointer-events-none overflow-hidden ' +
+        'absolute inset-0 z-30 pointer-events-none overflow-hidden bg-dusk ' +
         (reduceMotion ? '' : 'transition-opacity duration-300 ') +
         (entered ? 'opacity-100' : 'opacity-0')
       }
@@ -103,11 +103,8 @@ export default function InterviewMode({ db }: { db: ContentDB }) {
         }
       >
         <PortraitImg set={npc.portraitSet} emote={npcSpeaking ? view.emote : 'neutral'} alt={npc.name} active={npcSpeaking} />
-        {gary && (
-          <div className="-scale-x-100">
-            <PortraitImg set={gary.portraitSet} emote={garySpeaking ? view.emote : 'neutral'} alt="Gary" active={garySpeaking} />
-          </div>
-        )}
+        {/* no mirroring — real art carries baked-in detail that must not flip */}
+        {gary && <PortraitImg set={gary.portraitSet} emote={garySpeaking ? view.emote : 'neutral'} alt="Gary" active={garySpeaking} />}
       </div>
     </div>
   );

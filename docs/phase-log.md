@@ -273,3 +273,9 @@ Conversations are no longer spatial. Talk-clicks (mouse and keyboard) enter INTE
 - Start a conversation from anywhere / no pathing / clean enter+exit / scene+time preserved: verified by hand-drive and e2e.
 - First-time player completes Night 1 unaided: the ceremony e2e now does exactly this (tutorial cycle on red pens, then D1 via the starred open question).
 - Autoplayer passes, validator green, reviewer LGTM, verifier PASS: all above.
+
+### Addendum 2026-07-06 — Playtest hotfixes + first-person exploration (DQ-7)
+- BUG (found by Ryan, missed by e2e): InterviewMode (z-30) painted OVER the un-z-indexed DialogueBox - text invisible, conversation looked locked (clicks still worked underneath, which is why Playwright stayed green: toBeVisible doesn't test occlusion). Fix: DialogueBox z-35. Lesson: visibility assertions don't catch paint-order regressions.
+- BUG: Gary's interview portrait was mirrored (-scale-x-100), flipping baked-in detail in the real art. Mirroring removed; interview backdrop got a solid dusk backing so placeholder transparency can't leak the scene through.
+- CANON (DQ-7 RESOLVED): first-person exploration - Gary never drawn, nothing walks, interactions immediate, hotspot labels on hover/keyboard focus. Walk-line data stays (NPC placement) but drives no movement.
+- Gates: build clean, 70/70 tests, autoplay 595 deterministic x2, e2e 5/5.

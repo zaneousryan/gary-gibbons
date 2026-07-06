@@ -57,7 +57,7 @@ export default function DialogueBox({ db }: { db: ContentDB }) {
   const speakerName = isNarrator ? '' : view.speaker === 'gary' ? 'Gary' : (speakerDef?.name ?? view.speaker);
 
   return (
-    <div className="absolute inset-x-0 bottom-0 flex justify-center pb-6 pointer-events-none" data-testid="dialogue-box">
+    <div className="absolute inset-x-0 bottom-0 flex justify-center pb-6 pointer-events-none z-[35]" data-testid="dialogue-box">
       <div className="pointer-events-auto w-[min(1100px,92vw)] rounded-lg border-4 border-ink bg-cream/95 shadow-2xl p-4 flex gap-4">
         {portrait && (
           <img

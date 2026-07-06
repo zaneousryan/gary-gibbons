@@ -21,7 +21,6 @@ import { loadTexture, locationLayerPath, spritePath } from './assets';
 
 const DESIGN_W = 1920;
 const DESIGN_H = 1080;
-const WALK_SPEED = 520; // px/sec along the walk line
 
 /** Day-phase tint LUT-lite (spec §7): whole-world multiply per phase. */
 const PHASE_TINT: Record<string, number> = {
@@ -120,22 +119,8 @@ async function buildScene(db: ContentDB, refs: SceneRefs, locationId: string) {
     });
   }
 
-  // Gary
-  const garyDef = db.characters['gary'];
-  const garyTex = garyDef ? await loadTexture(spritePath(garyDef.portraitSet, 'idle_1')) : null;
-  if (garyTex) {
-    const gary = new Sprite(garyTex);
-    gary.anchor.set(0.5, 1);
-    gary.height = 380;
-    gary.scale.x = gary.scale.y;
-    gary.position.set(
-      Math.min(Math.max(DESIGN_W / 2, loc.walkLine.minX), loc.walkLine.maxX),
-      loc.walkLine.y,
-    );
-    gary.label = 'gary';
-    actorLayer.addChild(gary);
-    refs.gary = gary;
-  }
+  // Gary is never drawn — the world is seen through his eyes (playtest
+  // revision, 2026-07-06). refs.gary stays null; nothing walks.
 
   // hotspot markers
   const labelStyle = new TextStyle({
@@ -155,6 +140,15 @@ async function buildScene(db: ContentDB, refs: SceneRefs, locationId: string) {
     label.anchor.set(0.5, 1);
     label.position.set(hx, hy - 24);
     label.visible = false;
+    // first-person: labels reveal on hover (or keyboard focus), not proximity
+    marker.on('pointerover', () => {
+      label.visible = true;
+      marker.scale.set(1.25);
+    });
+    marker.on('pointerout', () => {
+      label.visible = false;
+      marker.scale.set(1);
+    });
     world.addChild(marker, label);
     refs.hotspotViews.push({ hotspot, marker, label, x: hx, y: hy });
   }
@@ -302,36 +296,22 @@ export default function PixiStage({ db }: { db: ContentDB }) {
       refs.app.canvas.style.objectFit = 'contain';
       refs.app.stage.addChild(refs.world);
 
-      // point-to-walk: clicking empty scene walks; clicking a hotspot walks then interacts
+      // first-person (playtest revision, 2026-07-06): the world is seen
+      // through Gary's eyes — no avatar, no pathing. Every interaction is
+      // immediate: hotspots interact, the bench sits, empty space is scenery.
       refs.app.stage.eventMode = 'static';
       refs.app.stage.hitArea = { contains: () => true };
-      const walkTo = (x: number, act: (() => void) | null) => {
-        const loc = refs.location;
-        if (!loc || !refs.gary) return;
-        refs.garyTarget = Math.min(Math.max(x, loc.walkLine.minX), loc.walkLine.maxX);
-        refs.pendingInteract = act;
-      };
 
       refs.app.stage.on('pointertap', (e) => {
         if (useDialogueStore.getState().view) return; // conversation holds the floor
         const loc = refs.location;
-        if (!loc || !refs.gary) return;
+        if (!loc) return;
         const point = refs.world.toLocal(e.global);
         const hs = refs.hotspotViews.find((h) => Math.hypot(h.x - point.x, h.y - point.y) < 60);
         if (hs) {
-          // conversations are not spatial (playtest revision 1, 2026-07-04):
-          // talking enters interview mode from anywhere in the room — Gary
-          // stays where he stands. Walking is for traversal and examinables.
-          if (hs.hotspot.kind === 'talk') {
-            interact(db, hs.hotspot);
-            return;
-          }
-          walkTo(hs.x, () => interact(db, hs.hotspot));
+          interact(db, hs.hotspot);
         } else if (refs.sitSpot && Math.hypot(refs.sitSpot.x - point.x, refs.sitSpot.y - point.y) < 60) {
-          const sit = refs.sitSpot;
-          walkTo(sit.x, () => sitDown(loc));
-        } else {
-          walkTo(point.x, null);
+          sitDown(loc);
         }
       });
 
@@ -344,50 +324,23 @@ export default function PixiStage({ db }: { db: ContentDB }) {
           refs.focusIndex = (refs.focusIndex + 1) % refs.hotspotViews.length;
         } else if (e.key === 'Enter' && refs.focusIndex >= 0) {
           const h = refs.hotspotViews[refs.focusIndex];
-          if (h) {
-            if (h.hotspot.kind === 'talk') interact(db, h.hotspot);
-            else walkTo(h.x, () => interact(db, h.hotspot));
-          }
+          if (h) interact(db, h.hotspot);
         }
       };
       window.addEventListener('keydown', onKey);
       cleanupKeys = () => window.removeEventListener('keydown', onKey);
 
       refs.app.ticker.add((ticker) => {
-        const gary = refs.gary;
         const loc = refs.location;
-        if (!gary || !loc) return;
-        // walk
-        if (refs.garyTarget !== null) {
-          const dx = refs.garyTarget - gary.x;
-          const step = WALK_SPEED * (ticker.deltaMS / 1000);
-          if (Math.abs(dx) <= step) {
-            gary.x = refs.garyTarget;
-            refs.garyTarget = null;
-            const act = refs.pendingInteract;
-            refs.pendingInteract = null;
-            if (act) {
-              act();
-              return; // the interaction may have rebuilt the scene — this frame's refs are stale
-            }
-          } else {
-            gary.x += Math.sign(dx) * step;
-            gary.scale.x = Math.abs(gary.scale.x) * (dx < 0 ? -1 : 1);
-          }
-        }
-        // depth scaling along the walk line
-        const [minS, maxS] = loc.walkLine.depthScale ?? [1, 1];
-        const t = (gary.x - loc.walkLine.minX) / (loc.walkLine.maxX - loc.walkLine.minX);
-        const s = minS + (maxS - minS) * Math.min(Math.max(t, 0), 1);
-        const base = 380 / (refs.gary?.texture.height ?? 380);
-        gary.scale.set(Math.sign(gary.scale.x) * base * s, base * s);
-        // proximity + keyboard-focus highlight
+        if (!loc) return;
+        // keyboard-focus highlight (hover handles the pointer side)
         refs.hotspotViews.forEach((h, i) => {
-          const near = Math.hypot(h.x - gary.x, h.y - loc.walkLine.y) < 420;
           const focused = i === refs.focusIndex;
-          h.label.visible = near || focused;
-          h.marker.alpha = focused ? 1 : near ? 1 : 0.55;
-          h.marker.scale.set(focused ? 1.35 : 1);
+          if (focused) {
+            h.label.visible = true;
+            h.marker.scale.set(1.35);
+          }
+          h.marker.alpha = focused ? 1 : 0.75;
         });
         // rain falls
         const rain = refs.world.getChildByLabel('rain');
