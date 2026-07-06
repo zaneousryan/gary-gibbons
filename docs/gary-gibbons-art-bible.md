@@ -1,6 +1,6 @@
 # GARY GIBBONS — THE ART BIBLE
 ## The Complete Visual Production Document for *Gary Gibbons: The Empty Capsule* and the Gary Gibbons franchise
-### Version 1.1 (production-readiness pass) · Canon-aligned with Design Doc v1.3 (species pass) and Technical Spec §10 (asset naming contract)
+### Version 1.2 (presentation addendum — see final chapter) · previously 1.1 (production-readiness pass) · Canon-aligned with Design Doc v1.3 (species pass) and Technical Spec §10 (asset naming contract)
 
 > **THE MASTER STYLE PROMPT** — every image-generation prompt in this document begins with this text, verbatim:
 >
@@ -886,3 +886,42 @@ Nothing on this list ships untracked; the production sheet mirrors this chapter 
 ---
 
 *End of the Art Bible v1.1. Paint it thumbed, light it amber, and let the tails tell the truth. — For Lanternside.*
+
+
+---
+
+# ADDENDUM v1.2 — PRESENTATION REVISIONS (2026-07-06)
+
+Source: Ryan playtest directives (interview mode DQ-5, first-person exploration DQ-7, scene-composite direction). These rules OVERRIDE any earlier section they conflict with. Every prompt exported for the next asset round must comply.
+
+## A. Portraits — the Interview Two-Shot contract
+
+Interview mode composes two large portraits side by side over a blurred scene. The engine does NOT mirror, crop, or matte portraits. Therefore:
+
+1. **TRANSPARENT BACKGROUND, ALWAYS.** PNG RGBA, alpha channel real (not white, not cream, no card). The engine supplies the backdrop.
+2. **NO BAKED FRAMES, BORDERS, CAPTIONS, OR NAMEPLATES.** No "GARY NEUTRAL" text, no card edges, no drop shadows baked in. The placeholder art has these — real art must NOT copy that layout; placeholders label themselves only because they are placeholders.
+3. **FACING:** every NPC portrait faces slightly CAMERA-RIGHT (they stand on the left of the two-shot, looking toward Gary). Gary's portraits face slightly CAMERA-LEFT. Never full profile; three-quarter view per §2.9. Art is delivered pre-facing — the engine will never flip an image.
+4. **FRAMING:** head-and-shoulders to mid-torso. Subject fills 80–90% of canvas height, feet of the bounding box at canvas bottom edge (portraits are bottom-aligned in the shot). Keep 5% clear margin left/right of the silhouette.
+5. **CANVAS:** 800×1000 px, subject anchored bottom-center.
+6. **EXPRESSION SET per character** (unchanged): neutral, happy, sad, angry, surprised, thinking — same pose and camera across the set; ONLY the face and hands change, so swaps read as reaction, not teleport.
+7. **LIGHTING:** lamplit key from screen-center (the conversation happens "between" the two portraits — both are lit from the middle of the frame), amber key / teal fill per §2.3.
+
+## B. Scenes — the Composite Model (base + overlays)
+
+Exploration is first-person (no Gary avatar, no walking). Scenes are click-and-find paintings, built as ONE base view plus CONDITIONAL OVERLAY paintings. This replaces free-standing NPC sprite placement wherever a location adopts it.
+
+1. **BASE VIEW** — `locations/<id>/<phase>_bg.png`, `_mid.png`, `_fg.png` (parallax planes, unchanged naming): the location EMPTY of people and story items. Its lighting carries the phase (morning/midday/evening/night variants as today). The base must stand alone as a complete painting — this is the "default view."
+2. **OVERLAY PAINTINGS** — `locations/<id>/overlay_<overlayId>.png`: full-frame 2400×1200 TRANSPARENT PNGs painted over the base, containing ONLY what that state adds — the people present in that day/timeframe, story items that appear or vanish (e.g., the vault sealed vs. open vs. dusty-and-empty), crowd states, decorations. Everything not part of the state change is transparent.
+3. **REGISTRATION:** overlays are painted ON TOP OF the base at 1:1 — same camera, same canvas, pixel-registered. Paint them as layers of one working file and export separately. Never move the camera between base and overlay.
+4. **ONE STATE = ONE OVERLAY.** Which overlay shows is data-driven (day, phase, flags) via the location's `overlays` list in content. When characters are painted into overlays, the location sets `paintedCharacters: true` and the engine stops drawing sprite actors there — the talk hotspots keep working on top of the painted people.
+5. **LIGHTING IN OVERLAYS:** match the phase of the base they'll sit on. If a state spans phases, deliver per-phase overlay variants (suffix `_<phase>` in the overlay id) rather than compromise lighting.
+6. **INTERACTIVITY GUARANTEE:** anything clickable inside an overlay must read as findable at 100% zoom per §1.2 (readable silhouette, lamplight kiss). Hotspot markers help, but the painting itself should reward the eye — this is a discovery game.
+7. **SPRITES REMAIN A FALLBACK** for locations not yet converted; the 2-frame idle/talk sprite spec stays in force for them.
+
+## C. Alpha & delivery rules (all asset types)
+
+1. PNG, RGBA, straight (non-premultiplied) alpha.
+2. No semi-transparent halo wider than 2px at silhouette edges (matte lines kill the lamplit look and ghost against dark scenes).
+3. Nothing baked that the engine draws: no vignettes, no rain, no phase tint (the engine tints), no UI, no text of any kind in scene or portrait art.
+4. Card art (`card_*`) keeps its existing self-contained-card spec — cards are physical objects and DO include their painted frame.
+5. Delivery path: files go in `assets\<relative path>` exactly mirroring the placeholder tree. NEVER deliver into `assets\_placeholders\` (generated, disposable). See assets\WHERE-ART-GOES.md.

@@ -373,5 +373,25 @@
     "weatherVariants": true,
     "music": "music_square",
     "ambience": "amb_square"
-  }
+  },
+  "overlays": [
+    {
+      "id": "ceremony_day",
+      "cond": {
+        "day": 1
+      },
+      "exclusiveGroup": "crowd",
+      "ref": "I.5.day1"
+    },
+    {
+      "id": "quiet_after",
+      "cond": {
+        "day": {
+          "gte": 2
+        }
+      },
+      "exclusiveGroup": "crowd",
+      "ref": "II.13"
+    }
+  ]
 }

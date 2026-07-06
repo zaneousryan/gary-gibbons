@@ -93,9 +93,31 @@ async function buildScene(db: ContentDB, refs: SceneRefs, locationId: string) {
   }
   const actorLayer = (world.getChildByLabel('actors') as Container) ?? world;
 
-  // scheduled NPCs (with 2-frame idle/talk cycles, spec §7)
+  // scene-composite overlays (art bible v1.2): conditional full-frame
+  // paintings over the base view — characters present, items appearing,
+  // day/timeframe states. First passing overlay per exclusiveGroup wins;
+  // ungrouped overlays stack in authored order.
+  const wonGroups = new Set<string>();
+  for (const ov of loc.overlays) {
+    if (!evalCondition((ov.cond ?? {}) as Condition, state)) continue;
+    if (ov.exclusiveGroup) {
+      if (wonGroups.has(ov.exclusiveGroup)) continue;
+      wonGroups.add(ov.exclusiveGroup);
+    }
+    const tex = await loadTexture(`locations/${loc.id}/overlay_${ov.id}.png`);
+    if (tex) {
+      const sprite = new Sprite(tex);
+      sprite.width = DESIGN_W;
+      sprite.height = DESIGN_H;
+      sprite.label = `overlay_${ov.id}`;
+      actorLayer.addChild(sprite);
+    }
+  }
+
+  // scheduled NPCs (with 2-frame idle/talk cycles, spec §7) — skipped when
+  // the location paints its people into overlays
   let spreadIndex = 0;
-  for (const placement of actorsAt(db, state, loc.id)) {
+  for (const placement of loc.paintedCharacters ? [] : actorsAt(db, state, loc.id)) {
     const ch = db.characters[placement.characterId];
     if (!ch) continue;
     const [idle1, idle2, talk1, talk2] = await Promise.all(

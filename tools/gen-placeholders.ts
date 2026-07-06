@@ -28,12 +28,22 @@ const PHASE_TINT: Record<string, RGB> = {
 
 let written = 0;
 let skipped = 0;
+let preserved = 0;
+
+// --force regenerates existing placeholder files; the default NEVER overwrites
+// an existing file, so anything a human dropped in (even into _placeholders by
+// mistake) survives. Lesson of 2026-07-06.
+const FORCE = process.argv.includes('--force');
 
 function save(relPath: string, canvas: Canvas) {
   const realAsset = path.join(ASSETS_DIR, relPath);
   const file = path.join(OUT, relPath);
   if (existsSync(realAsset)) {
     skipped++; // real art exists — placeholder unnecessary but generated anyway? No: skip.
+    return;
+  }
+  if (existsSync(file) && !FORCE) {
+    preserved++; // never clobber an existing file without --force
     return;
   }
   mkdirSync(path.dirname(file), { recursive: true });
@@ -138,6 +148,17 @@ function main() {
         save(`locations/${loc.id}/rain_${layer}.png`, locationLayer(loc.id, 'midday', layer, true));
       }
     }
+    // scene-composite overlays (art bible v1.2): transparent full-frame
+    // states — the placeholder is a small labeled panel on an otherwise
+    // clear frame, so a missing painting is visible but never blocking
+    for (const ov of loc.overlays) {
+      const c = new Canvas(2400, 1200, [0, 0, 0, 0] as unknown as RGB);
+      c.rect(300, 760, 700, 340, TEAL);
+      c.border(300, 760, 700, 340, INK, 6);
+      c.text(`OVERLAY`, 330, 800, 6, CREAM);
+      c.text(ov.id.toUpperCase().slice(0, 16), 330, 900, 5, CREAM);
+      save(`locations/${loc.id}/overlay_${ov.id}.png`, c);
+    }
   }
 
   for (const card of Object.values(db.cards)) {
@@ -182,7 +203,9 @@ function main() {
   const texture = new Canvas(1600, 2000, CREAM);
   save('newspaper/paper_texture.png', texture);
 
-  console.log(`gen-placeholders: ${written} placeholder(s) written, ${skipped} skipped (real asset exists).`);
+  console.log(
+    `gen-placeholders: ${written} placeholder(s) written, ${skipped} skipped (real asset exists), ${preserved} preserved (existing file, no --force).`,
+  );
 }
 
 main();

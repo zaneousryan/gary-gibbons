@@ -87,6 +87,28 @@ export const LocationSchema = z
     ref: RefSchema,
     /** Parallax planes, back to front — asset keys per spec §10. */
     layers: z.array(z.enum(['bg', 'mid', 'fg'])).min(1),
+    /**
+     * Scene-composite model (art bible v1.2, playtest directive 2026-07-06):
+     * the phase-lit base view + conditional overlay paintings on top —
+     * characters present, items appearing, day/timeframe states. Asset path:
+     * locations/<id>/overlay_<overlayId>.png (full-frame, transparent PNG).
+     * First overlay whose cond passes per exclusiveGroup wins; ungrouped
+     * overlays stack in order.
+     */
+    overlays: z
+      .array(
+        z
+          .object({
+            id: IdSchema,
+            cond: ConditionSchema.optional(),
+            exclusiveGroup: IdSchema.optional(),
+            ref: RefSchema,
+          })
+          .strict(),
+      )
+      .default([]),
+    /** True = people are painted into overlays; scheduled NPC sprites are not drawn. */
+    paintedCharacters: z.boolean().default(false),
     /** Walk-line: y position and x extent Gary can walk (spec §7 — 1D path). */
     walkLine: z
       .object({ y: z.number(), minX: z.number(), maxX: z.number(), depthScale: z.tuple([z.number(), z.number()]).optional() })
