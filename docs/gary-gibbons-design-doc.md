@@ -1,6 +1,6 @@
 # GARY GIBBONS: The Empty Capsule
-## Full Design Document — Version 1.3
-### Part I: Narrative Bible (v1.0, LOCKED) · Part II: Gameplay Elevation Pass (v1.1) · Part III: Gameplay & Agency Pass (v1.2) · v1.3: Species Pass (anthropomorphic animal world)
+## Full Design Document — Version 1.4
+### Part I: Narrative Bible (v1.0, LOCKED) · Part II: Gameplay Elevation Pass (v1.1) · Part III: Gameplay & Agency Pass (v1.2) · v1.3: Species Pass (anthropomorphic animal world) · v1.4: Name Pass (the grandfather is the first GARY GIBBONS; the protagonist is Gary Gibbons Jr., never called "Jr" — the full name, spoken by the town, always means the grandfather)
 
 ---
 
@@ -544,7 +544,7 @@ Morning: Dot's final pressure-test (she quietly says, *"Gary Gibbons would run i
 *(Last: a small parcel in oilcloth, addressed in strong pencil: FOR THE GIBBONS WHO COMES NEXT.)*
 
 **THE FIRST GARY GIBBONS'S LETTER (voice-over, warm gravel):**
-"If you're reading this, then one of mine grew up curious, and the badge found its way to you. Good. Now listen: the truth is not a trophy. It's a lantern. You don't win it — you carry it, and you mind whose eyes you shine it in. Ask the question under the question. Believe people are more than their worst night. And when the story is about someone's heart — and son, it is always, eventually, about someone's heart — tell the truth with compassion. In that order. And no other. — A.G."
+"If you're reading this, then one of mine grew up curious, and the badge found its way to you. Good. Now listen: the truth is not a trophy. It's a lantern. You don't win it — you carry it, and you mind whose eyes you shine it in. Ask the question under the question. Believe people are more than their worst night. And when the story is about someone's heart — and son, it is always, eventually, about someone's heart — tell the truth with compassion. In that order. And no other. — G.G."
 
 *(In the parcel: Gary Gibbons's field notebook; a brass magnifying glass engraved "Look closer, then look kinder" — Gary's series-permanent tool; and the jar of grape jam, "For emergencies." Gary laughs until he cries. Final shot: the board, cleared of string, and in the center one fresh index card in Gary's hand: "NEXT STORY?" — cut to black.)*
 
@@ -1108,4 +1108,5 @@ Part I scripts Julian prying up the boards. v1.2 addition: if the player reads t
 ---
 
 *End of Part III. — Gary Gibbons: The Empty Capsule, v1.2. The story is the same. The player found it themselves.*
+
 

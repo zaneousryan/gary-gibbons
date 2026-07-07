@@ -36,7 +36,7 @@
     },
     "n6": {
       "speaker": "narrator",
-      "line": "In the parcel: Gary Gibbons's field notebook. A brass magnifying glass engraved \"Look closer, then look kinder.\" And a jar of homemade grape jam, labeled in his careful hand: \"For emergencies.\" It's hereditary. Gary laughs until he cries, for several reasons at once.",
+      "line": "In the parcel: Gary Gibbons's field notebook. A brass magnifying glass engraved \"Look closer, then look kinder.\" And a jar of homemade grape jam, labeled in Gary Gibbons's hand: \"For emergencies.\" It's hereditary. Gary laughs until he cries, for several reasons at once.",
       "authored": "verbatim",
       "next": "n7"
     },
@@ -58,4 +58,5 @@
     }
   }
 }
+
 

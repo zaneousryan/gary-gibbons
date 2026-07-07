@@ -61,7 +61,7 @@
     },
     "c3o": {
       "speaker": "dot",
-      "line": "...Small hands. Hm. You're Gary Gibbons's, all right — he'd have said the same thing before his coffee. Go on then. Follow the ink.",
+      "line": "...Small hands. Hm. You're Gary Gibbons's grandson, all right — he'd have said the same thing before his coffee. Go on then. Follow the ink.",
       "authored": "aletheia",
       "emote": "surprised",
       "effects": [
@@ -99,4 +99,5 @@
   "oncePerDay": true,
   "repeatBark": "dot_repeat_busy"
 }
+
 

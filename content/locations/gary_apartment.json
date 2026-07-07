@@ -72,7 +72,7 @@
       "label": "Grandpa's Badge",
       "detail": {
         "tier": "character",
-        "text": "The first Gary Gibbons's press badge — Grandpa's, brass gone soft-dark with thumbprints. Gary touches it the way other people knock on wood."
+        "text": "The first Gary Gibbons's press badge, brass gone soft-dark with thumbprints. Gary touches it the way other people knock on wood."
       },
       "ref": "I.7.2"
     },
@@ -191,4 +191,5 @@
     }
   ]
 }
+
 
