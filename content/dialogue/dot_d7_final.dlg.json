@@ -9,7 +9,7 @@
   "nodes": {
     "h1": {
       "speaker": "dot",
-      "line": "You held the page. Archie held the page once too. I'll tell you about it when you're back.",
+      "line": "You held the page. Gary Gibbons held the page once too. I'll tell you about it when you're back.",
       "authored": "verbatim",
       "emote": "neutral",
       "effects": [{ "setFlag": "dot_ack_hold" }],
@@ -76,7 +76,7 @@
     },
     "c4": {
       "speaker": "dot",
-      "line": "Archie would run it exactly the way you're about to.",
+      "line": "Gary Gibbons would run it exactly the way you're about to.",
       "authored": "verbatim",
       "emote": "happy",
       "effects": [
@@ -89,3 +89,4 @@
   "oncePerDay": true,
   "repeatBark": "dot_repeat_busy"
 }
+

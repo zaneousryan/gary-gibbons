@@ -196,7 +196,7 @@
       "id": "nb_morgue_unlocked",
       "tab": "places",
       "title": "The Ledger Morgue",
-      "text": "Fifty years of the district in bound volumes and clipping drawers, under my own floor the whole time. The quietest room in town. Archie's desk is down there, one drawer locked.",
+      "text": "Fifty years of the district in bound volumes and clipping drawers, under my own floor the whole time. The quietest room in town. Gary Gibbons's desk is down there, one drawer locked.",
       "authored": "aletheia",
       "ref": "II.15.2"
     },
@@ -268,7 +268,7 @@
       "id": "nb_handwriting",
       "tab": "places",
       "title": "Handwriting comparison",
-      "text": "The looped G, the crossed double-t, the pen pressure. Three features, the way Archie taught. Same hand.",
+      "text": "The looped G, the crossed double-t, the pen pressure. Three features, the way Grandpa taught. Same hand.",
       "authored": "aletheia",
       "ref": "II.12.5"
     },
@@ -396,7 +396,7 @@
       "id": "nb_dot_blessing",
       "tab": "people",
       "title": "Dot, on the last morning",
-      "text": "'Archie would run it exactly the way you're about to.' The red pen stayed down. That's the highest compliment this office issues.",
+      "text": "'Gary Gibbons would run it exactly the way you're about to.' The red pen stayed down. That's the highest compliment this office issues.",
       "authored": "aletheia",
       "ref": "I.5.day7"
     },
@@ -490,3 +490,4 @@
     }
   ]
 }
+

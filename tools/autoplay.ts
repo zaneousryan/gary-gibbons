@@ -650,7 +650,7 @@ async function runOnce(seed: number): Promise<string[]> {
 
   // --- day 7: The Boathouse (I.8) ---
   game.moveTo('the_percolator');
-  talkTo(db, 'dot', 'dot_d7_final'); // the held-page entry: "Archie held the page once too."
+  talkTo(db, 'dot', 'dot_d7_final'); // the held-page entry: "Gary Gibbons held the page once too."
   assertFlag('dot_ack_hold'); // printed_hold_d6 (engine tone flag) routes the held entry
   assertFlag('dot_ran_it'); // "Thin sourcing, Gibbons." / "Thick enough." / "...Yeah. Run it."
   assertFlag('pitch_d7_done');
@@ -773,3 +773,4 @@ async function main() {
 }
 
 main().catch((e) => fail(String(e)));
+

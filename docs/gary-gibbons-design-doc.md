@@ -98,7 +98,7 @@ The story begins three days before the opening.
 
 *(What actually happened. The player reconstructs this out of order.)*
 
-**50 years ago** — Lanternside founded. Capsule sealed in the monument. Locksmith **Ida Wren** (then an apprentice) forges exactly **two keys**: the Ceremonial Key (council custody) and a Family Backup Key (kept in the Vale Manor study, largely forgotten). Among the items sealed inside: children's drawings and predictions; a letter sealed by **Theodora Vale** (Edmund's sister) that ends her secret romance with **Jonah Croft**; and a package left by a young cub reporter named **Arthur "Archie" Gibbons** — Gary's grandfather.
+**50 years ago** — Lanternside founded. Capsule sealed in the monument. Locksmith **Ida Wren** (then an apprentice) forges exactly **two keys**: the Ceremonial Key (council custody) and a Family Backup Key (kept in the Vale Manor study, largely forgotten). Among the items sealed inside: children's drawings and predictions; a letter sealed by **Theodora Vale** (Edmund's sister) that ends her secret romance with **Jonah Croft**; and a package left by a young cub reporter named **Gary Gibbons** — Gary's grandfather and namesake. (Our protagonist is Gary Gibbons Jr. — but NOBODY, including this document, the game, or the credits, ever calls him "Jr." He is Gary. The full name "Gary Gibbons," spoken by the town, always means the grandfather.)
 
 **10 years ago** — The Founder's Addition. Dying Edmund Vale adds his will: leadership shall pass to **both** his children, Julian and Clara, jointly, when Julian comes of age (24) — which falls, by Edmund's design, on the week of the 50th Anniversary. Nobody knows the contents. Everyone *assumes* it names Julian alone.
 
@@ -131,11 +131,11 @@ Format per character: *Role · Species · Age · Design & silhouette · Voice (h
 ## GARY GIBBONS — Protagonist
 **Investigative reporter, The Lanternside Ledger · Gibbon · 28**
 
-- **Species & Design:** A **gibbon** — long-limbed and lanky by nature, built for leaning in doorframes, reaching high shelves, and draping over café chairs. Sandy-brown fur, dark expressive face, scruffy cheek fur of a gibbon who forgot to be vain. Slightly rumpled tweed jacket with elbow patches, loosened knit tie, satchel heavy with notebooks, pencil tucked behind one small round ear. Grandpa Archie's tarnished brass **press badge** pinned inside his lapel — he touches it when thinking. His long arms are an animation gift: gesturing, note-scribbling at distance, hanging a lantern-high pin on the board without a stool.
+- **Species & Design:** A **gibbon** — long-limbed and lanky by nature, built for leaning in doorframes, reaching high shelves, and draping over café chairs. Sandy-brown fur, dark expressive face, scruffy cheek fur of a gibbon who forgot to be vain. Slightly rumpled tweed jacket with elbow patches, loosened knit tie, satchel heavy with notebooks, pencil tucked behind one small round ear. Grandpa's tarnished brass **press badge** pinned inside his lapel — he touches it when thinking. His long arms are an animation gift: gesturing, note-scribbling at distance, hanging a lantern-high pin on the board without a stool.
 - **Voice:** Earnest, self-deprecating internal monologue; polite and genuinely curious out loud. Asks "and how did that make you feel?" in a town that isn't used to being asked.
-- **Core wound:** Raised by his grandfather Archie, a legendary reporter, after his father left. Gary measures every choice against a ghost. His internal refrains: *"What would Grandpa do?" "Remember who you are." "Do it for Grandpa."*
+- **Core wound:** Raised by his grandfather — the first Gary Gibbons, a legendary reporter —, after his father left. Gary measures every choice against a ghost. His internal refrains: *"What would Grandpa do?" "Remember who you are." "Do it for Grandpa."*
 - **The grape thing:** Gary is quietly, absurdly, seriously fighting an addiction to grapes. Never a punchline the game underlines. A pattern the *player* discovers. (Full beat schedule: Section 7.) The species makes the joke quieter and truer — he's a gibbon; of course it's grapes. Fruit is his birthright and his nemesis.
-- **Diegetic hint system — "Ask Grandpa":** When stuck, the player can have Gary touch the press badge. He remembers a piece of Archie's advice, phrased as a nudge, never a solution. *"Grandpa always said: when a story stalls, go back to the person who was most embarrassed."*
+- **Diegetic hint system — "Ask Grandpa":** When stuck, the player can have Gary touch the press badge. He remembers a piece of Gary Gibbons's advice, phrased as a nudge, never a solution. *"Grandpa always said: when a story stalls, go back to the person who was most embarrassed."*
 
 ---
 
@@ -208,7 +208,7 @@ A plump, flour-dusted **hen**, terrifyingly perceptive; gossip is her love langu
 An enormous gentle **brown bear**, tiny espresso cups vanishing in his paws. Speaks in coffee metaphors. The café is the rumor exchange; Otto's chalkboard tracks the town's mood daily. Witness to the **seal fragment drop** (Day 6). Keeps a bowl of grapes on the counter, which is Gary's personal Everest.
 
 ### DOT RAMIREZ — Editor, The Lanternside Ledger · 55
-A grey-muzzled **wire-haired terrier**, Gary's boss, downstairs from his apartment. Gravel voice, red pen, secret heart of gold, and a bite reserved exclusively for lazy paragraphs. Daily function: each morning she pressure-tests Gary's theory — a diegetic recap system. *"Sell me the story, Gibbons. In one sentence."* Knew Archie; drops one Grandpa memory per day.
+A grey-muzzled **wire-haired terrier**, Gary's boss, downstairs from his apartment. Gravel voice, red pen, secret heart of gold, and a bite reserved exclusively for lazy paragraphs. Daily function: each morning she pressure-tests Gary's theory — a diegetic recap system. *"Sell me the story, Gibbons. In one sentence."* Knew the first Gary Gibbons; drops one Grandpa memory per day.
 
 ### IDA WREN — Locksmith, Wren & Wick · 74
 A tiny **wren** (the shop sign was inevitable), magnifying visor, workshop of ten thousand labeled drawers scaled to wren hands — which is why her locks are the finest in the district. Forged the capsule's keys fifty years ago as an apprentice. **Her ledger proves exactly two keys exist** — the linchpin of the "means" chain. Voice: talks to locks like they're shy animals.
@@ -414,7 +414,7 @@ Core yield: `[BOARD: THE OVERHEARD CONVERSATION — "You may be surprised" · BE
 
 ## DAY 7 — "The Boathouse" (Confrontation, Resolution, Ending — full scripts in §8)
 
-Morning: Dot's final pressure-test (she quietly says, *"Archie would run it exactly the way you're about to."*). Clara insists on coming as far as the riverbank. Confrontation at the Old Boathouse → confession → recovery (Tuck formalizes; Gary never plays cop) → the will is read in the square → shared leadership revealed → reconciliation → Warren's joyful handover and departure line → Gary writes the story → CREDITS CAPSULE SCENE (Grandpa's letter).
+Morning: Dot's final pressure-test (she quietly says, *"Gary Gibbons would run it exactly the way you're about to."*). Clara insists on coming as far as the riverbank. Confrontation at the Old Boathouse → confession → recovery (Tuck formalizes; Gary never plays cop) → the will is read in the square → shared leadership revealed → reconciliation → Warren's joyful handover and departure line → Gary writes the story → CREDITS CAPSULE SCENE (Grandpa's letter).
 
 ---
 
@@ -460,11 +460,11 @@ Morning: Dot's final pressure-test (she quietly says, *"Archie would run it exac
 | 5 | The Archive: a 200-year-old still life, *Grapes in Lamplight*. Gary stands before it slightly too long. Prudence: "It's not for sale." Gary: "I know what it is." |
 | 6 | Vale Manor fruit basket during the hardest interview of his life. The camera keeps it in frame. Gary keeps it in peripheral vision. He does not break. |
 | 7 | Victory beat: Gino offers the celebratory bunch. Gary takes ONE grape, looks at it, and hands it to Milo. "You earned it, kid." (He is at peace. Ish.) |
-| Credits | Grandpa's capsule package contains, among the treasures, a sealed jar of homemade grape jam labeled in Archie's hand: **"For emergencies."** It's hereditary. Gary laughs until he cries, for several reasons at once. |
+| Credits | Grandpa's capsule package contains, among the treasures, a sealed jar of homemade grape jam labeled in Gary Gibbons's hand: **"For emergencies."** It's hereditary. Gary laughs until he cries, for several reasons at once. |
 
 ## 7.2 The Grandpa Thread
 - **The badge** = diegetic hint system ("Ask Grandpa") and Gary's thinking tell.
-- **One Archie memory per day**, mostly via Dot: Day 1 "Archie filed from a rowboat once." → Day 6 "You know what your grandfather never did? Publish angry." 
+- **One Grandpa memory per day**, mostly via Dot: Day 1 "Gary Gibbons filed from a rowboat once." → Day 6 "You know what your grandfather never did? Publish angry." 
 - **Payoff:** the credits letter (§8.4). Grandpa's keepsake — a brass magnifying glass engraved ***"Look closer, then look kinder."*** — becomes Gary's series-permanent tool: in future games, the "observe" mode UI is literally this magnifying glass.
 
 ---
@@ -487,7 +487,7 @@ Morning: Dot's final pressure-test (she quietly says, *"Archie would run it exac
 **G:** *(inner, everything clicking at once)* A comfort to one child. A verdict overheard by the other.
 **B:** *(watching his face)* You've just understood something. I can see it land. *(quietly)* Be careful with it, Mr. Gibbons. Whatever it is — it's carrying one of my children.
 **G:** *(stands; at the door, he stops)* Mrs. Vale. My grandfather had a rule about stories like this one. "Truth with compassion. In that order — and no other."
-**B:** *(the first small smile)* Then Archie Gibbons raised you correctly. Good evening.
+**B:** *(the first small smile)* Then Gary Gibbons raised you correctly. Good evening.
 
 `[BOARD: THE OVERHEARD CONVERSATION · BEATRICE READ THE WILL]`
 
@@ -543,10 +543,10 @@ Morning: Dot's final pressure-test (she quietly says, *"Archie would run it exac
 
 *(Last: a small parcel in oilcloth, addressed in strong pencil: FOR THE GIBBONS WHO COMES NEXT.)*
 
-**ARCHIE'S LETTER (voice-over, warm gravel):**
+**THE FIRST GARY GIBBONS'S LETTER (voice-over, warm gravel):**
 "If you're reading this, then one of mine grew up curious, and the badge found its way to you. Good. Now listen: the truth is not a trophy. It's a lantern. You don't win it — you carry it, and you mind whose eyes you shine it in. Ask the question under the question. Believe people are more than their worst night. And when the story is about someone's heart — and son, it is always, eventually, about someone's heart — tell the truth with compassion. In that order. And no other. — A.G."
 
-*(In the parcel: Archie's field notebook; a brass magnifying glass engraved "Look closer, then look kinder" — Gary's series-permanent tool; and the jar of grape jam, "For emergencies." Gary laughs until he cries. Final shot: the board, cleared of string, and in the center one fresh index card in Gary's hand: "NEXT STORY?" — cut to black.)*
+*(In the parcel: Gary Gibbons's field notebook; a brass magnifying glass engraved "Look closer, then look kinder" — Gary's series-permanent tool; and the jar of grape jam, "For emergencies." Gary laughs until he cries. Final shot: the board, cleared of string, and in the center one fresh index card in Gary's hand: "NEXT STORY?" — cut to black.)*
 
 **Post-credits stinger:** Ferris, tending the repaired community garden, unearths something with a metallic *clink*. He looks left. He looks right. "...Ferris Mott smells destiny." SMASH TO LOGO: *GARY GIBBONS WILL RETURN.*
 
@@ -595,7 +595,7 @@ For locations append: *"Wide establishing shot, no characters unless specified."
 
 **CONSTABLE BRAM TUCK:** [MASTER STYLE PROMPT] An anthropomorphic basset hound constable, early 50s, magnificently unhurried, heavy-lidded eyes that miss nothing, long ears, slightly rumpled vintage constable uniform, half-eaten pastry in paw, leaning on a gas lamppost as a lifestyle. Color story: constable blue and pastry gold.
 
-**ARCHIE GIBBONS (flashback/portrait):** [MASTER STYLE PROMPT] Sepia-toned memory illustration, softer dreamlike watercolor edges: a weathered charismatic elderly gibbon reporter, silver-flecked fur, fedora with a brass press badge on the hat band, rolled shirtsleeves, laughing mid-story, warm gravelly presence.
+**GARY GIBBONS THE FIRST (flashback/portrait):** [MASTER STYLE PROMPT] Sepia-toned memory illustration, softer dreamlike watercolor edges: a weathered charismatic elderly gibbon reporter, silver-flecked fur, fedora with a brass press badge on the hat band, rolled shirtsleeves, laughing mid-story, warm gravelly presence.
 
 ## 9.3 Location Prompts
 
@@ -641,7 +641,7 @@ For locations append: *"Wide establishing shot, no characters unless specified."
 7. **Edmund's will as lantern/ivy metaphor** — the seal itself encodes the answer (lantern = Julian, ivy = Clara, inseparable). Sharp-eyed players can solve the THEME from Day 2.
 8. **The animal world (v1.3 species pass)** — Lanternside is an anthropomorphic animal district (Zootopia proportions, 1930s–50s European storybook, watercolor/gouache). Species assigned throughout §4; the weasel photo clue is now literal (Ferris is the district's only weasel); Julian's velvet antlers and the umbrella that hides them are canon; the Vale/Croft rivalry is deer/fox; the Pigeon Rule governs ambient wildlife.
 
-**Game Two hooks planted:** Ferris's post-credits *clink* in the garden · Warren's postcards from lighthouses (returning pen-pal NPC) · Archie's field notebook contains one unfinished story marked "COULDN'T CRACK IT — MAYBE YOU" · the magnifying glass as the new observe-mode UI · Prudence & Evelyn's joint exhibition opening "next spring."
+**Game Two hooks planted:** Ferris's post-credits *clink* in the garden · Warren's postcards from lighthouses (returning pen-pal NPC) · Gary Gibbons's field notebook contains one unfinished story marked "COULDN'T CRACK IT — MAYBE YOU" · the magnifying glass as the new observe-mode UI · Prudence & Evelyn's joint exhibition opening "next spring."
 
 ---
 
@@ -690,7 +690,7 @@ Every new mechanic in this pass answers one question: *what does a reporter do t
 - **Example (Warren, Day 3):**
   - PRESS: "Did you want to keep the chair?" → W: "No." *(true, closed, scene ends colder)*
   - EMPATHIZE: "Eight years is a long time to keep someone else's seat warm." → unlocks the lighthouse folio.
-  - OBSERVE *(if player noticed him cleaning already-clean glasses)*: "You've cleaned those glasses three times since I said his name." → W: *(long pause)* "...You're Archie's, all right. Sit down, Mr. Gibbons."
+  - OBSERVE *(if player noticed him cleaning already-clean glasses)*: "You've cleaned those glasses three times since I said his name." → W: *(long pause)* "...You're Gary Gibbons's, all right. Sit down, Mr. Gibbons."
 
 ## 12.2 Sketch From Memory (expanded from Part I's seal minigame)
 
@@ -789,13 +789,13 @@ The bunting sags a little more each day the mystery stays open; flowers accumula
   - Day 7: the final article is composed from ALL week's choices — the game's ending "grade," expressed as journalism. (Replay driver, §19.)
 - **Pacing:** Gives every day a narrative exhale before the board's inhale.
 - **Status:** REQUIRED (core).
-- **Example (Day 6 night — the hardest headline in the game):** The player now knows it's Julian. Options: "HEIR SUSPECTED IN CAPSULE THEFT" / "Investigation Nears Its End" / "Hold Tomorrow's Front Page." Choosing the third — printing *nothing* — is the correct compassionate play, and Dot's Day 7 morning line acknowledges it: "You held the page. Archie held the page once too. I'll tell you about it when you're back." *(Players who print the sensational one still reach the same ending — but Julian has read it before Gary arrives at the boathouse, and his opening line changes: "Front page after all." Same scene, heavier heart. Replay conversation piece.)*
+- **Example (Day 6 night — the hardest headline in the game):** The player now knows it's Julian. Options: "HEIR SUSPECTED IN CAPSULE THEFT" / "Investigation Nears Its End" / "Hold Tomorrow's Front Page." Choosing the third — printing *nothing* — is the correct compassionate play, and Dot's Day 7 morning line acknowledges it: "You held the page. Gary Gibbons held the page once too. I'll tell you about it when you're back." *(Players who print the sensational one still reach the same ending — but Julian has read it before Gary arrives at the boathouse, and his opening line changes: "Front page after all." Same scene, heavier heart. Replay conversation piece.)*
 
 ## 15.2 The Ledger Morgue (newspaper archive)
 
-- **Why:** Fifty years of the district's life in bound volumes and clipping drawers — the lore delivery room, three side-story engines, and the home of Archie's ghost.
+- **Why:** Fifty years of the district's life in bound volumes and clipping drawers — the lore delivery room, three side-story engines, and the home of Grandpa's ghost.
 - **Where:** Basement under the Ledger office; unlocked Day 3 (Dot sends Gary down for The Founder's Addition coverage — REQUIRED touch); free access after.
-- **Design:** Search by YEAR + SUBJECT drawers (deliberately tactile: pull drawer, thumb cards, unfold clippings). Authored contents, not procedural: ~35 readable clippings including the founding, the Addition, Theodora-era society columns ("Miss T.V. seen AGAIN at the Croft landing — we say nothing, we merely report"), decades of Archie bylines, and one drawer labeled in Archie's handwriting: "STORIES THAT GOT AWAY" (Game Two hook, §10). Finding Archie's clippings triggers optional badge-touch memories — the morgue is where the Grandpa thread lives spatially.
+- **Design:** Search by YEAR + SUBJECT drawers (deliberately tactile: pull drawer, thumb cards, unfold clippings). Authored contents, not procedural: ~35 readable clippings including the founding, the Addition, Theodora-era society columns ("Miss T.V. seen AGAIN at the Croft landing — we say nothing, we merely report"), decades of the first Gary Gibbons's bylines, and one drawer labeled in Gary Gibbons's handwriting: "STORIES THAT GOT AWAY" (Game Two hook, §10). Finding Gary Gibbons's clippings triggers optional badge-touch memories — the morgue is where the Grandpa thread lives spatially.
 - **Pacing:** The game's designated quiet room. No music; just the clock and paper sounds. Players will spend an hour here voluntarily.
 - **Status:** REQUIRED room, mostly OPTIONAL contents.
 
@@ -886,7 +886,7 @@ Dot's daily pressure-test (Part I) becomes systemic: she asks two questions each
 - **Trust-flavored dialogue:** ~15% of lines vary by headline history; the Day 7 boathouse opener has three versions (§15.1).
 - **Interview stances:** OBSERVE lines require noticing tells — most players miss half on run one.
 - **Weather-gated barks & rain-room scenes** (§14.2).
-- **NG+ — "Archie's Notes":** replay with grandpa's margin commentary appearing in the notebook at 25 authored moments — jokes, pride, one line at the boathouse ("Sit on the floor with him. Good lad."). Turns a replay into a duet with the ghost the whole game is about. *(Franchise signature; carry NG+ commentary forward every game.)*
+- **NG+ — "Grandpa's Notes":** replay with grandpa's margin commentary appearing in the notebook at 25 authored moments — jokes, pride, one line at the boathouse ("Sit on the floor with him. Good lad."). Turns a replay into a duet with the ghost the whole game is about. *(Franchise signature; carry NG+ commentary forward every game.)*
 
 ## 19.2 Collectibles (all diegetic)
 - **The 47 Lanterns:** photograph every gas lantern in the district (Warren's checklist in the camera case). Reward: Warren's first lighthouse postcard arrives post-game addressed to "The Lantern Counter."
@@ -1035,7 +1035,7 @@ Selected entries (full index in level-design appendix; ★ = becomes a clue):
 - **The Boathouse (Day 7):** the four reads from §13.5 plus one more: ★the floorboard nails — every nail dull with age except six, shining, recently re-driven. The player can find the hiding place *before Julian offers it* (§25.4).
 - **The Drowsy Lantern:** ★Guest register (Ferris's check-in date clears him of anything earlier — a redundancy path). One sherry glass kept upside-down at the corner seat: Margie's quiet reservation for Warren, standing hospitality for a lonely man. Room keys on hooks — Ferris's is never on its hook at night (observable Days 2–3, before the stakeout formally begins: the player can catch the pattern first).
 - **The Percolator:** ★Chalkboard hints. A wall of fifty years of festival photos — young Margie, young Warren, and in the earliest frame, ★a young gibbon reporter with a familiar badge, arm-in-arm with a young doe who is unmistakably Beatrice. Unlabeled. Unremarked. (See §28.)
-- **The Ledger Morgue:** ★weather column (§21). Archie's desk, preserved, one drawer locked (§28). The wall of front pages with one conspicuous gap — a missing week, fifty years ago, unexplained (§28).
+- **The Ledger Morgue:** ★weather column (§21). Gary Gibbons's desk, preserved, one drawer locked (§28). The wall of front pages with one conspicuous gap — a missing week, fifty years ago, unexplained (§28).
 - **Wren & Wick:** ★the ledger. Drawer 400 (§17.5). A child's first practice lock mounted like a diploma, engraved "I.W., age 9."
 
 ---
@@ -1077,12 +1077,12 @@ Part I scripts Julian prying up the boards. v1.2 addition: if the player reads t
 
 # 28. NATURAL SEEDS — UNREMARKED MYSTERIES (all OPTIONAL, none resolved, none signposted)
 
-1. **The locked drawer** in Archie's preserved desk. No key in this game. Ida, if asked: "I made that lock for Archie. He asked for one even I couldn't sweet-talk. *(pause)* He was smiling when he asked."
+1. **The locked drawer** in Gary Gibbons's preserved desk. No key in this game. Ida, if asked: "I made that lock for Gary Gibbons — the first one. He asked for one even I couldn't sweet-talk. *(pause)* He was smiling when he asked."
 2. **The missing week** — a gap in the morgue's front-page wall, fifty years ago. The bound volume for that week is simply absent from the shelf. Dot, if asked: "Before my time. Ask the shelf."
-3. **The festival photo** at the Percolator: young Archie arm-in-arm with young Beatrice, unlabeled. If Gary OBSERVES it in a late-game Beatrice scene, she looks at it a long moment. **B:** "Your grandfather took terrible photographs and wonderful ones. That one is both." *(Nothing further. Ever. This game.)*
+3. **The festival photo** at the Percolator: a young Gary Gibbons arm-in-arm with young Beatrice, unlabeled. If Gary OBSERVES it in a late-game Beatrice scene, she looks at it a long moment. **B:** "Your grandfather took terrible photographs and wonderful ones. That one is both." *(Nothing further. Ever. This game.)*
 4. **"& Wick"** — the shop is Wren & Wick. There is no Wick, no second workbench, one small covered chair in the back corner. Ida never mentions it. The sign is freshly repainted every spring.
 5. **Warren's one photograph** he turns face-down when Gary visits — visible in exactly two scenes, never if you look directly.
-6. **Archie's "STORIES THAT GOT AWAY" drawer** (Part II) — the readable contents (clipping-collection reward) include one folder that is only a title: *"THE LIGHTHOUSE THAT WASN'T THERE."* Warren is going to the lighthouses. The game says nothing.
+6. **Gary Gibbons's "STORIES THAT GOT AWAY" drawer** (Part II) — the readable contents (clipping-collection reward) include one folder that is only a title: *"THE LIGHTHOUSE THAT WASN'T THERE."* Warren is going to the lighthouses. The game says nothing.
 7. **Ferris's post-credits clink** (Part I) — unchanged, still the loudest seed; everything above whispers.
 
 **Design law for seeds:** no quest markers, no journal entries, no NPC saying "how mysterious!" A seed that announces itself is an advertisement; a seed that just *sits there* is a world.
@@ -1108,3 +1108,4 @@ Part I scripts Julian prying up the boards. v1.2 addition: if the player reads t
 ---
 
 *End of Part III. — Gary Gibbons: The Empty Capsule, v1.2. The story is the same. The player found it themselves.*
+

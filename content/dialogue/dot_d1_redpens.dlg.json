@@ -61,7 +61,7 @@
     },
     "c3o": {
       "speaker": "dot",
-      "line": "...Small hands. Hm. You're Archie's, all right — he'd have said the same thing before his coffee. Go on then. Follow the ink.",
+      "line": "...Small hands. Hm. You're Gary Gibbons's, all right — he'd have said the same thing before his coffee. Go on then. Follow the ink.",
       "authored": "aletheia",
       "emote": "surprised",
       "effects": [
@@ -82,7 +82,7 @@
     },
     "c5": {
       "speaker": "dot",
-      "line": "Archie filed from a rowboat once. One sentence, mid-river, deadline made. …Go earn the rest of that story.",
+      "line": "Gary Gibbons filed from a rowboat once. One sentence, mid-river, deadline made. …Go earn the rest of that story.",
       "authored": "aletheia",
       "emote": "happy",
       "ref": "I.7.2",
@@ -99,3 +99,4 @@
   "oncePerDay": true,
   "repeatBark": "dot_repeat_busy"
 }
+

@@ -70,8 +70,8 @@ export default function TitleScreen({ db }: { db: ContentDB }) {
           {finished && (
             <button onClick={() => startNew(true)} data-testid="title-ngplus"
               className="w-64 py-3 border-2 border-plum rounded text-cream font-bold tracking-wide cursor-pointer hover:bg-plum/30"
-              title="Replay with Archie's margin notes">
-              New Game+ — Archie's Notes
+              title="Replay with Grandpa's margin notes">
+              New Game+ — Grandpa's Notes
             </button>
           )}
           {finished && (
@@ -109,3 +109,4 @@ export default function TitleScreen({ db }: { db: ContentDB }) {
     </div>
   );
 }
+

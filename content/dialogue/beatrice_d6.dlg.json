@@ -134,7 +134,7 @@
     },
     "b16": {
       "speaker": "beatrice",
-      "line": "Then Archie Gibbons raised you correctly. Good evening.",
+      "line": "Then Gary Gibbons raised you correctly. Good evening.",
       "authored": "verbatim",
       "emote": "happy",
       "effects": [{ "setFlag": "beatrice_tea_done" }],
@@ -144,3 +144,4 @@
   "oncePerDay": false,
   "repeatBark": "beatrice_repeat_busy"
 }
+

@@ -6,9 +6,10 @@
   "sprite": "card_grandpas_package",
   "source": "gary",
   "initialStatus": "verified",
-  "text": "Among the missing: a package left at the founding by a young cub reporter named Archie Gibbons. Gary never knew what was in it. He was going to find out tonight.",
+  "text": "Among the missing: a package left at the founding by a young cub reporter named Gary Gibbons. Gary never knew what was in it. He was going to find out tonight.",
   "verifyRoutes": [],
   "reReadLines": [
     { "cond": { "day": { "gte": 4 } }, "bark": "reread_grandpas_package" }
   ]
 }
+

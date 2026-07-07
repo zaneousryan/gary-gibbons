@@ -30,13 +30,13 @@
     },
     "n5": {
       "speaker": "narrator",
-      "line": "\"Ask the question under the question. Believe people are more than their worst night. And when the story is about someone's heart — and son, it is always, eventually, about someone's heart — tell the truth with compassion. In that order. And no other. — A.G.\"",
+      "line": "\"Ask the question under the question. Believe people are more than their worst night. And when the story is about someone's heart — and son, it is always, eventually, about someone's heart — tell the truth with compassion. In that order. And no other. — G.G.\"",
       "authored": "verbatim",
       "next": "n6"
     },
     "n6": {
       "speaker": "narrator",
-      "line": "In the parcel: Archie's field notebook. A brass magnifying glass engraved \"Look closer, then look kinder.\" And a jar of homemade grape jam, labeled in Archie's hand: \"For emergencies.\" It's hereditary. Gary laughs until he cries, for several reasons at once.",
+      "line": "In the parcel: Gary Gibbons's field notebook. A brass magnifying glass engraved \"Look closer, then look kinder.\" And a jar of homemade grape jam, labeled in his careful hand: \"For emergencies.\" It's hereditary. Gary laughs until he cries, for several reasons at once.",
       "authored": "verbatim",
       "next": "n7"
     },
@@ -58,3 +58,4 @@
     }
   }
 }
+

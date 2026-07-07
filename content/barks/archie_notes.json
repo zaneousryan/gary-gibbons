@@ -1,8 +1,8 @@
 {
   "pool": "archie_notes",
   "barks": [
-    { "id": "an_empty_vault", "text": "Empty rooms talk loudest, son. — A.G.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_empty_vault"] },
-    { "id": "an_met_otto", "text": "Befriend whoever pours the coffee. The rest follows. — A.G.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_met_otto"] },
+    { "id": "an_empty_vault", "text": "Empty rooms talk loudest, son. — G.G.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_empty_vault"] },
+    { "id": "an_met_otto", "text": "Befriend whoever pours the coffee. The rest follows. — G.G.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_met_otto"] },
     { "id": "an_met_margie", "text": "A landlady who quotes exactly is worth three constables.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_met_margie"] },
     { "id": "an_met_gino", "text": "Ha! Mine was plums. Every reporter has a nemesis fruit. Hereditary, apparently — check the jam.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_met_gino"] },
     { "id": "an_met_ida", "text": "Ida was old when I was young. The drawers really do get ideas.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_met_ida"] },
@@ -25,6 +25,7 @@
     { "id": "an_overheard", "text": "Half a conversation starts most of the world's trouble. The other half usually forgives it.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_overheard"] },
     { "id": "an_confession", "text": "Sit on the floor with him. Good lad.", "authored": "verbatim", "ref": "II.19.1", "tags": ["nb_confession"] },
     { "id": "an_reading", "text": "Lead together, argue often, decide once. A whole town in eleven words. I never managed a lede under twenty.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_reading"] },
-    { "id": "an_credits", "text": "The jam keeps. So does the rule. Go find the next story. — A.G.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_credits"] }
+    { "id": "an_credits", "text": "The jam keeps. So does the rule. Go find the next story. — G.G.", "authored": "aletheia", "ref": "II.19.1", "tags": ["nb_credits"] }
   ]
 }
+

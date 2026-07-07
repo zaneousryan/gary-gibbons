@@ -67,7 +67,7 @@
     },
     "c4o": {
       "speaker": "warren",
-      "line": "...You're Archie's, all right. Sit down, Mr. Gibbons.",
+      "line": "...You're Gary Gibbons's, all right. Sit down, Mr. Gibbons.",
       "authored": "verbatim",
       "emote": "surprised",
       "next": "c4"
@@ -106,3 +106,4 @@
   "oncePerDay": false,
   "repeatBark": "warren_repeat_busy"
 }
+

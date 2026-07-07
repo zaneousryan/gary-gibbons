@@ -8,7 +8,7 @@
   "greetings": {
     "cold": "Mr. Gibbons. Keep it brief; the district doesn't run on interviews.",
     "neutral": "Mr. Gibbons. Good of you to come by.",
-    "warm": "Ah — Archie's boy. Sit down, the light's good this hour."
+    "warm": "Ah — Gary Gibbons's boy. Sit down, the light's good this hour."
   },
   "tells": [
     {
@@ -20,3 +20,4 @@
   ],
   "etiquette": { "note": "Feeds pigeons at 8 a.m. sharp. Never interrupt the pigeons." }
 }
+

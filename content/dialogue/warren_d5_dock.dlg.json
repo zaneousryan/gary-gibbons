@@ -19,7 +19,7 @@
     },
     "c2": {
       "speaker": "warren",
-      "line": "So. The screws. I wondered which of Archie's traits you'd inherit first — the eye, or the discretion.",
+      "line": "So. The screws. I wondered which of your grandfather's traits you'd inherit first — the eye, or the discretion.",
       "authored": "aletheia",
       "emote": "neutral",
       "next": "c3"
@@ -85,3 +85,4 @@
   "oncePerDay": false,
   "repeatBark": "warren_repeat_busy"
 }
+

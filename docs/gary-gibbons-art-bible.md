@@ -1,6 +1,6 @@
 # GARY GIBBONS — THE ART BIBLE
 ## The Complete Visual Production Document for *Gary Gibbons: The Empty Capsule* and the Gary Gibbons franchise
-### Version 1.2 (presentation addendum — see final chapter) · previously 1.1 (production-readiness pass) · Canon-aligned with Design Doc v1.3 (species pass) and Technical Spec §10 (asset naming contract)
+### Version 1.3 (name pass: the grandfather is the first GARY GIBBONS — protagonist is Gary Gibbons Jr., never called Jr.; previously 1.2 presentation addendum — see final chapter) · previously 1.1 (production-readiness pass) · Canon-aligned with Design Doc v1.3 (species pass) and Technical Spec §10 (asset naming contract)
 
 > **THE MASTER STYLE PROMPT** — every image-generation prompt in this document begins with this text, verbatim:
 >
@@ -211,7 +211,7 @@ The loudest emotional channel in the game. Every mammal's ears are rigged for at
 Tails are truth. Characters can manage their faces; tails leak (Ferris's tail is vainer than he is; Evelyn's does one slow curl when she's amused; Dot's gives one involuntary wag when Gary files good copy — she'd deny it). Deer tails are small and mostly still — the Vales are the composed family, which makes Julian's single tail-flick at the boathouse a scripted, devastating frame. Tail slots are tailored into all clothing.
 
 ## 3.11 Age Progression
-Age is shown by: fur/feather silvering (muzzle first), posture settle, eye lid weight, and *object wear* (the older the character, the more loved their props). Flashback/sepia versions (young Archie, young Beatrice, Theodora, Jonah) use the same silhouettes with lighter line weight and dreamier wash — memory is drawn softer, not younger-prettier.
+Age is shown by: fur/feather silvering (muzzle first), posture settle, eye lid weight, and *object wear* (the older the character, the more loved their props). Flashback/sepia versions (young Gary Gibbons, young Beatrice, Theodora, Jonah) use the same silhouettes with lighter line weight and dreamier wash — memory is drawn softer, not younger-prettier.
 
 ## 3.12 Accessories
 One signature accessory per principal, load-bearing for silhouette and story (badge, umbrella, clipboard, camera, loupe, visor, telescope, sash, secateurs, pastry). Accessories are drawn at slightly hero scale (110%) and receive their own prop sheets (Chapter 6). No character gains or loses their signature accessory without a story reason — when Warren *hands over* the camera, the silhouette change is the story.
@@ -234,7 +234,7 @@ Drivers, by character: Gary = arm length + satchel diagonal; Julian = antler cro
 **Species:** Gibbon. **Height:** 1.0 (the town's reference scale).
 **Clothing:** Brown tweed jacket, elbow patches (one mended in slightly-wrong thread — Dot's stitching), mustard knit tie forever loosened, soft-collared shirt, brown trousers, scuffed brogues. Leather satchel worn cross-body (the silhouette diagonal). Grandpa's brass press badge inside the lapel.
 **Color Palette:** Tweed brown `#7A5C3E`, Mustard Knit `#C9932F`, cream shirt, Vale Plum tie-pin accent, satchel `#5B4630`.
-**Props:** Pencil (behind ear; drops when shocked — 4 scripted drops), notebook, satchel, badge, grape stress ball (apartment), loaner bellows camera (Day 3+), Archie's magnifying glass (credits → franchise tool).
+**Props:** Pencil (behind ear; drops when shocked — 4 scripted drops), notebook, satchel, badge, grape stress ball (apartment), loaner bellows camera (Day 3+), Gary Gibbons's magnifying glass (credits → franchise tool).
 **Facial Expressions:** Portrait set of 5 + unguarded set: "listening with his whole face," the badge-touch half-smile, the grape thousand-yard stare, the Night-6 quiet.
 **Turnaround:** Front — open, slightly forward-leaning; arms hang past mid-thigh (draw the length proudly). Side — the satchel diagonal + question-mark spine. Back — jacket wrinkle map + tail-less gibbon seat, satchel strap X.
 **Action Poses:** Note-scribbling at arm's length; door-frame lean; floor-sit (boathouse); board-reach (no stool needed — arms); umbrella-less rain trot with newspaper hat.
@@ -311,7 +311,7 @@ Drivers, by character: Gary = arm length + satchel diagonal; Julian = antler cro
 
 ---
 
-## ARCHIE GIBBONS — The Grandfather (memory)
+## GARY GIBBONS THE FIRST — The Grandfather (memory)
 **Purpose:** The ghost the game is about; flashback/portrait/credits presence. **Priority: Important. Complexity: Low-Medium** (no gameplay rig; illustration set only).
 **Description/Personality:** A weathered, charismatic elderly gibbon reporter — silver-flecked fur, fedora with the brass badge on the band, rolled sleeves, laughing mid-story. Warm gravel made visible.
 **Species:** Gibbon. **Height:** 1.0 (Gary inherited the frame along with everything else).
@@ -439,9 +439,9 @@ Drivers, by character: Gary = arm length + satchel diagonal; Julian = antler cro
 ---
 
 ## DOT RAMIREZ — The Editor
-**Purpose:** Morning pressure-test; Archie's colleague; the Ledger's spine. **Priority: Important. Complexity: Medium.**
+**Purpose:** Morning pressure-test; the first Gary Gibbons's colleague; the Ledger's spine. **Priority: Important. Complexity: Medium.**
 **Description:** A compact grey-muzzled wire-haired terrier, affectionate impatience in a rolled-sleeve shirt, a red pen behind each ear.
-**Personality:** Gravel and gold; bites only lazy paragraphs; holds Archie's memory in a drawer she doesn't open.
+**Personality:** Gravel and gold; bites only lazy paragraphs; holds the first Gary Gibbons's memory in a drawer she doesn't open.
 **Species:** Wire fox terrier. **Height:** 0.8.
 **Clothing:** Ink-smudged shirt, sleeve garters, waistcoat, reading glasses pushed up between her ears.
 **Color Palette:** Newsprint grey, editor red `#B03A2E`, terrier wire-white.
@@ -559,7 +559,7 @@ Drivers, by character: Gary = arm length + satchel diagonal; Julian = antler cro
 **Mood:** The good kind of alone. Lamplight, tea steam, rain on the round window.
 **Architecture:** Attic room above the Ledger — sloped ceiling, exposed beams, one round window facing the square, narrow bed, desk under the eave, THE BOARD wall (grows a second panel Day 4, wraps the corner by Day 6 — three authored wall states).
 **Lighting:** Desk lamp amber pool as the composition anchor; window supplies phase color; night = the signature amber-vs-teal chord at maximum.
-**Props:** Investigation board (see Ch.6/7), typewriter, kettle + one honest mug, grape stress ball (migrates nightly — authored positions), Archie's badge stand, photo line (prints drying, Day 3+), narrow bookshelf of Archie's clippings, coat hook, notebook on the pillow.
+**Props:** Investigation board (see Ch.6/7), typewriter, kettle + one honest mug, grape stress ball (migrates nightly — authored positions), Gary Gibbons's badge stand, photo line (prints drying, Day 3+), narrow bookshelf of Gary Gibbons's clippings, coat hook, notebook on the pillow.
 **Textures:** Warm wood, wool blanket, paper everywhere, cork.
 **Colors:** Tweed browns, Paper Cream, amber pool, teal window night.
 **Ambient Life:** Rain on glass; steam; curtain breath; the Ledger's muffled typewriter percussion from below (audio-visual pairing anchor); pigeon silhouettes on the sill.
@@ -572,12 +572,12 @@ Drivers, by character: Gary = arm length + satchel diagonal; Julian = antler cro
 ## 5.2 THE LANTERNSIDE LEDGER — Office & Morgue
 **Purpose:** Dot's pressure-tests; press identity; the Morgue research room (quietest room in the game). **Priority: Critical. Complexity: High.**
 **Mood:** Office — brisk ink-and-deadline warmth. Morgue — held-breath paper cathedral.
-**Architecture:** Ground floor beneath Gary's attic: press room with the small proofing press, Dot's desk fortress, the front-page wall (fifty years of history — WITH ONE GAP, unexplained, seed §III.28); basement Morgue: bound-volume shelves, clipping drawers (YEAR × SUBJECT), Archie's preserved desk with the locked drawer, one green-shaded lamp per table.
+**Architecture:** Ground floor beneath Gary's attic: press room with the small proofing press, Dot's desk fortress, the front-page wall (fifty years of history — WITH ONE GAP, unexplained, seed §III.28); basement Morgue: bound-volume shelves, clipping drawers (YEAR × SUBJECT), Gary Gibbons's preserved desk with the locked drawer, one green-shaded lamp per table.
 **Lighting:** Office — daylight through gold-lettered windows; Morgue — green-gold lamp pools in soft dark (the one room where teal deepens — reverently, not ominously).
 **Props:** Copy spike, pneumatic message tube to upstairs (Gary's alarm clock, canonically), red pen cup (minus two — tutorial mystery), the missing bound volume's gap on the shelf, weather-column ledgers, "STORIES THAT GOT AWAY" drawer.
 **Ambient Life:** Type percussion, proof pages on lines, ink smell drawn as faint blue haze, dust motes in lamp cones.
 **Animation Ideas:** Drawer pull + card-thumb loop (the research verb, made tactile); volume slide; the tube's *thunk-rattle-thunk*.
-**Gameplay Interactions:** Morning Pitch (Dot), Morgue search (drawer UI), weather-column clue path, handwriting-ledger comparisons, clipping collectibles, Archie memory triggers.
+**Gameplay Interactions:** Morning Pitch (Dot), Morgue search (drawer UI), weather-column clue path, handwriting-ledger comparisons, clipping collectibles, Grandpa memory triggers.
 **Variations Required:** Office 4 phases; Morgue single timeless state (it has no weather and no hour — deliberate).
 ### GPT Images Prompt
 ⟨MASTER STYLE PROMPT — expand verbatim on export⟩ Interior wide establishing shot, no characters: the basement newspaper archive of a small-town paper — tall shelves of huge leather-bound newspaper volumes, wooden card-catalog drawers labeled by year and subject, long reading tables with green-shaded brass lamps casting warm pools in soft shadow, one preserved antique reporter's desk with a locked drawer and a dusty typewriter, dust motes in the lamplight, one conspicuous gap in a wall of framed front pages.
@@ -587,7 +587,7 @@ Drivers, by character: Gary = arm length + satchel diagonal; Julian = antler cro
 **Mood:** Steam-warm murmur; the town's living room.
 **Architecture:** Snug corner shop, bay window with the heroic goldfish, mismatched chairs (each one belongs to somebody — regulars' chairs are set-dressing biography), three counter heights (bear/standard/wren), the copper machine as the room's gleaming heart.
 **Lighting:** Morning gold through steam; evening candle-jars per table.
-**Props:** THE CHALKBOARD (daily text layer — a content-driven asset), copper machine, grape bowl (Grape Green, always in Gary's eyeline — composition rule), fifty years of festival photos on the wall (including the young-Archie-and-Beatrice frame: painted, unlabeled, canon), tiny cup shelf.
+**Props:** THE CHALKBOARD (daily text layer — a content-driven asset), copper machine, grape bowl (Grape Green, always in Gary's eyeline — composition rule), fifty years of festival photos on the wall (including the young-Gary-Gibbons-and-Beatrice frame: painted, unlabeled, canon), tiny cup shelf.
 **Ambient Life:** Steam bloom, cup clinks, the goldfish's opinions, rain-day crowd compression (unique scenes per design doc II.14.2).
 **Animation Ideas:** Machine hiss-and-shudder; chalk being rewritten (Otto's paw, morning ambient); steam letters briefly legible (once, Easter egg).
 **Gameplay Interactions:** Vox pop hub, rumor readings, fragment observe-scene (Day 6 — the floor gets a clean spotlight-ish warmth that day, subtly), Otto side story, rain remix scenes, grape bowl (Willpower tracker beat).
@@ -692,13 +692,13 @@ Drivers, by character: Gary = arm length + satchel diagonal; Julian = antler cro
 **6.1 THE REPORTER'S NOTEBOOK** — Purpose: Gary's thinking tool; the UI backbone. Scale: palm+. Material: cloth-bound, elastic strap, deckled pages. Aging: fattens sideways (tucked clippings) while thinning forward (torn pages — stubs remain). Gameplay: journal, Morning Pages, tear-out-and-pin. Animation: page flips, tear (with sound), doodle draw-on. **Critical.**
 ⟨MASTER STYLE PROMPT — expand verbatim on export⟩ A well-loved cloth-bound reporter's notebook, warm brown with a mustard elastic strap, deckled cream pages, corners soft with use, a pencil resting in the gutter, several loose clippings and a pressed leaf tucked between pages, small torn-out page stubs visible in the binding, on a warm cork-and-paper background.
 
-**6.2 THE PRESS BADGE (Archie's)** — Purpose: Gary's inheritance; press-privileges verb; Ask-Grandpa anchor. Scale: palm-small, drawn 110% + one value brighter than physics. Material: brass, worn to soft gold at the rim. Aging: fifty years of thumb-polish; pin replaced twice (Ida knows). Gameplay: 3 door-opens; hint ritual. Animation: the straighten, the glint. **Critical.**
+**6.2 THE PRESS BADGE (the first Gary Gibbons's)** — Purpose: Gary's inheritance; press-privileges verb; Ask-Grandpa anchor. Scale: palm-small, drawn 110% + one value brighter than physics. Material: brass, worn to soft gold at the rim. Aging: fifty years of thumb-polish; pin replaced twice (Ida knows). Gameplay: 3 door-opens; hint ritual. Animation: the straighten, the glint. **Critical.**
 ⟨MASTER STYLE PROMPT — expand verbatim on export⟩ A tarnished brass vintage press badge engraved with "THE LANTERNSIDE LEDGER — PRESS", worn to soft warm gold at the rim from decades of thumb polish, a sturdy old pin clasp, painted with one gentle gleam of lamplight, on a warm cork-and-paper background.
 
 **6.3 THE MESSENGER SATCHEL** — Leather, brass buckles, strap darkened at the shoulder; Gary's silhouette diagonal. Contents spill sheet required (notebooks, pencils, string, one emergency raisin box he pretends isn't there). **Critical.**
 ⟨MASTER STYLE PROMPT — expand verbatim on export⟩ A worn brown leather reporter's messenger satchel with brass buckles, the shoulder strap darkened from years of wear, overstuffed with notebooks and loose papers, a pencil loop on the side, honest scuffs and one careful stitch repair, on a warm cork-and-paper background.
 
-**6.4 THE TIME CAPSULE VAULT & CONTENTS** — Purpose: the mystery's heart. Vault: brass door, ivy-relief frame, interior dust-void library (a puzzle painting). Contents (revealed Day 7/credits): crates, children's bundles, drawings, prediction cards, a tooth "for science," Theodora's letter, Archie's oilcloth parcel. Aging: fifty years sealed — the most textured surfaces in the game. **Critical.**
+**6.4 THE TIME CAPSULE VAULT & CONTENTS** — Purpose: the mystery's heart. Vault: brass door, ivy-relief frame, interior dust-void library (a puzzle painting). Contents (revealed Day 7/credits): crates, children's bundles, drawings, prediction cards, a tooth "for science," Theodora's letter, Gary Gibbons's oilcloth parcel. Aging: fifty years sealed — the most textured surfaces in the game. **Critical.**
 ⟨MASTER STYLE PROMPT — expand verbatim on export⟩ An open brass vault door set into carved stone with an ivy relief frame, revealing a small stone chamber whose dusty floor shows clean rectangular voids where objects long rested; beside it, the recovered contents arranged with care — small wooden crates, cloth bundles tied with string, children's drawings, a folded prediction card, and one green-wax-sealed envelope on top, on a warm cork-and-paper background.
 
 **6.5 THE WAX SEAL (intact) & THE FRAGMENT** — Vale signet: lantern wreathed in ivy, deep green wax, three drips. Fragment: one broken curl showing partial ivy impression, evidence-bagged. Pipeline law: Grape Green never shares a frame with seal green. **Critical.**
@@ -725,7 +725,7 @@ Drivers, by character: Gary = arm length + satchel diagonal; Julian = antler cro
 **6.12 THE TYPEWRITER & THE EVENING EDITION** — Gary's portable (one sticky E — audible signature); the printed Ledger front page template (masthead, column rules — the ONLY ruler-straight lines in Lanternside). **Critical.**
 ⟨MASTER STYLE PROMPT — expand verbatim on export⟩ A vintage portable typewriter with warm black enamel and round keys, a fresh sheet mid-page, beside a folded small-town newspaper with an ornate masthead reading "THE LANTERNSIDE LEDGER", hand-set headline type and clean column rules, warm lamplight, on a warm cork-and-paper background.
 
-**6.13 THE GRAPE KIT** — The stress ball (squeezed matte rubber, thumb dents), Gino's hero bunch, the raisin box, the jam jar ("For emergencies." in Archie's hand), the memorial vine. Grape Green reserved. **Important.**
+**6.13 THE GRAPE KIT** — The stress ball (squeezed matte rubber, thumb dents), Gino's hero bunch, the raisin box, the jam jar ("For emergencies." in Gary Gibbons's hand), the memorial vine. Grape Green reserved. **Important.**
 ⟨MASTER STYLE PROMPT — expand verbatim on export⟩ A small still-life set: a grape-shaped rubber stress ball with visible thumb dents, a flawless bunch of green grapes, a modest vintage raisin box, and a sealed jar of homemade grape jam with a handwritten label reading "For emergencies.", painted with affectionate restraint, on a warm cork-and-paper background.
 
 **6.14 GRANDPA'S PARCEL** — Oilcloth, twine, pencil address "FOR THE GIBBONS WHO COMES NEXT"; contents: field notebook, the engraved magnifying glass ("Look closer, then look kinder."), the jam. The credits' hero prop. **Critical.**
@@ -758,7 +758,7 @@ Drivers, by character: Gary = arm length + satchel diagonal; Julian = antler cro
 **7.5 MORNING PAGES** — The notebook at the window seat: six candidate questions in Gary's hand, player circles three (pencil-circle animation), tea ring optional and canonical.
 ⟨MASTER STYLE PROMPT — expand verbatim on export⟩ Game UI illustration: an open notebook page in morning window light titled "Today" in hand lettering, six short handwritten questions listed with three of them circled in soft pencil, a faint tea ring on the page corner, a warm cream palette.
 
-**7.6 MAP OF LANTERNSIDE** — Hand-drawn district map in Gary's style (commissioned as if Archie drew the original and Gary annotates it): building vignettes, the river, walking routes as dotted pencil, location pins as tiny sketches, the survey-map overlay mode (ghost 1890s linework slides over). Question marks appear where deductions point (the boathouse ?).
+**7.6 MAP OF LANTERNSIDE** — Hand-drawn district map in Gary's style (commissioned as if the first Gary Gibbons drew the original and Gary annotates it): building vignettes, the river, walking routes as dotted pencil, location pins as tiny sketches, the survey-map overlay mode (ghost 1890s linework slides over). Question marks appear where deductions point (the boathouse ?).
 ⟨MASTER STYLE PROMPT — expand verbatim on export⟩ Game UI illustration: a charming hand-drawn map of a small riverside district on aged cream paper — tiny ink-and-watercolor building vignettes, a winding river, dotted pencil walking routes, small pins and handwritten labels, a compass rose doodled with a pigeon on it, and a faint older ghost-map layer of 1890s survey linework showing through in places.
 
 **7.7 MENUS (Title / Pause / Settings / Saves)** — Title: the apartment window at night, board silhouette, menu as items on Gary's desk (NEW STORY = fresh notebook; CONTINUE = the current notebook; SETTINGS = the desk drawer; QUIT = the coat hook). Pause: the notebook closes softly over the scene. Saves: the bound Edition Gallery shelf, one spine per save.
@@ -835,7 +835,7 @@ All VFX are painterly particles — hand-drawn sprite sheets (4–8 frames), nev
 - **ARCHIVE:** Dust and devotion → harp + celesta, sparse; the Theodora/Jonah love theme grows one instrument per exhibit-assembly state → ladder rolls, page turns → the loupe click, ledger scratch. Light shafts visually meter the music's sparseness — notes arrive like motes.
 - **RIVERBANK & BOATHOUSE:** Mist and tenderness → the game's quietest cue: solo cello over water granulation; the confrontation is UNDERSCORED BY ALMOST NOTHING until Julian breaks, then the two-voice Vale theme enters — viola alone, then violin joining as Clara is revealed at the bank → reeds, water, one distant gull → floorboard lift (hand-foley, long), the umbrella set gently down.
 - **COUNCIL HALL:** Municipal warmth → woodwind civic march played slightly fondly-ragged → clock, chair creak (the polished armrest has a specific creak) → key cabinet glass, the portrait examination's paper-on-canvas whisper.
-- **GLOBAL MOTIFS:** The kettle whistle = night-phase key change, every time. The gold-string deduction chord (same three notes, new instrument each day). Archie's theme = Gary's theme at half speed on an older piano — first heard complete under the credits letter, and players will realize they've been hearing half of it all game.
+- **GLOBAL MOTIFS:** The kettle whistle = night-phase key change, every time. The gold-string deduction chord (same three notes, new instrument each day). Grandpa's theme = Gary's theme at half speed on an older piano — first heard complete under the credits letter, and players will realize they've been hearing half of it all game.
 
 ---
 
@@ -846,7 +846,7 @@ All VFX are painterly particles — hand-drawn sprite sheets (4–8 frames), nev
 **PROTOTYPE PRIORITY FLAG (new field, all categories):** every asset row in the production sheet carries a milestone flag with one of four values — **Prototype** (needed to prove the loop), **Demo** (needed for the Day 2 vertical slice / public demo), **Full Game** (needed to ship 1.0), **Franchise** (needed for marketing, sequels, or brand). Flags default to **TBD** in this bible; they are assigned during milestone-pack extraction (see the Do-Not-Overproduce warning, top of document), starting with the First 30 Minutes pack. The bible defines the field; the packs decide the values.
 
 ## 11.1 Characters (17 named + kits) · *Prototype Flag: per-asset, TBD at extraction*
-Per named character: portrait set ×5 (+unguarded one-offs where scheduled: Julian ×2, Beatrice, Prudence, Margie, Ferris, Milo) · sprite idle ×2 + talk ×2 · walk cycle · costume variations per §4 · silhouette-sheet entry. [All principals **C**; Archie set **I**] · Crowd kit (4 adult rigs, 12 adult dress sets + skipping-rope children set of 3 — 15 anthropomorphic figures total) [**I**] · Fauna kit (pigeons incl. divorced pair, gulls, ducks, goldfish) [**I**] · Turnaround sheets ×17 [**C**] · The Silhouette Sheet (living document) [**C**].
+Per named character: portrait set ×5 (+unguarded one-offs where scheduled: Julian ×2, Beatrice, Prudence, Margie, Ferris, Milo) · sprite idle ×2 + talk ×2 · walk cycle · costume variations per §4 · silhouette-sheet entry. [All principals **C**; Grandfather set **I**] · Crowd kit (4 adult rigs, 12 adult dress sets + skipping-rope children set of 3 — 15 anthropomorphic figures total) [**I**] · Fauna kit (pigeons incl. divorced pair, gulls, ducks, goldfish) [**I**] · Turnaround sheets ×17 [**C**] · The Silhouette Sheet (living document) [**C**].
 
 ## 11.2 Buildings & Exteriors · *Prototype Flag: per-asset, TBD at extraction*
 Founders' Square (all narrative states — the largest single environment package) [**C**] · Market Row (phases + rain + festival + memorial) [**C**] · Riverbank/boathouse exterior [**C**] · Street connective facades + skybox washes + the lantern map (gameplay data!) [**C**] · Marketing "postcard composition" per location ×10 [**I**].
@@ -878,7 +878,7 @@ Steam capsule set (main 616×353 / small / header / library 600×900 + hero): **
 ⟨MASTER STYLE PROMPT — expand verbatim on export⟩ Key art composition: an anthropomorphic gibbon reporter in a rumpled tweed jacket seen from behind at three-quarter angle, standing at a lamplit cork investigation board covered in sketches and taut red string in a cozy attic at night, one red string leading dramatically toward the viewer's corner of the frame, a round window behind him glowing with the warm lantern-lit rooftops of a small storybook European animal town, title space reserved in the upper third, warm amber and deep teal palette.
 
 ## 11.11 Loading Screens, Portraits, Expressions · *Prototype Flag: per-asset, TBD at extraction*
-40 pigeon-saga loading doodles [**I**] · full portrait census (17×5 + 7 unguarded + young/sepia set: Archie×3, Beatrice, Theodora, Jonah) [**C**] · epilogue exhibition poster (the two portraits, gap closed) [**I**].
+40 pigeon-saga loading doodles [**I**] · full portrait census (17×5 + 7 unguarded + young/sepia set: grandfather×3, Beatrice, Theodora, Jonah) [**C**] · epilogue exhibition poster (the two portraits, gap closed) [**I**].
 
 ## 11.12 The Shipping Gate
 Nothing on this list ships untracked; the production sheet mirrors this chapter 1:1 with status columns and the Prototype Priority Flag column, and **the Chekhov-detail paintings and the lantern map are flagged gameplay-blocking** — they are clue data wearing paint, and the content validator's world will reference them by name.
@@ -925,3 +925,4 @@ Exploration is first-person (no Gary avatar, no walking). Scenes are click-and-f
 3. Nothing baked that the engine draws: no vignettes, no rain, no phase tint (the engine tints), no UI, no text of any kind in scene or portrait art.
 4. Card art (`card_*`) keeps its existing self-contained-card spec — cards are physical objects and DO include their painted frame.
 5. Delivery path: files go in `assets\<relative path>` exactly mirroring the placeholder tree. NEVER deliver into `assets\_placeholders\` (generated, disposable). See assets\WHERE-ART-GOES.md.
+

@@ -42,7 +42,7 @@ The board screen is replaced by **the layout desk at the Ledger** — a paste-up
 
 - **Suspect ledger** → the page's masthead sidebar: portrait thumbnails with MOTIVE/MEANS/OPPORTUNITY as three under-portrait checkboxes that ink in. CLEARED prints a diagonal overstamp. Same data, zero new UI ideas to learn.
 - **Theories** → "Standing corrections" box on page 2: one line each, stamped DIDN'T HOLD when retired.
-- **Contradiction desk** → **the fact-check spike.** Two testimony strips can be spiked together; if they can't both be true, the overlap prints in red with a "?" pulled into the notebook's questions page. Diegetic name: "Check it twice — Archie's rule."
+- **Contradiction desk** → **the fact-check spike.** Two testimony strips can be spiked together; if they can't both be true, the overlap prints in red with a "?" pulled into the notebook's questions page. Diegetic name: "Check it twice — Grandpa's rule."
 - **Timeline rail** → **the WEEK IN REVIEW column**: four dated column slots; event strips drop in only when an anchoring fact exists (same seating rule). Completing it on Night 6 prints the column and plays the existing silent cinematic as a press run.
 
 ## A4. Tutorial fit
@@ -113,3 +113,4 @@ The existing Night-1 tutorial survives almost intact; "pin → string → click"
 | Build cost | High (new UI surface) | Medium (deep restyle) |
 | Content kept | 100% | 100% |
 | Biggest risk | Metaphor collision with editions | Might polish a disliked core |
+

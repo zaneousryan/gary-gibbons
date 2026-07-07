@@ -30,7 +30,7 @@
         },
         {
           "id": "addition_again",
-          "text": "The Addition coverage, re-filed where it belongs. Archie's byline sits three columns over, reviewing a soup competition with tremendous seriousness.",
+          "text": "The Addition coverage, re-filed where it belongs. Gary Gibbons's byline sits three columns over, reviewing a soup competition with tremendous seriousness.",
           "ref": "II.15.2"
         }
       ],
@@ -40,7 +40,7 @@
       "id": "archies_desk",
       "at": [1200, 640],
       "kind": "chekhov",
-      "label": "Archie's Desk",
+      "label": "Gary Gibbons's Desk",
       "detail": {
         "tier": "character",
         "text": "Preserved as he left it: blotter, pencil cup, a drawer with a lock even Ida couldn't sweet-talk. He was smiling when he asked for it, she says. Gary doesn't open drawers that were closed with a smile. Not yet."
@@ -72,3 +72,4 @@
     "ambience": "amb_clock_paper"
   }
 }
+

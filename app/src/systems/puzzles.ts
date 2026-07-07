@@ -287,7 +287,7 @@ export function solveTornLetter(): Effect[] {
 // Content lands with side story 17.5 (Phase 6).
 
 export const HANDWRITING_MATCH = {
-  description: 'Match the ticket signature against the ledger pages — three features, the way Archie taught: the looped G, the crossed double-t, the pressure of the pen.',
+  description: 'Match the ticket signature against the ledger pages — three features, the way Grandpa taught: the looped G, the crossed double-t, the pressure of the pen.',
   features: [
     { id: 'hw_loop', label: 'The looped G' },
     { id: 'hw_crosst', label: 'The crossed double-t' },
@@ -350,3 +350,4 @@ export const PUZZLE_RESOLVE_EFFECTS: Record<string, Effect[]> = {
   handwriting_match: HANDWRITING_MATCH.resolveEffects,
   map_overlay: MAP_OVERLAY.resolveEffects,
 };
+

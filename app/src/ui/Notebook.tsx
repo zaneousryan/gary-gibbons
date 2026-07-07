@@ -58,7 +58,7 @@ export default function Notebook({ db }: { db: ContentDB }) {
           {tab !== 'questions' &&
             tabEntries.map((e) => {
               const def = db.notebook.entries.find((n) => n.id === e.id);
-              // NG+ — Archie's Notes (II.19.1): margin commentary from the
+              // NG+ — Grandpa's Notes (II.19.1; the first Gary Gibbons): margin commentary from the
               // ghost the whole game is about
               const archie = ngPlus
                 ? db.barks['archie_notes']?.barks.find((b) => b.tags.includes(e.id))
@@ -91,3 +91,4 @@ export default function Notebook({ db }: { db: ContentDB }) {
     </div>
   );
 }
+

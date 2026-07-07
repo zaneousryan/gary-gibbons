@@ -44,7 +44,7 @@
     },
     "c4": {
       "speaker": "dot",
-      "line": "Archie staked out a bakery for three nights once, over missing flour. Third night he fell asleep and the baker covered him with a coat. Solved it anyway — the coat smelled of the flour. Even his naps did journalism.",
+      "line": "Gary Gibbons staked out a bakery for three nights once, over missing flour. Third night he fell asleep and the baker covered him with a coat. Solved it anyway — the coat smelled of the flour. Even his naps did journalism.",
       "authored": "aletheia",
       "emote": "happy",
       "ref": "I.7.2",
@@ -54,3 +54,4 @@
   "oncePerDay": true,
   "repeatBark": "dot_repeat_busy"
 }
+

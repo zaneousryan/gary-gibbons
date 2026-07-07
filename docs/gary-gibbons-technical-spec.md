@@ -257,7 +257,7 @@ Sub-modules:
 Board state fully serialized (pin positions included — the player's mess is theirs).
 
 ### 6.3 NotebookSystem
-Tabs PEOPLE/PLACES/QUESTIONS (+hidden GRAPES tab unlock D4). Auto-entries from dialogue/effects; Morning Pages modal (pick 3 of ~6 questions → sets voxpop topic + PRIMED weights); tear-out interaction moves a page entity to board inventory, leaves stub; doodle collection; NG+ Archie margin notes (25 authored anchors).
+Tabs PEOPLE/PLACES/QUESTIONS (+hidden GRAPES tab unlock D4). Auto-entries from dialogue/effects; Morning Pages modal (pick 3 of ~6 questions → sets voxpop topic + PRIMED weights); tear-out interaction moves a page entity to board inventory, leaves stub; doodle collection; NG+ Grandpa margin notes — the first Gary Gibbons (25 authored anchors).
 
 ### 6.4 VerificationSystem
 Watches flags/cards; when any `verifyRoutes` cond passes → status upgrade + CONFIRMED-G.G. stamp toast (*thock* sfx). Exposes `whyUnverified(cardId)` for UI ("needs: a document, a witness, or your own eyes").
@@ -298,7 +298,7 @@ Settings: text size, text speed, volume mix, colorblind string patterns, reduce-
 ---
 
 ## 9. NG+ & POST-GAME
-NG+ flag unlocks Archie margin notes + Edition Gallery carryover + stats screen (incl. `grapesDeclined`, no fanfare). Post-game free-roam: Day 7-evening state with post-beat lines, collectible completion, STORIES-THAT-GOT-AWAY drawer if clippings complete.
+NG+ flag unlocks Grandpa margin notes (the first Gary Gibbons) + Edition Gallery carryover + stats screen (incl. `grapesDeclined`, no fanfare). Post-game free-roam: Day 7-evening state with post-beat lines, collectible completion, STORIES-THAT-GOT-AWAY drawer if clippings complete.
 
 ---
 
@@ -368,3 +368,4 @@ Generation note: the design doc §9 prompts map 1:1 — character prompts → po
 ---
 
 *This spec plus design doc v1.2 is the complete build contract. Aletheia builds the machine; the content folder is the town; Ryan brings the lamplight.*
+
